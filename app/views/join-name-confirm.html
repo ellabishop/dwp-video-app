@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Confirm appointment
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl" id="result">
+      Confirm your appointment details
+    </h1>
+    <p></p>
+    <dl class="govuk-summary-list" style="margin-bottom: 60px;">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+          Your full name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          David Smith
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Your appointment time
+        </dt>
+        <dd class="govuk-summary-list__value">
+          9:00am
+        </dd>
+      </div>
+    </dl>
+    <a href="conduct-video-waiting" class="govuk-button">OK, continue</a>
+    <a href="namesignin" style="margin-left:15px" class="govuk-button govuk-button--secondary">Try again</a>
+
+
+  </div>
+</div>
+
+{% endblock %}

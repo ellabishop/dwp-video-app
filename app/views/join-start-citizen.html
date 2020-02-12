@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Video appointment at job centre
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl" style="margin-top: 20px">
+              Join a video appointment
+            </h1>
+
+          <p>This service lets you join a booked video appointment. <br> <br>
+            Please make sure you've checked in before you start. If you haven't<br>
+            you can <a href="#"> check in here.</a>
+          </p>
+
+          <a href="join-name-citizen.html" role="button" draggable="false" style="margin-top:30px" class="govuk-button govuk-button--start" data-module="govuk-button">
+            Start now
+            <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+            </svg>
+          </a>
+    </div>
+    </div>
+
+{% endblock %}

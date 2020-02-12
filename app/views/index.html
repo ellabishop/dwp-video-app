@@ -1,0 +1,26 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script>
+  sessionStorage.clear();
+  req.session.data = {};
+</script>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl" style="margin-top: 20px">
+      Remote consultation - prototypes
+    </h1>
+    <p>This is for testing only, do not rely on it if you want something real to happen.</p>
+    <p><a href="claimant">See visitor facing view</a></p>
+    <p><a href="staff">See colleague view</a></p>
+
+</div>
+
+{% endblock %}
