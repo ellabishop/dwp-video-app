@@ -202,8 +202,8 @@ $govuk-header-border-color: #00728F !important;
 }
 
 .govuk-button--quiet-navigation:hover {
-  background-color: darken(#FFF, 5%) !important;
-  color: #0b0c0c
+  background-color: darken(#FFF, 10%) !important;
+  color: #0b0c0c;
 }
 
 .govuk-button--quiet-navigation:hover[disabled] {
