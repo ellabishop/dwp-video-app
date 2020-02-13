@@ -1,9 +1,10 @@
 // global styles for <a> and <p> tags
 $govuk-global-styles: true;
 
+
 // We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
 $govuk-assets-path: '/govuk/assets/';
-
+$govuk-header-border-color: #00728F !important;
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
 @import "lib/extensions/extensions";
 
@@ -18,6 +19,11 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.govuk-header__container {
+  border-bottom-color: #00728F !important;
+}
+
 .dwp-video-header {
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -89,11 +95,12 @@ $govuk-assets-path: '/govuk/assets/';
   float: right;
 }
 
+/* Style for status text on DWP-video-header */
 .participants-names {
   display: inline-block;
   font-size: 19px;
   padding-top: 7.5px;
-  color: #1d70b8;
+  color: #000000;
 }
 
 /* Quiet warning button */
