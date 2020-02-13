@@ -1,0 +1,28 @@
+{% extends "layout_appt-staff.html" %}
+
+{% block pageTitle %}
+  Video appointment at job centre
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group">
+          <form method="post" action="manage-centre">
+          <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-heading-xl">
+              Your video appointment has ended
+            </h1>
+          </legend>
+          </fieldset>
+
+<p>You can view all the appointments booked in your diary and join the next scheduled appointment for today.</p>
+
+<a href="end-appts-staff" style="margin-top:30px" class="govuk-button">View appointments</a>
+
+      </form>
+    </div>
+    </div>
+    </div>
+{% endblock %}

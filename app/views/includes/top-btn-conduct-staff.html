@@ -1,0 +1,38 @@
+
+
+<div class="btn-video-top">
+  <div class="participants-names">
+  <strong>Jane </strong>connected to <strong>David</strong>:      <label id="minutes"> 00</label>:<label id="seconds">00</label>
+
+  </div>
+<div class="btn-video-top--right">
+
+    <a href="paused-staff" class="govuk-button button-secondary" style="margin: 0px 15px 15px 0px; color:#000"">Pause appointment</a>
+    <a href="end-video-check-staff" class="govuk-button govuk-button--warning button-end " style="margin: 0">End appointment</a>
+
+</div>
+    </div>
+
+
+
+        <script>
+        var minutesLabel = document.getElementById("minutes");
+        var secondsLabel = document.getElementById("seconds");
+        var totalSeconds = 0;
+        setInterval(setTime, 1000);
+
+        function setTime() {
+          ++totalSeconds;
+          secondsLabel.innerHTML = pad(totalSeconds % 60);
+          minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+        }
+
+        function pad(val) {
+          var valString = val + "";
+          if (valString.length < 2) {
+            return "0" + valString;
+          } else {
+            return valString;
+          }
+        }
+    </script>
