@@ -1,0 +1,26 @@
+{% extends "layout_video-staff.html" %}
+
+{% block pageTitle %}
+  Remote consultation
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-video-leave-frame">
+    <div class="govuk-video-inside-frame">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          The other person has left the appointment</h1>
+      <p>You can end the appointment now, or wait for the other person to rejoin.</p>
+
+<a href="end-video-check-staff" class="govuk-button govuk-button--warning " style="margin: 25px 15px 0px 0px">End appointment</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "includes/bottom-btns-staff.html" %}
+
+{% endblock %}

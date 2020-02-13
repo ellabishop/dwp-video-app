@@ -1,0 +1,44 @@
+{% extends "layout_appt-staff.html" %}
+
+{% block pageTitle %}
+  Remote Consultation
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-l">
+            Your virtual waiting room
+          </h1>
+
+          <h2 class="govuk-body-l">11 February, 2020</h2>
+<table class="govuk-table">
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Appointment Time</th>
+    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Name</th>
+    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Status</th>
+    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
+  </tr>
+</thead>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td scope="row" class="govuk-table__cell">09:00am</td>
+    <td class="govuk-table__cell">David Smith</td>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--progress" style="background: #00703c">
+  READY
+</strong></td>
+<td class="govuk-table__cell"><a href=conduct-video-staff> Start appointment</a></td>
+  </tr>
+
+  
+
+
+</tbody>
+</table>
+
+    </div>
+
+    </div>
+
+{% endblock %}

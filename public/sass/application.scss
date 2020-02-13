@@ -167,3 +167,13 @@ $govuk-assets-path: '/govuk/assets/';
   margin-left: 18px;
   margin-top: 4px;
 }
+
+/* Sign out link for staff */
+
+.sign-out-top--right {
+  margin: 0 !important;
+  float: right;
+  text-align: right;
+  padding-top: 5px;
+  padding-right: 0px;
+}

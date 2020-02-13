@@ -1,0 +1,27 @@
+{% extends "layout_video-staff.html" %}
+
+{% block pageTitle %}
+  Remote consultation
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-video-frame">
+    <div class="govuk-video-inside-frame">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          You've paused the video appointment</h1>
+
+      <p>Resume the appointment when you're ready.</p>
+
+<a href="conduct-video-staff" class="govuk-button" style="margin: 25px 15px 0px 0px">Resume</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "includes/bottom-btns-staff.html" %}
+
+{% endblock %}
