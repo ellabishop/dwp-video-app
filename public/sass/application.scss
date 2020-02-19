@@ -20,9 +20,33 @@ $govuk-header-border-color: #00728F !important;
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+
+
 .govuk-header__container {
   border-bottom-color: #00728F !important;
+  text-align: center !important;
 }
+
+.govuk-header__contents {
+  padding-left: 120px;
+  float:left;
+}
+
+.govuk-width-container__video {
+  margin:0;
+  padding: 0;
+  max-width: 1200px !important;
+  position:absolute;
+}
+
+.govuk-main-wrapper__video {
+  margin: 0;
+  padding: 0;
+  width: 1200px;
+  text-align: center;
+  position:relative;
+  display: inline-block !important;
+  }
 
 .dwp-video-header {
   font-family: "GDS Transport", Arial, sans-serif;
@@ -159,7 +183,7 @@ $govuk-header-border-color: #00728F !important;
 .govuk-video-frame {
   text-align: center;
   width: 950px;
-  height: 686px;
+  height: 646px;
   border-color: #0b0c0c;
   border: #0b0c0c 2px solid;
   padding: 0;
@@ -169,14 +193,14 @@ $govuk-header-border-color: #00728F !important;
 
 .govuk-video-inside-frame {
   text-align: left !important;
-  padding-top: 70px;
-  padding-left: 70px;
+  padding-top: 110px;
+  padding-left: 90px;
 }
 
 .govuk-video-leave-frame {
   text-align: center;
   width: 950px;
-  height: 686px;
+  height: 646px;
   border-color: #d4351c;
   border: #d4351c 5px solid;
   padding: 0;
