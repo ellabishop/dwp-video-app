@@ -48,6 +48,13 @@ $govuk-header-border-color: #00728F !important;
   margin: 0;
 }
 
+.video-image {
+  text-align: center;
+  width: 1680px;
+  padding: 0;
+  margin: 0;
+}
+
 /* Top and bottom button divs */
 
 .btn-video-top {
@@ -152,7 +159,7 @@ $govuk-header-border-color: #00728F !important;
 .govuk-video-frame {
   text-align: center;
   width: 950px;
-  height: 489px;
+  height: 686px;
   border-color: #0b0c0c;
   border: #0b0c0c 2px solid;
   padding: 0;
@@ -169,7 +176,7 @@ $govuk-header-border-color: #00728F !important;
 .govuk-video-leave-frame {
   text-align: center;
   width: 950px;
-  height: 489px;
+  height: 686px;
   border-color: #d4351c;
   border: #d4351c 5px solid;
   padding: 0;
@@ -219,4 +226,9 @@ $govuk-header-border-color: #00728F !important;
   height: 10px;
   background-color: #1d70b8;
 
+}
+
+.fit {
+  max-width: 99%;
+  max-height: 99%;
 }
