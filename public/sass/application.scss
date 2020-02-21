@@ -27,7 +27,8 @@ $govuk-header-border-color: #00728F !important;
 }
 
 .govuk-header__link {
-  color: #000 !important;
+  color: #0b0c0c !important;
+  cursor:default;
 }
 
 .govuk-width-container__video {
@@ -131,7 +132,7 @@ $govuk-header-border-color: #00728F !important;
   font-size: 19px;
   padding-top: 7.5px;
   color: #000000;
-  width: 1200px;
+  width: 50%;
   text-align: left !important;
   float: left !important;
 }
