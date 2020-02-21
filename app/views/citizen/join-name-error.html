@@ -12,7 +12,7 @@
       <a href=join-name-confirm-fail float="right"> Fail to confirm</a> </div> -->
 
 
-      <form action="/full-name-answer" method="post" class="form" id="check-in_form" style="margin-top: 20px">
+      <form action="join-name-confirm" method="post" class="govuk-form-group--error" id="check-in_form" style="margin-top: 20px">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <h1 class="govuk-heading-xl">
@@ -22,7 +22,10 @@
             </legend>
             </fieldset>
             <fieldset class="govuk-fieldset">
-      <input type="text" id="full-name" name="full-name" class="govuk-input keyboard-input" style="width:50%">
+              <span id="full-name-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter your full name
+  </span>
+      <input type="text" id="full-name" name="full-name" class="govuk-input govuk-input--error" style="width:50%">
       </fieldset>
       <button class="govuk-button" data-module="govuk-button" style="margin-top: 30px">Continue</button>
       </form>

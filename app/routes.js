@@ -2,5 +2,24 @@ const express = require('express')
 const router = express.Router()
 
 // Add your routes here - above the module.exports line
+router.post('/full-name-answer', function (req, res) {
+
+// Make a variable and give it the value from 'how-many-balls'
+  var fullName = req.session.data['full-name']
+
+
+// Check whether the variable matches a condition
+  if (fullName == ""){
+    // Send user to next page
+    res.redirect('/citizen/join-name-error')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('/citizen/join-name-confirm')
+  }
+
+
+})
+
 
 module.exports = router
