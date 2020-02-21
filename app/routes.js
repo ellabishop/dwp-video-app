@@ -21,5 +21,22 @@ router.post('/full-name-answer', function (req, res) {
 
 })
 
+router.post('/security-code-answer', function (req, res) {
 
+// Make a variable and give it the value from 'how-many-balls'
+  var securityCode = req.session.data['security-code']
+
+
+// Check whether the variable matches a condition
+  if (securityCode == ""){
+    // Send user to next page
+    res.redirect('/citizen/passcode/join-password-error')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('/citizen/passcode/join-password-confirm')
+  }
+
+
+})
 module.exports = router
