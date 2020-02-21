@@ -24,10 +24,11 @@ $govuk-header-border-color: #00728F !important;
 
 .govuk-header__container {
   border-bottom-color: #00728F !important;
-  text-align: center !important;
 }
 
-
+.govuk-header__link {
+  color: #000 !important;
+}
 
 .govuk-width-container__video {
   margin:0;
@@ -183,12 +184,12 @@ $govuk-header-border-color: #00728F !important;
 
 .govuk-video-frame {
   text-align: center;
-  width: 1200px;
-  height: 646px;
+  width: 1191px;
+  height: 699px;
   border-color: #0b0c0c;
   border: #0b0c0c 2px solid;
   padding: 0;
-  margin-left: 18px;
+
   margin-top: 4px;
   display: inline-block;
   background-color: #fff;
