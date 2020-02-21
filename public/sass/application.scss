@@ -20,7 +20,11 @@ $govuk-header-border-color: #00728F !important;
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
-
+.preview {
+  position:absolute !important;
+  bottom:0!important;
+  right:0!important;
+}
 
 .govuk-header__container {
   border-bottom-color: #00728F !important;
@@ -29,6 +33,7 @@ $govuk-header-border-color: #00728F !important;
 .govuk-header__link {
   color: #0b0c0c !important;
   cursor:default;
+  display:none;
 }
 
 .govuk-width-container__video {
@@ -190,7 +195,7 @@ $govuk-header-border-color: #00728F !important;
   border-color: #0b0c0c;
   border: #0b0c0c 2px solid;
   padding: 0;
-
+  position:relative;
   margin-top: 4px;
   display: inline-block;
   background-color: #fff;
@@ -209,6 +214,7 @@ $govuk-header-border-color: #00728F !important;
   text-align: left !important;
   padding-top: 110px;
   padding-left: 90px;
+  position:relative;
 }
 
 .govuk-video-leave-frame {
