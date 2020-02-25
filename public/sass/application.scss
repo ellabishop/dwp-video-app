@@ -33,7 +33,10 @@ $govuk-header-border-color: #00728F !important;
 .govuk-header__link {
   color: #0b0c0c !important;
   cursor:default;
-  display:none;
+}
+
+.govuk-back-link {
+  margin-top: 0px !important;
 }
 
 .govuk-width-container__video {
@@ -93,10 +96,9 @@ $govuk-header-border-color: #00728F !important;
 
 }
 .btn-bottom {
-  width: 1200px;
+  width: 1280px;
   display: inline-block !important;
-  margin-top: 5px;
-  margin-left: 0;
+  margin: 10px 0 0 0;
   padding: 0;
 }
 
@@ -190,8 +192,8 @@ $govuk-header-border-color: #00728F !important;
 
 .govuk-video-frame {
   text-align: center;
-  width: 1191px;
-  height: 699px;
+  width: 1271px;
+  height: 716px;
   border-color: #0b0c0c;
   border: #0b0c0c 2px solid;
   padding: 0;
