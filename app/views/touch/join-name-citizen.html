@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Video appointment at job centre
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+<a href="join-start-citizen" class="govuk-back-link" style="font-size:24px;">Back</a>
+    <!--  <div class="nav-link">
+      <a href=join-name-confirm-fail float="right"> Fail to confirm</a> </div> -->
+
+
+<form action="join-name-confirm" method="post" class="form" id="check-in_form" style="margin-top: 20px;"">
+          <div style="text-align:center"> <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+                What is your full name?
+                </h1>
+                <p class="headerhint govuk-heading-m" style= "color: #6f777b">Enter your first and last names, don't include middle names.</p>
+            </legend>
+            </fieldset> </div>
+            <fieldset class="govuk-fieldset" style="text-align:center">
+      <input type="text" id="full-name" name="full-name" class="govuk-input keyboard-input" style="width:50%; margin-bottom:40px">
+      </fieldset>
+
+          <div class="qwerty-keyboard" id="keyboard"></div>
+
+
+          <script src="/public/javascripts/jquery-1.11.3.js"></script>
+          <script src="/public/javascripts/keyboard.js"></script>
+          <link rel="stylesheet" href="/public/sass/jkeyboard.css">
+</div>
+
+<script>
+        $('#keyboard').jkeyboard({
+            layout: "english_capital",
+            input: $('#full-name'),
+            customLayouts: {
+                selectable: ["english_capital"],
+                english_capital: [
+                    ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',],
+                    ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L',],
+                    ['-','Z', 'X', 'C', 'V', 'B', 'N', 'M',"'"],
+                    ['backspace','space','return']
+                    ],
+            }
+        });
+    </script>
+    {% endblock %}
+
+
+
+
+
+
+
+          <!-- <h1 class="govuk-heading-xl" style="margin-top: 20px">
+              What is your full name?
+            </h1>
+
+          <div class="govuk-form-group">
+        <label class="govuk-label" for="cust-name">
+        </label>
+        <span id="event-name-hint" class="govuk-hint">
+          Enter your first and last names, don't include middle names.
+        </span>
+        <input class="govuk-input" id="cust-name" name="cust-name" type="text" aria-describedby="event-name-hint">
+      </div>
+
+    <a href="join-name-confirm.html" role="button" draggable="false" style="margin-top:30px" class="govuk-button" data-module="govuk-button">
+            Continue
+
+          </a>
+
+    </div>
+    </div>-->
