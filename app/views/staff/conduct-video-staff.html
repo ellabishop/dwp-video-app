@@ -1,5 +1,28 @@
-{% extends "layout_video-staff.html" %}
+{% extends "layout_unbranded.html" %}
 
-{% block pageTitle %}
-  Remote consultation
+{% block headIcons %}
+
 {% endblock %}
+
+{% block head %}
+{% include "includes/head.html" %}
+{% endblock %}
+
+{% block header %}
+
+{% include "includes/header-video.html" %}
+<div class="dwp-video-header">
+    {% include "includes/top-btn-conduct-staff.html" %}
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="app-width-container--wide">
+  <div class="govuk-video-image">
+    <a href="end-appts-staff"><img src="/public/images/staffview.png"</a>
+    {% include "includes/bottom-btns-staff.html" %}
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}{% endblock %}

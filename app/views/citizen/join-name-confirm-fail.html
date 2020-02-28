@@ -5,20 +5,19 @@ Confirm appointment
 {% endblock %}
 
 {% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl" style="margin-top: 20px">
+        We could not confirm your appointment details
+      </h1>
+      <p>The information you have entered does not match our records. <br>
+        If you need any help, please ask a member of staff.</p>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl" style="margin-top: 20px">
-      We could not confirm your appointment details
-    </h1>
-    <p>The information you have entered does not match our records. <br>
-    If you need any help, please ask a member of staff.</p>
+        <a href="join-name-citizen" style="margin-top:30px" class="govuk-button">Try again</a>
+        <a href="join-start-citizen" style="margin:30px 0px 0px 15px" class="govuk-button govuk-button--secondary">Finish</a>
 
-    <a href="join-name-citizen" style="margin-top:30px" class="govuk-button">Try again</a>
-    <a href="join-start-citizen" style="margin:30px 0px 0px 15px" class="govuk-button govuk-button--secondary">Finish</a>
-
-
-  </div>
+      </div>
+    </div>
 </div>
-
 {% endblock %}

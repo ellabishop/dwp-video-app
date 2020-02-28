@@ -1,13 +1,41 @@
-{% extends "layout_video-staff-end.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   Remote consultation
 {% endblock %}
 
+{% block head %}
+{% include "includes/head.html" %}
+{% endblock %}
+
+{% block header %}
+{% include "includes/header-video.html" %}
+<div class="dwp-video-header">
+  <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
+    {% include "includes/top-btn-conduct-staff.html" %}
+      </div>
+      </div>
+{% endblock %}
+
 {% block content %}
 
+<div class="app-width-container--wide">
+  <div class="govuk-video-frame" a href="join-video-conduct">
+    <div class="govuk-video-inside-frame">
+      <div class="govuk-grid-column-two-thirds" style="display: inline-block; text-align: left;">
+        <h1 class="govuk-heading-xl">
+          Are you sure you want to finish the appointment?
+        </h1>
 
+          <p>If you end the appointment now, the session will be closed and the other person will be disconnected.</p>
 
+          <a href="end-staff" class="govuk-button" style="margin: 25px 15px 0px 0px">Yes, confirm</a>
+          <a href="conduct-video-staff" class="govuk-button govuk-button--secondary " style="margin-top: 25px">No, resume</a>
 
+      </div>
+    </div>
+  </div>
+  {% include "includes/bottom-btns-staff.html" %}
+</div>
 
 {% endblock %}

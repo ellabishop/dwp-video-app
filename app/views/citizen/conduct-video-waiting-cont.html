@@ -1,5 +1,65 @@
-{% extends "layout_video-waiting-cont.html" %}
+{% extends "layout_video.html" %}
 
 {% block pageTitle %}
   Remote consultation
+{% endblock %}
+
+{% block header %}
+
+{% include "includes/header-video.html" %}
+<div class="dwp-video-header">
+  <div class="govuk-width-container govuk-header__contents" style="margin: 0, text-align: center; max-width: 1280px">{% include "includes/top-btn--waiting-citizen.html" %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="app-width-container--wide">
+      <div class="govuk-video-frame">
+        <a href="conduct-video-citizen"><div class="govuk-video-inside-frame">
+          <div class="govuk-grid-column-two-thirds" style="display: inline-block; text-align: left;">
+            <h1 class="govuk-heading-xl">
+            Please continue to wait
+          </h1>
+
+          <h2 class="govuk-heading-m">
+            The other person knows you're ready.
+            </h2>
+
+  <p>Your appointment was due to start <strong> <label id="minutes"> 00 </label> minutes <label id="seconds" >00</label> seconds</strong> ago.</p>
+
+  <div class="govuk-inset-text">Please do not leave without talking to a member of staff. You may be paid less in your benefits if you miss an appointment.
+    </div>
+
+        </div>
+
+        <div class="govuk-grid-column-one-third" style="margin: 0; display: inline-block; text-align: right; padding-top:398px; padding-right: 0"><img src="/public/images/citizen.png" style=" border: 2px solid #0b0c0c; margin-left:8px"></div>
+
+      </div>
+    </a>
+    </div>
+  </div>
+
+  <script>
+  var minutesLabel = document.getElementById("minutes");
+  var secondsLabel = document.getElementById("seconds");
+  var totalSeconds = 0;
+  setInterval(setTime, 1000);
+
+  function setTime() {
+    ++totalSeconds;
+    secondsLabel.innerHTML = pad(totalSeconds % 60);
+    minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+  }
+
+  function pad(val) {
+    var valString = val + "";
+    if (valString.length < 2) {
+      return "0" + valString;
+    } else {
+      return valString;
+    }
+  }
+</script>
+
 {% endblock %}
