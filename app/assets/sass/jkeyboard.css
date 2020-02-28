@@ -16,34 +16,31 @@
   color: #0b0c0c;
   display: inline-block;
   background-color: #dee0e2;
-  border: 2px solid #0b0c0c;
   margin: 10px 0 1px 14px;
   border-radius: 10px;
   width: 8%;
   padding: 15px 0px;
   box-sizing: border-box;
   text-align: center;
-  overflow: hidden;
+  box-shadow: 5px 10px #888888 !important;
   font-weight: bold;
 }
 .jkeyboard .jline ul li.uppercase {
   text-transform: uppercase;
 }
 .jkeyboard .jline ul li:hover, .jkeyboard .jline ul li:active {
-  border: 2px solid #0b0c0c;
   background: #85994B;
 }
 .jkeyboard .jline .return {
   width: 160px;
   font-size: 24px;
   padding: 22px 0;
-  border: 2px solid #00823b;
   background: #00823b;
   color: #ffffff !important;
-  box-shadow: #00823b;
+  box-shadow: 3px #000000;
 }
 .jkeyboard .jline .return:hover {
-  border: 2px solid #006435!important;
+
   background: #006435!important;
 }
 .jkeyboard .jline .space {
