@@ -1,6 +1,31 @@
 
-{% extends "touch/layout_video.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   Conduct a video appopintment
+{% endblock %}
+
+{% block head %}
+{% include "includes/head.html" %}
+{% endblock %}
+
+{% block header %}{% include "includes/header-video.html" %}
+<div class="dwp-video-header">
+  <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
+    {% include "touch/top-btn--conduct-citizen.html" %}
+      </div>
+</div>
+
+{% endblock %}
+{% block content %}
+<div class="govuk-header__container govuk-header__container--full-width" style="border: 0px; text-align: center; margin-top: 5px">
+<a href="end-complete-citizen"><img src="/public/images/workcoach6.png"></a>
+{% include "touch/bottom-btns-citizen.html" %}
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+
 {% endblock %}
