@@ -22,7 +22,7 @@
   padding: 15px 0px;
   box-sizing: border-box;
   text-align: center;
-  box-shadow: #0b0c0c;
+  box-shadow: 5px 10px #888888 !important;
   font-weight: bold;
 }
 .jkeyboard .jline ul li.uppercase {

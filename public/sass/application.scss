@@ -25,8 +25,9 @@ $govuk-header-border-color: #00728F !important;
 //}
 
 .app-width-container--wide {
-  padding: 0 govuk-spacing(4);
+  padding: 0 govuk-spacing(0);
   margin: 0;
+  text-align: center;
 }
 
 .preview {
