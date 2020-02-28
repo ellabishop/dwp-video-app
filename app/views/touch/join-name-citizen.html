@@ -1,10 +1,11 @@
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   Video appointment at job centre
 {% endblock %}
 
 {% block content %}
+<div class="govuk-width-container">
   <div class="govuk-grid-row">
 
 <a href="join-start-citizen" class="govuk-back-link" style="font-size:24px;">Back</a>
@@ -32,7 +33,7 @@
           <script src="/public/javascripts/keyboard.js"></script>
           <link rel="stylesheet" href="/public/sass/jkeyboard.css">
 </div>
-
+</div>
 <script>
         $('#keyboard').jkeyboard({
             layout: "english_capital",
