@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Confirm appointment
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="join-name-citizen" class="govuk-back-link" style="font-size:24px">Back</a>
+
+    <h1 class="govuk-heading-xl" style="margin-top: 20px">
+      Confirm your appointment details
+    </h1>
+    <p></p>
+    <dl class="govuk-summary-list" style="margin-bottom: 60px;">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+          Your full name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['full-name'] }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Your appointment time
+        </dt>
+        <dd class="govuk-summary-list__value">
+          9:00am
+        </dd>
+      </div>
+    </dl>
+    <a href="conduct-video-waiting" class="govuk-button" style="padding:15px; font-size:24px; border-radius:10px">OK, continue</a>
+    <a href="join-name-citizen" style="margin-left:30px;" class="govuk-button govuk-button--secondary secondary-touch">Try again</a>
+
+
+  </div>
+</div>
+
+{% endblock %}
