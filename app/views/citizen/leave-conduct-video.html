@@ -1,12 +1,20 @@
-{% extends "layout_video.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   Remote consultation
 {% endblock %}
 
-{% block content %}
+{% block header %}
+{% include "includes/header-video.html" %}
+<div class="dwp-video-header">
+  <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
+    {% include "includes/top-btn--conduct-citizen.html" %}
+      </div>
+      </div>
+{% endblock %}
 
-<div class="govuk-grid-row">
+{% block content %}
+<div class="app-width-container--wide">
   <div class="govuk-video-leave-frame">
     <div class="govuk-video-inside-frame">
       <div class="govuk-grid-column-two-thirds">
