@@ -222,13 +222,14 @@ $govuk-header-border-color: #00728F !important;
 
 .govuk-video-leave-frame {
   text-align: center;
-  width: 950px;
-  height: 646px;
+  width: 1271px;
+  height: 716px;
   border-color: #d4351c;
   border: #d4351c 5px solid;
   padding: 0;
-  margin-left: 18px;
+
   margin-top: 4px;
+  display: inline-block;
 }
 
 /* Sign out link for staff */

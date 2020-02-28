@@ -1,18 +1,27 @@
-{% extends "layout_video-waiting.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   Remote consultation
 {% endblock %}
 
-{% block content %}
+{% block header %}
+{% include "includes/header-video.html" %}
+<div class="dwp-video-header">
+  <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
+    {% include "includes/top-btn--conduct-citizen.html" %}
+      </div>
+      </div>
+{% endblock %}
 
-<div class="govuk-grid-row">
+{% block content %}
+<div class="app-width-container--wide">
+
   <div class="govuk-video-leave-frame">
     <div class="govuk-video-inside-frame">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">
           Are you sure you want to leave the appointment?</h1>
-          <p>You may be paid less in your benefits if you miss an appointment.
+          <p>You may be paid less in your benefits if you do not complete an appointment.
             </p>
 
 <a href="end-left-citizen" class="govuk-button govuk-button--warning " style="margin: 25px 15px 0px 0px">Yes, leave</a>
