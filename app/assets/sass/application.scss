@@ -24,6 +24,15 @@ $govuk-header-border-color: #00728F !important;
   //background-color: #444 !important;
 //}
 
+#touch-body-text {
+  font-size: 21px;
+}
+
+.govuk-main-wrapper {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
 .app-width-container--wide {
   padding: 0 govuk-spacing(0);
   margin: 0;
