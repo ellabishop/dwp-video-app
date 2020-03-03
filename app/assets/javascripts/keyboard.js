@@ -34,7 +34,7 @@
             text: '&nbsp;'
         },
         space: {
-            text: '&nbsp;'
+            text: 'Space'
         },
         numeric_switch: {
             text: '123',
@@ -235,6 +235,7 @@
                 input_node = input.get(0),
                 start = input_node.selectionStart,
                 end = input_node.selectionEnd;
+
 
             var max_length = $(input).attr("maxlength");
             if (start == end && end == val.length) {

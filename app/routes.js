@@ -5,7 +5,7 @@ const router = express.Router()
 router.post('/full-name-answer', function (req, res) {
 
 // Make a variable and give it the value from 'how-many-balls'
-  var fullName = req.session.data['full-name']
+  var fullName = req.session.data['fullName']
 
 
 // Check whether the variable matches a condition

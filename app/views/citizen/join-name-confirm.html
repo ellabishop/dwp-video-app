@@ -14,14 +14,14 @@ Confirm appointment
     <h1 class="govuk-heading-xl" style="margin-top: 20px">
       Confirm your appointment details
     </h1>
-    <p></p>
-    <dl class="govuk-summary-list" style="margin-bottom: 60px;">
+
+    <dl class="govuk-summary-list" style="margin-bottom: 60px;" name="theField">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key govuk-!-width-one-half">
           Your full name
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['full-name'] }}
+          {{ data['fullName'] }}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -39,4 +39,5 @@ Confirm appointment
     </div>
   </div>
 </div>
+
 {% endblock %}
