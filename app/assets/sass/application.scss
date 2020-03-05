@@ -34,9 +34,20 @@ $govuk-header-border-color: #00728F !important;
 }
 
 .app-width-container--wide {
+  
   padding: 0 govuk-spacing(0);
   margin: 0;
   text-align: center;
+  display: block;
+  background-color: #fff;
+
+}
+
+#paused {
+  padding: 0 govuk-spacing(0);
+  margin: 0;
+  text-align: center;
+  display: none;
 }
 
 .preview {
@@ -178,8 +189,6 @@ $govuk-header-border-color: #00728F !important;
   background-color: #f3f2f1;
 }
 
-
-
 /* Home office secondary button */
 
 .button-secondary {
@@ -203,12 +212,12 @@ $govuk-header-border-color: #00728F !important;
 .govuk-video-frame {
   text-align: center;
   width: 1271px;
-  height: 716px;
+  height: 712px;
   border-color: #0b0c0c;
   border: #0b0c0c 2px solid;
   padding: 0;
   position:relative;
-  margin-top: 4px;
+
   display: inline-block;
   background-color: #fff;
 }

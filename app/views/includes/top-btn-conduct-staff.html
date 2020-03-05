@@ -2,36 +2,43 @@
 
 <div class="btn-video-top">
   <div class="participants-names">
-  <strong>Jane </strong>connected to <strong>David Smith</strong>:      <label id="minutes"> 00</label>:<label id="seconds">00</label>
+  <strong>Jane </strong>connected to <strong>David Smith</strong>:      <label id="minutes">00</label>:<label id="seconds">00</label>
 
   </div>
 <div class="btn-video-top--right">
-    <a href="paused-staff" class="govuk-button govuk-button--quiet-navigation" style="margin: 0px 15px 15px 0px; color:#000"">Pause</a>
-    <a href="end-video-check-staff" class="govuk-button govuk-button--quiet-warning" style="margin: 0">Finish</a>
+    <button id="pause" class="govuk-button govuk-button--quiet-navigation" style="margin: 0px 15px 15px 0px; color:#000" onclick="javascript:SwapDivsWithClick('one','two'); myPauseClicked(this); myFinishDisabled(finish)">Pause</button>
+    <button id="finish" class="govuk-button govuk-button--quiet-warning" style="margin: 0" onclick="javascript:SwapDivsFinish('one','three'); myPauseClicked(pause); myFinishDisabled(this)">Finish</button>
 
     </div>
 
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/staff-timer.js"></script>
 
 
-        <script>
-        var minutesLabel = document.getElementById("minutes");
-        var secondsLabel = document.getElementById("seconds");
-        var totalSeconds = 0;
-        setInterval(setTime, 1000);
-
-        function setTime() {
-          ++totalSeconds;
-          secondsLabel.innerHTML = pad(totalSeconds % 60);
-          minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-        }
-
-        function pad(val) {
-          var valString = val + "";
-          if (valString.length < 2) {
-            return "0" + valString;
-          } else {
-            return valString;
-          }
-        }
-    </script>
 </div>
+
+<script>
+
+  function myPauseClicked(el)
+  {
+      el.disabled = true;
+  }
+
+  function myFinishDisabled(el)
+  {
+    el.disabled = true;
+  }
+
+</script>
+
+<script>
+
+  function stopTimer() {
+    if (a) clearInterval(a);
+    a = null;
+  }
+
+  document.getElementById("pause").addEventListener("click", stopTimer);
+  
+
+  </script>

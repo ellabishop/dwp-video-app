@@ -7,9 +7,11 @@ router.post('/full-name-answer', function (req, res) {
 // Make a variable and give it the value from 'how-many-balls'
   var fullName = req.session.data['fullName']
 
-
 // Check whether the variable matches a condition
-  if (fullName == ""){
+  if (fullName == "Noel Name"){
+  res.redirect('/citizen/join-name-confirm-fail')
+  }
+  else if (fullName == ""){
     // Send user to next page
     res.redirect('/citizen/join-name-error')
   }
@@ -17,9 +19,8 @@ router.post('/full-name-answer', function (req, res) {
     // Send user to ineligible page
     res.redirect('/citizen/join-name-confirm')
   }
-
-
 })
+
 
 router.post('/security-code-answer', function (req, res) {
 
@@ -28,15 +29,18 @@ router.post('/security-code-answer', function (req, res) {
 
 
 // Check whether the variable matches a condition
-  if (securityCode == ""){
+  if (securityCode == "apple"){
     // Send user to next page
+    res.redirect('/citizen/passcode/join-password-confirm')
+  }
+  else if (securityCode == ""){
+    // Send user to ineligible page
     res.redirect('/citizen/passcode/join-password-error')
   }
   else {
     // Send user to ineligible page
-    res.redirect('/citizen/passcode/join-password-confirm')
+    res.redirect('/citizen/passcode/join-password-confirm-fail')
   }
-
 
 })
 module.exports = router
