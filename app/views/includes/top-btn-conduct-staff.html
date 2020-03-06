@@ -2,7 +2,7 @@
 
 <div class="btn-video-top">
   <div class="participants-names">
-  <strong>Jane </strong>connected to <strong>David Smith</strong>:      <label id="minutes">00</label>:<label id="seconds">00</label>
+  <strong>Jane </strong>connected to <strong>David Smith</strong>:      <label id="minutes">00</label>:<label id="seconds">00  </label>
 
   </div>
 <div class="btn-video-top--right">
@@ -40,12 +40,16 @@
 
   </script>
 
-<!--  <script>
-
-
+<!-- <script>
     $(document).ready(function() {
+
+      var txt = $("<div class='red-paused'></div>").html("&nbsp Paused");
+
       $("#pause").click(function(){
-      $(".participants-names").append(" <b>Paused</b> ");
+
+      $(".participants-names").append(txt);
+
     });
+
   });
 </script> -->
