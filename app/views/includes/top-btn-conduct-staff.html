@@ -32,13 +32,20 @@
 </script>
 
 <script>
-
   function stopTimer() {
     if (a) clearInterval(a);
     a = null;
   }
-
   document.getElementById("pause").addEventListener("click", stopTimer);
-  
 
   </script>
+
+<!--  <script>
+
+
+    $(document).ready(function() {
+      $("#pause").click(function(){
+      $(".participants-names").append(" <b>Paused</b> ");
+    });
+  });
+</script> -->
