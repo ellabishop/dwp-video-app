@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Create Confirmation
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-panel govuk-panel--confirmation" style="margin-bottom:40px">
+          <h1 class="govuk-panel__title">
+            Video appointment created
+          </h1>
+        </div>
+<h2 class="govuk-heading-m">What to do next</h2>
+<p>1. Copy this appointment code and save it in your diary. You’ll need it to join the video appointment.</p>
+      <div class="code-box"> <div class="code" id="divCode">h d b f e r</div>
+<div class="copy-code-btn"><button class="app-copy-button" id="btext" onclick="copyCode()" style="float: right; margin: 7px 15px 0 0">Copy code</button>
+
+</div>
+</div>
+
+<p>2. Copy these joining instructions and send them to the claimant.</p>
+
+<div class="text-box"> <div class="email" id="divText"><p>
+Hello [First Name]<br><br>
+
+Following our earlier discussion, you have agreed to complete your residency appointment by video.
+<br><br>
+
+<strong>Your appointment is with:</strong>  [First Name]
+<br><br>
+<strong>On this date:</strong>  12 April 2020
+<br><br>
+<strong>At this time:</strong>  {{ data['myInput'] }}
+<br><br>
+To start your appointment, go to <a href="#"> video-service-link </a> either on a computer or a mobile device.<br>
+Please make sure your device is charged or attached to a power supply.
+<br><br>
+If you can’t attend this appointment, please call us straight away on 0800 328 9344.
+<br><br>
+
+[First Name]
+<br><br>
+[Job Title]</p></div>
+<div class="copy-email-btn"><button class="app-copy-button" id="btext2" onclick="copyClipboard()" style="float: right; margin: 30px 15px 0 0">Copy text</button>
+</div></div>
+<div class="govuk-inset-text">
+  The code and link will only be valid from 30 minutes before the appointment time and will expire after 2 hours. &nbsp &nbsp &nbsp
+If you need to reschedule the appointment, you must <a href="enter-video-details">enter the video appointment details</a> again to create a new appointment.
+    </div>
+    <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    Make sure you’ve copied the code and text before you finish. You will not be able to view this page again.
+  </strong>
+</div>
+
+<button class="govuk-button">Finish</button>
+  </div>
+</div>
+</div>
+
+<script>
+function copyCode() {
+var elm = document.getElementById("divCode");
+// for Internet Explorer
+
+if(document.body.createTextRange) {
+  var range = document.body.createTextRange();
+  range.moveToElementText(elm);
+  range.select();
+  document.execCommand("Copy");
+}
+else if(window.getSelection) {
+  // other browsers
+
+  var selection = window.getSelection();
+  var range = document.createRange();
+  range.selectNodeContents(elm);
+  selection.removeAllRanges();
+  selection.addRange(range);
+  document.execCommand("Copy");
+  document.getElementById("btext").innerHTML = 'Code copied';
+  var originalContent = document.getElementById("btext").innerHTML;
+        setTimeout(function() {
+                    document.getElementById('btext').innerHTML = 'Copy code'
+                 }, 3000);
+
+}
+}
+</script>
+
+  <script>
+function copyClipboard() {
+  var elm = document.getElementById("divText");
+  // for Internet Explorer
+
+  if(document.body.createTextRange) {
+    var range = document.body.createTextRange();
+    range.moveToElementText(elm);
+    range.select();
+    document.execCommand("Copy");
+  }
+  else if(window.getSelection) {
+    // other browsers
+
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(elm);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    document.execCommand("Copy");
+    document.getElementById("btext2").innerHTML = 'Text copied';
+    var originalContent2 = document.getElementById("btext").innerHTML;
+          setTimeout(function() {
+                      document.getElementById('btext2').innerHTML = 'Copy text'
+                   }, 3000);
+
+  }
+}
+</script>
+
+{% endblock %}
