@@ -43,4 +43,22 @@ router.post('/security-code-answer', function (req, res) {
   }
 
 })
+
+router.post('/appt-time', function (req, res) {
+
+// Make a variable and give it the value from 'how-many-balls'
+  var myInput = req.session.data['myInput']
+
+// Check whether the variable matches a condition
+if (myInput == ""){
+    // Send user to next page
+    res.redirect('#')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('/staff/create-appointment/create-video-confirmation')
+  }
+})
+module.exports = router
+
 module.exports = router
