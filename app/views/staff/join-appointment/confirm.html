@@ -1,0 +1,63 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  Confirm Appointment
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner" style="margin-bottom:10px">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    <a href="enter-code" class="govuk-back-link" style="margin-top:10px">Back</a>
+
+    <h1 class="govuk-heading-xl" style="margin-top: 40px">
+      Check your video appointment details
+    </h1>
+
+    <dl class="govuk-summary-list" style="margin-bottom: 60px;" name="theField">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+          Claimant's full name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Luke Smith
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Start time
+        </dt>
+        <dd class="govuk-summary-list__value">
+          10:30am
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+          Duration
+        </dt>
+        <dd class="govuk-summary-list__value">
+          30 minutes
+        </dd>
+      </div>
+    </dl>
+    <a href="https://35.178.189.252/?m=" class="govuk-button">Confirm and join</a>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

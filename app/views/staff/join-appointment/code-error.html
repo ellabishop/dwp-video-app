@@ -1,0 +1,71 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  Code Error
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-width-container">
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#">Enter the appointment code</a>
+            </li>
+            <li>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <form action="/appointment-code-answer" method="post" class="govuk-form-group--error" id="appointmentCode" style="margin-top: 10px">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-heading-xl">
+                Enter your appointment code </h1>
+                <p>This is the 6 letter code you generated when you created the appointment.</p>
+            </legend>
+            </fieldset>
+            <fieldset class="govuk-fieldset">
+              <span id="appointmentCode" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter your appointment code
+  </span>
+      <input type="text" id="appointmentCode" name="appointmentCode" class="govuk-input govuk-input--error" style="width:50%">
+      </fieldset>
+      <button class="govuk-button" data-module="govuk-button" style="margin-top: 30px">Join video appointment</button>
+      </form>
+      <br>
+
+
+      <h2 class="govuk-heading-m">If you do not have your code</h2>
+
+      <p>If you have lost or forgotten your code, you'll need to create a new video appointment. If you need help, search for 'Create a video appointment' on
+        the DWP intranet. </p>
+
+    </div>
+  </div>
+
+{% endblock %}
