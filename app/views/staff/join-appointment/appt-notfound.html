@@ -1,0 +1,42 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  Confirm Appointment
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container">
+<div class="govuk-phase-banner" style="margin-bottom:10px">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    <a href="enter-code" class="govuk-back-link" style="margin-top:10px">Back</a>
+
+    <h1 class="govuk-heading-xl" style="margin-top: 40px">
+      There is a problem
+    </h1>
+<p> We could not confirm your appointment details. <br>
+  Check you have the correct code and try again. </p>
+
+
+  <a href="enter-code" style="margin-top:30px" class="govuk-button">Try again</a>
+      <a href="#" style="margin:30px 0px 0px 15px" class="govuk-button govuk-button--secondary">Finish</a>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
