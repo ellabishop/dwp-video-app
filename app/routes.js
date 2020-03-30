@@ -59,6 +59,28 @@ if (myInput == ""){
     res.redirect('/staff/create-appointment/create-video-confirmation')
   }
 })
+
+//**Blank appointment code **//
+
+// Add your routes here - above the module.exports line
+router.post('/appointment-code-answer', function (req, res) {
+
+// Make a variable and give it the value from 'how-many-balls'
+  var appointmentCode = req.session.data['appointmentCode']
+
+
+
+// Check whether the variable matches a condition
+  if (appointmentCode == ""){
+    // Send user to next page
+    res.redirect('staff/join-appointment/code-error')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('staff/join-appointment/confirm')
+  }
+
+})
 module.exports = router
 
 module.exports = router
