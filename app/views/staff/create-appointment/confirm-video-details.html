@@ -1,0 +1,60 @@
+{% extends "layout-create.html" %}
+
+{% block pageTitle %}
+Confirm appointment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl" style="margin-top: 40px">
+      Check your video appointment details
+    </h1>
+
+    <dl class="govuk-summary-list" style="margin-bottom: 60px;" name="theField">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+          Claimant's full name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['fullName'] }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Appointment date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          12 April 2020
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Start time
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['myInput'] }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Duration
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['myDuration'] }}
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Now create your video appointment<h2>
+      <p>By submitting this information, you'll create a unique code you can use to join the video appointment. You'll also create a link and joining instructions to send to the claimant.</p>
+    <a href="create-video-confirmation" class="govuk-button" style="margin-top: 30px">Create video appointment</a>
+    <a href="enter-video-details" style="margin: 30px 0 0 15px" class="govuk-button govuk-button--secondary">Change details</a>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
