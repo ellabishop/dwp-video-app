@@ -56,7 +56,7 @@ if (myInput == ""){
   }
   else {
     // Send user to ineligible page
-    res.redirect('/staff/create-appointment/create-video-confirmation')
+    res.redirect('/staff/create-appointment/confirm-video-details')
   }
 })
 
