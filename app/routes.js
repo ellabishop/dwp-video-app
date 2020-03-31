@@ -47,12 +47,17 @@ router.post('/security-code-answer', function (req, res) {
 router.post('/appt-time', function (req, res) {
 
 // Make a variable and give it the value from 'how-many-balls'
-  var myInput = req.session.data['myInput']
+  var claimantName = req.session.data['fullName']
+  var apptDay = req.session.data['appointment-day']
+  var apptMon = req.session.data['appointment-month']
+  var apptYear = req.session.data['appointment-year']
+  var startTime = req.session.data['startTime']
+  var duration = req.session.data['myDuration']
 
 // Check whether the variable matches a condition
-if (myInput == ""){
+if (claimantName, apptDay, apptMon, apptYear, startTime, duration  == ""){
     // Send user to next page
-    res.redirect('#')
+    res.redirect('/staff/create-appointment/enter-video-details-error-nothing')
   }
   else {
     // Send user to ineligible page
