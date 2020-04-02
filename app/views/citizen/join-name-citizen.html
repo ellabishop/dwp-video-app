@@ -15,23 +15,20 @@
 <a href="join-start-citizen" class="govuk-back-link">Back</a>
     <!--  <div class="nav-link">
       <a href=join-name-confirm-fail float="right"> Fail to confirm</a> </div> -->
-
-
       <form action="/full-name-answer" method="post" class="form" name="theForm" id="check-in_form" style="margin-top: 40px" onsubmit="fixit()">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-heading-xl">What is your full name?</h1>
+          </legend>
+        </fieldset>
           <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-              <h1 class="govuk-heading-xl">
-                What is your full name?
-                </h1>
-                <p class="headerhint">Enter your first and last names, do not include middle names.</p>
-            </legend>
+          <p class="headerhint" style= "color: #6f777b; margin-top: 40px">Enter your first and last names, do not include middle names.</p>
+              <input type="text" id="fullName" name="fullName" class="govuk-input" style="width:50%"">
             </fieldset>
-            <fieldset class="govuk-fieldset">
-      <input type="text" id="fullName" name="fullName" class="govuk-input" style="width:50%">
-      </fieldset>
       <button class="govuk-button" data-module="govuk-button" style="margin-top: 30px">Continue</button>
-      </form>
+</form>
     </div>
+
   </div>
 
 </div>
