@@ -9,7 +9,7 @@
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-<form action="/appt-time" method="post" class="form">
+
       <h1 class="govuk-heading-xl" style="margin-top: 40px">
         Enter the video appointment details
       </h1>
@@ -54,7 +54,7 @@
 
               <strong>Start time</strong>
               <span id="account-number-hint" class="govuk-hint">
-    For example, 9:00am
+    For example, 2:00pm
   </span>
               </label>
               <input class="govuk-input govuk-input--width-5"  name="startTime" type="text" id="startTime" name="myCountry" placeholder="">
@@ -65,10 +65,9 @@
                 <strong>Duration</strong></label>
                 <input class="govuk-input" name="myDuration" type="text" id="myDuration" placeholder="" style="width: 120px">
                 </div>
-        <button style="margin-top:20px" class="govuk-button" data-module="govuk-button">
-Continue
-      </button>
-</form>
+        <a href="confirm-video-details" style="margin-top:20px" class="govuk-button" data-module="govuk-button">Continue</a>
+        <a href="create-video-start" style="margin: 30px 0 0 30px; display: inline-block">Cancel</a>
+
     </div>
   </div>
   </div>
@@ -277,7 +276,7 @@ Continue
   }
 
   /*An array containing all the country names in the world:*/
-  var countries = ["10 minutes","15 minutes","20 minutes","25 minutes","30 minutes","35 minutes","40 minutes","45 minutes","50 minutes","55 minutes","1 hour"];
+  var countries = ["10 minutes","15 minutes","20 minutes","25 minutes","30 minutes","35 minutes","40 minutes","45 minutes","50 minutes","55 minutes","60 minutes"];
 
   /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
   autocomplete(document.getElementById("myDuration"), countries);
