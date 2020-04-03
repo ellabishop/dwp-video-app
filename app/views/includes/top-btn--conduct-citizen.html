@@ -1,41 +1,52 @@
 <div class="btn-video-top">
-  <div class="participants-names_touch">
-    <strong>David Smith </strong>is connected to <strong>Jane</strong>
+  <div class="participants-names">
+  <strong>David Smith </strong>connected to <strong>Jane</strong>
 
   </div>
 <div class="btn-video-top--right">
-      <button id="pause" class="govuk-button govuk-button--quiet-navigation touch" onclick="javascript:SwapDivsWithClick('one','two'); myPauseClicked(this); myFinishDisabled(finish)">Pause</button>
+    <button id="pause" class="govuk-button govuk-button--quiet-navigation" style="margin: 0px 0px 15px 0px; color:#000" onclick="javascript:SwapDivsWithClick('one','two'); myPauseClicked(this); myFinishDisabled(finish)">Pause</button>
+
     </div>
 
   <script src="/public/javascripts/jquery-1.11.3.js"></script>
   <script src="/public/javascripts/staff-timer.js"></script>
 
 
+</div>
 
+<script>
 
+  function myPauseClicked(el)
+  {
+      el.disabled = true;
+  }
 
-<!-- Script and html for timer:
+  function myFinishDisabled(el)
+  {
+    el.disabled = true;
+  }
 
-<label id="minutes"> 00</label>:<label id="seconds">00</label>
+</script>
 
-    <script>
-    var minutesLabel = document.getElementById("minutes");
-    var secondsLabel = document.getElementById("seconds");
-    var totalSeconds = 0;
-    setInterval(setTime, 1000);
+<script>
+  function stopTimer() {
+    if (a) clearInterval(a);
+    a = null;
+  }
+  document.getElementById("pause").addEventListener("click", stopTimer);
 
-    function setTime() {
-      ++totalSeconds;
-      secondsLabel.innerHTML = pad(totalSeconds % 60);
-      minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-    }
+  </script>
 
-    function pad(val) {
-      var valString = val + "";
-      if (valString.length < 2) {
-        return "0" + valString;
-      } else {
-        return valString;
-      }
-    }
+<!-- <script>
+    $(document).ready(function() {
+
+      var txt = $("<div class='red-paused'></div>").html("&nbsp Paused");
+
+      $("#pause").click(function(){
+
+      $(".participants-names").append(txt);
+
+    });
+
+  });
 </script> -->
