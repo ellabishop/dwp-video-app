@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout-staff.html" %}
 
 {% block pageTitle %}
   Video appointment at job centre
@@ -18,14 +18,23 @@
           </legend>
           </fieldset>
 
-<p>You can view and start any active appointments, or finish using this service.</p>
+<p>You can now finish this session and return to the start.</p>
 
-<a href="join-noappts-staff" style="margin: 30px 15px 0px 0px" class="govuk-button">View appointments</a>
-<a href="join-start-staff" style="margin-top:30px" class="govuk-button govuk-button--secondary">Finish</a>
+<a href="join-appointment/start" style="margin: 30px 15px 0px 0px" class="govuk-button">Finish</a>
+
 
       </form>
     </div>
     </div>
     </div>
   </div>
+
+
+  <script>
+    function closeWin() {
+  myWindow.close();   // Closes the new window
+}
+
+</script>
+
 {% endblock %}

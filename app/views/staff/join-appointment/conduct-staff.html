@@ -14,7 +14,7 @@
 
 {% block content %}
 
-<div class="app-width-container--wide" id="one" style="display:block">
+<div class="app-width-container--wide" id="one" style="display:block; z-index: 1;">
   <div class="govuk-video-image">
  <img src="/public/images/staffview.png">
 
@@ -40,24 +40,20 @@
 </div>
 </div>
 <!--hidden finish content -->
-<div class="app-width-container--wide" id="three" style="display:none">
-  <div class="govuk-video-frame" a href="join-video-conduct">
-    <div class="govuk-video-inside-frame">
-      <div class="govuk-grid-column-two-thirds" style="display: inline-block; text-align: left;">
-        <h1 class="govuk-heading-xl">
-          Are you sure you want to finish the appointment?
-        </h1>
+<div class="app-width-container--wide" id="three" style="display:none; z-index: 1000; position: absolute; top: 180px; right: 220px; height: 180px; border-radius: 5px;">
+  <div class="govuk-video-end-box">
+        <h3 class="govuk-heading-m">
+          Are you sure you want to end the appointment?
+        </h3>
 
-          <p>If you end the appointment now, the session will be closed and the other person will be disconnected.</p>
 
-          <a href="end-staff" class="govuk-button" style="margin: 25px 15px 0px 0px">Yes, confirm</a>
-          <a href="#one" class="govuk-button govuk-button--secondary " style="margin-top: 25px" onclick="javascript:SwapDivsWithClick('one','three'); myPauseEnabled(pause); myFinishEnabled(finish)"">No, resume</a>
+
+          <a href="../end-staff" class="govuk-button" style="margin: 20px 25px 0px 0px; padding-left: 15px; padding-right: 15px">Yes, confirm</a>
+          <a href="#one" class="govuk-button govuk-button--secondary " style="margin-top: 20px; padding-left: 15px; padding-right: 15px" onclick="javascript:SwapDivsWithClick('one','three'); myPauseEnabled(pause); myFinishEnabled(finish)">No, cancel</a>
 
       </div>
     </div>
-  </div>
 
-</div>
 
 <script src="/public/javascripts/jquery-1.11.3.js"></script>
 <script src="public/javascripts/staff-timer.js"></script>
@@ -88,7 +84,7 @@ function SwapDivsFinish(div1,div3)
 
    if( d3.style.display == "none" )
    {
-      d1.style.display = "none";
+
       d3.style.display = "block";
    }
    else

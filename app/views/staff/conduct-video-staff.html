@@ -47,20 +47,18 @@
 {% include "includes/bottom-btns-staff.html" %}
 </div>
 <!-- hidden finish content -->
+<div class="modal">
 <div class="app-width-container--wide" id="three" style="display:none">
   <div class="govuk-video-frame" a href="join-video-conduct">
-    <div class="govuk-video-inside-frame">
-      <div class="govuk-grid-column-two-thirds" style="display: inline-block; text-align: left;">
-        <h1 class="govuk-heading-xl">
+
+        <h3 class="govuk-heading-s">
           Are you sure you want to finish the appointment?
-        </h1>
+        </h3>
 
           <p>If you end the appointment now, the session will be closed and the other person will be disconnected.</p>
 
-          <a href="end-staff" class="govuk-button" style="margin: 25px 15px 0px 0px">Yes, confirm</a>
-          <a href="#one" class="govuk-button govuk-button--secondary " style="margin-top: 25px" onclick="javascript:SwapDivsWithClick('one','three'); myPauseEnabled(pause); myFinishEnabled(finish)"">No, resume</a>
-
-      </div>
+          <a href="end-staff" class="govuk-button" style="margin: 25px 15px 0px 0px">Yes</a>
+          <a href="#one" class="govuk-button govuk-button--secondary " style="margin-top: 25px" onclick="javascript:SwapDivsWithClick('one','three'); myPauseEnabled(pause); myFinishEnabled(finish)">No</a>
     </div>
   </div>
   {% include "includes/bottom-btns-staff.html" %}
