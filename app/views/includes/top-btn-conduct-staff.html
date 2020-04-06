@@ -20,14 +20,16 @@
 
 <script>
 
-  function myPauseClicked(el)
+  function myPauseClicked(this,finish)
   {
-      el.disabled = true;
+     this.disabled = true;
+     finish.disabled = false;
   }
 
-  function myFinishDisabled(el)
+  function myFinishDisabled(this,pause)
   {
-    el.disabled = true;
+    this.disabled = false;
+    pause.disabled = true;
   }
 
 </script>
