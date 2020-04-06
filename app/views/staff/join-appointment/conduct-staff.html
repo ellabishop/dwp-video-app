@@ -33,7 +33,7 @@
         Resume the appointment when you're ready.
         </p>
 
-<a href="#one" id="resume" class="govuk-button" style="margin: 25px 15px 0px 0px" onclick="javascript:SwapDivsWithClick('one','two'); myPauseEnabled(pause); myFinishEnabled(finish)">Resume</a>
+<a href="#one" id="resume" class="govuk-button" style="margin: 25px 15px 0px 0px" onclick="javascript:SwapDivsWithClick('one','two'); myPauseEnabled(pause)">Resume</a>
 
     </div>
   </div>
@@ -49,7 +49,7 @@
 
 
           <a href="../end-staff" class="govuk-button" style="margin: 20px 25px 0px 0px; padding-left: 15px; padding-right: 15px">Yes, confirm</a>
-          <a href="#one" class="govuk-button govuk-button--secondary " style="margin-top: 20px; padding-left: 15px; padding-right: 15px" onclick="javascript:SwapDivsWithClick('one','three'); myPauseEnabled(pause); myFinishEnabled(finish)">No, cancel</a>
+          <a href="#one" class="govuk-button govuk-button--secondary " style="margin-top: 20px; padding-left: 15px; padding-right: 15px" onclick="javascript:SwapDivsFinish('one','three'); myFinishEnabled(finish); myPauseEnabled(pause); CheckPauseOn('one','two')">No, cancel</a>
 
       </div>
     </div>
@@ -82,6 +82,7 @@ function SwapDivsFinish(div1,div3)
    d1 = document.getElementById(div1);
    d3 = document.getElementById(div3);
 
+
    if( d3.style.display == "none" )
    {
 
@@ -92,6 +93,16 @@ function SwapDivsFinish(div1,div3)
       d1.style.display = "block";
       d3.style.display = "none";
    }
+}
+
+function CheckPauseOn(div1,div2)
+{
+  if(d2.style.display == "block")
+  {
+    d2.style.display == "block";
+    d1.style.display = "none";
+    document.getElementById("pause").disabled = true;  
+  }
 }
 
 </script>
