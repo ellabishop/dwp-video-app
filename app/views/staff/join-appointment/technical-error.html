@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+  {% block pageTitle %}
+    Video appointment at job centre
+  {% endblock %}
+
+  {% block content %}
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+              <h1 class="govuk-heading-xl" style="margin-top: 40px">
+                There's a problem
+              </h1>
+
+            <h1 class="govuk-heading-m">Your video appointment ended unexpectedly.</h1>
+            <p>This may be due to a technical fault. You can try and rejoin the appointment or if you need help, <a href="#">contact technical support.</a></p>
+
+
+              <a href="conduct-staff" style="margin-top:30px" class="govuk-button">Rejoin</a>
+              <a href="start" style="margin: 30px 0 0 15px" class="govuk-button govuk-button--secondary">Finish</a>
+      </div>
+      </div>
+  </div>
+  {% endblock %}

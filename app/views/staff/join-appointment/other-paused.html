@@ -1,0 +1,36 @@
+{% extends "layout-staff-vid.html" %}
+
+{% block pageTitle %}
+  Appointment Paused
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="dwp-video-header">
+    {% include "includes/top-btn-conduct-staff.html" %}
+</div>
+
+{% endblock %}
+
+
+{% block content %}
+<div class="app-width-container--wide">
+  <div class="govuk-video-frame" a href="join-video-conduct">
+    <a href="conduct-video-citizen"><div class="govuk-video-inside-frame">
+      <div class="govuk-grid-column-two-thirds" style="display: inline-block; text-align: left;">
+        <h1 class="govuk-heading-xl">
+          The video appointment has been paused
+        </h1>
+
+        <h2 class="govuk-heading-m">
+          Only the other person can resume the appointment.
+          </h2>
+
+
+      </div>
+    </div></a>
+  </div>
+</div>
+
+
+{% endblock %}
