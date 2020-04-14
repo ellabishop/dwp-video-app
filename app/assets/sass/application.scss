@@ -137,16 +137,15 @@ $govuk-header-border-color: #00728F !important;
 
 .video-image {
   text-align: center;
-  width: 100%;
+  width: 1680px;
   padding: 0;
   margin: 0;
 }
-@media (max-width: 40.0625em) {
-.video-image {
-  
-  max-width: 640px;
 
-}
+@media only screen and (max-width: 640px) {
+  .video-image{
+    max-width: 640px
+  }
 
 /* Top and bottom button divs */
 
