@@ -134,6 +134,11 @@ $govuk-header-border-color: #00728F !important;
   margin: 0;
 }
 
+@media only screen and (max-width: 640px) {
+  .govuk-video-image{
+    max-width: 640px
+  }
+}
 
 .video-image {
   text-align: center;
@@ -141,11 +146,6 @@ $govuk-header-border-color: #00728F !important;
   padding: 0;
   margin: 0;
 }
-
-@media only screen and (max-width: 640px) {
-  .video-image{
-    max-width: 640px
-  }
 
 /* Top and bottom button divs */
 
