@@ -134,12 +134,6 @@ $govuk-header-border-color: #00728F !important;
   margin: 0;
 }
 
-@media (min.width 640px) {
-  .govuk-video-image{
-    max-width: 640px
-  }
-}
-
 .video-image {
   text-align: center;
   width: 1680px;
