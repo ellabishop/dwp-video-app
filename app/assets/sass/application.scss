@@ -50,7 +50,7 @@ $govuk-header-border-color: #00728F !important;
   padding-bottom: 40px;
 }
 
-.app-width-container--wide {
+/*.app-width-container--wide {
   height: 760px;
   padding: 0 govuk-spacing(0);
   margin: 0;
@@ -58,7 +58,7 @@ $govuk-header-border-color: #00728F !important;
   display: block;
   background-color: #fff;
 
-}
+} */
 
 #paused {
   padding: 0 govuk-spacing(0);
@@ -255,8 +255,8 @@ $govuk-header-border-color: #00728F !important;
 
 .govuk-video-frame {
   text-align: center;
-  width: 1271px;
-  height: 712px;
+  width: 100%;
+  height: auto;
   border-color: #0b0c0c;
   border: #0b0c0c 2px solid;
   padding: 0;
@@ -269,8 +269,8 @@ $govuk-header-border-color: #00728F !important;
 @media (max-width: 1024px) {
 .govuk-video-frame {
   text-align: center;
-  width: 635px;
-  height: 356px;
+  width: 100%;
+  height: auto;
   border-color: #0b0c0c;
   border: #0b0c0c 2px solid;
   padding: 0;
@@ -284,8 +284,8 @@ $govuk-header-border-color: #00728F !important;
 @media (max-width: 640px) {
 .govuk-video-frame {
   text-align: center;
-  width: 350px;
-  height: 233px;
+  width: 100%;
+  height: auto;
   border-color: #0b0c0c;
   border: #0b0c0c 2px solid;
   padding: 0;
@@ -569,6 +569,7 @@ button:focus {
         text-align: center;
         display: block;
         background-color: #fff;
+        width: 50%;
 
       }
 
