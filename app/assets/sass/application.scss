@@ -281,20 +281,6 @@ $govuk-header-border-color: #00728F !important;
 }
 }
 
-@media (max-width: 640px) {
-.govuk-video-frame {
-  text-align: center;
-  width: 500px;
-  height: 300px;
-  border-color: #0b0c0c;
-  border: #0b0c0c 2px solid;
-  padding: 0;
-  position:relative;
-
-  display: inline-block;
-  background-color: #fff;
-}
-}
 
 .govuk-name-frame {
   text-align: center !important;
