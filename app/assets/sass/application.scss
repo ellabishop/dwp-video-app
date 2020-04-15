@@ -213,6 +213,13 @@ $govuk-header-border-color: #00728F !important;
 @media (max-width: 640px) {
   .participants-names {
     font-size: 14px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 641px) {
+  .participants-names {
+    padding-left: 15px;
   }
 }
 
