@@ -1,0 +1,15 @@
+.video-banner {
+    @media (max-height: 400px) { 
+      display: none;
+     }
+  }
+  
+  .video-container {
+    height: calc(100vh - 100px);
+    max-height: 712px;
+  }
+  
+  video {
+    height: 100%;
+    width: 100%;
+  }
