@@ -134,11 +134,21 @@ $govuk-header-border-color: #00728F !important;
   margin: 0;
 }
 
+
+
 .video-image {
   text-align: center;
   width: 1680px;
   padding: 0;
   margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .video-image {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 /* Top and bottom button divs */
@@ -198,6 +208,19 @@ $govuk-header-border-color: #00728F !important;
   width: 50%;
   text-align: left !important;
   float: left !important;
+}
+
+@media (max-width: 640px) {
+  .participants-names {
+    font-size: 14px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 641px) {
+  .participants-names {
+    padding-left: 15px;
+  }
 }
 
 .participants-names_touch {
@@ -264,6 +287,13 @@ $govuk-header-border-color: #00728F !important;
 
   display: inline-block;
   background-color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .govuk-video-frame  {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .govuk-name-frame {
@@ -531,6 +561,15 @@ button:focus {
         display: inline-block;
       }
 
+@media (max-width: 1024px) {
+        img{
+        width:100%;
+        height:100%;
+        }
+      }
+
+
+
 
   .app-width-container--wide {
 
@@ -590,3 +629,6 @@ border:none;
   opacity: 0.6;
   outline: none;
   border:none; }
+
+
+  @import "components/video";
