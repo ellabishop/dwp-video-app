@@ -104,6 +104,12 @@ $govuk-header-border-color: #00728F !important;
   text-align: center;
 }
 
+@media (max-width: 640px) {
+.dwp-video-header {
+  display: none;
+  }
+}
+
 .dwp-video-header_touch {
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -154,13 +160,15 @@ $govuk-header-border-color: #00728F !important;
 /* Top and bottom button divs */
 
 .btn-video-top {
-  width: 1280px;
+  width: 100%;
   text-align: center;
   height: auto;
   background-color: transparent;
   margin-bottom: 0;
   display: inline-block !important;
 }
+
+
 .btn-bottom {
   width: 1280px;
   display: inline-block !important;
@@ -214,6 +222,7 @@ $govuk-header-border-color: #00728F !important;
   .participants-names {
     font-size: 14px;
     padding-left: 30px;
+    display: none;
   }
 }
 
