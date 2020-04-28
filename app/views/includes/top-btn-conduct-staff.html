@@ -8,7 +8,31 @@
 <div class="btn-video-top--right">
     <button id="shareScreen" class="govuk-button govuk-button--quiet-navigation" style="margin: 0px 20px 15px 0px; color:#000">Share screen</button>
     <button id="pause" class="govuk-button govuk-button--quiet-navigation" style="margin: 0px 15px 15px 0px; color:#000" onclick="javascript:SwapDivsWithClick('one','two'); myPauseClicked(this)">Pause</button>
-    <button id="finish" class="govuk-button govuk-button--quiet-warning" style="margin: 0" onclick="javascript:SwapDivsFinish('one','three'); myFinishDisabled(finish)">End</button>
+    <!--<button class="govuk-button govuk-button--quiet-warning" style="margin:0" data-toggle="modal" data-target="myModal">End</button>
+
+    <button class="govuk-button--quiet-warning" style="margin:0" data-toggle="modal" data-target="modal-with-form">End</button> -->
+
+    <button class= "govuk-button govuk-button--quiet-warning" onclick="document.getElementById('id01').style.display='block'">End</button>
+
+<dialog id="id01" class="modal" aria-labelledby="end-appointment" aria-describedby="end-confirmation" aria-modal="true" role="alertdialog" tabindex="0" open>
+  <form class="modal-content">
+    <div class="govuk-modal-dialog-header"></div>
+    <div class="modal-container">
+      <h1>End the video appointment?</h1>
+      <p> You will not be able to rejoin and the session will be closed.</p>
+
+      <div class="clearfix">
+          <a href="../end-staff" class="govuk-button" style="margin: 20px 25px 0px 0px; padding-left: 15px; padding-right: 15px">End appointment </a>
+        <button type="button" onClick="document.getElementById('id01').style.display='none'" class="govuk-button govuk-button--secondary" style="margin-top: 20px; padding-left: 15px; padding-right: 15px">Cancel</button>
+      </div>
+    </div>
+  </form>
+</dialog>
+
+
+
+
+  <!--  <button id="finish" class="govuk-button govuk-button--quiet-warning" style="margin: 0" onclick="javascript:SwapDivsFinish('one','three'); myFinishDisabled(finish)">End</button> -->
 
     </div>
 
@@ -42,6 +66,7 @@
   document.getElementById("pause").addEventListener("click", stopTimer);
 
   </script>
+
 
 <!-- <script>
     $(document).ready(function() {
