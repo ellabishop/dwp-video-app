@@ -708,3 +708,17 @@ border:none;
   background-color: #ffdd00;
   color: #0b0c0c;
 }
+
+/* Desktop (width > 1024px) */
+.device-desktop-screen{
+  @media screen and (max-width: 1024px){
+    display: none;
+  }
+}
+
+/* small and Medium sized devices (width < 1024px) */
+.device-small-and-medium-screen{
+  @media screen and (min-width: 1025px){
+    display: none;
+  }
+}
