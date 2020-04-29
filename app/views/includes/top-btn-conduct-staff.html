@@ -16,14 +16,15 @@
 
 <dialog id="id01" class="modal" aria-labelledby="end-appointment" aria-describedby="end-confirmation" aria-modal="true" role="alertdialog" tabindex="0" open>
   <form class="modal-content">
-    <div class="govuk-modal-dialog-header"></div>
+    <div class="govuk-modal-dialog-header"><button type="button" onclick="document.getElementById('id01').style.display='none'" class="govuk-button modal-close" title="Close Modal">×</button></div>
     <div class="modal-container">
       <h1>End the video appointment?</h1>
       <p> You will not be able to rejoin and the session will be closed.</p>
 
       <div class="clearfix">
-          <a href="../end-staff" class="govuk-button" style="margin: 20px 25px 0px 0px; padding-left: 15px; padding-right: 15px">End appointment </a>
         <button type="button" onClick="document.getElementById('id01').style.display='none'" class="govuk-button govuk-button--secondary" style="margin-top: 20px; padding-left: 15px; padding-right: 15px">Cancel</button>
+          <a href="../end-staff" class="govuk-button" style="margin: 20px 25px 0px 25px; padding-left: 15px; padding-right: 15px">End appointment </a>
+
       </div>
     </div>
   </form>
