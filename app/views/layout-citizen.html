@@ -9,4 +9,17 @@
 {% endblock %}
 
 {% block header %}{% include "includes/header-citizen.html" %}{% endblock %}
-{% block footer %}{% endblock %}
+{% block footer %}  {{ govukFooter({
+    meta: {
+      items: [
+        {
+          href: "http://localhost:3001/citizen/help.html",
+          text: "Help"
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  }) }}{% endblock %}
