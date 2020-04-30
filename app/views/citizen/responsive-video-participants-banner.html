@@ -5,15 +5,20 @@
 {% endblock %}
 
 {% block header %}
-<div class="device-desktop-screen">
-    {% include "includes/header-conduct.html" %}
+    <div class="device-desktop-screen">
+        {% include "includes/header-conduct.html" %}
 
-    <div class="dwp-video-header">
-        <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
-            {% include "includes/top-btn--conduct-citizen.html" %}
+        <div class="dwp-video-header">
+            <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
+                {% include "includes/top-btn--conduct-citizen.html" %}
+            </div>
         </div>
     </div>
-</div>
+
+    <div class="device-small-and-medium-screen">
+        <div class="govuk-header__container" style="padding-top: 0;"></div>
+    </div>
+
 {% endblock %}
 
 {% block content %}
@@ -27,13 +32,6 @@
             </div>
         </div>
     </div>
-
-    <div class="dwp-video-header device-small-and-medium-screen">
-        <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
-            {% include "includes/top-btn--conduct-citizen.html" %}
-        </div>
-    </div>
-
 
     <script>
         // Grab elements, create settings, etc.
@@ -52,5 +50,9 @@
                 });
         }
     </script>
+
+{% endblock %}
+
+{% block footer %}
 
 {% endblock %}

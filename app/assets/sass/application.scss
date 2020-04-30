@@ -710,15 +710,16 @@ border:none;
 }
 
 /* Desktop (width > 1024px) */
-.device-desktop-screen{
-  @media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px){
+  .device-desktop-screen{
     display: none;
   }
 }
 
 /* small and Medium sized devices (width < 1024px) */
-.device-small-and-medium-screen{
-  @media screen and (min-width: 1025px){
+@media screen and (min-width: 1025px){
+  .device-small-and-medium-screen{
     display: none;
   }
 }
+
