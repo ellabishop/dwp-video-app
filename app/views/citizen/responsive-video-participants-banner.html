@@ -15,28 +15,28 @@
         </div>
     </div>
 
-    <div class="device-small-and-medium-screen">
+    <!-- <div class="device-small-and-medium-screen">
         <div class="govuk-header__container" style="padding-top: 0;"></div>
-    </div>
+    </div> -->
 
 {% endblock %}
 
 {% block content %}
 
-    <div class="govuk-width-container" style="max-width: 1280px">
-        <div class="video-container">
-            <video id="video" autoplay=""></video> 
-
-            <div class="video-preview">
-                <img src="/public/images/Citizen.png"></div>        
-            </div>
+    <div class="govuk-width-container">
+        
+        <div class="device-small-and-medium-screen" style="max-width: 1280px">
+            <div class="govuk-header__container" style="padding-top: 0;"></div>
         </div>
+
+        <video id="video" autoplay="" ></video>
 
         <div class="device-small-and-medium-screen">
             <div class="dwp-video-header" style="height: auto;">
                 {% include "includes/top-btn--conduct-citizen.html" %}
             </div>
         </div>
+
     </div>
 
     <script>
