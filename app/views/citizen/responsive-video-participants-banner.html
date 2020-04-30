@@ -1,0 +1,56 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Conduct a video appointment
+{% endblock %}
+
+{% block header %}
+<div class="device-desktop-screen">
+    {% include "includes/header-conduct.html" %}
+
+    <div class="dwp-video-header">
+        <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
+            {% include "includes/top-btn--conduct-citizen.html" %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="app-width-container--wide">
+        <div class="video-container">
+            <video id="video" autoplay=""></video> 
+
+            <div class="video-preview">
+                <img src="/public/images/Citizen.png"></div>        
+            </div>
+        </div>
+    </div>
+
+    <div class="dwp-video-header device-small-and-medium-screen">
+        <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
+            {% include "includes/top-btn--conduct-citizen.html" %}
+        </div>
+    </div>
+
+
+    <script>
+        // Grab elements, create settings, etc.
+        var video = document.getElementById('video');
+
+        // Get access to the camera!
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            // Not adding `{ audio: true }` since we only want video now
+            navigator
+                .mediaDevices
+                .getUserMedia({video: true})
+                .then(function (stream) {
+                    //video.src = window.URL.createObjectURL(stream);
+                    video.srcObject = stream;
+                    video.play();
+                });
+        }
+    </script>
+
+{% endblock %}
