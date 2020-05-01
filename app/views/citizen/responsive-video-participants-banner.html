@@ -8,35 +8,25 @@
     <div class="device-desktop-screen">
         {% include "includes/header-conduct.html" %}
 
-        <div class="dwp-video-header">
-            <div class="govuk-width-container" style="max-width: 1280px">
-                {% include "includes/top-btn--conduct-citizen.html" %}
-            </div>
-        </div>
+        {% include "includes/participants-banner.html" %}
     </div>
 
-    <!-- <div class="device-small-and-medium-screen">
+    <div class="device-small-and-medium-screen">
         <div class="govuk-header__container" style="padding-top: 0;"></div>
-    </div> -->
+    </div>
 
 {% endblock %}
 
 {% block content %}
 
     <div class="govuk-width-container">
-        
-        <div class="device-small-and-medium-screen" style="max-width: 1280px">
-            <div class="govuk-header__container" style="padding-top: 0;"></div>
-        </div>
 
-        <video id="video" autoplay="" ></video>
+        <video id="video" autoplay=""></video> 
 
-        <div class="device-small-and-medium-screen">
-            <div class="dwp-video-header" style="height: auto;">
-                {% include "includes/top-btn--conduct-citizen.html" %}
-            </div>
-        </div>
+    </div>
 
+    <div class="device-small-and-medium-screen">
+        {% include "includes/participants-banner.html" %}
     </div>
 
     <script>
