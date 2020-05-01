@@ -722,3 +722,19 @@ border:none;
     display: none;
   }
 }
+
+.participants-header {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  color: #000000;
+  background: #f3f2f1;
+  display: block;
+  padding: 15px 0px 5px 0px;
+  position:relative;
+  height: 50px;
+}
