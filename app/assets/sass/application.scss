@@ -710,18 +710,32 @@ border:none;
 }
 
 /* Desktop (width > 1024px) */
-@media screen and (max-width: 1024px){
-  .device-desktop-screen{
-    display: none;
-  }
-}
+// @media screen and (min-width: 1025px) {
+//   .small-screen--no-display, .medium-screen--no-display{
+//     display: none;
+//   }
+// }
 
 /* small and Medium sized devices (width < 1024px) */
-@media screen and (min-width: 1025px){
-  .device-small-and-medium-screen{
-    display: none;
-  }
-}
+// @media screen and (min-width: 1025px) {
+//   .device-small-and-medium-screen{
+//     display: none;
+//   }
+// }
+
+/* Medium screen devices */
+// @media screen and (max-width: 1024px) and (min-width: 480px) {
+//   .small-screen--no-display, .desktop-screen--no-display{
+//     display: none;
+//   }
+// }
+
+/* Small screen devices (portrait mode) */
+// @media screen and (max-width: 479px){
+//   .medium-screen--no-display, .desktop-screen--no-display{
+//     display: none;
+//   }
+// }
 
 .participants-header {
   font-family: "GDS Transport", Arial, sans-serif;
@@ -737,4 +751,24 @@ border:none;
   padding: 15px 0px 5px 0px;
   position:relative;
   height: 50px;
+}
+
+.responsive-container{
+  position:relative;
+  margin:0;
+  line-height:0;
+  text-align:center;
+}
+
+.selfie-container{
+  width:25%;
+  height:25%;
+  position:absolute !important;
+  bottom:0;
+  right:0;
+}
+
+img{
+  height: 100%;
+  width: 100%;
 }
