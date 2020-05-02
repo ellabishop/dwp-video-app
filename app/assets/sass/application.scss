@@ -709,33 +709,33 @@ border:none;
   color: #0b0c0c;
 }
 
-/* Desktop (width > 1024px) */
-// @media screen and (min-width: 1025px) {
-//   .small-screen--no-display, .medium-screen--no-display{
-//     display: none;
-//   }
-// }
+/* width < 1025px hidden */
+.small-and-medium-screen--no-display {
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
 
-/* small and Medium sized devices (width < 1024px) */
-// @media screen and (min-width: 1025px) {
-//   .device-small-and-medium-screen{
-//     display: none;
-//   }
-// }
+/* width > 1024px hidden */
+.desktop-screen--no-display {
+  @media screen and (min-width: 1025px) {
+    display: none;
+  }
+}
 
-/* Medium screen devices */
-// @media screen and (max-width: 1024px) and (min-width: 480px) {
-//   .small-screen--no-display, .desktop-screen--no-display{
-//     display: none;
-//   }
-// }
+/* width between 480px - 1024px hidden */
+.medium-screen--only {
+  @media screen and (min-width: 1025px), (max-width: 480px) {
+    display: none;
+  }
+}
 
-/* Small screen devices (portrait mode) */
-// @media screen and (max-width: 479px){
-//   .medium-screen--no-display, .desktop-screen--no-display{
-//     display: none;
-//   }
-// }
+/* width > 480px hidden */
+.small-screen--only {
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
+}
 
 .participants-header {
   font-family: "GDS Transport", Arial, sans-serif;
@@ -760,15 +760,21 @@ border:none;
   text-align:center;
 }
 
+.responsive-container video {
+  height: 100%;
+  width: 100%;
+}
+
 .selfie-container{
   width:25%;
   height:25%;
   position:absolute !important;
   bottom:0;
   right:0;
+  border: 2px solid #0b0c0c;
 }
 
-img{
+.selfie-container img{
   height: 100%;
   width: 100%;
 }
