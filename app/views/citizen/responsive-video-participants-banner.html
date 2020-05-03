@@ -5,14 +5,14 @@
 {% endblock %}
 
 {% block header %}
-    <div class="small-and-medium-screen--no-display">
+    <div class="desktop-screen--only">
         {% include "includes/header-conduct.html" %}
 
         {% include "includes/top-participants-banner.html" %}
     </div>
 
-    <div class="desktop-screen--no-display">
-        <div class="govuk-header__container" style="padding-top: 0;"></div>
+    <div class="small-and-medium-screen--only">
+        <div class="govuk-header__container" style="padding-top: 0; margin-bottom: -20px;"></div>
     </div>
 
 {% endblock %}
@@ -29,7 +29,7 @@
         </div>
     </div>
 
-    <div class="desktop-screen--no-display" style="text-align: center;">
+    <div class="small-and-medium-screen--only" style="text-align: center;">
         {% include "includes/top-participants-banner.html" %}
     </div>
 
