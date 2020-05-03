@@ -723,7 +723,7 @@ border:none;
   }
 }
 
-/* width < 480px and width > 1024px hidden */
+/* width < 480px or width > 1024px hidden */
 .medium-screen--only {
   @media screen and (min-width: 1025px), (max-width: 480px) {
     display: none;
@@ -759,30 +759,4 @@ border:none;
   padding: 15px 0px 5px 0px;
   position:relative;
   height: 50px;
-}
-
-.responsive-container{
-  position:relative;
-  margin:0;
-  line-height:0;
-  text-align:center;
-}
-
-.responsive-container video {
-  height: 100%;
-  width: 100%;
-}
-
-.selfie-container{
-  width:25%;
-  height:25%;
-  position:absolute !important;
-  bottom:0;
-  right:0;
-  border: 2px solid #0b0c0c;
-}
-
-.selfie-container img{
-  height: 100%;
-  width: 100%;
 }

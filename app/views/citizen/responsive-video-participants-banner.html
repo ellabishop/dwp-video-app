@@ -5,10 +5,10 @@
 {% endblock %}
 
 {% block header %}
+
     <div class="desktop-screen--only">
         {% include "includes/header-conduct.html" %}
-
-        {% include "includes/top-participants-banner.html" %}
+        {% include "includes/participants-banner.html" %}
     </div>
 
     <div class="small-and-medium-screen--only">
@@ -29,8 +29,12 @@
         </div>
     </div>
 
-    <div class="small-and-medium-screen--only" style="text-align: center;">
-        {% include "includes/top-participants-banner.html" %}
+    <div class="medium-screen--only">
+        {% include "includes/participants-banner.html" %}
+    </div>
+
+    <div class="small-screen--only">
+        {% include "includes/participants-banner--small-screen.html" %}
     </div>
 
     <script>
