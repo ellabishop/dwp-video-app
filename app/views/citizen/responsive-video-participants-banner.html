@@ -6,12 +6,12 @@
 
 {% block header %}
 
-    <div class="desktop-screen--only">
+    <div class="small-and-medium-screen--no-display">
         {% include "includes/header-conduct.html" %}
         {% include "includes/participants-banner.html" %}
     </div>
 
-    <div class="small-and-medium-screen--only">
+    <div class="desktop-screen--no-display">
         <div class="govuk-header__container" style="padding-top: 0; margin-bottom: -20px;"></div>
     </div>
 
@@ -20,26 +20,29 @@
 {% block content %}
 
     <div class="govuk-width-container">
+
         <div class="responsive-container">
             <video id="video" autoplay=""></video> 
-    
+
             <div class="selfie-container">
                 <img src="/public/images/Citizen.png"></img>        
             </div>
         </div>
-    </div>
 
-    <div class="medium-screen--only">
-        {% include "includes/participants-banner.html" %}
-    </div>
+        <div class="medium-screen--only">
+            {% include "includes/participants-banner.html" %}
+        </div>
+        
+        <div class="small-screen--only">
+            {% include "includes/participants-banner--small-screen.html" %}
+        </div>
 
-    <div class="small-screen--only">
-        {% include "includes/participants-banner--small-screen.html" %}
     </div>
 
     <script>
         // Grab elements, create settings, etc.
         var video = document.getElementById('video');
+        var portraitVideo = document.getElementById('portrait_video');
 
         // Get access to the camera!
         if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
@@ -51,14 +54,11 @@
                     //video.src = window.URL.createObjectURL(stream);
                     video.srcObject = stream;
                     video.play();
+
+                    portraitVideo.srcObject = stream;
+                    portraitVideo.play();
                 });
         }
     </script>
-
-{% endblock %}
-
-{% block footer %}
-
-
 
 {% endblock %}
