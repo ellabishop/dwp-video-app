@@ -749,7 +749,6 @@ border:none;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 19px;
-  font-size: 0.875rem;
   line-height: 1.14286;
   color: #000000;
   background: #f3f2f1;
@@ -815,9 +814,6 @@ border:none;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  text-align: center;
-  justify-self: center;
-  justify-items: center;
 
   video {
     height: 100%;
@@ -825,7 +821,7 @@ border:none;
 
     /* fill the screen for devices with screen width < 1024px */
     @media screen and (max-width: 1024px) {
-      height: calc(100vh - 100px);
+      height: calc(100vh - 150px);
       width: 100%;
       object-fit: cover;
     }
