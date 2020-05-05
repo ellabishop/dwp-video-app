@@ -22,7 +22,7 @@
                 <video id="video" autoplay=""></video>
 
                 <div class="flex-selfie-container">
-                    <img src="/public/images/Citizen.png"></img>
+                    <video id="selfie-video" autoplay=""></video>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
     <script>
         // Grab elements, create settings, etc.
         var video = document.getElementById('video');
-        var portraitVideo = document.getElementById('portrait_video');
+        var selfieVideo = document.getElementById('selfie-video');
 
         // Get access to the camera!
         if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
@@ -53,8 +53,8 @@
                     video.srcObject = stream;
                     video.play();
 
-                    portraitVideo.srcObject = stream;
-                    portraitVideo.play();
+                    selfieVideo.srcObject = stream;
+                    selfieVideo.play();
                 });
         }
     </script>

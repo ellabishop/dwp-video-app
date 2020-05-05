@@ -819,11 +819,20 @@ border:none;
     height: 100%;
     width: 100%;
 
-    /* fill the screen for devices with screen width < 1024px */
-    @media screen and (max-width: 1024px) {
-      height: calc(100vh - 190px);
+    /* make the video cover the screen for small and medium devices */
+    @media screen and (max-width : 1024px) {
       width: 100%;
       object-fit: cover;
+    }
+
+    /* adjust video height for medium devices */
+    @media screen and (min-width : 480px) and (max-width: 1024px) {
+      height: calc(100vh - 150px);
+    }
+
+    /* adjust video height for small devices */
+    @media screen and (max-width: 480px) {
+      height: calc(100vh - 180px);
     }
   }
 }
@@ -843,7 +852,7 @@ border:none;
     right: 0;
   }
 
-  img{
+  video{
     height: 100%;
     width: 100%;
   }
