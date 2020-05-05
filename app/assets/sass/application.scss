@@ -819,26 +819,20 @@ border:none;
     height: 100%;
     width: 100%;
 
-    /* fill the screen for devices with screen width < 1024px */
-    @media screen and (max-width: 480px) {
-
-      @media screen and (orientation: portrait) {
-        height: calc(100vh - 190px);
-      }
-
-      @media screen and (orientation: landscape) {
-        height: calc(100vh - 170px);
-      }
-      
+    /* cover the screen with the video for devices with screen width < 1024px */
+    @media screen and (max-width: 1024px) {
       width: 100%;
       object-fit: cover;
     }
 
+    /* adjust video height on small devices on portrait mode */
+    @media screen and (max-width: 480px) and (orientation: portrait) {
+      height: calc(100vh - 190px);
+    }
 
-    @media screen and (min-width : 480px) and (max-width: 1024px) {
+    /* adjust the video height on small devices on landscape mode */
+    @media screen and (max-width: 480px) and (orientation: landscape) {
       height: calc(100vh - 170px);
-      width: 100%;
-      object-fit: cover;
     }
   }
 }
