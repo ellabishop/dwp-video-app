@@ -810,6 +810,10 @@ border:none;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (max-width: 1024px) {
+    border-top: 10px solid #00728F !important;
+  }
 }
 
 .flex-responsive-container {
@@ -836,7 +840,7 @@ border:none;
   }
 }
 
-.flex-selfie-container{
+.flex-selfie-container {
   width: 25%;
   height: 25%;
   position: absolute !important;
