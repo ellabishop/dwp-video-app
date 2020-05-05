@@ -820,8 +820,23 @@ border:none;
     width: 100%;
 
     /* fill the screen for devices with screen width < 1024px */
-    @media screen and (max-width: 1024px) {
-      height: calc(100vh - 190px);
+    @media screen and (max-width: 480px) {
+
+      @media screen and (orientation: portrait) {
+        height: calc(100vh - 190px);
+      }
+
+      @media screen and (orientation: landscape) {
+        height: calc(100vh - 170px);
+      }
+      
+      width: 100%;
+      object-fit: cover;
+    }
+
+
+    @media screen and (min-width : 480px) and (max-width: 1024px) {
+      height: calc(100vh - 170px);
       width: 100%;
       object-fit: cover;
     }
