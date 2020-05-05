@@ -820,17 +820,13 @@ border:none;
     width: 100%;
 
     /* adjust video height on portrait mode */
-    @media screen and (max-width: 1024px) and (orientation: portrait) {
-      height: calc(100vh - 190px);
+    @media screen and (max-width: 1024px) {
       width: 100%;
       object-fit: cover;
     }
 
-    /* adjust vide height on landscape mode */
-    @media screen and (max-width: 1024px) and (orientation: landscape) {
-      height: calc(100vh - 170px);
-      width: 100%;
-      object-fit: cover;
+    @media screen and (max-width: 480px) {
+      height: calc(100vh - 180px);
     }
   }
 }
