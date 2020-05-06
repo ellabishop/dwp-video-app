@@ -15,7 +15,7 @@
 
 {% block content %}
 
-    <div class="main-content-flex-box">
+<!--     <div class="main-content-flex-box">
 
         <div class="flex-responsive-container">
             <div class="flex-video-container">
@@ -35,6 +35,30 @@
             {% include "includes/status-bar--small-screen.html" %}
         </div>
 
+    </div> -->
+
+    <div class="flex-container">
+
+        <div class="item-video flex-responsive-container">
+            <video id="video" autoplay=""></video>
+    
+            <div class="flex-selfie-container">
+                <video id="selfie-video" autoplay=""></video>
+            </div>
+        </div>
+    
+        <div class="small-screen--only">
+            <div class="footer-small-screen footer-background">
+                <div>
+                    <strong>David Smith </strong>connected to <strong>Jane</strong>
+                </div>
+            
+                <div>
+                    <button class="govuk-button govuk-button--quiet-navigation" style="color:#000; font-size: 19px; width: 90%;" >Pause</button>
+                </div>
+            </div>
+        </div>
+    
     </div>
 
     <script>
