@@ -827,12 +827,12 @@ border:none;
 
     /* adjust video height for medium devices */
     @media screen and (min-width : 480px) and (max-width: 1024px) {
-      height: calc(100vh - 80px);
+      height: calc(100vh - 100px);
     }
 
     /* adjust video height for small devices */
     @media screen and (max-width: 480px) {
-      height: calc(100vh - 110px);
+      height: calc(100vh - 130px);
     }
   }
 }
