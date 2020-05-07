@@ -1,9 +1,9 @@
 .video-banner {
-    @media (max-height: 500px) { 
+    @media (max-height: 500px) {
       display: none;
      }
   }
-  
+
   .video-container {
     position: relative;
     height: calc(100vh - 200px);
@@ -11,12 +11,12 @@
     max-width: 1280px;
     margin: auto;
   }
-  
+
   video {
     height: 100%;
     width: 100%;
   }
-  
+
   .video-preview{
     position: absolute;
     bottom: 0;
@@ -28,12 +28,12 @@
       border: 2px solid #0b0c0c;
       width: auto;
       height: 100%;
-      @media (orientation: landscape) { 
+      @media (orientation: landscape) {
         width: auto;
         height: 100%;
        }
 
-      @media (orientation: portrait) { 
+      @media (orientation: portrait) {
         width: 100%;
         height: auto;
       }
