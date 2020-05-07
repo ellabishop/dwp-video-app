@@ -730,14 +730,14 @@ border:none;
 }
 
 /* width < 480px or width > 1024px */
-@media screen and (min-width: 1025px), (max-width: 480px) {
+@media screen and (min-width: 1025px), (max-width: 479px) {
   .medium-screen--only {
     display: none;
   }
 }
 
 /* width > 480px */
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 480px) {
   .small-screen--only {
     display: none;
   }
@@ -786,11 +786,6 @@ border:none;
   border: 2px solid #0b0c0c;
   object-fit: contain;
 
-  /* adjust selfie container position for medium devices*/
-  @media screen and (min-width : 480px) and (max-width: 1024px) {
-    top: 10px;
-    right: 0;
-  }
 
   video {
     height: 100%;
