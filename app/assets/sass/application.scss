@@ -853,7 +853,7 @@ border:none;
 }
 
 /* small screen on landscape */
-@media screen and (max-width: 479px) and (orientation: landscape) {
+@media screen and (max-height: 479px) and (orientation: landscape) {
   html {
     /* Rotate the content container */
     transform: rotate(-90deg);
@@ -867,24 +867,6 @@ border:none;
     top: 100%;
     left: 0;
   }
-
-  .flex-container {
-    height: 100vw;
-  }
-
-  .footer-small-screen {
-    height: 20vw;
-  }
-
-  .item-video {
-    border-top: 10px solid #00728F !important;
-    height: calc(80vw - 10px);
-  
-    video {
-      object-fit: cover;
-    }
-  }
-
 }
 
 /* medium screen */
