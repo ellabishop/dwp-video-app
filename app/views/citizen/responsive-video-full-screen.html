@@ -15,7 +15,7 @@
 
 {% block content %}
 
-    <div class="flex-container">
+<!--     <div class="flex-container">
 
         <div class="flex-responsive-container">
             <div class="item-video">
@@ -51,6 +51,27 @@
             </div>
         </div>
 
+    </div> -->
+
+    <div class="module">
+
+        <div class="module__item flex-responsive-container">
+
+            <video id="video" autoplay=""></video>
+
+            <div class="flex-selfie-container">
+                <video id="selfie-video" autoplay="" style="object-fit: cover;"></video>
+            </div>
+
+        </div>
+
+        <div class="module__item">
+            <div>
+                <strong>David Smith </strong>connected to <strong>Jane</strong>
+            </div>
+            <button>Pause</button>
+        </div>
+
     </div>
 
     <script>
@@ -73,6 +94,17 @@
                     selfieVideo.play();
                 });
         }
+    </script>
+
+    <script>
+        
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+        window.addEventListener('resize', () => {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
     </script>
 
 {% endblock %}

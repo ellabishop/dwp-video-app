@@ -799,8 +799,6 @@ border:none;
   height: 100vh;
   min-height: 320px;
   min-width: 320px;
-  height: -moz-available;          /* WebKit-based browsers will ignore this. */
-  height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
  
   @media screen and (max-width: 1024px) {
     max-width: 1024px; //for smaller devices remove white spaces around it
@@ -844,6 +842,7 @@ border:none;
   color: #000000;
   background: #f3f2f1;
   text-align: center;
+  width: 100%;
 }
 
 /* small screen portrait */
@@ -886,3 +885,93 @@ border:none;
     }
   }
 }
+
+/* window.innerHeight test */
+
+.module {
+  margin: 0 auto;
+  min-height: 320px;
+  min-width: 320px;
+ 
+  @media screen and (max-width: 1024px) {
+    max-width: 1024px; //for smaller devices remove white spaces around it
+    height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
+  @media screen and (min-width : 1025px) {
+    max-width: 960px; //keep all the top banner, status bar and video aligned on desktop
+    margin: 0 auto;
+  }
+}
+
+.module__item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.module__item:nth-child(1) {
+  @media screen and (max-width: 479px) {
+    border-top: 5px solid #00728F !important;
+    height: calc(80% - 5px);
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1024px) {
+    border-top: 10px solid #00728F !important;
+    height: calc(85% - 10px);
+  }
+
+  video {
+    @media screen and (max-width: 1024px) {
+      object-fit: cover;
+    }
+  }
+}
+
+.module__item:nth-child(2) {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.14286;
+  color: #000000;
+  background: #f3f2f1;
+  text-align: center;
+  justify-content: space-evenly;
+
+  @media screen and (max-width: 479px) {
+    height: 20%;
+    flex-direction: column;
+
+    button {
+      width: 90%;
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1024px) {
+    height: 15%;
+    flex-direction: row;
+
+    button {
+      height: 50%;
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    display: none;
+  }
+
+  button {
+    background: transparent;
+    background-color: #ffffff !important;
+    border-color: #0b0c0c;
+    border: #0b0c0c 1px solid;
+    color: #0b0c0c !important;
+    box-shadow: 0 1px 0 #0b0c0c;
+    font-size: 19px;
+  }
+}
+
+/* *********** */
