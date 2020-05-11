@@ -62,12 +62,13 @@
 
         async function lockPortraitMode() {
             try {
-                await screen.orientation.lock("portrait-primary");
-                alert("Portrait mode locked!"); // Debug
+                await screen.orientation.lock('portrait-primary');
+                alert('Portrait mode locked!'); // Debug
             } 
             
             catch (err) {
                 console.log(err); // Debug
+                alert('Please switch to portrait mode manually!'); // Debug
             }
         }
 
@@ -85,7 +86,7 @@
         }
 
         configureViewportHeight(); // Configure the custome viewport property.
-        window.addEventListener("load", checkCurrentWidth);
+        window.addEventListener('load', checkCurrentWidth);
         window.addEventListener('resize', () => {
             checkCurrentWidth();
             configureViewportHeight();
