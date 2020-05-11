@@ -730,14 +730,14 @@ border:none;
 }
 
 /* width < 480px or width > 1024px */
-@media screen and (min-width: 1025px), (max-width: 480px) {
+@media screen and (min-width: 1025px), (max-width: 479px) {
   .medium-screen--only {
     display: none;
   }
 }
 
 /* width > 480px */
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 480px) {
   .small-screen--only {
     display: none;
   }
@@ -786,11 +786,6 @@ border:none;
   border: 2px solid #0b0c0c;
   object-fit: contain;
 
-  /* adjust selfie container position for medium devices*/
-  @media screen and (min-width : 480px) and (max-width: 1024px) {
-    top: 10px;
-    right: 0;
-  }
 
   video {
     height: 100%;
@@ -799,59 +794,46 @@ border:none;
 }
 
 .flex-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  margin: 0 auto;
   min-height: 320px;
   min-width: 320px;
-  max-width: 960px;
+ 
+  @media screen and (max-width: 1024px) {
+    max-width: 1024px; //For smaller devices remove white spaces around it.
+    height: calc(var(--vh, 1vh) * 100); //Use vh as a fallback for browsers that do not support Custom Properties.
+  }
 
   @media screen and (min-width : 1025px) {
+    max-width: 960px; //Keep all the top banner, status bar and video aligned on desktop screen.
     margin: 0 auto;
   }
 }
 
-.item-video {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-
-  @media screen and (max-width: 480px) {
-    border-top: 10px solid #00728F !important;
-    height: calc(80vh - 10px);
-
-    video {
-      object-fit: cover;
-    }
-  }
-
-  @media screen and (min-width: 481px) and (max-width: 1024px) {
-    border-top: 10px solid #00728F !important;
-    height: calc(85vh - 10px);
-
-    video {
-      object-fit: cover;
-    }
-  }
-}
-
-.footer-small-screen {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 20vh;
-  width: 100%;
-}
-
-.footer-medium-screen {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+.flex-item {
   align-items: center;
-  height: 15vh;
+  display: flex;
+  justify-content: center;
 }
 
-.footer-background {
+.flex-item:nth-child(1) {
+  @media screen and (max-width: 479px) {
+    border-top: 5px solid #00728F !important;
+    height: calc(80% - 5px);
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1024px) {
+    border-top: 10px solid #00728F !important;
+    height: calc(85% - 10px);
+  }
+
+  video {
+    @media screen and (max-width: 1024px) {
+      object-fit: cover;
+    }
+  }
+}
+
+.flex-item:nth-child(2) {
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -861,4 +843,38 @@ border:none;
   color: #000000;
   background: #f3f2f1;
   text-align: center;
+  justify-content: space-evenly;
+
+  button {
+    background: transparent;
+    background-color: #ffffff !important;
+    border-color: #0b0c0c;
+    border: #0b0c0c 1px solid;
+    color: #0b0c0c !important;
+    box-shadow: 0 1px 0 #0b0c0c;
+    font-size: 19px;
+  }
+
+  @media screen and (max-width: 479px) {
+    height: 20%;
+    flex-direction: column;
+
+    button {
+      width: 90%;
+      height: 30%
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1024px) {
+    height: 15%;
+    flex-direction: row;
+
+    button {
+      height: 50%;
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    display: none;
+  }
 }
