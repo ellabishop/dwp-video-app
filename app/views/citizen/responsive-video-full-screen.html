@@ -15,47 +15,9 @@
 
 {% block content %}
 
-<!--     <div class="flex-container">
+    <div class="flex-container">
 
-        <div class="flex-responsive-container">
-            <div class="item-video">
-                <video id="video" autoplay=""></video>
-
-                <div class="flex-selfie-container">
-                    <video id="selfie-video" autoplay=""></video>
-                </div>
-            </div>
-        </div>
-
-        <div class="medium-screen--only">
-            <div class="footer-medium-screen footer-background">
-                <div>
-                    <strong>David Smith </strong>connected to <strong>Jane</strong>
-                </div>
-            
-                <div>
-                    <button id="pause" class="govuk-button govuk-button--quiet-navigation" style="color:#000; font-size: 19px; margin-top: 15px;">Pause</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="small-screen--only">
-            <div class="footer-small-screen footer-background">
-                <div>
-                    <strong>David Smith </strong>connected to <strong>Jane</strong>
-                </div>
-            
-                <div>
-                    <button class="govuk-button govuk-button--quiet-navigation" style="color:#000; font-size: 19px; width: 90%;" >Pause</button>
-                </div>
-            </div>
-        </div>
-
-    </div> -->
-
-    <div class="module">
-
-        <div class="module__item flex-responsive-container">
+        <div class="flex-item flex-responsive-container">
 
             <video id="video" autoplay=""></video>
 
@@ -65,7 +27,7 @@
 
         </div>
 
-        <div class="module__item">
+        <div class="flex-item">
             <div>
                 <strong>David Smith </strong>connected to <strong>Jane</strong>
             </div>
@@ -97,14 +59,25 @@
     </script>
 
     <script>
-        
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-        window.addEventListener('resize', () => {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        });
+        function configureViewportHeight(){
+            let vh = window.innerHeight * 0.01; //Get inner height of the window and multiply it by 1% to get one unit of vh.
+            document.documentElement.style.setProperty('--vh', `${vh}px`); //Create a custom variable "--vh" to hold the value to be used.
+        }
+
+        configureViewportHeight(); //Configure the custome viewport property.
+        window.addEventListener('resize', configureViewportHeight); //Listen to resize event and fire the above function.
+        
+    </script>
+
+    <script>
+
+        let vw = window.innerWidth;
+
+        if(vw < 480){
+            //ToDo portrait lock
+        }
+
     </script>
 
 {% endblock %}

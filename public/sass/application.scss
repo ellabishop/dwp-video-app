@@ -793,114 +793,18 @@ border:none;
   }
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  min-height: 320px;
-  min-width: 320px;
- 
-  @media screen and (max-width: 1024px) {
-    max-width: 1024px; //for smaller devices remove white spaces around it
-  }
-
-  @media screen and (min-width : 1025px) {
-    max-width: 960px; //keep all the top banner, status bar and video aligned on desktop
-    margin: 0 auto;
-  }
-}
-
-.item-video {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
-
-.footer-small-screen {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 20vh;
-  width: 100%;
-}
-
-.footer-medium-screen {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 15vh;
-}
-
-.footer-background {
-  font-family: "GDS Transport", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 19px;
-  line-height: 1.14286;
-  color: #000000;
-  background: #f3f2f1;
-  text-align: center;
-  width: 100%;
-}
-
-/* small screen portrait */
-@media screen and (max-width: 479px) /* and (orientation: portrait) */  {
-  .item-video {
-    border-top: 10px solid #00728F !important;
-    height: calc(80vh - 10px);
-  
-    video {
-      object-fit: cover;
-    }
-  }
-}
-
-/* small screen on landscape */
-// @media screen and (max-height: 479px) and (orientation: landscape) {
-//   html {
-//     /* Rotate the content container */
-//     transform: rotate(-90deg);
-//     transform-origin: left top;
-//     /* Set content width to viewport height */
-//     width: 100vh;
-//     /* Set content height to viewport width */
-//     height: 100vw;
-//     overflow-x: hidden;
-//     position: absolute;
-//     top: 100%;
-//     left: 0;
-//   }
-// }
-
-/* medium screen */
-@media screen and (min-width: 480px) and (max-width: 1024px) {
-  .item-video {
-    border-top: 10px solid #00728F !important;
-    height: calc(85vh - 10px);
-  
-    video {
-      object-fit: cover;
-    }
-  }
-}
-
-/* test */
-
 .module {
-  height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
   margin: 0 auto;
   min-height: 320px;
   min-width: 320px;
  
   @media screen and (max-width: 1024px) {
-    max-width: 1024px; //for smaller devices remove white spaces around it
+    max-width: 1024px; //For smaller devices remove white spaces around it.
+    height: calc(var(--vh, 1vh) * 100); //Use vh as a fallback for browsers that do not support Custom Properties.
   }
 
   @media screen and (min-width : 1025px) {
-    max-width: 960px; //keep all the top banner, status bar and video aligned on desktop
+    max-width: 960px; //Keep all the top banner, status bar and video aligned on desktop screen.
     margin: 0 auto;
   }
 }
@@ -912,11 +816,24 @@ border:none;
 }
 
 .module__item:nth-child(1) {
-  height: 80%;
+  @media screen and (max-width: 479px) {
+    border-top: 5px solid #00728F !important;
+    height: calc(80% - 5px);
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1024px) {
+    border-top: 10px solid #00728F !important;
+    height: calc(85% - 10px);
+  }
+
+  video {
+    @media screen and (max-width: 1024px) {
+      object-fit: cover;
+    }
+  }
 }
 
 .module__item:nth-child(2) {
-  height: 20%;
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -926,7 +843,38 @@ border:none;
   color: #000000;
   background: #f3f2f1;
   text-align: center;
-  width: 100%;
-}
+  justify-content: space-evenly;
 
-/* *********** */
+  button {
+    background: transparent;
+    background-color: #ffffff !important;
+    border-color: #0b0c0c;
+    border: #0b0c0c 1px solid;
+    color: #0b0c0c !important;
+    box-shadow: 0 1px 0 #0b0c0c;
+    font-size: 19px;
+  }
+
+  @media screen and (max-width: 479px) {
+    height: 20%;
+    flex-direction: column;
+
+    button {
+      width: 90%;
+      height: 20%
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1024px) {
+    height: 15%;
+    flex-direction: row;
+
+    button {
+      height: 50%;
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    display: none;
+  }
+}
