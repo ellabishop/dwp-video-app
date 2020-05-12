@@ -17,38 +17,21 @@
 
     <div class="flex-container">
 
-        <div class="flex-responsive-container">
-            <div class="item-video">
-                <video id="video" autoplay=""></video>
+        <div class="flex-item flex-responsive-container">
 
-                <div class="flex-selfie-container">
-                    <video id="selfie-video" autoplay=""></video>
-                </div>
+            <video id="video" autoplay=""></video>
+
+            <div class="flex-selfie-container">
+                <video id="selfie-video" autoplay="" style="object-fit: cover;"></video>
             </div>
+
         </div>
 
-        <div class="medium-screen--only">
-            <div class="footer-medium-screen footer-background">
-                <div>
-                    <strong>David Smith </strong>connected to <strong>Jane</strong>
-                </div>
-            
-                <div>
-                    <button id="pause" class="govuk-button govuk-button--quiet-navigation" style="color:#000; font-size: 19px; margin-top: 15px;">Pause</button>
-                </div>
+        <div class="flex-item">
+            <div>
+                <strong>David Smith </strong>connected to <strong>Jane</strong>
             </div>
-        </div>
-
-        <div class="small-screen--only">
-            <div class="footer-small-screen footer-background">
-                <div>
-                    <strong>David Smith </strong>connected to <strong>Jane</strong>
-                </div>
-            
-                <div>
-                    <button class="govuk-button govuk-button--quiet-navigation" style="color:#000; font-size: 19px; width: 90%;" >Pause</button>
-                </div>
-            </div>
+            <button>Pause</button>
         </div>
 
     </div>
@@ -73,6 +56,41 @@
                     selfieVideo.play();
                 });
         }
+    </script>
+
+    <script>
+
+        async function lockPortraitMode() {
+            try {
+                await screen.orientation.lock('portrait-primary');
+                alert('Portrait mode locked!'); // Debug
+            } 
+            
+            catch (err) {
+                console.log(err); // Debug
+            }
+        }
+
+        function checkCurrentWidth() {
+            const vw = window.innerWidth;
+
+            if (window.innerWidth < 480) {
+                lockPortraitMode();
+            }
+        }
+
+        function configureViewportHeight() {
+            const vh = window.innerHeight * 0.01; // Get inner height of the window and multiply it by 1% to get one unit of vh.
+            document.documentElement.style.setProperty('--vh', `${vh}px`); // Set the value in the "--vh" custom property to the root of the document
+        }
+
+        configureViewportHeight(); // Configure the custome viewport property.
+        window.addEventListener('load', checkCurrentWidth);
+        window.addEventListener('resize', () => {
+            checkCurrentWidth();
+            configureViewportHeight();
+        }); // Listen to resize event and fire the above function.
+        
     </script>
 
 {% endblock %}
