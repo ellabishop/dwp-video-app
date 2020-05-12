@@ -737,7 +737,7 @@ border:none;
 }
 
 /* width > 480px */
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 480px) {
   .small-screen--only {
     display: none;
   }
@@ -793,11 +793,11 @@ border:none;
   }
 }
 
-.module {
+.flex-container {
   margin: 0 auto;
   min-height: 320px;
   min-width: 320px;
-
+ 
   @media screen and (max-width: 1024px) {
     max-width: 1024px; //For smaller devices remove white spaces around it.
     height: calc(var(--vh, 1vh) * 100); //Use vh as a fallback for browsers that do not support Custom Properties.
@@ -809,13 +809,13 @@ border:none;
   }
 }
 
-.module__item {
+.flex-item {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
-.module__item:nth-child(1) {
+.flex-item:nth-child(1) {
   @media screen and (max-width: 479px) {
     border-top: 5px solid #00728F !important;
     height: calc(80% - 5px);
@@ -833,7 +833,7 @@ border:none;
   }
 }
 
-.module__item:nth-child(2) {
+.flex-item:nth-child(2) {
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -861,7 +861,7 @@ border:none;
 
     button {
       width: 90%;
-      height: 20%
+      height: 30%
     }
   }
 
