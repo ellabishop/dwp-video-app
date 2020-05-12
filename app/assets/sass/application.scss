@@ -793,6 +793,7 @@ border:none;
   }
 }
 
+/* Video and status bar container */
 .flex-container {
   margin: 0 auto;
   min-height: 320px;
@@ -809,12 +810,14 @@ border:none;
   }
 }
 
+/* Container item */
 .flex-item {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
+/* Video element */
 .flex-item:nth-child(1) {
   @media screen and (max-width: 479px) {
     border-top: 5px solid #00728F !important;
@@ -833,6 +836,7 @@ border:none;
   }
 }
 
+/* Status bar */
 .flex-item:nth-child(2) {
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

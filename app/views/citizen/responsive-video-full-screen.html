@@ -60,36 +60,13 @@
 
     <script>
 
-        async function lockPortraitMode() {
-            try {
-                await screen.orientation.lock('portrait-primary');
-                alert('Portrait mode locked!'); // Debug
-            } 
-            
-            catch (err) {
-                console.log(err); // Debug
-            }
-        }
-
-        function checkCurrentWidth() {
-            const vw = window.innerWidth;
-
-            if (window.innerWidth < 480) {
-                lockPortraitMode();
-            }
-        }
-
         function configureViewportHeight() {
             const vh = window.innerHeight * 0.01; // Get inner height of the window and multiply it by 1% to get one unit of vh.
             document.documentElement.style.setProperty('--vh', `${vh}px`); // Set the value in the "--vh" custom property to the root of the document
         }
 
         configureViewportHeight(); // Configure the custome viewport property.
-        window.addEventListener('load', checkCurrentWidth);
-        window.addEventListener('resize', () => {
-            checkCurrentWidth();
-            configureViewportHeight();
-        }); // Listen to resize event and fire the above function.
+        window.addEventListener('resize', configureViewportHeight); // Listen to resize event and fire the above function.
         
     </script>
 
