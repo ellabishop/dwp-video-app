@@ -1,0 +1,79 @@
+
+
+<div class="btn-video-top">
+  <div class="participants-names">
+<strong> Luke Smith</strong>:  <label id="minutes">00</label>:<label id="seconds">00  </label>
+  </div>
+<div class="btn-video-top--right">
+  <!--  <button id="shareScreen" class="govuk-button govuk-button--quiet-navigation" style="margin: 0px 20px 15px 0px; color:#000">Share screen</button>
+    <button id="pause" class="govuk-button govuk-button--quiet-navigation" style="margin: 0px 15px 15px 0px; color:#000" onclick="javascript:SwapDivsWithClick('one','two'); myPauseClicked(this)">Pause</button>
+    <!--<button class="govuk-button govuk-button--quiet-warning" style="margin:0" data-toggle="modal" data-target="myModal">End</button> -->
+
+    <button class= "govuk-button govuk-button--quiet-warning" onclick="document.getElementById('id01').style.display='block'">End</button>
+
+<dialog id="id01" class="modal" aria-labelledby="end-appointment" aria-describedby="end-confirmation" aria-modal="true" role="alertdialog" tabindex="0" open>
+  <form class="modal-content">
+    <div class="govuk-modal-dialog-header"><button type="button" onclick="document.getElementById('id01').style.display='none'" class="govuk-button modal-close" title="Cancel">×</button></div>
+    <div class="modal-container">
+      <h1>End the video appointment?</h1>
+      <p> You will not be able to rejoin and the session will be closed.</p>
+
+      <div class="clearfix">
+          <a href="end-staff" class="govuk-button" style="margin-bottom: 0">End appointment </a>
+          <a href onClick="document.getElementById('id01').style.display='none'" style="display: inline-block; margin: 7px 0 0 20px" class="govuk-body govuk-link--no-visited-state">Cancel</a>
+
+      </div>
+    </div>
+  </form>
+</dialog>
+
+
+  <!--  <button id="finish" class="govuk-button govuk-button--quiet-warning" style="margin: 0" onclick="javascript:SwapDivsFinish('one','three'); myFinishDisabled(finish)">End</button> -->
+
+    </div>
+
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/staff-timer.js"></script>
+
+
+</div>
+
+<script>
+
+  function myPauseClicked(this)
+  {
+     this.disabled = true;
+
+</script>
+
+<script>
+
+  function myFinishDisabled(el)
+  {
+    el.disabled = true;
+  }
+</script>
+
+<script>
+  function stopTimer() {
+    if (a) clearInterval(a);
+    a = null;
+  }
+  document.getElementById("pause").addEventListener("click", stopTimer);
+
+  </script>
+
+
+<!-- <script>
+    $(document).ready(function() {
+
+      var txt = $("<div class='red-paused'></div>").html("&nbsp Paused");
+
+      $("#pause").click(function(){
+
+      $(".participants-names").append(txt);
+
+    });
+
+  });
+</script> -->

@@ -1,0 +1,51 @@
+<div class="btn-video-top">
+
+
+  </div>
+<div class="btn-video-top--right">
+
+
+    </div>
+
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/staff-timer.js"></script>
+
+
+</div>
+
+<script>
+
+  function myPauseClicked(el)
+  {
+      el.disabled = true;
+  }
+
+  function myFinishDisabled(el)
+  {
+    el.disabled = true;
+  }
+
+</script>
+
+<script>
+  function stopTimer() {
+    if (a) clearInterval(a);
+    a = null;
+  }
+  document.getElementById("pause").addEventListener("click", stopTimer);
+
+  </script>
+
+<!-- <script>
+    $(document).ready(function() {
+
+      var txt = $("<div class='red-paused'></div>").html("&nbsp Paused");
+
+      $("#pause").click(function(){
+
+      $(".participants-names").append(txt);
+
+    });
+
+  });
+</script> -->

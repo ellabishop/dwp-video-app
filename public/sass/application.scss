@@ -212,7 +212,7 @@ $govuk-header-border-color: #00728F !important;
   font-size: 19px;
   padding-top: 7.5px;
   color: #000000;
-  width: 50%;
+  width: 70%;
   text-align: left !important;
   float: left !important;
 }
@@ -798,7 +798,7 @@ border:none;
   margin: 0 auto;
   min-height: 320px;
   min-width: 320px;
- 
+
   @media screen and (max-width: 1024px) {
     max-width: 1024px; //For smaller devices remove white spaces around it.
     height: calc(var(--vh, 1vh) * 100); //Use vh as a fallback for browsers that do not support Custom Properties.
