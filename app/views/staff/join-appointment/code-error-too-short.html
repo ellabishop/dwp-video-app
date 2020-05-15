@@ -16,7 +16,7 @@ Enter the appointment code
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#appointmentCode">Enter the appointment code</a>
+              <a href="#appointmentCode">Appointment code must be 6 letters</a>
             </li>
             <li>
 
@@ -40,7 +40,7 @@ Enter the appointment code
 Appointment code </label>
 
 <span id="appointmentCode" class="govuk-error-message">
-<span class="govuk-visually-hidden">Error:</span> Enter the appointment code
+<span class="govuk-visually-hidden">Error:</span> Appointment code must be 6 letters
 </span>
       <input type="text" id="appointmentCode" name="appointmentCode" class="govuk-input govuk-input--error" style="width:50%">
       </fieldset>
@@ -54,11 +54,11 @@ Appointment code </label>
 
       <p>If you've lost or forgotten your code, you'll need to create a new video appointment. </p>
 
+    </div>
+
   </div>
+  <a href="code-error-not-alpha" style="float: right">Not alpha</a>
 
-</div>
-<a href="code-error-too-short" style="float: right">Too short</a>
-
-</div>
+  </div>
 
 {% endblock %}
