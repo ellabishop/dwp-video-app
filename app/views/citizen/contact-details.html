@@ -15,12 +15,13 @@ Contact Details
 <p>You can enter a telephone number that we can reach you on if anything goes wrong with your video appointment.
    This information is not stored beyond the length of the video call. </p>
 
-         <form action="conduct-video-waiting" method="post" novalidate>
+         <form action="conduct-video-waiting" method="post">
 
            <div class="govuk-form-group">
-             <label class="govuk-label govuk-label--m" for="passport-number">
-              Your name
-             </label>
+             <fieldset class="govuk-fieldset" role="group">
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                 Your name
+               </legend>
              <div class="govuk-form-group">
   <label class="govuk-label" for="full-name">
     Full name
@@ -30,7 +31,7 @@ Contact Details
            </div>
 
            <div class="govuk-form-group">
-             <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+             <fieldset class="govuk-fieldset" role="group">
                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                  Contact number
                </legend>
@@ -40,10 +41,9 @@ Contact Details
     UK telephone number
   </label>
 
-
   <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel">
 </div>
-           </div>
+         </div>
 
 
 
