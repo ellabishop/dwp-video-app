@@ -10,14 +10,7 @@
 
 {% block header %}{% include "includes/header-staff.html" %}{% endblock %}
 {% block footer %}
-  {{ govukFooter({
-    meta: {
-      items: [
-        {
-          href: "http://localhost:3001/citizen/help.html",
-          text: "Help"
-        }
-      ]
-    }
+{{ govukFooter({
+
   }) }}
 {% endblock %}
