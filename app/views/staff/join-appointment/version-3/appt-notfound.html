@@ -1,0 +1,30 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  Appointment not found
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl" style="margin-top: 40px">
+      We could not confirm your appointment
+    </h1>
+<p>Check you have the correct code and try again. </p>
+
+
+  <a href="enter-code" style="margin: 30px 15px 0px 0px" class="govuk-button">Try again</a>
+
+
+    </div>
+
+  </div>
+
+  <div style="float: right">
+  <a href="appt-too-early">Too early</a> | <a href="appt-too-late">Too late</a>
+  </div>
+
+</div>
+{% endblock %}
