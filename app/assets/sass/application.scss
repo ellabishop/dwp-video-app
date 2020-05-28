@@ -209,12 +209,27 @@ $govuk-header-border-color: #00728F !important;
 /* Style for status text on DWP-video-header */
 .participants-names {
   display: inline-block;
-  font-size: 19px;
   padding-top: 7.5px;
   color: #000000;
   width: 70%;
   text-align: left !important;
   float: left !important;
+}
+
+.participants-names-claimant {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  width: 32%;
+  text-align: left !important;
+  float: left !important;
+}
+
+.participants-number {
+  display: inline-block;
+  font-size: 19px;
+  padding-top: 5px;
 }
 
 @media (max-width: 640px) {
