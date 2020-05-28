@@ -24,6 +24,15 @@ $govuk-header-border-color: #00728F !important;
   //background-color: #444 !important;
 //}
 
+.popup {
+
+  position: absolute;
+  top: 0;
+  right: 497px;
+  z-index: 1500;
+  display: none;
+}
+
 .govuk-video-end-box {
   text-align: left;
   width: 310px;
