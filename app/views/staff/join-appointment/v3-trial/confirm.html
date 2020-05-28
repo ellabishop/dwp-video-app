@@ -1,7 +1,7 @@
-{% extends "layout-create.html" %}
+{% extends "layout-staff.html" %}
 
 {% block pageTitle %}
-Confirm appointment
+  Confirm Appointment
 {% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@ Confirm appointment
     <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl" style="margin-top: 40px">
-      Check your video appointment details
+      Confirm your video appointment details
     </h1>
 
     <dl class="govuk-summary-list" style="margin-bottom: 60px;" name="theField">
@@ -19,7 +19,7 @@ Confirm appointment
           Claimant's full name
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['fullName'] }}
+          Luke Smith
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -27,7 +27,7 @@ Confirm appointment
           Appointment date
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['appointment-day'] }} May {{ data['appointment-year'] }}
+          12 April 2020
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -35,7 +35,7 @@ Confirm appointment
           Start time
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['startTime'] }}
+          10:30am
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -43,13 +43,12 @@ Confirm appointment
           Duration
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['myDuration'] }}
+          30 minutes
         </dd>
       </div>
     </dl>
-
-    <a href="create-video-confirmation" class="govuk-button">Create video appointment</a>
-    <a href="enter-video-details" style="margin: 0 0 0 15px" class="govuk-button govuk-button--secondary">Change details</a>
+    <a href="conduct-staff" class="govuk-button">Confirm and join</a>
+    <a href="enter-code" style="margin-left:15px" class="govuk-button govuk-button--secondary">Try again</a>
 
     </div>
   </div>
