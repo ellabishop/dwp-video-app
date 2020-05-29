@@ -1,42 +1,29 @@
-{% extends "layout_unbranded.html" %}
+{% extends "layout-citizen.html" %}
 
 {% block pageTitle %}
     Conduct a video appopintment
 {% endblock %}
 
-{% block header %}
 
-{% include "includes/header-conduct.html" %}
-<div class="dwp-video-header">
-  <div class="govuk-width-container govuk-header__contents" style="margin: 0, text-align: center; max-width: 1280px">{% include "includes/top-btn--waiting-citizen.html" %}
-    </div>
-  </div>
-{% endblock %}
 
 {% block content %}
-  <div class="app-width-container--wide">
-      <div class="govuk-video-frame">
-        <a href="conduct-video-waiting-cont">
-          <div class="govuk-video-inside-frame">
+<div class="govuk-width-container">
+ <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds" style="display: inline-block; text-align: left;">
-            <h1 class="govuk-heading-xl">
-              You've joined the video appointment
+            <h1 class="govuk-heading-xl" style="margin-top: 40px">
+              You're the only person in the appointment
             </h1>
 
             <h2 class="govuk-heading-m">
               Please wait for the other person to join.
               </h2>
 
-              <p>Your appointment is expected to start in <strong><label id="demo"></label></strong>.</p>
+              <p>Your appointment is expected to start at 2:00pm.
 
             <!--<div class="govuk-inset-text">Please do not leave without talking to a member of staff. You may be paid less in your benefits if you miss an appointment.
             </div>-->
           </div>
-  <div class="govuk-grid-column-one-third" style="margin: 0; display: inline-block; text-align: right; padding-top:424px; padding-right: 0"><img src="/public/images/Citizen.png" style=" border: 2px solid #0b0c0c; margin-left:8px"></div>        </div>
-
-
-      </a>
-    </div>
+          </div>
 </div>
 
 <script>
