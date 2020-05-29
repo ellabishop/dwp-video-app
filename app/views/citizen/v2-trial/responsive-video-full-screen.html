@@ -1,0 +1,73 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Conduct a video appointment
+{% endblock %}
+
+{% block header %}
+
+    <div class="small-and-medium-screen--no-display">
+        {% include "includes/header-attend-video.html" %}
+        {% include "includes/status-bar.html" %}
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="flex-container">
+
+        <div class="flex-item flex-responsive-container">
+
+            <video id="video" autoplay=""></video>
+
+            <div class="flex-selfie-container">
+                <video id="selfie-video" autoplay="" style="object-fit: cover;"></video>
+            </div>
+
+        </div>
+
+        <div class="flex-item">
+            <div>
+                <strong>David Smith </strong>connected to <strong>Jane</strong>
+            </div>
+            <button>Pause</button>
+        </div>
+
+    </div>
+
+    <script>
+        // Grab elements, create settings, etc.
+        var video = document.getElementById('video');
+        var selfieVideo = document.getElementById('selfie-video');
+
+        // Get access to the camera!
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            // Not adding `{ audio: true }` since we only want video now
+            navigator
+                .mediaDevices
+                .getUserMedia({video: true})
+                .then(function (stream) {
+                    //video.src = window.URL.createObjectURL(stream);
+                    video.srcObject = stream;
+                    video.play();
+
+                    selfieVideo.srcObject = stream;
+                    selfieVideo.play();
+                });
+        }
+    </script>
+
+    <script>
+
+        function configureViewportHeight() {
+            const vh = window.innerHeight * 0.01; // Get inner height of the window and multiply it by 1% to get one unit of vh.
+            document.documentElement.style.setProperty('--vh', `${vh}px`); // Set the value in the "--vh" custom property to the root of the document
+        }
+
+        configureViewportHeight(); // Configure the custome viewport property.
+        window.addEventListener('resize', configureViewportHeight); // Listen to resize event and fire the above function.
+        
+    </script>
+
+{% endblock %}

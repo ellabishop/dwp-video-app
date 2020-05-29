@@ -28,9 +28,9 @@ $govuk-header-border-color: #00728F !important;
 
   position: absolute;
   top: 0;
-  right: 480px;
+  right: 497px;
   z-index: 1500;
-
+  display: none;
 }
 
 .govuk-video-end-box {
@@ -387,6 +387,10 @@ $govuk-header-border-color: #00728F !important;
 
 .govuk-button--quiet-navigation:hover[disabled] {
   background-color: #f3f2f1;
+}
+
+.govuk-button--panel {
+  background-color:#b1b4b6 !important;
 }
 
 /* Horizontal line */
