@@ -390,7 +390,13 @@ $govuk-header-border-color: #00728F !important;
 }
 
 .govuk-button--panel {
-  background-color:#b1b4b6 !important;
+  background-color: #dee0e2;
+  box-shadow: 0 2px 0 #626a6e;
+
+}
+
+.govuk-button--panel:hover {
+  background-color: darken(#dee0e2, 10%) !important;
 }
 
 /* Horizontal line */
