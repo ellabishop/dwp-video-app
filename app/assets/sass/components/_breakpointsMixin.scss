@@ -1,0 +1,54 @@
+@mixin for-breakpoint ($size) {  
+
+  /* ----------- Desktop and large Screens ----------- */
+  @if $size == desktop-screen {
+    @media screen 
+      and (min-width: 1025px) { @content; } 
+  }
+
+  /* ----------- Small and Medium Screens ----------- */
+  @else if $size == small-to-medium-screen {
+    @media screen 
+      and (max-width: 1024px) { @content; }
+  }
+
+  /* ----------- Small and Medium Screens Portrait Mode ----------- */
+  @else if $size == small-to-medium-screen-portrait {
+    @media screen 
+      and (max-width: 1024px) 
+      and (orientation: portrait) { @content; }
+  }
+
+  /* ----------- Small and Medium Screens Landscape Mode ----------- */
+  @else if $size == small-to-medium-screen-landscape {
+    @media screen 
+      and (max-width: 1024px) 
+      and (orientation: landscape) { @content; }
+  }
+
+  /* ----------- Medium Screens ----------- */
+  @else if $size == medium-screen {
+    @media screen 
+      and (min-width: 480px) 
+      and (max-width: 1024px) { @content; }
+  }
+
+  /* ----------- Small Screens ----------- */
+  @else if $size == small-screen {
+    @media screen 
+      and (min-width: 0px) 
+      and (max-width: 479px) { @content; }
+  }
+
+  /* ----------- Portrait Mode ----------- */
+  @else if $size == portrait-mode {
+    @media screen 
+      and (orientation: portrait) { @content; }
+  }
+
+  /* ----------- Landscape Mode ----------- */
+  @else if $size == landscape-mode {
+    @media screen 
+      and (orientation: landscape) { @content; }
+  }
+}
