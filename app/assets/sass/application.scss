@@ -1081,6 +1081,17 @@ $adjusted-desktop-width: calc(#{$adjusted-desktop-height} * 1.333);
 .refresh-button-container--header {
   display: flex;
   justify-content: flex-end;
+  width: auto;
+  margin: 0 auto;
+
+  @include for-breakpoint (desktop-screen) {
+    max-width: $adjusted-desktop-width;
+  }
+
+  @include for-breakpoint (small-to-medium-screen) {
+    max-width: $full-width;
+    padding-right: 5px;
+  }
 
   button {
     margin-top: 10px;
