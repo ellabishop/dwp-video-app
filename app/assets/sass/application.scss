@@ -938,11 +938,8 @@ $full-height: calc(var(--vh) * 100);
 $full-width: calc(var(--vw) * 100);
 $header-height: var(--header-height);
 $footer-height: var(--footer-height);
-
-$mobile-landscape-height: calc(#{$full-height} - calc(#{$header-height} + #{$border-top}));
-$mobile-portrait-height: calc(#{$full-height} - calc(#{$footer-height} + #{$border-top}));
-
-$adjusted-desktop-height: calc(#{$full-height} - calc(var(--header-height) + (#{$main-wrapper-padding} * 2)));
+$mobile-height: calc(#{$full-height} - calc(#{$header-height} + #{$footer-height}));
+$adjusted-desktop-height: calc(#{$full-height} - calc(var(--header-height) + (#{$main-wrapper-padding} * 2) + #{$footer-height}));
 $adjusted-desktop-width: calc(#{$adjusted-desktop-height} * 1.333);
 
 /* ************** */
@@ -965,18 +962,10 @@ $adjusted-desktop-width: calc(#{$adjusted-desktop-height} * 1.333);
   @include for-breakpoint (small-to-medium-screen) {
     height: 100vh;
     width: 100vw;
+    height: $mobile-height;
+    width: $full-width;
     margin: 0;
     padding: 0;
-  }
-
-  @include for-breakpoint (small-to-medium-screen-portrait) {
-    height: $mobile-portrait-height;
-    width: $full-width;
-  }
-
-  @include for-breakpoint (small-to-medium-screen-landscape) {
-    height: $mobile-landscape-height;
-    width: $full-width;
   }
 }
 
@@ -1102,6 +1091,10 @@ $adjusted-desktop-width: calc(#{$adjusted-desktop-height} * 1.333);
 .refresh-button-container--footer {
   display: flex;
   justify-content: center;
+
+  @include for-breakpoint (small-to-medium-screen) {
+    max-width: $full-width;
+  }
 
   button {
     margin-top: 10px;
