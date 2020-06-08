@@ -18,6 +18,8 @@ $govuk-header-border-color: #00728F !important;
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
+@import 'components/breakpointsMixin';
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 @import "jkeyboard";
 //.govuk-template__body {
@@ -531,6 +533,17 @@ button:focus {
   background-color: #f3f2f1;
 }
 
+.govuk-refresh{
+
+background: transparent;
+background-color: #ffffff !important;
+border: 1px solid #00823b;
+padding-top: 9px;
+padding-bottom: 8px;
+color: #00823b !important;
+box-shadow: 0 2px 0 0 #00703c;
+margin-bottom: 15px !important;}
+
 .autocomplete {
   position: relative;
   display: inline-block;
@@ -896,7 +909,7 @@ border:none;
   }
 
   @media screen and (max-width: 479px) {
-    height: 20%;
+    height: 10%;
     flex-direction: column;
 
     button {
@@ -912,5 +925,180 @@ border:none;
 
   @media screen and (min-width: 1025px) {
     display: none;
+  }
+}
+
+/* Refresh design Begins */
+
+/* Variables for height & width calculations. */
+
+$border-top: 10px;
+$main-wrapper-padding: 20px;
+$full-height: calc(var(--vh) * 100);
+$full-width: calc(var(--vw) * 100);
+$header-height: var(--header-height);
+$footer-height: var(--footer-height);
+$mobile-height: calc(#{$full-height} - calc(#{$header-height} + #{$footer-height}));
+$adjusted-desktop-height: calc(#{$full-height} - calc(var(--header-height) + (#{$main-wrapper-padding} * 2) + #{$footer-height}));
+$adjusted-desktop-width: calc(#{$adjusted-desktop-height} * 1.333);
+
+/* ************** */
+
+.tile-area {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  line-height: 0;
+  margin: auto;
+  background: #f1f2f3;
+
+  @include for-breakpoint (desktop-screen) {
+    height: $adjusted-desktop-height;
+    width: $adjusted-desktop-width;
+  }
+
+  @include for-breakpoint (small-to-medium-screen) {
+    height: 100vh;
+    width: 100vw;
+    height: $mobile-height;
+    width: $full-width;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.tile-primary {
+  z-index: 1;
+  grid-column: 1 / span 10;
+  grid-row: 1 / span 10;
+
+  video {
+    height: 100%;
+    width: 100%;
+
+    @include for-breakpoint (small-to-medium-screen) {
+      object-fit: cover;
+    }
+  }
+}
+
+.tile-secondary {
+  z-index: 2;
+  grid-column: 8 / span 10;
+  grid-row: 8 / span 10;
+
+  video {
+    height: 100%;
+    width: 100%;
+
+    @include for-breakpoint (small-to-medium-screen) {
+      object-fit: cover;
+    }
+  }
+}
+
+.govuk-main-wrapper {
+  @include for-breakpoint (desktop-screen) {
+    padding-top: $main-wrapper-padding;
+    padding-bottom: $main-wrapper-padding;
+  }
+
+  @include for-breakpoint (small-to-medium-screen) {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.custom-header-width {
+  @include for-breakpoint (desktop-screen) {
+    max-width: $adjusted-desktop-width !important;
+  }
+}
+
+.custom-max-width {
+  @include for-breakpoint (desktop-screen) {
+    max-width: $adjusted-desktop-width;
+  }
+}
+
+.small-to-medium-screen--show {
+  @include for-breakpoint (desktop-screen) {
+    display: none;
+  }
+}
+
+.large-screen--hide {
+  @include for-breakpoint (small-to-medium-screen) {
+    display: none;
+  }
+}
+
+.small-to-medium-screen--top-border {
+  @include for-breakpoint (small-to-medium-screen) {
+    border-top: $border-top solid #00728F !important;
+    width: $full-width;
+  }
+}
+
+.portrait-mode--no-display {
+  @include for-breakpoint (portrait-mode) {
+    display: none;
+  }
+}
+
+.landscape-mode--no-display {
+  @include for-breakpoint (landscape-mode) {
+    display: none;
+  }
+}
+
+.status-bar-background {
+  font-family: Arial, sans-serif, "GDS Transport";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.14286;
+  color: #000000;
+  background: #f3f2f1;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.refresh-button-container--header {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+  margin: 0 auto;
+
+  @include for-breakpoint (desktop-screen) {
+    max-width: $adjusted-desktop-width;
+  }
+
+  @include for-breakpoint (small-to-medium-screen) {
+    max-width: $full-width;
+    padding-right: 5px;
+  }
+
+  button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.refresh-button-container--footer {
+  display: flex;
+  justify-content: center;
+
+  @include for-breakpoint (small-to-medium-screen) {
+    max-width: $full-width;
+  }
+
+  button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%
   }
 }
