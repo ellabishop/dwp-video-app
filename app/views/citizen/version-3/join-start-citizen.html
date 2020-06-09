@@ -22,9 +22,15 @@
           </a>
 
     </div>
-    <!--
+
 <div style="float: right">
-<a href="start-citizen-too-early">Early</a> | <a href="start-citizen-too-late">Late</a> | <a href="URL-invalid">URL invalid</a></div> -->
+<a href="#" onclick="openWin()">Help</a>
 
+<script>
 
+  function openWin() {
+    var myWindow = window.open("help")
+    myWindow.open();
+  }
+</script>
 {% endblock %}
