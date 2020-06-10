@@ -8,6 +8,9 @@
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
+      <a href="#" class="govuk-back-link" onclick="goBack()">Back</a>
+      
         <span class="govuk-caption-xl" style="margin-top:40px">Guidance</span>
           <div class="govuk-heading-xl">How to prepare for a video appointment</div>
           <h2 class="govuk-heading-m">Equipment you need</h2>
@@ -46,7 +49,7 @@
 
           </div>
     </div>
-    <button class="govuk-button" style="margin-top:30px" onclick="closeWin()">Close</button>
+  <!--  <button class="govuk-button" style="margin-top:30px" onclick="closeWin()">Close</button> -->
   </div>
 
   <script>
@@ -55,4 +58,11 @@
       myWindow.close();
     }
 </script>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
 {% endblock %}
