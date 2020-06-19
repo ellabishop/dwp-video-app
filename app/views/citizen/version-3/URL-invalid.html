@@ -1,7 +1,7 @@
 {% extends "layout-citizen.html" %}
 
 {% block pageTitle %}
-  You're appointment is currently unavailable - Attend a video appointment
+  The appointment is currently unavailable - Attend a video appointment
 {% endblock %}
 
 {% block content %}
@@ -9,12 +9,17 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl" style="margin-top: 40px">
-            Your appointment is currently unavailable
+          Sorry, the appointment is currently unavailable
             </h1>
 
-          <p>You may be too early, too late or trying to attend an appointment which has already finished.</p>
+          <p>This could be because:</p>
 
-          <p>Check the time of your appointment and try again.</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>you're too early</li>
+            <li>you're too late</li>
+            <li>the appointment has finished</li>
+          </ul>
+          <p>Check the date and time of your appointment and that you have used the correct link.</p>
           <p> You can now leave this page. </p>
 
         </div>

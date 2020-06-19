@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block content %}
-<div class="popup" style="display:none"><a href="conduct-video-citizen"><img src="/public/images/popup.png"></a></div>
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -23,55 +22,26 @@
             </span>
           </summary>
           <div class="govuk-details__text">
-            If you did not see a message and cannot see or hear the other person, you may need to change your browser settings:<br><br>
-
-<h3 class="govuk-heading-m">Mobile</h3>
-
-<h3 class="govuk-heading-s">iPhone or iPad</h3>
-
-1. Go to your 'Settings'.<br>
-2. Select 'Safari'.<br>
-3. Select 'Camera' or 'Microphone' and choose 'Allow'.<br><br>
-
-<h3 class="govuk-heading-s">Android</h3>
-
-1. Go to your 'Settings'.<br>
-2. Select 'Apps'.<br>
-3. Select 'Chrome' (select 'See all apps' if you cannot see it).<br>
-4. Select 'Permissions'.<br>
-5. Select 'Camera' or 'Microphone' and choose 'Allow'.<br><br>
-
-<h3 class="govuk-heading-m">Desktop</h3>
-
-<h3 class="govuk-heading-s">Safari</h3>
-
-1. Go to 'Safari'on your toolbar.<br>
-2. Select 'Preferences'.<br>
-3. Select 'Websites'.<br>
-4. Select 'Camera' or 'Microphone' and choose 'Allow'.<br><br>
-
-<h3 class="govuk-heading-s">Chrome</h3>
-
-1. At the top right of your browser, select the three dots.<br>
-2. Select 'Settings'.<br>
-3. In 'Advanced', select 'Privacy and security'.<br>
-4. Select 'Site settings'.<br>
-5. Select 'Camera' or 'Microphone' and choose 'Allow'.
-
-
-
-
+            If you did not see a message and cannot see or hear the other person, you may have blocked access to your camera or microphone. You can change permissions through your browser or device settings.
 
           </div>
         </details>
 
+
         </div>
+
         <div style="float: right; margin-bottom: 0; padding: 0">
-        <a href="conduct-video-citizen">Next</a></div>
-<!--    <script>
+        <a href="permission-denied">Blocked</a> | <a href="conduct-video-citizen">Next</a></div>
+<!-- <script>
       setTimeout(function(){
 $('.popup').show();
 }, 3000);
+</script> -->
+<!-- <script>
+
+function showPopup() {
+$('.popup').show();
+}
 </script> -->
 
 {% endblock %}
