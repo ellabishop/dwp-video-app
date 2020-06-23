@@ -456,12 +456,12 @@ $govuk-header-border-color: #00728F !important;
   width: 97%;
   padding: 30px 0 30px 30px;
   margin: 0;
-  display:inline-flex;
   border: 1px solid #bfc1c3;
+  position: relative;
 }
 
 .code-box {
-  background-color: #fff;
+  background-color: #f3f2f1;
   height: 45px;
   width: 97%;
   margin-bottom: 30px;
@@ -471,7 +471,7 @@ $govuk-header-border-color: #00728F !important;
 }
 
 .text-box {
-  background-color: #fff;
+  background-color: #f3f2f1;
   width: 97%;
   padding: 30px 0 30px 30px;
   margin: 0;
@@ -490,10 +490,10 @@ $govuk-header-border-color: #00728F !important;
 }
 
 .copy-email-btn {
-  width: 20%;
+  position: absolute;
+  top: -110px;
   float: right;
-  position:relative;
-  top: -110px
+
 }
 
 .copy-code-btn {
@@ -540,9 +540,11 @@ button:focus {
   margin-bottom: 15px !important;
 }
 
-.app-copy-button, .app-copy-button:link, .app-copy-button:visited, .app-copy-button:active, .app-copy-button:hover {
+.app-copy-button, .app-copy-button:link, .app-copy-button:visited,.app-copy-button:hover {
   color: #0b0c0c;
 }
+
+
 
 .app-copy-button:hover {
   background-color: #FFF0ED !important;
@@ -551,6 +553,22 @@ button:focus {
 .app-copy-button:hover[disabled] {
   background-color: #f3f2f1;
 }
+
+.app-copy-button:focus {
+    color: #0b0c0c !important;
+    background-color: #fd0 !important;
+    -webkit-box-shadow: 0 2px 0 0 #0b0c0c;
+    box-shadow: 0 2px 0 0 #0b0c0c;
+    border: none;
+  }
+
+  .app-copy-button:active {
+      color: #0b0c0c;
+      -webkit-box-shadow: 0 2px 0 0 #0b0c0c;
+      box-shadow: 0 2px 0 0 #0b0c0c;
+      border: 2px solid #fd0 important!;
+
+    }
 
 .govuk-refresh{
 
