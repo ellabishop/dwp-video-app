@@ -17,7 +17,7 @@
 
 <h2 class="govuk-heading-m">What to do next</h2>
 <p>1. Copy this appointment code and save it in your diary. You’ll need it to join the video appointment.</p>
-      <div class="code-box"> <div class="code" id="divCode">ljwnms</div>
+      <div class="code-box-2"> <div class="code" id="divCode">ljwnms</div>
 <div class="copy-code-btn"><button class="app-copy-button" id="btext" onclick="copyCode()" style="float: right; margin: 7px 15px 0 0">Copy code</button>
 
 </div>
@@ -25,7 +25,7 @@
 
 <p>2. Copy these joining instructions and send them to the claimant.</p>
 
-<div class="text-box">
+<div class="text-box-2">
 
 <div class="email" id="divText">
   <h2 class="govuk-heading-m">Appointment details:</h2>
@@ -131,7 +131,6 @@ function copyClipboard() {
     selection.addRange(range);
     document.execCommand("Copy");
     document.getElementById("btext2").innerHTML = 'Text copied';
-    document.getElementById("btext2").style.backgroundColor = "#ffffff";
     var originalContent2 = document.getElementById("btext").innerHTML;
           setTimeout(function() {
                       document.getElementById('btext2').innerHTML = 'Copy text'
@@ -140,5 +139,6 @@ function copyClipboard() {
   }
 }
 </script>
+
 
 {% endblock %}
