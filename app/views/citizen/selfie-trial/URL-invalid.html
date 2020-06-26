@@ -1,0 +1,28 @@
+{% extends "layout-citizen.html" %}
+
+{% block pageTitle %}
+  The appointment is currently unavailable - Attend a video appointment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl" style="margin-top: 40px">
+          Sorry, the appointment is currently unavailable
+            </h1>
+
+          <p>This could be because:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>you're too early</li>
+            <li>you're too late</li>
+            <li>the appointment has finished</li>
+          </ul>
+          <p>Check the date and time of your appointment and that you have used the correct link.</p>
+          <p> You can now leave this page. </p>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
