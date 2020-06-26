@@ -1,7 +1,7 @@
 {% extends "layout-citizen.html" %}
 
 {% block pageTitle %}
-  The appointment is currently unavailable - Attend a video appointment
+  Sorry, the appointment is currently unavailable - Attend a video appointment
 {% endblock %}
 
 {% block content %}
@@ -20,9 +20,16 @@
             <li>the appointment has finished</li>
           </ul>
           <p>Check the date and time of your appointment and that you have used the correct link.</p>
-          <p> You can now leave this page. </p>
 
+<button class="govuk-button" style="margin-top:30px" onclick="closeWin()">Close</button>
         </div>
     </div>
 </div>
+
+<script>
+  function closeWin() {
+    var myWindow = window.close("help")
+    myWindow.close();
+  }
+</script>
 {% endblock %}
