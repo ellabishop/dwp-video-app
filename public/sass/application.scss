@@ -29,7 +29,7 @@ $govuk-header-border-color: #00728F !important;
 .warning-panel {
 margin: 2em 0;
 background-color: #f3f2f1;
-padding: 2em;
+padding: 2em 2em 0.5em 2em;
 }
 
 .popup {
@@ -484,7 +484,7 @@ padding: 2em;
 .code {
   font-weight: 400;
   font-size: 24px;
-  font-family: "GDS Transport";
+  font-family: "GDS Transport", "Arial";
   letter-spacing: 0.5rem;
 }
 
@@ -496,14 +496,14 @@ padding: 2em;
   float: right;
   position: relative;
   margin-right: 15px;
-  top: -15px;
+  top: -17px;
 }
 
 .copy-code-btn {
   float: right;
   position: relative;
   margin-right: 15px;
-  top:-1px;
+  top:-2px;
 }
 
 input {

@@ -10,5 +10,15 @@
 
 {% block header %}{% include "includes/header-citizen.html" %}{% endblock %}
 {% block footer %}  {{ govukFooter({
-  
-  }) }}{% endblock %}
+  meta: {
+    items: [
+      {
+        href: "https://govuk-prototype-kit.herokuapp.com/",
+        text: "Cookies"
+      }
+
+
+    ]
+  }
+  }) }}
+  {% endblock %}
