@@ -15,7 +15,17 @@
           <p>You do not need to do anything, we will contact you to reschedule the appointment.</p>
           <p>You can now leave this page.</p>
 
+          <button class="govuk-button" style="margin-top:30px" onclick="closeWin()">Close</button>
+
+            </div>
         </div>
     </div>
-</div>
+
+    <script>
+      function closeWin() {
+        var myWindow = window.close("help")
+        myWindow.close();
+      }
+    </script>
+  
 {% endblock %}
