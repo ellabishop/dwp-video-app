@@ -9,16 +9,8 @@
 {% endblock %}
 
 {% block header %}{% include "includes/header-citizen.html" %}{% endblock %}
-{% block footer %}  {{ govukFooter({
-  meta: {
-    items: [
-      {
-        href: "/citizen/cookies",
-        text: "Cookies"
-      }
+{% block footer %}
 
+{% include "includes/footer-citizen.html" %}
 
-    ]
-  }
-  }) }}
   {% endblock %}
