@@ -14,7 +14,54 @@
 
   <h1 class="govuk-heading-l" style="margin-top:40px" id="header" data-page="submitFeedback">Feedback</h1>
 
-          <form action="submit-feedback" method="POST" autocomplete="off" novalidate="true" spellcheck="false">
+  <h2 class="govuk-heading-m"> Satisfaction survey </h2>
+
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Overall, how did you feel about the service you received today?</legend>
+
+  <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input type="radio" name="service_feedback[service_satisfaction_rating]" id="radio-satisfaction" class="govuk-radios__input">
+
+  <label for="radio-satisfaction" class="govuk-label govuk-radios__label">Very satisfied</label>
+</div>
+
+          <div class="govuk-radios__item">
+            <input type="radio" name="service_feedback[service_satisfaction_rating]" id="radio-satisfaction-1" class="govuk-radios__input">
+
+  <label for="radio-satisfaction-1" class="govuk-label govuk-radios__label">Satisfied</label>
+</div>
+
+          <div class="govuk-radios__item">
+            <input type="radio" name="service_feedback[service_satisfaction_rating]" id="radio-satisfaction-2" class="govuk-radios__input">
+
+  <label for="radio-satisfaction-2" class="govuk-label govuk-radios__label">Neither satisfied or dissatisfied</label>
+</div>
+
+          <div class="govuk-radios__item">
+            <input type="radio" name="service_feedback[service_satisfaction_rating]" id="radio-satisfaction-3" class="govuk-radios__input">
+
+  <label for="radio-satisfaction-3" class="govuk-label govuk-radios__label">Dissatisfied</label>
+</div>
+
+          <div class="govuk-radios__item">
+            <input type="radio" name="service_feedback[service_satisfaction_rating]" id="radio-satisfaction-4" class="govuk-radios__input">
+
+  <label for="radio-satisfaction-4" class="govuk-label govuk-radios__label">Very dissatisfied</label>
+
+
+</div>
+
+</div>
+</fieldset>
+</div>
+
+        <form action="submit-feedback" method="POST" autocomplete="off" novalidate="true" spellcheck="false">
+
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Tell us what you think of the online service. </legend>
+
               <p>Don’t include any personal or financial information.</p>
 
               <div class="govuk-form-group">
@@ -29,8 +76,8 @@
           <div class="govuk-hint hmpo-chars-left" aria-live="polite" data-module="hmpo-chars-left" data-chars-left-input="feedback-message" data-chars-left-template="{count} character{s} remaining" data-chars-left-default="{max} characters maximum">500 characters remaining</div>
             <button class="govuk-button button" data-module="govuk-button">
         Submit feedback
-      </button>   <button class="govuk-button govuk-button--secondary" onclick="closeWin()">Cancel</button>
-          </form>
+      </button></form> <!--  <button class="govuk-button govuk-button--secondary" onclick="closeWin()">Cancel</button> -->
+
                   </div>
 
 
