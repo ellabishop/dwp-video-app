@@ -16,7 +16,7 @@
 
           <p>You can now leave this page. </p>
 
-          <button class="govuk-button" style="margin-top:30px" onclick="closeWin()">Close</button>
+          <button class="govuk-button" style="margin-top:30px" id="close3" onclick="closeWin()">Close</button>
 
             </div>
         </div>
@@ -28,5 +28,11 @@
         myWindow.close();
       }
     </script>
+
+    <noscript>
+    <style>
+        #close3 {display:none;}
+    </style>
+</noscript>
 
 {% endblock %}
