@@ -1,4 +1,4 @@
-{% extends "layout-citizen.html" %}
+{% extends "layout-citizen-3.html" %}
 
 {% block pageTitle %}
   How to prepare for a video appointment - Attend a video appointment
@@ -53,7 +53,7 @@
 
           </div>
     </div>
-<button class="govuk-button" style="margin-top:30px" onclick="closeWin()">Close</button>
+<button class="govuk-button" style="margin-top:30px" id="close3" onclick="closeWin()">Close</button>
   </div>
 
   <script>
@@ -62,6 +62,12 @@
       myWindow.close();
     }
 </script>
+
+<noscript>
+<style>
+    #close3 {display:none;}
+</style>
+</noscript>
 
 <script>
 function goBack() {

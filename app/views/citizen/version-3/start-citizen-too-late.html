@@ -1,4 +1,4 @@
-{% extends "layout-citizen.html" %}
+{% extends "layout-citizen-3.html" %}
 
 {% block pageTitle %}
   You're too late to join your appointment - Attend a video appointment
@@ -13,9 +13,9 @@
             </h1>
 
           <p>You do not need to do anything, we will contact you to reschedule the appointment.</p>
-      
 
-          <button class="govuk-button" style="margin-top:30px" onclick="closeWin()">Close</button>
+
+          <button class="govuk-button" style="margin-top:30px" id="close2" onclick="closeWin()">Close</button>
 
             </div>
         </div>
@@ -27,5 +27,11 @@
         myWindow.close();
       }
     </script>
+
+    <noscript>
+    <style>
+        #close2 {display:none;}
+    </style>
+</noscript>
 
 {% endblock %}

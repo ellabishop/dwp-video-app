@@ -1,4 +1,4 @@
-{% extends "layout-citizen.html" %}
+{% extends "layout-citizen-3.html" %}
 
 {% block pageTitle %}
   Attend a video appointment
@@ -29,13 +29,8 @@
     </div>
 
 <div style="float: right">
-<a href="help">Help</a> | <a href="start-citizen-too-early">Early</a> | <a href="start-citizen-too-late">Late</a> | <a href="start-citizen-finished">Finished</a></div>
+<a href="help" target="_blank">Help</a> | <a href="start-citizen-too-early" target="_blank">Early</a> | <a href="start-citizen-too-late" target="_blank">Late</a> | <a href="start-citizen-finished" target="_blank">Finished</a></div>
 
-<script>
 
-  function openWin() {
-    var myWindow = window.open("help")
-    myWindow.open();
-  }
-</script>
+
 {% endblock %}
