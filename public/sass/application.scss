@@ -170,6 +170,12 @@ padding: 2em 2em 0.5em 2em;
   margin: 0;
 }
 
+.participant {
+  width: 300px;
+  height: 670px;
+  border-color: #f3f2f1;
+}
+
 @media (max-width: 1024px) {
   .video-image {
     width: 100%;

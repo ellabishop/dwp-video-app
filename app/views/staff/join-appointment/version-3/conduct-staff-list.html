@@ -15,11 +15,45 @@
 
 {% block content %}
 
-<div class="app-width-container--wide" id="one" style="display:block; z-index: 1;">
-  <div class="govuk-video-image">
- <img src="/public/images/Staffview2.png">
-   </div>
-</div>
+<div class="govuk-width-container" style="max-width: 1280px">
+  <div class="govuk-video-image" style="text-align:left">
+    <img src="/public/images/Staff-list.png"></div>
+<div class="participants"><table class="govuk-table">
+<!--  <caption class="govuk-heading-s" style="text-align:left">Participants</caption>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Organiser (you)</th>
+      <td class="govuk-table__cell"><a>Remove</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Attendee 1</th>
+      <td class="govuk-table__cell"></td>
+    </tr>
+  </tbody>
+</table> -->
+<h1 class="govuk-heading-s">
+    Participants
+    </h1>
+<dl class="govuk-summary-list" style="font-size:16px">
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      Organiser (you)
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      Attendee 1
+    </dd>
+    <dd class="govuk-summary-list__actions">
+   <a class="govuk-link" href="#">
+        Remove<span class="govuk-visually-hidden"> remove</span>
+      </a>
+    </dd>
+  </div>
+</dl></div>
+  </div>
 
 <!-- hidden pause content -->
 <div class="app-width-container--wide" id="two" style="display:none">
