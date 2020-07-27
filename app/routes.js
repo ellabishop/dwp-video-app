@@ -98,10 +98,10 @@ router.post('/appointment-code-answer', function (req, res) {
 // Check whether the variable matches a condition
   if (appointmentCode == ""){
     // Send user to next page
-    res.redirect('staff/join-appointment/version-3/code-error')
+    res.redirect('staff/join-appointment/version_2/code-error')
   }
   else {
-    res.redirect('staff/join-appointment/version-3/confirm')
+    res.redirect('staff/join-appointment/version_2/conduct-staff-list')
   }
 
 })
