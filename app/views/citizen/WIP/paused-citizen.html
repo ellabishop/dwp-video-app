@@ -1,0 +1,34 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  The video appointment has been paused - Attend a video appointment
+{% endblock %}
+
+{% block header %}
+{% include "includes/header-conduct.html" %}
+<div class="dwp-video-header">
+  <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
+    {% include "includes/top-btn--conduct-citizen.html" %}
+      </div>
+      </div>
+{% endblock %}
+
+{% block content %}
+<div class="app-width-container--wide">
+  <div class="govuk-video-frame" a href="join-video-conduct">
+    <a href="conduct-video-citizen"><div class="govuk-video-inside-frame">
+      <div class="govuk-grid-column-two-thirds" style="display: inline-block; text-align: left;">
+        <h1 class="govuk-heading-xl">
+          The video appointment has been paused
+        </h1>
+
+        <p>Only the other person can resume the appointment.</p>
+
+      </div>
+    </div></a>
+  </div>
+<!--  {% include "includes/bottom-btns-citizen.html" %} -->
+</div>
+
+
+{% endblock %}
