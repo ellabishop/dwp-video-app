@@ -9,7 +9,7 @@
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-<form action="/appt-time-2" method="post" class="form">
+<form action="/appt-time" method="post" class="form">
       <h1 class="govuk-heading-xl" style="margin-top: 40px">
         Enter the video appointment details
       </h1>
@@ -54,7 +54,7 @@
 
               <strong>Start time</strong>
               <span id="account-number-hint" class="govuk-hint">
-    For example, 2:00pm
+    For example, 9:00am
   </span>
               </label>
               <input class="govuk-input govuk-input--width-5"  name="startTime" type="text" id="startTime" name="myCountry" placeholder="">
@@ -62,16 +62,12 @@
             <div class="govuk-form-group">
               <label class="govuk-label" for="width-10">
 
-                <strong>Duration</strong>
-                <span id="account-number-hint" class="govuk-hint">
-      For example, 10 minutes or 1 hour 30 minutes
-    </span></label>
-                <input class="govuk-input" name="myDuration" type="text" id="myDuration" placeholder="" style="width: 180px">
+                <strong>Duration</strong></label>
+                <input class="govuk-input" name="myDuration" type="text" id="myDuration" placeholder="" style="width: 120px">
                 </div>
-                <button style="margin-top:20px" class="govuk-button" data-module="govuk-button">
-          Continue
-              </button>
-        <a href="create-video-start" style="margin: 30px 0 0 30px; display: inline-block">Cancel</a>
+        <button style="margin-top:20px" class="govuk-button" data-module="govuk-button">
+Continue
+      </button>
 </form>
     </div>
   </div>
@@ -281,12 +277,10 @@
   }
 
   /*An array containing all the country names in the world:*/
-  var countries = ["10 minutes","15 minutes","20 minutes","25 minutes","30 minutes","35 minutes","40 minutes","45 minutes","50 minutes","55 minutes","1 hour","1 hour 30 minutes","2 hours","2 hours 30 minutes","3 hours","3 hours 30 minutes","4 hours","4 hours 30 minutes","5 hours"];
+  var countries = ["10 minutes","15 minutes","20 minutes","25 minutes","30 minutes","35 minutes","40 minutes","45 minutes","50 minutes","55 minutes","1 hour"];
 
   /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
   autocomplete(document.getElementById("myDuration"), countries);
   </script>
-
-</script>
 
 {% endblock %}

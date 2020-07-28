@@ -35,14 +35,33 @@
 <div class="email" id="divText">
 
 
+  <h3 class="govuk-heading-m">Video appointment details:</h3>
 
-<p><strong>1. &nbsp Prepare for your video appointment using the following link (opens in new tab):</strong></p>
-<p><a href="£" target="_blank">https://jobcentre.dwp.gov.uk/help</a>
-</p>
+<ul class="govuk-list govuk-list--bullet">
 
-<p><strong>2. &nbsp Attend your video appointment using the following link (opens in new tab):</strong></p>
-<p><a href="£" target="_blank">https://test.jobcentre.dwp.gov.uk/attend-video-appointment/start-yrumze?ajsvc_token=st=1593095400~exp=1595691000~acl=/attend-video-appointment/start-yrumze!/attend-video-appointment/
-  ended-yrumze!/attend-video-appointment/end!/attend-video-appointment/yrumze!/attend-video-appointment/join!/attend-video-appointment/leave~hmac=af81326e524c4b88585ee972cdd3a52885c0667cb22e058047f42dc87096fdda</a></p>
+
+<strong>Your appointment is with:</strong>  [First Name]
+<br><br>
+<strong>On this date:</strong>  30 July 2020
+<br><br>
+<strong>At this time:</strong>  {{ data['startTime'] }}
+<br><br>
+<strong>It will last:</strong>  {{ data['myDuration'] }}
+
+</ul>
+<br>
+<h3 class="govuk-heading-m" style="padding-bottom:5px">How to attend a video appointment:</h3>
+
+
+<ol class="govuk-list govuk-list--number"><li style="font-weight: bold; padding-bottom: 10px">Check you're ready for a video appointment</li>
+You need to make sure you have the right equipment and know what to expect before your appointment.
+<a href="https://dwp-video-app.herokuapp.com/citizen/version-3/help" target="_blank"><br><br> Prepare for your video appointment (opens in new window or tab)</a>
+<br><br>
+
+<li style="font-weight: bold; padding-bottom: 10px">Attend your video appointment</li>
+You should be ready to attend your appointment from 10 minutes before the start time.
+<a href="#" target="_blank"><br><br> Attend your video appointment (opens in new window or tab)</a>
+</ol>
 </div>
 
 

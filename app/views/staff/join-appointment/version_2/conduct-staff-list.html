@@ -1,0 +1,305 @@
+{% extends "layout-staff-vid.html" %}
+
+{% block pageTitle %}
+  Video appointment - Conduct a video appointment
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="dwp-video-header">
+    <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
+        {% include "includes/top-btn-conduct-staff.html" %}
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container" style="max-width: 1280px">
+  <div class="govuk-video-image" style="text-align:left">
+    <img src="/public/images/Staff-list.png"></div>
+<div class="participants"><table class="govuk-table">
+<!--<caption class="govuk-heading-s" style="text-align:left">Participants</caption>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Organiser (you)</th>
+      <td class="govuk-table__cell"><a>Remove</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Attendee 1</th>
+      <td class="govuk-table__cell"></td>
+    </tr>
+  </tbody>
+</table> -->
+<h1 class="govuk-heading-s">
+    Participants
+    </h1>
+<dl class="govuk-summary-list" style="font-size:16px">
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      Organiser (you)
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      Attendee 1
+    </dd>
+    <dd class="govuk-summary-list__actions">
+   <a class="govuk-link" href="#">
+        <span class="govuk-visually-hidden"> remove</span>
+      </a>
+    </dd>
+  </div>
+</dl></div>
+  </div>
+<!--
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="#past-day">
+          Attendees
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#past-week">
+          Waiting room
+        </a>
+      </li>
+    </ul>
+    <div class="govuk-tabs__panel" id="past-day">
+      <h2 class="govuk-heading-l">Attendees</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Organiser (you)</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Attendee 1</td>
+            <td class="govuk-table__cell">1</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Attendee 2</td>
+            <td class="govuk-table__cell">2</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+      <h2 class="govuk-heading-l">Past week</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Case manager</th>
+            <th scope="col" class="govuk-table__header">Cases opened</th>
+            <th scope="col" class="govuk-table__header">Cases closed</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">David Francis</td>
+            <td class="govuk-table__cell">24</td>
+            <td class="govuk-table__cell">18</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Paul Farmer</td>
+            <td class="govuk-table__cell">16</td>
+            <td class="govuk-table__cell">20</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Rita Patel</td>
+            <td class="govuk-table__cell">24</td>
+            <td class="govuk-table__cell">27</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+      <h2 class="govuk-heading-l">Past month</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Case manager</th>
+            <th scope="col" class="govuk-table__header">Cases opened</th>
+            <th scope="col" class="govuk-table__header">Cases closed</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">David Francis</td>
+            <td class="govuk-table__cell">98</td>
+            <td class="govuk-table__cell">95</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Paul Farmer</td>
+            <td class="govuk-table__cell">122</td>
+            <td class="govuk-table__cell">131</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Rita Patel</td>
+            <td class="govuk-table__cell">126</td>
+            <td class="govuk-table__cell">142</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+      <h2 class="govuk-heading-l">Past year</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Case manager</th>
+            <th scope="col" class="govuk-table__header">Cases opened</th>
+            <th scope="col" class="govuk-table__header">Cases closed</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">David Francis</td>
+            <td class="govuk-table__cell">1380</td>
+            <td class="govuk-table__cell">1472</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Paul Farmer</td>
+            <td class="govuk-table__cell">1129</td>
+            <td class="govuk-table__cell">1083</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Rita Patel</td>
+            <td class="govuk-table__cell">1539</td>
+            <td class="govuk-table__cell">1265</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+<!-- hidden pause content -->
+<div class="app-width-container--wide" id="two" style="display:none">
+<div class="govuk-video-frame">
+  <div class="govuk-video-inside-frame">
+    <div class="govuk-grid-column-two-thirds" style="display: inline-block; text-align: left;">
+      <h1 class="govuk-heading-xl">
+        You've paused the video appointment
+      </h1>
+
+      <p>
+        Resume the appointment when you're ready.
+        </p>
+
+<a href="#one" id="resume" class="govuk-button" style="margin: 25px 15px 0px 0px" onclick="javascript:SwapDivsWithClick('one','two'); myPauseEnabled(pause)">Resume</a>
+
+    </div>
+  </div>
+</div>
+</div>
+<!--hidden finish content -->
+<div class="app-width-container--wide" id="three" style="display:none; z-index: 1000; position: absolute; top: 180px; right: 220px; height: 180px; border-radius: 5px;">
+  <div class="govuk-video-end-box">
+
+        <h3 class="govuk-heading-m">
+          End the video appointment?
+        </h3>
+<p> You will not be able to rejoin and the session will be closed.</p>
+
+
+          <a href="../end-staff" class="govuk-button" style="margin: 20px 25px 0px 0px; padding-left: 15px; padding-right: 15px">End appointment</a>
+          <a href="#one" class="govuk-button govuk-button--secondary " style="margin-top: 20px; padding-left: 15px; padding-right: 15px" onclick="javascript:SwapDivsFinish('one','three'); myFinishEnabled(finish); myPauseEnabled(pause); CheckPauseOn('one','two')">Cancel</a>
+
+      </div>
+    </div>
+
+
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="public/javascripts/staff-timer.js"></script>
+<script type="text/javascript">
+
+function SwapDivsWithClick(div1,div2)
+{
+   d1 = document.getElementById(div1);
+   d2 = document.getElementById(div2);
+  document.getElementById("pause").disabled = false;
+
+   if( d2.style.display == "none" )
+   {
+      d1.style.display = "none";
+      d2.style.display = "block";
+   }
+   else
+   {
+      d1.style.display = "block";
+      d2.style.display = "none";
+   }
+}
+
+function SwapDivsFinish(div1,div3)
+{
+   d1 = document.getElementById(div1);
+   d3 = document.getElementById(div3);
+
+   if( d3.style.display == "none" )
+   {
+
+      d3.style.display = "block";
+       document.getElementById("three").focus();
+   }
+   else
+   {
+      d1.style.display = "block";
+      d3.style.display = "none";
+   }
+}
+
+function CheckPauseOn(div1,div2)
+{
+  if(d2.style.display == "block")
+  {
+    d2.style.display == "block";
+    d1.style.display = "none";
+    document.getElementById("pause").disabled = true;
+  }
+}
+
+</script>
+
+<script>
+  function myPauseEnabled(el)
+  {
+    el.disabled = false;
+  }
+
+  function myFinishEnabled(el)
+  {
+    el.disabled = false;
+  }
+</script>
+
+<script>
+  function startTimer() {
+    stopTimer(); //make sure timer is not already running
+    a = setInterval(setTime, 1000); //start new timer
+  }
+document.getElementById("resume").addEventListener("click", startTimer);
+</script>
+
+<script>
+    $(document).ready(function() {
+
+      $("#resume").click(function() {
+
+      $("div").remove(txt,txt2);
+    });
+  });
+</script>
+
+{% endblock %}

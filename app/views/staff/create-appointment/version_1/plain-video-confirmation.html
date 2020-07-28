@@ -14,45 +14,44 @@
             Video appointment created
           </h1>
         </div>
+
 <h2 class="govuk-heading-m">What to do next</h2>
-<p>1. Copy this appointment code and save it in your diary. You’ll need it to join the video appointment.</p>
-      <div class="code-box"> <div class="code" id="divCode">ljwnms</div>
-<div class="copy-code-btn"><button class="app-copy-button" id="btext" onclick="copyCode()" style="float: right; margin: 7px 15px 0 0">Copy code</button>
+<p> 1. Copy this appointment code and save it in your diary. You’ll need it to join the video appointment.</p>
+
+      <div class="code-box-2">
+        <div class="copy-code-btn"><button class="app-copy-button" id="btext" onclick="copyCode()" role="button" tabindex="0">Copy code</button>
+        </div>
+        <div class="code" id="divCode">ljwnms</div>
 
 </div>
+
+<p> 2. Copy these joining instructions and send them to the claimant.</p>
+
+<div class="text-box-2">
+
+<div class="copy-email-btn"><button class="app-copy-button" id="btext2" onclick="copyClipboard()" role="button" tabindex="0">Copy text</button>
 </div>
 
-<p>2. Copy these joining instructions and send them to the claimant.</p>
+<div class="email" id="divText">
 
-<div class="text-box"> <div class="email" id="divText"><p>
-Hello [First Name]<br><br>
 
-Following our earlier discussion, you have agreed to complete your [appointment type] by video.
-<br><br>
 
-<strong>Your appointment is with:</strong>  [First Name]
-<br><br>
-<strong>On this date:</strong>  30 July 2020
-<br><br>
-<strong>At this time:</strong>  {{ data['startTime'] }}
-<br><br>
-<strong>It will last:</strong>  {{ data['myDuration'] }}
-<br><br>
-Keep this email and use it to <a href="#">join your video appointment</a>.
-<p>Please make sure your device is charged or attached to a power supply.
-<br><br>
-If you cannot attend this appointment, please call us straight away on [telephone number].
-<br><br>
+<p><strong>1. &nbsp Prepare for your video appointment using the following link (opens in new tab):</strong></p>
+<p><a href="https://jobcentre.dwp.gov.uk/help" target="_blank">https://jobcentre.dwp.gov.uk/help</a>
+</p>
 
-[First Name]
-<br><br>
-[Job Title]</p></div>
-<div class="copy-email-btn" id="divText"><button class="app-copy-button" id="btext2" onclick="copyClipboard()" style="float: right; margin: 100px 15px 0 0">Copy text</button>
-</div></div>
+<p><strong>2. &nbsp Attend your video appointment using the following link (opens in new tab):</strong></p>
+<p><a href="£" target="_blank">https://test.jobcentre.dwp.gov.uk/attend-video-appointment/start-yrumze?ajsvc_token=st=1593095400~exp=1595691000~acl=/attend-video-appointment/start-yrumze!/attend-video-appointment/
+  ended-yrumze!/attend-video-appointment/end!/attend-video-appointment/yrumze!/attend-video-appointment/join!/attend-video-appointment/leave~hmac=af81326e524c4b88585ee972cdd3a52885c0667cb22e058047f42dc87096fdda</a></p>
+</div>
+
+
+  </div>
+
 <div class="govuk-inset-text">
-  The code and link will only be valid from 30 minutes before the appointment time and will expire after 2 hours.
 If you need to reschedule the appointment, you must <a href="enter-video-details">enter the video appointment details</a> again to create a new appointment.
     </div>
+
     <div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
   <strong class="govuk-warning-text__text">
@@ -65,6 +64,8 @@ If you need to reschedule the appointment, you must <a href="enter-video-details
   </div>
 </div>
 </div>
+
+
 
 <script>
 function copyCode() {
@@ -125,5 +126,6 @@ function copyClipboard() {
   }
 }
 </script>
+
 
 {% endblock %}
