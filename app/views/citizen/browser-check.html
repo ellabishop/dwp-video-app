@@ -14,14 +14,44 @@
 
           <p>Your current web browser is Microsoft Internet Explorer.</p>
           <p>To use the service on this device, you will need to copy the link and paste into the <a href="#"">Chrome</a> web browser. Alternatively, use a different device.</p>
-<div class="warning-panel" id="divURL">
-          <p>https://test.jobcentre.dwp.gov.uk/attend-video-appointment/start-yrumze?ajsvc_token=st=1593095400~exp=1595691000~acl=/attend-video-appointment/start-yrumze!/attend-video-appointment/ ended-yrumze!/attend-video-appointment/end!/attend-video-appointment/yrumze!/attend-video-appointment/join!/attend-video-appointment/leave~hmac=af81326e524c4b88585ee972cdd3a52
+<div class="warning-panel" id="atext" onclick="copyLink()">
+          <p id="divURL">https://test.jobcentre.dwp.gov.uk/attend-video-appointment/start-yrumze?ajsvc_token=st=1593095400~exp=1595691000~acl=/attend-video-appointment/start-yrumze!/attend-video-appointment/ ended-yrumze!/attend-video-appointment/end!/attend-video-appointment/yrumze!/attend-video-appointment/join!/attend-video-appointment/leave~hmac=af81326e524c4b88585ee972cdd3a52
             885c0667cb22e058047f42dc87096fdda</p>
           </div>
 <button class="govuk-button" data-module="govuk-button" style="margin-top: 30px" id="btext" onclick="copyCode()">Copy link</button>
         </div>
     </div>
 </div>
+
+<script>
+function copyLink() {
+var elm = document.getElementById("divURL");
+// for Internet Explorer
+
+if(document.body.createTextRange) {
+  var range = document.body.createTextRange();
+  range.moveToElementText(elm);
+  range.select();
+  document.execCommand("Copy");
+}
+else if(window.getSelection) {
+  // other browsers
+  var selection = window.getSelection();
+  var range = document.createRange();
+  range.selectNodeContents(elm);
+  selection.removeAllRanges();
+  selection.addRange(range);
+  document.execCommand("Copy");
+  document.getElementById("btext").innerHTML = 'Link copied';
+  setTimeout(function() {
+              document.getElementById('btext').innerHTML = 'Copy link'
+           }, 3000);
+
+
+
+  }
+}
+</script>
 
 <script>
 function copyCode() {
