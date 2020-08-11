@@ -18,12 +18,24 @@
       <form action="/full-name-answer" method="post" class="form" name="theForm" id="check-in_form" style="margin-top: 40px" onsubmit="fixit()">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-            <h1 class="govuk-heading-xl">What is your full name?</h1>
+            <h1 class="govuk-heading-xl" style="margin-bottom: 15px">What is your name?</h1>
           </legend>
+          <div class="govuk-hint"> This will be displayed to the host.</div>
+
+
         </fieldset>
           <fieldset class="govuk-fieldset">
-          <p class="headerhint" style= "color: #6f777b">Enter your first and last names, do not include middle names.</p>
-              <input type="text" id="fullName" name="fullName" class="govuk-input" style="width:50%"">
+            <div class="govuk-form-group">
+            <label class="govuk-label" for="first-name">
+                First name
+              </label>              <input type="text" id="first-name" name="first-name" class="govuk-input" style="width:50%">
+              </div>
+              <div class="govuk-form-group">
+
+              <label class="govuk-label" for="last-name">
+                  Last name (optional)
+                </label>  <input type="text" id="last-name" name="last-name" class="govuk-input" style="width:50%">
+</div>
             </fieldset>
       <button class="govuk-button" data-module="govuk-button" style="margin-top: 30px">Continue</button>
 </form>
