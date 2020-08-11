@@ -101,7 +101,7 @@ router.post('/appointment-code-answer', function (req, res) {
     res.redirect('staff/join-appointment/version_2/code-error')
   }
   else {
-    res.redirect('staff/join-appointment/version_2/conduct-staff-list')
+    res.redirect('staff/join-appointment/version_2/start-staff-permissions')
   }
 
 })
