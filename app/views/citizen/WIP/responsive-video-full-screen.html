@@ -19,33 +19,24 @@
 
     <div class="flex-container">
 
-        <div class="flex-item flex-responsive-container-waiting">
-          <div class="govuk-grid-row" style="margin: 0">
+        <div class="flex-item flex-responsive-container">
 
-            <div class="govuk-grid-column-two-thirds" style="display: inline-block; text-align: left; padding: 30px 0 0 70px">
+            <video id="video" autoplay=""></video>
 
-              <h1 class="govuk-heading-xl" style="margin-top: 40px">
-                You have joined the appointment
-              </h1>
-
-              <p>
-                Please wait for the host.
-                </p>
-
-
-            </div>
-            <video id="video" autoplay="">
-              </video>
-
-            <div class="flex-selfie-container-waiting">
+            <div class="flex-selfie-container">
                 <video id="selfie-video" autoplay="" style="object-fit: cover;"></video>
             </div>
 
         </div>
-    </div>
 
-    <div style="float: right; margin-bottom: 0; padding: 0">
-  <a href="conduct-video-citizen">Next</a></div>
+        <div class="flex-item">
+            <div>
+                <strong>David Smith </strong>connected to <strong>Jane</strong>
+            </div>
+            <button>Pause</button>
+        </div>
+
+    </div>
 
     <script>
         // Grab elements, create settings, etc.
@@ -60,7 +51,8 @@
                 .getUserMedia({video: true})
                 .then(function (stream) {
                     //video.src = window.URL.createObjectURL(stream);
-
+                    video.srcObject = stream;
+                    video.play();
 
                     selfieVideo.srcObject = stream;
                     selfieVideo.play();
