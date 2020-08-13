@@ -881,6 +881,7 @@ border:none;
   line-height: 0;
 }
 
+
 .flex-selfie-container {
   width: 25%;
   height: 25%;
@@ -888,6 +889,30 @@ border:none;
   bottom: 0;
   right: 0;
   border: 2px solid #0b0c0c;
+  object-fit: contain;
+
+
+  video {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.flex-responsive-container-waiting {
+  position: relative;
+  margin: 0;
+  line-height: 0;
+  border: 2px solid #0b0c0c;
+}
+
+.flex-selfie-container-waiting {
+  width: 25%;
+  height: 25%;
+  position: absolute !important;
+  bottom: 0;
+  right: 0;
+  border-top: 2px solid #0b0c0c;
+  border-left: 2px solid #0b0c0c;
   object-fit: contain;
 
 
