@@ -1,0 +1,79 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Attend a video appointment
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/header-conduct.html" %}
+  <div class="dwp-video-header">
+    <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 960px">
+      {% include "includes/top-btn--conduct-citizen.html" %}
+        </div>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+  <div class="tile-area">
+    <div class="tile-primary">
+      <video id="video-primary" autoplay=""></video>
+    </div>
+
+    <div class="tile-secondary">
+      <video id="video-secondary" autoplay=""></video>
+    </div>
+  </div>
+
+  <script>
+    // Grab elements, create settings, etc.
+    var video = document.getElementById('video-primary');
+    var selfieVideo = document.getElementById('video-secondary');
+
+    // Get access to the camera!
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      // Not adding `{ audio: true }` since we only want video now
+      navigator
+      .mediaDevices
+      .getUserMedia({ video: true })
+      .then(function (stream) {
+        //video.src = window.URL.createObjectURL(stream);
+        video.srcObject = stream;
+        video.play();
+
+        selfieVideo.srcObject = stream;
+        selfieVideo.play();
+      });
+    }
+  </script>
+
+  <script>
+    function setupCustomProperty() {
+      const vh = window.innerHeight * 0.01; // Get inner height of the window and multiply it by 1% to get one unit of vh.
+      const vw = window.innerWidth * 0.01;
+      const headerDiv = document.getElementById('header-content-div');
+      const footerDiv = document.getElementById('footer-content-div');
+      const headerHeight = Math.max(headerDiv.clientHeight, headerDiv.offsetHeight, headerDiv.scrollHeight);
+      const footerHeight = Math.max(footerDiv.clientHeight, footerDiv.offsetHeight, footerDiv.scrollHeight);
+
+      document.documentElement.style.setProperty('--vh', `${vh}px`); // Set the value in the "--vh" custom property to the root of the document
+      document.documentElement.style.setProperty('--vw', `${vw}px`);
+      document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+      document.documentElement.style.setProperty('--footer-height', `${footerHeight}px`);
+    }
+
+    window.addEventListener('load', setupCustomProperty); // Configure the custome viewport property.
+    window.addEventListener('resize', setupCustomProperty); // Listen to resize event and fire the above function.
+
+  </script>
+
+{% endblock %}
+
+{% block footer %}
+  <div id="footer-content-div">
+    <div class="landscape-mode--no-display">
+      {% include "includes/footer-refresh-banner.html" %}
+    </div>
+  </div>
+{% endblock %}
