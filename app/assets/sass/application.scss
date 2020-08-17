@@ -903,6 +903,10 @@ border:none;
   margin: 0;
   line-height: 0;
   border: 2px solid #0b0c0c;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+}
 }
 
 .flex-selfie-container-waiting {
