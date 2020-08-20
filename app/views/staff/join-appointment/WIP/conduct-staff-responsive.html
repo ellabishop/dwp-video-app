@@ -7,147 +7,85 @@
 
 {% block beforeContent %}
 <div class="dwp-video-header">
-    <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
+    <div class="govuk-width-container" style="margin: 0, text-align: center;">
         {% include "includes/top-btn-conduct-staff.html" %}
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
+<div class="flex-container">
 
-<div class="govuk-width-container" style="max-width: 1280px">
-  <div class="govuk-video-image" style="text-align:left">
-    <img src="/public/images/Staff-list.png"></div>
-<div class="participants">
-<h1 class="govuk-heading-s">
-    Participants
-    </h1>
-<dl class="govuk-summary-list" style="font-size:16px">
-  <div class="govuk-summary-list__row">
-    <dd class="govuk-summary-list__value">
-      Host (me)
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">
-           <span class="govuk-visually-hidden"> No action available</span>
-         </a>
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dd class="govuk-summary-list__value">
-      Attendee
-    </dd>
-    <dd class="govuk-summary-list__actions">
-   <a class="govuk-link" href="#">
-        <span class="govuk-visually-hidden"> No action available</span>
-      </a>
-    </dd>
-  </div>
-</dl></div>
-  </div>
+    <div class="flex-item flex-responsive-container">
 
-<!-- hidden pause content -->
-<div class="app-width-container--wide" id="two" style="display:none">
-<div class="govuk-video-frame">
-  <div class="govuk-video-inside-frame">
-    <div class="govuk-grid-column-two-thirds" style="display: inline-block; text-align: left;">
-      <h1 class="govuk-heading-xl">
-        You've paused the video appointment
-      </h1>
+        <video id="video" autoplay=""></video>
 
-      <p>
-        Resume the appointment when you're ready.
-        </p>
+        <div class="flex-selfie-container-waiting">
+            <video id="selfie-video" autoplay="" style="object-fit: cover;"></video>
+        </div>
 
-<a href="#one" id="resume" class="govuk-button" style="margin: 25px 15px 0px 0px" onclick="javascript:SwapDivsWithClick('one','two'); myPauseEnabled(pause)">Resume</a>
+        <div class="participants">
+        <h1 class="govuk-heading-s">
+            Participants
+            </h1>
+        <dl class="govuk-summary-list" style="font-size:16px">
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              Host (me)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                   <span class="govuk-visually-hidden"> No action available</span>
+                 </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              Attendee
+            </dd>
+            <dd class="govuk-summary-list__actions">
+           <a class="govuk-link" href="#">
+                <span class="govuk-visually-hidden"> No action available</span>
+              </a>
+            </dd>
+          </div>
+        </dl></div>
+          </div>
 
     </div>
-  </div>
-</div>
-</div>
 
+<script>
+    // Grab elements, create settings, etc.
+    var video = document.getElementById('video');
+    var selfieVideo = document.getElementById('selfie-video');
 
+    // Get access to the camera!
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        // Not adding `{ audio: true }` since we only want video now
+        navigator
+            .mediaDevices
+            .getUserMedia({video: true})
+            .then(function (stream) {
+                //video.src = window.URL.createObjectURL(stream);
+                video.srcObject = stream;
+                video.play();
 
-<script src="/public/javascripts/jquery-1.11.3.js"></script>
-<script src="public/javascripts/staff-timer.js"></script>
-<script type="text/javascript">
-
-function SwapDivsWithClick(div1,div2)
-{
-   d1 = document.getElementById(div1);
-   d2 = document.getElementById(div2);
-  document.getElementById("pause").disabled = false;
-
-   if( d2.style.display == "none" )
-   {
-      d1.style.display = "none";
-      d2.style.display = "block";
-   }
-   else
-   {
-      d1.style.display = "block";
-      d2.style.display = "none";
-   }
-}
-
-function SwapDivsFinish(div1,div3)
-{
-   d1 = document.getElementById(div1);
-   d3 = document.getElementById(div3);
-
-   if( d3.style.display == "none" )
-   {
-
-      d3.style.display = "block";
-       document.getElementById("three").focus();
-   }
-   else
-   {
-      d1.style.display = "block";
-      d3.style.display = "none";
-   }
-}
-
-function CheckPauseOn(div1,div2)
-{
-  if(d2.style.display == "block")
-  {
-    d2.style.display == "block";
-    d1.style.display = "none";
-    document.getElementById("pause").disabled = true;
-  }
-}
-
+                selfieVideo.srcObject = stream;
+                selfieVideo.play();
+            });
+    }
 </script>
 
 <script>
-  function myPauseEnabled(el)
-  {
-    el.disabled = false;
-  }
 
-  function myFinishEnabled(el)
-  {
-    el.disabled = false;
-  }
-</script>
+    function configureViewportHeight() {
+        const vh = window.innerHeight * 0.01; // Get inner height of the window and multiply it by 1% to get one unit of vh.
+        document.documentElement.style.setProperty('--vh', `${vh}px`); // Set the value in the "--vh" custom property to the root of the document
+    }
 
-<script>
-  function startTimer() {
-    stopTimer(); //make sure timer is not already running
-    a = setInterval(setTime, 1000); //start new timer
-  }
-document.getElementById("resume").addEventListener("click", startTimer);
-</script>
+    configureViewportHeight(); // Configure the custome viewport property.
+    window.addEventListener('resize', configureViewportHeight); // Listen to resize event and fire the above function.
 
-<script>
-    $(document).ready(function() {
-
-      $("#resume").click(function() {
-
-      $("div").remove(txt,txt2);
-    });
-  });
 </script>
 
 {% endblock %}
