@@ -87,10 +87,10 @@ else if(window.getSelection) {
   selection.removeAllRanges();
   selection.addRange(range);
   document.execCommand("Copy");
-  document.getElementById("btext").innerHTML = 'Code copied';
+  document.getElementById("btext").innerHTML = 'copïwyd y cod';
   var originalContent = document.getElementById("btext").innerHTML;
         setTimeout(function() {
-                    document.getElementById('btext').innerHTML = 'Copy code'
+                    document.getElementById('btext').innerHTML = 'Copïo cod'
                  }, 3000);
 
 }
@@ -117,10 +117,10 @@ function copyClipboard() {
     selection.removeAllRanges();
     selection.addRange(range);
     document.execCommand("Copy");
-    document.getElementById("btext2").innerHTML = 'Text copied';
+    document.getElementById("btext2").innerHTML = 'Copïwyd y testun';
     var originalContent2 = document.getElementById("btext").innerHTML;
           setTimeout(function() {
-                      document.getElementById('btext2').innerHTML = 'Copy text'
+                      document.getElementById('btext2').innerHTML = 'Copïo testun'
                    }, 3000);
 
   }
