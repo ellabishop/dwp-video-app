@@ -1,0 +1,81 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Attend a video appointment
+{% endblock %}
+
+{% block header %}
+
+    <div class="small-and-medium-screen--no-display">
+        {% include "includes/header-attend-video.html" %}
+        {% include "includes/status-bar.html" %}
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="flex-container">
+
+        <div class="flex-item flex-responsive-container-waiting">
+          <div class="govuk-grid-row" style="margin: 0">
+
+                   <div class="govuk-grid-column-two-thirds" style="display: inline-block; text-align: left; padding: 30px 0 0 70px">
+
+                     <h1 class="govuk-heading-xl" style="margin-top: 40px">
+                       You have joined the appointment
+                     </h1>
+
+                     <p>
+                       Please wait for the host.
+                       </p>
+
+                     <!--<div class="govuk-inset-text">Please do not leave without talking to a member of staff. You may be paid less in your benefits if you miss an appointment.
+                     </div>-->
+                   </div>
+            <video id="video" autoplay="">
+              </video>
+
+            <div class="flex-selfie-container-waiting">
+                <video id="selfie-video" autoplay="" style="object-fit: cover;"></video>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script>
+        // Grab elements, create settings, etc.
+        var video = document.getElementById('video');
+        var selfieVideo = document.getElementById('selfie-video');
+
+        // Get access to the camera!
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            // Not adding `{ audio: true }` since we only want video now
+            navigator
+                .mediaDevices
+                .getUserMedia({video: true})
+                .then(function (stream) {
+                    //video.src = window.URL.createObjectURL(stream);
+
+
+                    selfieVideo.srcObject = stream;
+                    selfieVideo.play();
+                });
+        }
+    </script>
+
+    <script>
+
+        function configureViewportHeight() {
+            const vh = window.innerHeight * 0.01; // Get inner height of the window and multiply it by 1% to get one unit of vh.
+            document.documentElement.style.setProperty('--vh', `${vh}px`); // Set the value in the "--vh" custom property to the root of the document
+        }
+
+        configureViewportHeight(); // Configure the custome viewport property.
+        window.addEventListener('resize', configureViewportHeight); // Listen to resize event and fire the above function.
+
+    </script>
+
+{% endblock %}

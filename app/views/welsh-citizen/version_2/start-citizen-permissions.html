@@ -1,0 +1,47 @@
+{% extends "layout-citizen-3.html" %}
+
+{% block pageTitle %}
+  Video appointment - Attend a video appointment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl" style="margin-top: 40px">
+              Allow access to camera and microphone
+            </h1>
+
+
+        <p class="govuk-body">If you're asked to allow use of your camera and microphone, you must choose '<strong>Allow</strong>' to take part in the video appointment.</p>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+            Did not see a message?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            If you did not see a message and cannot see or hear the other person, you may have blocked access to your camera or microphone. You can change permissions through your browser or device settings.
+
+          </div>
+        </details>
+
+
+        </div>
+
+        <div style="float: right; margin-bottom: 0; padding: 0">
+        <a href="permission-denied">Blocked</a> | <a href="conduct-video-citizen">Next</a></div>
+<!-- <script>
+      setTimeout(function(){
+$('.popup').show();
+}, 3000);
+</script> -->
+<!-- <script>
+
+function showPopup() {
+$('.popup').show();
+}
+</script> -->
+
+{% endblock %}

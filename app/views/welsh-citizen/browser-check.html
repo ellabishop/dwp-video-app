@@ -1,0 +1,87 @@
+{% extends "layout-citizen.html" %}
+
+{% block pageTitle %}
+  Sorry, your browser is not supported - Attend a video appointment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl" style="margin-top: 40px">
+            Sorry, your browser is not supported
+            </h1>
+
+          <p>Your current web browser (the software you use to access the internet) is not supported by this service.</p>
+          <h2 class="govuk-heading-s">Supported browsers</h2>
+          <ul class="govuk-list govuk-list--bullet">
+             <li><a href="#">Google Chrome</a> (version 78 or later) on any device</li>
+             <li><a href="#">Safari</a> (version 12 or later) on an Apple device</li>
+             </ul>
+
+             <p>You can <a href="https://www.whatsmybrowser.org/" class="govuk-link" target="_new">check your browser</a> and how up to date it is or use a different device.</p>
+
+        </div>
+    </div>
+</div>
+
+<script>
+function copyLink() {
+var elm = document.getElementById("divURL");
+// for Internet Explorer
+
+if(document.body.createTextRange) {
+  var range = document.body.createTextRange();
+  range.moveToElementText(elm);
+  range.select();
+  document.execCommand("Copy");
+}
+else if(window.getSelection) {
+  // other browsers
+  var selection = window.getSelection();
+  var range = document.createRange();
+  range.selectNodeContents(elm);
+  selection.removeAllRanges();
+  selection.addRange(range);
+  document.execCommand("Copy");
+  document.getElementById("btext").innerHTML = 'Link copied';
+  setTimeout(function() {
+              document.getElementById('btext').innerHTML = 'Copy link'
+           }, 3000);
+
+
+
+  }
+}
+</script>
+
+<script>
+function copyCode() {
+var elm = document.getElementById("divURL");
+// for Internet Explorer
+
+if(document.body.createTextRange) {
+  var range = document.body.createTextRange();
+  range.moveToElementText(elm);
+  range.select();
+  document.execCommand("Copy");
+}
+else if(window.getSelection) {
+  // other browsers
+  var selection = window.getSelection();
+  var range = document.createRange();
+  range.selectNodeContents(elm);
+  selection.removeAllRanges();
+  selection.addRange(range);
+  document.execCommand("Copy");
+  document.getElementById("btext").innerHTML = 'Link copied';
+  var originalContent = document.getElementById("btext").innerHTML;
+        setTimeout(function() {
+                    document.getElementById('btext').innerHTML = 'Copy link'
+                 }, 3000);
+
+  }
+}
+</script>
+
+{% endblock %}

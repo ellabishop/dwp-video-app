@@ -1,0 +1,36 @@
+{% extends "layout-citizen-3.html" %}
+
+{% block pageTitle %}
+  You're too early to join your appointment - Attend a video appointment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl" style="margin-top: 40px">
+            Sorry, you’re too early to attend your appointment
+            </h1>
+
+          <p>Try again from 10 minutes before your appointment start time.</p>
+
+
+
+          <button class="govuk-button" style="margin-top:30px" id="close1" onclick="closeWin()">Close</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+      function closeWin() {
+        var myWindow = window.close("help")
+        myWindow.close();
+      }
+    </script>
+
+    <noscript>
+    <style>
+        #close1 {display:none;}
+    </style>
+</noscript>
