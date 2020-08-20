@@ -100,11 +100,11 @@ router.post('/appt-time-3', function (req, res) {
 // Check whether the variable matches a condition
 if (claimantName, apptDay, apptMon, apptYear, startTime, duration  == ""){
     // Send user to next page
-    res.redirect('/staff/welsh-create-appointment/version_1/confirm-video-details')
+    res.redirect('/staff/create-appointment/welsh-create-appointment/version_1/confirm-video-details')
   }
   else {
     // Send user to ineligible page
-    res.redirect('/staff/welsh-create-appointment/version_1/confirm-video-details')
+    res.redirect('/staff/create-appointment/welsh-create-appointment/version_1/confirm-video-details')
   }
 })
 

@@ -26,6 +26,18 @@ $govuk-header-border-color: #00728F !important;
   //background-color: #444 !important;
 //}
 
+:root {
+  --conduct-custom-max-width: 960px;
+  --conduct-base-container-height: 500px;
+  --conduct-base-container-width: 960px;
+  --conduct-tile-container-height: 500px;
+  --conduct-tile-container-width: 960px;
+  --participants-list-height: 500px;
+  --participants-list-width: 960px;
+  --selfie-height: 125px;
+  --selfie-width: 240px;
+}
+
 .govuk-table {
   font-size: 14px !important;
   line-height: 1.4285714286 !important;
@@ -143,6 +155,24 @@ padding: 2em 2em 0.5em 2em;
   background: #f3f2f1;
   display: block;
   padding: 10px 0px 10px 0px;
+  position:relative;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+
+.dwp-video-header-conduct {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  color: #000000;
+  background: #f3f2f1;
+  display: block;
+  padding: 15px 0px 5px 0px;
   position:relative;
   width: 100%;
   height: 50px;
@@ -751,7 +781,7 @@ border:none;
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 999; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -1185,3 +1215,73 @@ $adjusted-desktop-width: calc(#{$adjusted-desktop-height} * 1.333);
     width: 90%;
   }
 }
+
+/*** Resizable conduct page begin ****/
+.custom-header-width--conduct {
+  max-width: var(--conduct-custom-max-width);
+}
+
+.custom-status-bar-width--conduct {
+  max-width: var(--conduct-custom-max-width);
+}
+
+.base-container--conduct {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 20px;
+  justify-content: center;
+  justify-items: center;
+  height: var(--conduct-base-container-height);
+  width: var(--conduct-base-container-width);
+}
+
+.tile-container--conduct {
+  position: relative;
+  height: var(--conduct-tile-container-height);
+  width: var(--conduct-tile-container-width);
+  background: #f1f2f3;
+}
+
+.participants-list--conduct {
+  height: var(--participants-list-height);
+  width: var(--participants-list-width);
+  background: #ffffff;
+  margin-left: 20px;
+}
+
+.tile-primary--conduct {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+    @include for-breakpoint (small-to-medium-screen) {
+      object-fit: cover;
+    }
+  }
+}
+
+.tile-secondary--conduct {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: var(--selfie-height);
+  width: var(--selfie-width);
+  z-index: 2;
+
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+    @include for-breakpoint (small-to-medium-screen) {
+      object-fit: cover;
+    }
+  }
+}
+/*** Resizable conduct page end ****/
