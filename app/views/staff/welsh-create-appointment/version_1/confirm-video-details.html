@@ -1,0 +1,58 @@
+{% extends "layout-create.html" %}
+
+{% block pageTitle %}
+Check your video appointment details - Create a video appointment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl" style="margin-top: 40px">
+      Edrychwch dros fanylion eich apwyntiad fideo
+    </h1>
+
+    <dl class="govuk-summary-list" style="margin-bottom: 60px;" name="theField">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+          Enw llawn yr hawlydd
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['fullName'] }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Dyddiad yr apwyntiad
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['appointmentDay'] }} Iau {{ data['appointmentYear'] }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Amser dechraue
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['startTime'] }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Hyd
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['myDuration'] }}
+        </dd>
+      </div>
+    </dl>
+
+    <a href="plain-video-confirmation" class="govuk-button">Creu apwyntiad fideo</a>
+    <a href="enter-video-details" style="margin: 0 0 0 15px" class="govuk-button govuk-button--secondary">Newid manylion</a>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
