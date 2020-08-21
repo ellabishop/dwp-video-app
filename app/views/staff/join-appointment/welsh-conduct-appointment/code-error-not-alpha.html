@@ -1,0 +1,63 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+Enter the appointment code - Conduct a video appointment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          Mae problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#appointmentCode">Mae’n rhaid i’r cod apwyntiad ond cynnwys llythryennau</a>
+            </li>
+            <li>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <form action="/appointment-code-answer" method="post" class="govuk-form-group--error" id="appointmentCode" style="margin-top: 10px">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-heading-xl">
+                Rhowch eich cod apwyntiad </h1>
+                <p>Mae hwn yn god 6 llythyren y gwnaethoch ei gynhyrchu pan wnaethoch greu’r apwyntiad.</p>
+            </legend>
+            </fieldset>
+            <fieldset class="govuk-fieldset">
+
+  <label class="govuk-label" for="address-line-1">
+Cod apwyntiad </label>
+
+<span id="appointmentCode" class="govuk-error-message">
+<span class="govuk-visually-hidden">Error:</span> Mae’n rhaid i’r cod apwyntiad ond cynnwys llythryennau
+</span>
+      <input type="text" id="appointmentCode" name="appointmentCode" class="govuk-input govuk-input--error" style="width:50%">
+      </fieldset>
+
+      </form>
+        <button class="govuk-button" data-module="govuk-button" style="margin-top: 30px">Parhau</button>
+      <br>
+
+
+      <h2 class="govuk-heading-m">Os nad yw eich cod gennych</h2>
+
+      <p>Os ydych wedi colli neu anghofio eich cod byddwch angen creu apwyntiad fideo newydd. </p>
+
+  </div>
+  <a href="enter-code" style="float: right">Back to start</a>
+</div>
+
+</div>
+
+{% endblock %}
