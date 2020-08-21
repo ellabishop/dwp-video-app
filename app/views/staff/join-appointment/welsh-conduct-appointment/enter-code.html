@@ -1,0 +1,47 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  Enter the appointment code - Conduct a video appointment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/appointment-code-answer-2" method="post" class="form" id="appointmentcode_form" style="margin-top:40px">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-heading-xl">
+              Rhowch eich cod apwyntiad
+            </h1>
+            <p> Mae hwn yn god 6 llythyren y gwnaethoch ei gynhyrchu pan wnaethoch greu’r apwyntiad.</p>
+          </legend>
+        </fieldset>
+
+      <fieldset class="govuk-fieldset">
+          <label class="govuk-label" for="appointment-code">
+            Cod apwyntiad </label>
+            <input type="text" id="appointment-code" name="appointmentCode" class="govuk-input" style="width:50%">
+      </fieldset>
+        <button class="govuk-button" data-module="govuk-button" style="margin-top: 30px">Parhau</button>
+      </form>
+
+      <h2 class="govuk-heading-m">Os nad yw eich cod gennych</h2>
+
+      <p>Os ydych wedi colli neu anghofio eich cod byddwch angen creu apwyntiad fideo newydd.</p>
+
+    </div>
+    <div style="float: right; margin-bottom: 0; padding: 0">
+  </div>
+
+</div>
+
+  <script type="text/javascript">
+  function addLink(){
+    var anchor = document.getElementById('link');
+    var meeting = document.getElementById('appointmentCode');
+    anchor.href += meeting.value;
+  }
+</script>
+
+{% endblock %}

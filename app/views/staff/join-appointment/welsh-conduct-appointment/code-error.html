@@ -1,0 +1,64 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+Enter the appointment code - Conduct a video appointment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          Mae problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#appointment-code">Rhowch eich cod apwyntiad</a>
+            </li>
+            <li>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+        <form action="/appointment-code-answer-2" method="post" class="govuk-form-group--error" id="appointmentcode_form" style="margin-top:40px">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-heading-xl">
+                Rhowch eich cod apwyntiad </h1>
+                <p>Mae hwn yn god 6 llythyren y gwnaethoch ei gynhyrchu pan wnaethoch greu’r apwyntiad</p>
+            </legend>
+            </fieldset>
+            <fieldset class="govuk-fieldset">
+
+  <label class="govuk-label" for="appointment-code">
+Cod apwyntiad </label>
+
+<span id="appointment-code-error" class="govuk-error-message">
+<span class="govuk-visually-hidden">Error:</span> Rhowch eich cod apwyntiad
+</span>
+      <input type="text" id="appointment-code" name="appointmentCode" class="govuk-input govuk-input--error" style="width:50%">
+      </fieldset>
+<button class="govuk-button" data-module="govuk-button" style="margin-top: 30px">Parhau</button>
+      </form>
+
+      <br>
+
+
+      <h2 class="govuk-heading-m">Os nad yw eich cod gennych</h2>
+
+      <p>Os ydych wedi colli neu anghofio eich cod byddwch angen creu apwyntiad fideo newydd. </p>
+
+  </div>
+  <a href="code-error-too-short" style="float: right">Too short</a>
+
+</div>
+
+</div>
+
+{% endblock %}

@@ -126,6 +126,22 @@ router.post('/appointment-code-answer', function (req, res) {
   }
 
 })
+
+router.post('/appointment-code-answer-2', function (req, res) {
+
+// Make a variable and give it the value from 'how-many-balls'
+  var appointmentCode = req.session.data['appointmentCode']
+
+// Check whether the variable matches a condition
+  if (appointmentCode == ""){
+    // Send user to next page
+    res.redirect('staff/join-appointment/welsh-conduct-appointment/code-error')
+  }
+  else {
+    res.redirect('staff/join-appointment/welsh-conduct-appointment/start-staff-permissions')
+  }
+
+})
 module.exports = router
 
 module.exports = router
