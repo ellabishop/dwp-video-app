@@ -1289,3 +1289,44 @@ $adjusted-desktop-width: calc(#{$adjusted-desktop-height} * 1.333);
   }
 }
 /*** Resizable conduct page end ****/
+
+
+/*** Translation help page start ***/
+
+.translation-nav {
+
+@media screen and (min-width: 40.0625em) {
+  margin-top: 45px;
+}
+}
+
+.translation-nav {
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "GDS Transport", Arial, sans-serif;
+  border-bottom: 1px solid #b1b4b6;
+}
+
+.translation-nav_list {
+  list-style: none;
+  margin: 0 -10px;
+  padding: 0;
+}
+
+.translation-nav_list-item {
+  float: left;
+  border-right: 1px solid #b1b4b6;
+  height: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+
+}
+
+.translation-nav_list-item-2 {
+  height: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
