@@ -59,6 +59,15 @@ padding: 2em 2em 0.5em 2em;
   display: none;
 }
 
+.popup2 {
+
+  position: absolute;
+  top: 0;
+  left: 135px;
+  z-index: 1500;
+  display: none;
+}
+
 .govuk-video-end-box {
   text-align: left;
   width: 310px;
