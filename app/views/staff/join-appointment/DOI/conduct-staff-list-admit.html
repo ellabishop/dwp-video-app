@@ -1,0 +1,53 @@
+{% extends "layout-staff-vid.html" %}
+
+{% block pageTitle %}
+  Video appointment - Conduct a video appointment
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="dwp-video-header">
+    <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
+        {% include "includes/top-btn-conduct-staff.html" %}
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container" style="max-width: 1280px">
+  <div class="govuk-video-image" style="text-align:left">
+    <img src="/public/images/workcoach9.png"></div>
+<div class="participants">
+<h1 class="govuk-heading-s">
+    Participants
+    </h1>
+<dl class="govuk-summary-list" style="font-size:16px">
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      Host (me)
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+           <span class="govuk-visually-hidden"> No action available</span>
+         </a>
+    </dd>
+  </div>
+  <h1 class="govuk-heading-s" style="margin-top: 30px">
+      Waiting room
+      </h1>
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      David Smith
+    </dd>
+    <dd class="govuk-summary-list__actions">
+   <a class="govuk-link" href="conduct-staff-list-remove">
+        Admit
+      </a>
+    </dd>
+  </div>
+</dl></div>
+  </div>
+
+
+{% endblock %}
