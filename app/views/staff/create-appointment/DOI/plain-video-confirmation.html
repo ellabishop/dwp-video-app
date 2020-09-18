@@ -16,17 +16,21 @@
         </div>
 
 <h2 class="govuk-heading-m">What to do next</h2>
-<p> 1. Copy this LINK and save it in your diary. You’ll need it to join the video appointment.</p>
+
+
+<p> 1. Copy and save this appointment link. You’ll need it to join the video appointment.</p>
 
       <div class="code-box-3">
         <div class="copy-code-btn"><button class="app-copy-button" style="margin-bottom:0px" id="btext" onclick="copyCode()" role="button" tabindex="0">Copy link</button>
         </div>
-        <p><a href="https://dwp-video-app.herokuapp.com/staff/join-appointment/DOI/start" id="divCode" target="_blank">Conduct a video appointment (opens in new tab)</a></p>
-
-
+        <div class="email" id="divCode">
+        <p><strong>Conduct your video appointment using the following link (opens in new tab):</strong></p>
+        <p><a href="£" target="_blank">https://test.jobcentre.dwp.gov.uk/conduct-video-appointment/start?ajsvc_token=exp=1609900218~acl=/conduct/*!/conduct-video-appointment/*~hmac=338ab663af042537ebab845b0f2d6536ad2e75d50603a2e7a96aeb9171ed6d23</a>
+        </p></div>
 </div>
 
-<p> 2. Copy these joining instructions and send them to the claimant.</p>
+
+<p> 2. Copy and save these joining instructions. The claimant will need them to join the video appointment.</p>
 
 <div class="text-box-2">
 
@@ -119,7 +123,7 @@ function copyClipboard() {
     selection.addRange(range);
     document.execCommand("Copy");
     document.getElementById("btext2").innerHTML = 'Text copied';
-    var originalContent2 = document.getElementById("btext").innerHTML;
+    var originalContent2 = document.getElementById("btext2").innerHTML;
           setTimeout(function() {
                       document.getElementById('btext2').innerHTML = 'Copy text'
                    }, 3000);
