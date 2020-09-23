@@ -7,9 +7,14 @@
 <div class="container">
   <img src="/public/images/videolink.png">
   <p>
-<a href="start" class="conductbtn" target="_blank">
+<a class="conductbtn" onclick="myWindow()">
 https://dwp-video-app.herokuapp.com/staff/join-appointment/research/start</a>
 
 </div>
+<script>
+function myWindow() {
+  window.open('start.html', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+</script>
 
 {% endblock %}
