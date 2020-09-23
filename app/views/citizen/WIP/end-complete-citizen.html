@@ -20,5 +20,13 @@
 
     </div>
     </div>
+    <button class="govuk-button" id="close" onclick="closeWin()">Finish</button>
 </div>
+
+<script>
+  function closeWin() {
+    var myWindow = window.close("end")
+    myWindow.close();
+  }
+</script>
 {% endblock %}
