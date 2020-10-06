@@ -1,0 +1,84 @@
+{% extends "layout-citizen-3.html" %}
+
+{% block pageTitle %}
+  How to prepare for a video appointment - Attend a video appointment
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+  <!--    <a href="#" class="govuk-back-link" onclick="goBack()">Back</a> -->
+
+        <span class="govuk-caption-xl" style="margin-top:40px">Guidance</span>
+          <h1 class="govuk-heading-xl">How to prepare for a video appointment</h1> </div>
+
+          <div class="govuk-grid-column-one-third">
+<nav role="navigation" class="translation-nav" aria-label="Translations">
+  <ul class="translation-nav_list">
+          <li class="translation-nav_list-item">
+            <span lang="en">English</span> </li>
+           <li class="translation-nav_list-item-2">
+             <a lang="cy" rel="alternate" href="../welsh-attend/v1-static-trial/help" style="padding-left:10px">Cymraeg</a> </li>
+       </nav>
+           </div>
+          <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-m">Equipment you need</h2>
+          <p>You'll need the following:<p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>a computer, laptop, smartphone or tablet with a camera and microphone</li>
+              <li>internet access - we suggest you use wifi to avoid mobile data charges</li>
+              <li>a supported web browser (the software you use to access the internet)</li>
+            </ul>
+            <h2 class="govuk-heading-s">Supported browsers</h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="https://www.google.com/chrome/">Google Chrome</a> (version 78 or later) on Windows, Apple or Android devices</li>
+              <li><a href="https://support.apple.com/en_GB/downloads/safari ">Safari</a> (version 12 or later) on Apple devices</li>
+            </ul>
+
+
+
+              <h2 class="govuk-heading-m">During your appointment</h2>
+                <p>When your camera is on, you’ll be seen at all times, whether you’re speaking or not.
+                  This includes if you change to another tab, or on some devices, even if you lock your screen.</p>
+
+                <p>If you experience any issues with the picture or sound during the appointment, try the 'Refresh' button.
+                  In most cases this will fix the problem.</p>
+
+                <p> If you close your browser or lose connection before the end of your appointment, you can use the 'Attend your video appointment' link again to rejoin.</p>
+
+                <div class="warning-panel"><div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>You are not allowed to record or take pictures of a video appointment without our consent. If we suspect you are making a recording, we will end the appointment immediately.<br><br>Any criminal behaviour will be reported.</span></strong></div></div>
+
+
+          </div>
+    </div>
+<button class="govuk-button" style="margin-top:30px" id="close3" onclick="closeWin()">Close</button>
+  </div>
+
+  <script>
+    function closeWin() {
+      var myWindow = window.close("help")
+      myWindow.close();
+    }
+</script>
+
+<noscript>
+<style>
+    #close3 {display:none;}
+</style>
+</noscript>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+{% endblock %}

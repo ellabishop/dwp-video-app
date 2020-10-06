@@ -120,7 +120,6 @@ padding: 2em 2em 0.5em 2em;
   border-bottom-color: #00728F !important;
 }
 
-
 /*.govuk-header__link {
   color: #0b0c0c !important;
   cursor:default;
@@ -368,18 +367,7 @@ padding: 2em 2em 0.5em 2em;
 }
 
 /* Frames for video waiting and leave screens */
-.govuk-video-frame-uc {
-  text-align: center;
-  width: 100%;
-  height: 712px;
-  border-color: #0b0c0c;
-  border: #0b0c0c 2px solid;
-  padding: 0;
-  position:relative;
 
-  display: inline-block;
-  background-color: #fff;
-}
 .govuk-video-frame {
   text-align: center;
   width: 1271px;
@@ -427,7 +415,6 @@ padding: 2em 2em 0.5em 2em;
   margin-top: 4px;
   display: inline-block;
 }
-
 
 /* Sign out link for staff */
 
@@ -587,7 +574,7 @@ padding: 2em 2em 0.5em 2em;
   float: right;
   position: relative;
   margin-right: 15px;
-  top:-17px;
+  top: 4px;
 }
 
 input {
