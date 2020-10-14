@@ -605,6 +605,13 @@ padding: 2em 2em 0.5em 2em;
   top: -4px;
 }
 
+.longURL{
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  -ms-word-break: break-all;
+}
+
 input {
 background-color: #fff;
 border: 0;
