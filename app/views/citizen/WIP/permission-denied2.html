@@ -1,0 +1,40 @@
+{% extends "layout-citizen-3.html" %}
+
+{% block pageTitle %}
+  Unblock your camera and microphone  - Attend a video appointment
+{% endblock %}
+
+{% block content %}
+<!-- <div class="popup" style="display:none"><a href="conduct-video-citizen"><img src="/public/images/popup.png"></a></div> -->
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl" style="margin-top: 40px">
+              Your camera or microphone is blocked
+            </h1>
+              <p class="govuk-body">You must unblock access to your camera and microphone to take part in the video appointment. Follow the instructions for your device and browser.</p>
+              <ul class="govuk-list">
+              <li>– &nbspChrome on Android</li>
+              <li>– &nbsp<a href="permission-denied2a">Safari on iPhone or iPad</a></li>
+              <li>– &nbsp<a href="permission-denied2b">Chrome on Desktop</a></li>
+              <li>– &nbsp<a href="#Safari on desktop">Safari on Desktop</a></li>
+              </ul>
+              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+                <h3 class="govuk-heading-s" id="Chrome on Android">Chrome on Android</h3>
+
+                <ol class="govuk-list govuk-list--number">
+                  <li>Select the 3 dots in the browser toolbar.</li>
+                  <li>Select 'Settings'.</li>
+                  <li>Select 'Site settings'.</li>
+                  <li>Select 'Camera' or 'Microphone'.</li>
+                  <li>Make sure this website is in the 'Allowed' list.</li>
+                  <li>If it is in 'Blocked', select it and set the camera or microphone to 'Allow'.</li>
+                  <li>Exit the settings and continue from this page.</li>
+                </ol>
+
+                <a href="responsive-video-full-screen" class="govuk-button" style="margin-top: 30px">Continue</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
