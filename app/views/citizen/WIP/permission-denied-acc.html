@@ -1,0 +1,96 @@
+{% extends "layout-citizen-3.html" %}
+
+{% block pageTitle %}
+  Unblock your camera and microphone  - Attend a video appointment
+{% endblock %}
+
+{% block content %}
+<!-- <div class="popup" style="display:none"><a href="conduct-video-citizen"><img src="/public/images/popup.png"></a></div> -->
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl" style="margin-top: 40px">
+              Your camera or microphone is blocked
+            </h1>
+              <p class="govuk-body">You will need to unblock access to your camera and microphone to take part in the video appointment. Follow the instructions for your device and browser.</p>
+
+              <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                        Chrome on Android
+                      </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <ol class="govuk-list govuk-list--number">
+                      <li>Select the 3 dots in the browser toolbar.</li>
+                      <li>Select 'Settings' then 'Site settings'.</li>
+                      <li>Select 'Site settings'.</li>
+                      <li>Select 'Camera' or 'Microphone'.</li>
+                      <li>Make sure this website is in the 'Allowed' list.</li>
+                      <li>If it is in 'Blocked', select it and set the camera or microphone to 'Allow'.</li>
+                      <li>Exit the settings and continue from this page.</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                        Safari on iPhone or iPad
+                      </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                    <p class='govuk-body'><ol class="govuk-list govuk-list--number">
+                      <li>Select the 'A<span class="large-font">A</span>' icon in the address bar.</li>
+                      <li>Select 'Website settings'.
+                      <li>Select 'Camera' or 'Microphone' and select 'Allow'.</li>
+                      <li>Select 'Done' and continue from this page.</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                        Chrome on Desktop
+                      </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                    <p class='govuk-body'>
+                      <ol class="govuk-list govuk-list--number">
+                      <li>Select the lock icon in the address bar.</li>
+                      <li>Select 'Allow' for 'Camera' or 'Microphone'.</li>
+                      <li>Exit the settings and continue from this page.</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                        Safari on Desktop
+                      </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+                    <p class='govuk-body'><ol class="govuk-list govuk-list--number">
+                      <li>Select 'Safari' on your menu bar.</li>
+                      <li>Select 'Settings for this website'.</li>
+                      <li>Select 'Allow' for 'Camera' or 'Microphone'.</li>
+                      <li>Exit the settings and continue from this page.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+<a href="responsive-video-waiting" role="button" class="govuk-button" data-module="govuk-button" style="margin-top: 10px">Continue</a>
+      </div>
+  </div>
+</div>
+
+{% endblock %}
