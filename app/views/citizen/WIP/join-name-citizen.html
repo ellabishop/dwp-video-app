@@ -85,6 +85,32 @@ function fixit() {
 }
 </script>
 
+<script type="text/javascript">
+    var SUPPORTED_URL = "http://localhost:3000/citizen/WIP/supported";
+    var UNSUPPORTED_URL = "http://localhost:3000/citizen/WIP/not-supported";
+
+    function selectTechnologyLocation() {
+        var isWebRTCSupported = navigator.getUserMedia ||
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia ||
+        navigator.msGetUserMedia ||
+        window.RTCPeerConnection;
+
+        if (window.navigator.userAgent.indexOf("Edge") > -1) {
+            return UNSUPPORTED_URL;
+        }
+
+        if (isWebRTCSupported) {
+            return SUPPORTED_URL;
+        }
+        else {
+            return UNSUPPORTED_URL;
+        }
+    }
+    window.location = selectTechnologyLocation();
+</script>
+
+
     {% endblock %}
 
 
