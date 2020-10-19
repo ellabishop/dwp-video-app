@@ -26,11 +26,49 @@
             </svg>
           </a>
 
+<!--
+<noscript>
+    <div class="govuk-warning-text" style="position:relative">
+   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+   <strong class="govuk-warning-text__text">
+   <span class="govuk-warning-text__assistive">Warning</span>
+    Please enable javascript to attend your video appointment.
+   </strong>
+    </div>
+  </noscript> -->
     </div>
 
 <div style="float: right">
 <a href="help" target="_blank">Help</a> | <a href="accessibility-statement" target="_blank">Accessibility</a> | <a href="start-citizen-too-early" target="_blank">Early</a> | <a href="start-citizen-too-late" target="_blank">Late</a> | <a href="start-citizen-finished" target="_blank">Finished</a></div>
 
+<noscript>
+  <meta http-equiv="refresh" content="0;url=noscript.html">
+</noscript>
+
+<script type="text/javascript">
+    var SUPPORTED_URL = "supported.html";
+    var UNSUPPORTED_URL = "not-supported.html";
+
+    function selectTechnologyLocation() {
+        var isWebRTCSupported = navigator.getUserMedia ||
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia ||
+        navigator.msGetUserMedia ||
+        window.RTCPeerConnection;
+
+        if (window.navigator.userAgent.indexOf("Edge") > -1) {
+            return UNSUPPORTED_URL;
+        }
+
+        if (isWebRTCSupported) {
+            return SUPPORTED_URL;
+        }
+        else {
+            return UNSUPPORTED_URL;
+        }
+    }
+    window.location = selectTechnologyLocation();
+</script>
 
 
 {% endblock %}
