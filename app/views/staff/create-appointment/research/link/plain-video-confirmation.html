@@ -15,58 +15,60 @@
           </h1>
         </div>
 
-
 <h2 class="govuk-heading-m">What to do next</h2>
 
 
-<p> 1. Copy and save this link. The host can use it to join the video appointment.</p>
+<p> 1. Copy and save this appointment link. You’ll need it to join the video appointment.</p>
 
-<div class="code-box-2">
-  <div class="copy-code-btn"><button class="app-copy-button" id="btext" onclick="copyCode()" role="button" tabindex="0">Copy link</button>
-  </div>
-  <div class="email" id="divCode">
-  <p><a href="#" class="longURL">https://test.jobcentre.dwp.gov.uk/conduct-video-appointment/start?ajsvc_token=exp=1609900218~acl=/conduct/*!/conduct-video-appointment/*~hmac=338ab663af042537ebab845b0f2d6536ad2e75d50603a2e7a96aeb9171ed6d23</a>
-  </p></div>
-
+      <div class="code-box-3">
+        <div class="copy-code-btn"><button class="app-copy-button" style="margin-bottom:0px" id="btext" onclick="copyCode()" role="button" tabindex="0">Copy link</button>
+        </div>
+        <div class="email" id="divCode">
+        <p><strong>Conduct your video appointment using the following link (opens in new tab):</strong></p>
+        <p><a href="£" target="_blank">https://test.jobcentre.dwp.gov.uk/conduct-video-appointment/start?ajsvc_token=exp=1609900218~acl=/conduct/*!/conduct-video-appointment/*~hmac=338ab663af042537ebab845b0f2d6536ad2e75d50603a2e7a96aeb9171ed6d23</a>
+        </p></div>
 </div>
 
 
-<p> 2. Copy and save this link. The attendee can use it to join the appointment.</p>
+<p> 2. Copy and save these joining instructions. The attendee will need them to join the video appointment.</p>
 
-<div class="text-box-3">
+<div class="text-box-2">
 
-<div class="copy-email-btn"><button class="app-copy-button" id="btext2" onclick="copyClipboard()" role="button" tabindex="0">Copy link</button>
+<div class="copy-email-btn"><button class="app-copy-button" id="btext2" onclick="copyClipboard()" role="button" tabindex="0">Copy text</button>
 </div>
 
 <div class="email" id="divText">
 
-<p><a href="#" target="_blank" class="longURL">https://test.jobcentre.dwp.gov.uk/attend-video-appointment/start-yrumze?ajsvc_token=st=1593095400~exp=1595691000~acl=/attend-video-appointment/start-yrumze!/attend-video-appointment/
+
+
+<p><strong>1. &nbsp Prepare for your video appointment using the following link (opens in new tab):</strong></p>
+<p><a href="https://jobcentre.dwp.gov.uk/help" target="_blank">https://jobcentre.dwp.gov.uk/help</a>
+</p>
+
+<p><strong>2. &nbsp Attend your video appointment using the following link (opens in new tab):</strong></p>
+<p><a href="£" target="_blank">https://test.jobcentre.dwp.gov.uk/attend-video-appointment/start-yrumze?ajsvc_token=st=1593095400~exp=1595691000~acl=/attend-video-appointment/start-yrumze!/attend-video-appointment/
   ended-yrumze!/attend-video-appointment/end!/attend-video-appointment/yrumze!/attend-video-appointment/join!/attend-video-appointment/leave~hmac=af81326e524c4b88585ee972cdd3a52885c0667cb22e058047f42dc87096fdda</a></p>
 </div>
+
+
   </div>
 
-
-    </div>
-
 <div class="govuk-inset-text">
-If you need to reschedule the appointment, you must enter the video appointment details again to create another appointment.
+If you need to reschedule the appointment, you must <a href="enter-video-details">enter the video appointment details</a> again to create a new appointment.
     </div>
 
     <div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
   <strong class="govuk-warning-text__text">
     <span class="govuk-warning-text__assistive">Warning</span>
-    Make sure you copy the links before you finish. You will not be able to view this page again.
+    Make sure you’ve copied the links and text before you finish. You will not be able to view this page again.
   </strong>
 </div>
 
-<a href="enter-video-details" role="button" class="govuk-button govuk-!-margin-right-1">Create another appointment</a>
-<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  Close
-</button>
+<a href="create-video-start" button class="govuk-button">Finish</a>
   </div>
 </div>
-
+</div>
 
 
 
@@ -120,43 +122,13 @@ function copyClipboard() {
     selection.removeAllRanges();
     selection.addRange(range);
     document.execCommand("Copy");
-    document.getElementById("btext2").innerHTML = 'Link copied';
+    document.getElementById("btext2").innerHTML = 'Text copied';
     var originalContent2 = document.getElementById("btext2").innerHTML;
           setTimeout(function() {
-                      document.getElementById('btext2').innerHTML = 'Copy link'
+                      document.getElementById('btext2').innerHTML = 'Copy text'
                    }, 3000);
 
   }
-}
-</script>
-
-<script>
-function copyHelp() {
-var elm = document.getElementById("divHelp");
-// for Internet Explorer
-
-if(document.body.createTextRange) {
-  var range = document.body.createTextRange();
-  range.moveToElementText(elm);
-  range.select();
-  document.execCommand("Copy");
-}
-else if(window.getSelection) {
-  // other browsers
-
-  var selection = window.getSelection();
-  var range = document.createRange();
-  range.selectNodeContents(elm);
-  selection.removeAllRanges();
-  selection.addRange(range);
-  document.execCommand("Copy");
-  document.getElementById("bhelp2").innerHTML = 'Link copied';
-  var originalContent2 = document.getElementById("bhelp2").innerHTML;
-        setTimeout(function() {
-                    document.getElementById('bhelp2').innerHTML = 'Copy link'
-                 }, 3000);
-
-}
 }
 </script>
 
