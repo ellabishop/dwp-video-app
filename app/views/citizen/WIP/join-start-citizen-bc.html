@@ -45,34 +45,25 @@
   <meta http-equiv="refresh" content="0;url=noscript.html">
 </noscript>
 
+
+
 <script type="text/javascript">
-    var SUPPORTED_URL = "supported.html";
-    var UNSUPPORTED_URL = "not-supported.html";
-
-    function selectTechnologyLocation() {
-        var isWebRTCSupported = navigator.getUserMedia ||
-        navigator.webkitGetUserMedia ||
-        navigator.mozGetUserMedia ||
-        navigator.msGetUserMedia ||
-        window.RTCPeerConnection;
-
-        if (window.navigator.userAgent.indexOf("Edge") > -1) {
-            return UNSUPPORTED_URL;
-        }
-
-        if (window.navigator.userAgent.indexOf("Chrome") > -1) {
-            return SUPPORTED_URL;
-        }
-
-        if (window.navigator.userAgent.indexOf("Safari") > -1) {
-            return SUPPORTED_URL;
-        }
-        else {
-            return UNSUPPORTED_URL;
-        }
-    }
-    window.location = selectTechnologyLocation();
-</script>
-
+  if ((navigator.userAgent.indexOf('Chrome') >= 0))
+{
+window.location.replace("supported.html");
+}
+else if (navigator.userAgent.indexOf('Safari') >= 0)
+{
+    window.location.replace("supported.html");
+}
+else if (navigator.userAgent.indexOf('Edge') >= 0)
+{
+    window.location.replace("supported.html");
+}
+else
+{
+window.location.replace("not-supported.html");
+}
+  </script>
 
 {% endblock %}
