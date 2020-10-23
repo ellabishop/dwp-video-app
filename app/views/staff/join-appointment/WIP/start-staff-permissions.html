@@ -72,36 +72,7 @@
         <div style="float: right; margin-bottom: 0; padding: 0">
         <a href="conduct-staff-list">Next</a></div>
 
-    <script>
-      setTimeout(function(){
-$('.popup').show();
-}, 3000);
-</script>
 
-<script type="text/javascript">
-    var SUPPORTED_URL = "conduct-staff-list.html";
-    var UNSUPPORTED_URL = "not-supported.html";
-
-    function selectTechnologyLocation() {
-        var isWebRTCSupported = navigator.getUserMedia ||
-        navigator.webkitGetUserMedia ||
-        navigator.mozGetUserMedia ||
-        navigator.msGetUserMedia ||
-        window.RTCPeerConnection;
-
-        if (window.navigator.userAgent.indexOf("Edge") > -1) {
-            return UNSUPPORTED_URL;
-        }
-
-        if (isWebRTCSupported) {
-            return SUPPORTED_URL;
-        }
-        else {
-            return UNSUPPORTED_URL;
-        }
-    }
-    window.location = selectTechnologyLocation();
-</script>
 
 
 {% endblock %}

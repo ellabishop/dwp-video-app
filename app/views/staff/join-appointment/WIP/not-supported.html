@@ -1,4 +1,4 @@
-{% extends "layout-citizen-3.html" %}
+{% extends "layout-staff.html" %}
 
 {% block pageTitle %}
   Attend a video appointment
@@ -11,14 +11,48 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl" style="margin-top: 40px">
-              Sorry, your browser is not supported!
+              Sorry, your browser is not supported
             </h1>
+            <div>
+<p> You will need to launch the 'Conduct a video appointment' service in Microsoft Edge. </p>
 
+                    <a href="microsoft-edge:/enter-code.html" role="button" class="govuk-button" style="margin-top:30px"> Join your meeting in Edge </a>
+
+
+                </div>
 </div>
 </div>
 </div>
 
 
+<script>
+function copyURL() {
+var elm = document.getElementById("divCode");
+// for Internet Explorer
 
+if(document.body.createTextRange) {
+  var range = document.body.createTextRange();
+  range.moveToElementText(elm);
+  range.select();
+  document.execCommand("Copy");
+}
+else if(window.getSelection) {
+  // other browsers
+
+  var selection = window.getSelection();
+  var range = document.createRange();
+  range.selectNodeContents(elm);
+  selection.removeAllRanges();
+  selection.addRange(range);
+  document.execCommand("Copy");
+  document.getElementById("btext").innerHTML = 'Code copied';
+  var originalContent = document.getElementById("btext").innerHTML;
+        setTimeout(function() {
+                    document.getElementById('btext').innerHTML = 'Copy code'
+                 }, 3000);
+
+}
+}
+</script>
 
 {% endblock %}
