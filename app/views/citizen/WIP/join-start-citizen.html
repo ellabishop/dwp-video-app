@@ -55,10 +55,7 @@
         navigator.mozGetUserMedia ||
         navigator.msGetUserMedia ||
         window.RTCPeerConnection;
-
-        if (window.navigator.userAgent.indexOf("Edge") > -1) {
-            return UNSUPPORTED_URL;
-        }
+        
 
         if (isWebRTCSupported) {
             return SUPPORTED_URL;

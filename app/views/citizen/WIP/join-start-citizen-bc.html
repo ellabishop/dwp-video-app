@@ -41,14 +41,36 @@
 <div style="float: right">
 <a href="help" target="_blank">Help</a> | <a href="accessibility-statement" target="_blank">Accessibility</a> | <a href="start-citizen-too-early" target="_blank">Early</a> | <a href="start-citizen-too-late" target="_blank">Late</a> | <a href="start-citizen-finished" target="_blank">Finished</a></div>
 
+
+
+<script type="text/javascript">
+
+  var SUPPORTED_URL = 'supported.html';
+  var UNSUPPORTED_URL = 'not-supported.html';
+  window.location = getURL();
+  function getURL() {
+  	if (isSupported()) {
+    	return SUPPORTED_URL;
+    }
+    return UNSUPPORTED_URL;
+  }
+  
+  function isSupported() {
+    if (navigator.userAgent.indexOf('Chrome') != -1
+      || navigator.userAgent.indexOf('Safari') != -1
+      || navigator.userAgent.indexOf('Edge') != -1) {
+      return true;
+    }
+    return false;
+  }
+</script>
+
 <noscript>
   <meta http-equiv="refresh" content="0;url=noscript.html">
 </noscript>
 
-
-
-<script type="text/javascript">
-  if ((navigator.userAgent.indexOf('Chrome') >= 0))
+<!--<script type="text/javascript">
+  if (navigator.userAgent.indexOf('Chrome') >= 0)
 {
 window.location.replace("supported.html");
 }
@@ -60,14 +82,10 @@ else if (navigator.userAgent.indexOf('Edge') >= 0)
 {
     window.location.replace("supported.html");
 }
-else if (navigator.userAgent.indexOf('/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[A|N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i')>=0) {
-{
-    window.location.replace("not-supported.html");
-}
-else
+else if
 {
 window.location.replace("not-supported.html");
 }
-  </script>
+  </script> -->
 
 {% endblock %}
