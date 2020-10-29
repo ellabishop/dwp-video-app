@@ -17,14 +17,13 @@
   <div id="base-container" class="base-container--conduct">
     <div id="tile-container" class="tile-container--conduct">
       <video id="primary-video" class="tile-primary--conduct" autoplay=""></video>
-      <video id="secondary-video" class="tile-secondary--conduct" autoplay=""></video>
+
     </div>
 
     <div id="participants-list" class="participants-list--conduct">
       <h1 class="govuk-heading-s">
-        Participants
-      </h1>
-
+          Participants
+          </h1>
       <dl class="govuk-summary-list" style="font-size:16px">
         <div class="govuk-summary-list__row">
           <dd class="govuk-summary-list__value">
@@ -32,24 +31,71 @@
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
-              <span class="govuk-visually-hidden"> No action available</span>
-            </a>
+                 <span class="govuk-visually-hidden"> No action available</span>
+               </a>
           </dd>
         </div>
+        <h1 class="govuk-heading-s" style="margin-top: 30px">
+            Waiting room
+            </h1>
+            There is nobody waiting.
+      </dl></div>
 
-        <div class="govuk-summary-list__row">
-          <dd class="govuk-summary-list__value">
-            Attendee
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              <span class="govuk-visually-hidden"> No action available</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
-    </div>
+      <div id="participants-list-2" class="participants-list--conduct" style="display:none;">
+        <h1 class="govuk-heading-s">
+            Participants
+            </h1>
+        <dl class="govuk-summary-list" style="font-size:16px">
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              Host (me)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                   <span class="govuk-visually-hidden"> No action available</span>
+                 </a>
+            </dd>
+          </div>
+          <h1 class="govuk-heading-s" style="margin-top: 30px">
+              Waiting room
+              </h1>
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              Participant
+            </dd>
+            <dd class="govuk-summary-list__actions">
+           <a class="govuk-link" href="conduct-wait-3">
+                Admit
+              </a>
+            </dd>
+          </div>
+        </dl></div>
   </div>
+  <div style="float: right; margin-bottom: 0; padding: 0">
+  <a href="conduct-wait-2">Next</a></div>
+
+  <script type='text/javascript'>
+
+   $(window).load(function(){
+   setTimeout(
+    function(){
+
+       $('#participants-list').replaceWith($('#participants-list-2'));
+       $('#participants-list-2').show();
+
+    },
+    30000
+ );
+   });
+
+   </script>
+
+<!--  <script>
+  setTimeout(function () {
+     //Redirect with JavaScript
+     window.location.href= 'conduct-wait-2';
+  }, 20000);
+  </script> -->
 
   <script>
     var primaryVideoAspectRatio = 0;
