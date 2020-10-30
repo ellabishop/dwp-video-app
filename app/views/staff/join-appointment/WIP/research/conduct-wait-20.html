@@ -38,88 +38,20 @@
         <h1 class="govuk-heading-s" style="margin-top: 30px">
             Waiting room
             </h1>
-            There is nobody waiting.
+        <div class="govuk-summary-list__row">
+          <dd class="govuk-tag govuk-tag--yellow">
+            Attendee
+          </dd>
+          <dd class="govuk-summary-list__actions">
+         <a class="govuk-link" href="conduct-wait-3">
+              Admit
+            </a>
+          </dd>
+        </div>
       </dl></div>
-
-      <div id="participants-list-2" class="participants-list--conduct" style="display:none;">
-        <h1 class="govuk-heading-s">
-            Participants
-            </h1>
-        <dl class="govuk-summary-list" style="font-size:16px">
-          <div class="govuk-summary-list__row">
-            <dd class="govuk-summary-list__value">
-              Host (me)
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                   <span class="govuk-visually-hidden"> No action available</span>
-                 </a>
-            </dd>
-          </div>
-          <h1 class="govuk-heading-s" style="margin-top: 30px">
-              Waiting room
-              </h1>
-          <div class="govuk-summary-list__row">
-            <dd class="govuk-summary-list__value">
-              Attendee
-            </dd>
-            <dd class="govuk-summary-list__actions">
-           <a class="govuk-link" href="conduct-wait-3">
-                Admit
-              </a>
-            </dd>
-          </div>
-        </dl></div>
   </div>
-  <div style="float: right; margin-bottom: 0; padding: 0">
-  <a href="conduct-wait-2">Next</a></div>
+
   <button onclick="notifyMe()">Notification</button>
-
-  <script type='text/javascript'>
-
-   $(window).load(function(){
-   setTimeout(
-    function(){
-
-       $('#participants-list').replaceWith($('#participants-list-2'));
-       $('#participants-list-2').show();
-
-    },
-    5000
- );
-   });
-
-   </script>
-
-   <script>
-     function notifyMe() {
-       // Let's check if the browser supports notifications
-       if (!("Notification" in window)) {
-         alert("This browser does not support desktop notification");
-       }
-
-       // Let's check whether notification permissions have already been granted
-       else if (Notification.permission === "granted") {
-         // If it's okay let's create a notification
-         var notification = new Notification("An attendee is in the waiting room");
-       }
-
-       // Otherwise, we need to ask the user for permission
-       else if (Notification.permission !== "denied") {
-         Notification.requestPermission().then(function (permission) {
-           // If the user accepts, let's create a notification
-           if (permission === "granted") {
-             var notification = new Notification("An attendee is in the waiting room");
-           }
-         });
-       }
-
-       // At last, if the user has denied notifications, and you
-       // want to be respectful there is no need to bother them any more.
-     }
- </script>
-
-
 
   <script>
     var primaryVideoAspectRatio = 0;
@@ -204,5 +136,36 @@
       };
     }
   </script>
+
+
+
+  <script>
+    function notifyMe() {
+      // Let's check if the browser supports notifications
+      if (!("Notification" in window)) {
+        alert("This browser does not support desktop notification");
+      }
+
+      // Let's check whether notification permissions have already been granted
+      else if (Notification.permission === "granted") {
+        // If it's okay let's create a notification
+        var notification = new Notification("An attendee is in the waiting room");
+      }
+
+      // Otherwise, we need to ask the user for permission
+      else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then(function (permission) {
+          // If the user accepts, let's create a notification
+          if (permission === "granted") {
+            var notification = new Notification("An attendee is in the waiting room");
+          }
+        });
+      }
+
+      // At last, if the user has denied notifications, and you
+      // want to be respectful there is no need to bother them any more.
+    }
+
+</script>
 
 {% endblock %}
