@@ -1,0 +1,115 @@
+{% extends "layout-citizen-3.html" %}
+
+{% block pageTitle %}
+  Your video appointment is finished - Attend a video appointment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl" style="margin-top: 40px">
+              Your video appointment is finished
+            </h1>
+
+<!--    <div class="govuk-panel" style="background-color:#f3f2f1; text-align:left">
+  <h1 class="govuk-heading-s" style="color:#0b0c0c;">
+    How was your video appointment?
+  </h1>
+    <a class="govuk-link" href="https://getinvolved.dwp.gov.uk/++preview++/digital/e86ff17a/consultation/subpage.2020-09-23.0601311615/"> Give your feedback on this service</a>.
+</div>
+</div> -->
+
+<form action="" method="post" novalidate>
+  <div id="feedback">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Overall, how did you feel about your video appointment today?
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--small">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="rating" name="rating" type="radio" value="very satisfied">
+        <label class="govuk-label govuk-radios__label" for="rating">
+          Very satisfied
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="rating-2" name="rating" type="radio" value="datisfied">
+        <label class="govuk-label govuk-radios__label" for="rating-2">
+          Satisfied
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="rating-3" name="rating" type="radio" value="neither">
+        <label class="govuk-label govuk-radios__label" for="rating-3">
+          Neither satisfied nor dissatisfied
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="rating-4" name="rating" type="radio" value="dissatisfied">
+        <label class="govuk-label govuk-radios__label" for="rating-4">
+          Dissatisfied
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="rating-5" name="rating" type="radio" value="month">
+        <label class="govuk-label govuk-radios__label" for="rating-5">
+          Very dissatisfied
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+<h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+    How could we improve this service?
+  </label>
+</h1>
+<div id="more-detail-hint" class="govuk-hint">
+  Don't include personal or financial information, like your National Insurance number or credit card details.
+</div>
+<textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+<button class="govuk-button" onclick="thankYou()"id="send-feedback" data-module="govuk-button">
+            Send feedback
+          </button>
+        </form>
+
+<div id="thankyou" style="display:none;">
+  <div class="govuk-panel" style="background-color:#f3f2f1; text-align:left">
+          <h1 class="govuk-heading-s" style="color:#0b0c0c;">
+            Thank you for your feedback
+          </h1>
+            <a class="govuk-link" href="https://getinvolved.dwp.gov.uk/++preview++/digital/e86ff17a/consultation/subpage.2020-09-23.0601311615/"> Get involved in future research</a>.
+        </div></div>
+
+<script>
+  function thankYou() {
+
+  var myThankyou = document.getElementById('thankyou');
+
+  // get the current value of the clock's display property
+  var displaySetting = myThankyou.style.display;
+
+  // also get the clock button, so we can change what it says
+  var send-feedback = document.getElementById('send-feedback');
+
+  // now toggle the clock and the button text, depending on current state
+  if (displaySetting == 'block') {
+    // clock is visible. hide it
+    myThankyou.style.display = 'none';
+    // change button text
+    clockButton.innerHTML = 'Show clock';
+  }
+  else {
+    // clock is hidden. show it
+    myClock.style.display = 'block';
+    // change button text
+    clockButton.innerHTML = 'Hide clock';
+  }
+}
