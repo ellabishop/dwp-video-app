@@ -22,7 +22,7 @@
 <p> 1. Copy and save this link. The host can use it to join the appointment.</p>
 
 <div class="code-box-2">
-  <div class="copy-code-btn"><button class="app-copy-button" id="btext" onclick="copyCode()" role="button" tabindex="0">Copy link</button>
+  <div class="copy-code-btn"><button class="app-copy-button" id="btext" onclick="copyCode()" role="button" tabindex="0">Copy host link</button>
   </div>
   <div class="email" id="divCode">
   <p><a href="#" class="longURL">https://test.jobcentre.dwp.gov.uk/conduct-video-appointment/start?ajsvc_token=exp=1609900218~acl=/conduct/*!/conduct-video-appointment/*~hmac=338ab663af042537ebab845b0f2d6536ad2e75d50603a2e7a96aeb9171ed6d23</a>
@@ -35,7 +35,7 @@
 
 <div class="text-box-3">
 
-<div class="copy-email-btn"><button class="app-copy-button" id="btext2" onclick="copyClipboard()" role="button" tabindex="0">Copy link</button>
+<div class="copy-email-btn"><button class="app-copy-button" id="btext2" onclick="copyClipboard()" role="button" tabindex="0">Copy attendee link</button>
 </div>
 
 <div class="email" id="divText">
@@ -104,7 +104,7 @@ else if(window.getSelection) {
   document.getElementById("btext").innerHTML = 'Link copied';
   var originalContent = document.getElementById("btext").innerHTML;
         setTimeout(function() {
-                    document.getElementById('btext').innerHTML = 'Copy link'
+                    document.getElementById('btext').innerHTML = 'Copy host link'
                  }, 3000);
 
 }
@@ -134,7 +134,7 @@ function copyClipboard() {
     document.getElementById("btext2").innerHTML = 'Link copied';
     var originalContent2 = document.getElementById("btext2").innerHTML;
           setTimeout(function() {
-                      document.getElementById('btext2').innerHTML = 'Copy link'
+                      document.getElementById('btext2').innerHTML = 'Copy attendee link'
                    }, 3000);
 
   }
