@@ -21,8 +21,7 @@
 </div>
 </div> -->
 
-<form action="" method="post" novalidate>
-  <div id="feedback">
+<form action="#" id="feedback" style="display:block;">
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -75,43 +74,43 @@
 </div>
 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
-<button class="govuk-button" onclick="thankYou()"id="send-feedback" data-module="govuk-button">
+<button class="govuk-button" id="send-feedback" data-module="govuk-button" onclick="javascript:SwapDivsWithClick('feedback','thankyou')">
             Send feedback
           </button>
         </form>
 
 <div id="thankyou" style="display:none;">
-  <div class="govuk-panel" style="background-color:#f3f2f1; text-align:left">
+  <div class="govuk-panel" style="background-color:#ffff; text-align:left; border: 5px solid #00703c;">
           <h1 class="govuk-heading-s" style="color:#0b0c0c;">
             Thank you for your feedback
           </h1>
             <a class="govuk-link" href="https://getinvolved.dwp.gov.uk/++preview++/digital/e86ff17a/consultation/subpage.2020-09-23.0601311615/"> Get involved in future research</a>.
         </div></div>
 
-<script>
-  function thankYou() {
 
-  var myThankyou = document.getElementById('thankyou');
+<script type="text/javascript">
 
-  // get the current value of the clock's display property
-  var displaySetting = myThankyou.style.display;
+  function SwapDivsWithClick(feedback,thankyou)
+  {
+     d1 = document.getElementById(feedback);
+     d2 = document.getElementById(thankyou);
 
-  // also get the clock button, so we can change what it says
-  var send-feedback = document.getElementById('send-feedback');
-
-  // now toggle the clock and the button text, depending on current state
-  if (displaySetting == 'block') {
-    // clock is visible. hide it
-    myThankyou.style.display = 'none';
-    // change button text
-    clockButton.innerHTML = 'Show clock';
+     if( d2.style.display == "none" )
+     {
+        d1.style.display = "none";
+        d2.style.display = "block";
+     }
+     else
+     {
+        d1.style.display = "block";
+        d2.style.display = "none";
+     }
   }
-  else {
-    // clock is hidden. show it
-    myClock.style.display = 'block';
-    // change button text
-    clockButton.innerHTML = 'Hide clock';
-  }
-}
+
+        </script>
+
+
+
+
 
 {% endblock %}

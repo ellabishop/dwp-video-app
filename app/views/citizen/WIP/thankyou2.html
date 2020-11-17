@@ -1,0 +1,57 @@
+{% extends "layout-citizen-3.html" %}
+
+{% block pageTitle %}
+  Your video appointment is finished - Attend a video appointment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl" style="margin-top: 40px">
+              Thank you for your feedback
+            </h1>
+
+<!--    <div class="govuk-panel" style="background-color:#f3f2f1; text-align:left">
+  <h1 class="govuk-heading-s" style="color:#0b0c0c;">
+    How was your video appointment?
+  </h1>
+    <a class="govuk-link" href="https://getinvolved.dwp.gov.uk/++preview++/digital/e86ff17a/consultation/subpage.2020-09-23.0601311615/"> Give your feedback on this service</a>.
+</div>
+</div> -->
+
+
+<div id="thankyou">
+  <div class="govuk-panel" style="background-color:#ffff; text-align:left; border: 5px solid #00703c;">
+        
+            <a class="govuk-link" href="https://getinvolved.dwp.gov.uk/++preview++/digital/e86ff17a/consultation/subpage.2020-09-23.0601311615/"> Get involved in future research</a>.
+        </div></div>
+
+
+<script type="text/javascript">
+
+  function SwapDivsWithClick(feedback,thankyou)
+  {
+     d1 = document.getElementById(feedback);
+     d2 = document.getElementById(thankyou);
+
+     if( d2.style.display == "none" )
+     {
+        d1.style.display = "none";
+        d2.style.display = "block";
+     }
+     else
+     {
+        d1.style.display = "block";
+        d2.style.display = "none";
+     }
+  }
+
+        </script>
+
+
+
+
+
+{% endblock %}
