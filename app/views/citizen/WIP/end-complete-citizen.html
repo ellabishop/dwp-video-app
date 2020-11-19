@@ -14,11 +14,77 @@
             </h1>
 
             <form action="thankyou2" method="post" novalidate>
+              <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="satisfied">
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                 <h1 class="govuk-fieldset__heading">
+                  How was the quality of your video appointment?
+                 </h1>
+               </legend>
+               <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="quality" name="quality" type="radio" value="good" data-aria-controls="conditional-quality">
+                   <label class="govuk-label govuk-radios__label" for="quality">
+                     Good
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="quality-2" name="quality" type="radio" value="bad" data-aria-controls="conditional-quality-2">
+                   <label class="govuk-label govuk-radios__label" for="quality-2">
+                     Bad
+                   </label>
+                 </div>
+                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-quality-2">
+                   <div class="govuk-form-group">
+                     <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+       <h1 class="govuk-fieldset__heading">
+         What went wrong?
+       </h1>
+     </legend>
+     <div id="wrong-hint" class="govuk-hint">
+       Select all that apply.
+     </div>
+     <div class="govuk-checkboxes">
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong" name="wrong" type="checkbox" value="poor video">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong">
+           Poor video quality
+         </label>
+       </div>
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong-2" name="wrong" type="checkbox" value="poor audio">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-2">
+           Poor audio quality
+         </label>
+       </div>
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong-3" name="wrong" type="checkbox" value="other person">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-3">
+           I could not see or hear the other person
+         </label>
+       </div>
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong-4" name="wrong" type="checkbox" value="me">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-4">
+          The other person could not see or hear me
+         </label>
+       </div>
+     </div>
+
+   </fieldset> </div>
+                 </div>
+               </div>
+              </fieldset>
+              </div>
+
+
+
             <div class="govuk-form-group">
            <fieldset class="govuk-fieldset" aria-describedby="satisfied">
              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                <h1 class="govuk-fieldset__heading">
-                Overall, are you satisfied with the video appointment service?
+                Overall, are you satisfied with using this video service to attend an appointment?
                </h1>
              </legend>
              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
@@ -45,40 +111,11 @@
            </fieldset>
          </div>
 
-         <div class="govuk-form-group">
-           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-               <h1 class="govuk-fieldset__heading">
-                How was the quality of your video appointment?
-               </h1>
-             </legend>
-             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-               <div class="govuk-radios__item">
-                 <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-                 <label class="govuk-label govuk-radios__label" for="contact">
-                   Good
-                 </label>
-               </div>
-               <div class="govuk-radios__item">
-                 <input class="govuk-radios__input" id="bad" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-                 <label class="govuk-label govuk-radios__label" for="bad">
-                   Bad
-                 </label>
-               </div>
-               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="bad">
-                 <div class="govuk-form-group">
-                   <label class="govuk-label" for="bad">
-                     Please tell us why.
-                   </label>
-                   <textarea class="govuk-textarea" id="bad" name="more-detail" rows="3"></textarea> </div>
 
-               </div>
-             </div>
-           </fieldset> </div>
 
            <div class="govuk-form-group">
            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
-               Any other feedback about your experience?
+               How can we improve this service?
              </label>
            </h1>
            <div id="more-detail-hint" class="govuk-hint">
