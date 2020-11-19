@@ -12,8 +12,85 @@
             <h1 class="govuk-heading-xl" style="margin-top: 40px">
               Your video appointment is finished
             </h1>
-   <p class="govuk-body"> What did you think of the service? (takes approximately 3 minutes) </p>
-  <a href="https://getinvolved.dwp.gov.uk/++preview++/digital/e86ff17a/consultation/subpage.2020-09-23.0601311615/" class="govuk-button" role="button" style="margin-top:30px">Help us improve the service</a>
+
+            <form action="thankyou2" method="post" novalidate>
+            <div class="govuk-form-group">
+           <fieldset class="govuk-fieldset" aria-describedby="satisfied">
+             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+               <h1 class="govuk-fieldset__heading">
+                Overall, are you satisfied with the video appointment service?
+               </h1>
+             </legend>
+             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+               <div class="govuk-radios__item">
+                 <input class="govuk-radios__input" id="satisfaction" name="satisfaction" type="radio" value="yes" data-aria-controls="conditional-satisfaction">
+                 <label class="govuk-label govuk-radios__label" for="satisfaction">
+                   Yes
+                 </label>
+               </div>
+               <div class="govuk-radios__item">
+                 <input class="govuk-radios__input" id="satisfaction-2" name="satisfaction" type="radio" value="no" data-aria-controls="conditional-satisfaction-2">
+                 <label class="govuk-label govuk-radios__label" for="satisfaction-2">
+                   No
+                 </label>
+               </div>
+               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-satisfaction-2">
+                 <div class="govuk-form-group">
+                   <label class="govuk-label" for="more-detail">
+                     Please tell us why
+                   </label>
+                   <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"></textarea> </div>
+               </div>
+             </div>
+           </fieldset>
+         </div>
+
+         <div class="govuk-form-group">
+           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+               <h1 class="govuk-fieldset__heading">
+                How was the quality of your video appointment?
+               </h1>
+             </legend>
+             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+               <div class="govuk-radios__item">
+                 <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                 <label class="govuk-label govuk-radios__label" for="contact">
+                   Good
+                 </label>
+               </div>
+               <div class="govuk-radios__item">
+                 <input class="govuk-radios__input" id="bad" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                 <label class="govuk-label govuk-radios__label" for="bad">
+                   Bad
+                 </label>
+               </div>
+               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="bad">
+                 <div class="govuk-form-group">
+                   <label class="govuk-label" for="bad">
+                     Please tell us why.
+                   </label>
+                   <textarea class="govuk-textarea" id="bad" name="more-detail" rows="3"></textarea> </div>
+
+               </div>
+             </div>
+           </fieldset> </div>
+
+           <div class="govuk-form-group">
+           <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+               Any other feedback about your experience?
+             </label>
+           </h1>
+           <div id="more-detail-hint" class="govuk-hint">
+             Don't include personal or financial information, like your National Insurance number or credit card details.
+           </div>
+           <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+           </div>
+           <button class="govuk-button" id="send-feedback" data-module="govuk-button" onclick="javascript:SwapDivsWithClick('feedback','thankyou')">
+                       Send feedback
+                     </button>
+                   </form>
+         </div>
 
 </div>
 </div>
