@@ -44,29 +44,4 @@
   }
 </script>
 
-<script type="text/javascript">
-    var SUPPORTED_URL = "enter-code.html";
-    var UNSUPPORTED_URL = "not-supported.html";
-
-    function selectTechnologyLocation() {
-        var isWebRTCSupported = navigator.getUserMedia ||
-        navigator.webkitGetUserMedia ||
-        navigator.mozGetUserMedia ||
-        navigator.msGetUserMedia ||
-        window.RTCPeerConnection;
-
-        if (window.navigator.userAgent.indexOf("Edge") > -1) {
-            return UNSUPPORTED_URL;
-        }
-
-        if (isWebRTCSupported) {
-            return SUPPORTED_URL;
-        }
-        else {
-            return UNSUPPORTED_URL;
-        }
-    }
-    window.location = selectTechnologyLocation();
-</script>
-
 {% endblock %}

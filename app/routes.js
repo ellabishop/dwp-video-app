@@ -142,6 +142,47 @@ router.post('/appointment-code-answer-2', function (req, res) {
   }
 
 })
+
+//**Blank quality radio **//
+
+// Add your routes here - above the module.exports line
+router.post('/quality-answer', function (req, res) {
+
+// Make a variable and give it the value from 'how-many-balls'
+  var appointmentCode = req.session.data['quality']
+
+// Check whether the variable matches a condition
+  if (quality == "good"){
+    // Send user to next page
+    res.redirect('thankyou')
+  }
+  // Check whether the variable matches a condition
+    if (quality == "bad"){
+      // Send user to next page
+      res.redirect('thankyou')
+    }
+  else {
+    res.redirect('staff/join-appointment/version_2/start-staff-permissions')
+  }
+
+})
+
+router.post('/appointment-code-answer-2', function (req, res) {
+
+// Make a variable and give it the value from 'how-many-balls'
+  var appointmentCode = req.session.data['appointmentCode']
+
+// Check whether the variable matches a condition
+  if (appointmentCode == ""){
+    // Send user to next page
+    res.redirect('staff/join-appointment/welsh-conduct-appointment/code-error')
+  }
+  else {
+    res.redirect('staff/join-appointment/welsh-conduct-appointment/start-staff-permissions')
+  }
+
+})
+
 module.exports = router
 
 module.exports = router
