@@ -9,7 +9,7 @@
 {% include "includes/header-conduct.html" %}
 <div class="dwp-video-header">
   <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
-    {% include "includes/top-btn--conduct-citizen.html" %}
+    {% include "includes/top-btn-conduct-citizen-trial.html" %}
       </div>
 </div>
 {% endblock %}
@@ -24,29 +24,8 @@
 
 </div>
 
-
-<!-- hidden pause content -->
-<div class="app-width-container--wide" id="two" style="display:none">
-<div class="govuk-video-frame">
-  <div class="govuk-video-inside-frame">
-    <div class="govuk-grid-column-two-thirds" style="display: inline-block; text-align: left;">
-      <h1 class="govuk-heading-xl">
-        You've paused the video appointment
-      </h1>
-
-      <p>
-        Resume the appointment when you're ready.
-        </p>
-
-<a href="#one" id="resume" class="govuk-button" style="margin: 25px 15px 0px 0px" onclick="javascript:SwapDivsWithClick('one','two'); myPauseEnabled(pause)">Resume appointment</a>
-
-    </div>
-  </div>
-</div>
-</div>
-
 <div style="float: right; margin:50px 200px">
-<a href="paused-citizen">Other paused</a>| <a href="end-complete-citizen">Appointment finished</a>
+<a href="end-complete-citizen">Appointment finished</a>
 </div>
 
 <script src="/public/javascripts/jquery-1.11.3.js"></script>
