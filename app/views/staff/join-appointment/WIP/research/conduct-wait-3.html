@@ -31,7 +31,11 @@
             Host (me)
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
+            <a class="govuk-link" href="#"><select class="govuk-select" id="camera" name="camera">
+              <label><option value="front">Camera 1</option> </label>
+              <option value="rear" selected>Camera 2</option>
+            </select>
+
                  <span class="govuk-visually-hidden"> No action available</span>
                </a>
           </dd>
@@ -41,7 +45,20 @@
             Attendee
           </dd>
           <dd class="govuk-summary-list__actions">
-
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dd class="govuk-summary-list__value">
+            Attendee
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dd class="govuk-summary-list__value">
+            Attendee
+          </dd>
+          <dd class="govuk-summary-list__actions">
           </dd>
         </div>
         <h1 class="govuk-heading-s" style="margin-top: 30px">
@@ -53,10 +70,10 @@
             Settings
             </h1>
         <label class="govuk-label" for="Camera">
-          Camera
+        Camera
         </label>
         <select class="govuk-select" id="camera" name="camera">
-          <option value="front">Camera 1</option>
+          <label><option value="front">Camera 1</option> </label>
           <option value="rear" selected>Camera 2</option>
         </select>
       </div></div>

@@ -8,7 +8,7 @@
 {% block beforeContent %}
 <div class="dwp-video-header">
     <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
-        {% include "includes/top-btn-conduct-staff.html" %}
+        {% include "includes/top-btn-conduct-camera.html" %}
     </div>
 </div>
 {% endblock %}
@@ -45,12 +45,39 @@
   </div>
 </dl>
 
-<div class="govuk-form-group">
-  <h1 class="govuk-heading-s">
-      Settings
-      </h1>
-  <label class="govuk-label" for="Camera">
-    Camera
+<!--
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Camera
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-radios govuk-radios--small">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month" checked>
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Camera 1
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          Camera 2
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+  </div>
+</details>
+
+<!--
+<h2 class="govuk-heading-s"> Settings</h2>
+  <label class="govuk-label" for="Camera" style="display:inline;">
+    Select camera
   </label>
   <select class="govuk-select" id="camera" name="camera">
     <option value="front">Camera 1</option>
