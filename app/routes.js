@@ -143,6 +143,22 @@ router.post('/appointment-code-answer-2', function (req, res) {
 
 })
 
+router.post('/appointment-code-3', function (req, res) {
+
+// Make a variable and give it the value from 'how-many-balls'
+  var appointmentCode = req.session.data['appointmentCode']
+
+// Check whether the variable matches a condition
+  if (appointmentCode == ""){
+    // Send user to next page
+    res.redirect('staff/join-appointment/version_3/code-error')
+  }
+  else {
+    res.redirect('staff/join-appointment/version_3/start-staff-permissions')
+  }
+
+})
+
 //**Blank quality radio **//
 
 // Add your routes here - above the module.exports line
