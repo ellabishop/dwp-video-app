@@ -165,20 +165,20 @@ router.post('/appointment-code-3', function (req, res) {
 router.post('/quality-answer', function (req, res) {
 
 // Make a variable and give it the value from 'how-many-balls'
-  var appointmentCode = req.session.data['quality']
+  var quality = req.session.data['quality']
 
 // Check whether the variable matches a condition
   if (quality == "good"){
     // Send user to next page
-    res.redirect('thankyou')
+    res.redirect('citizen/version_2/thankyou')
   }
   // Check whether the variable matches a condition
     if (quality == "bad"){
       // Send user to next page
-      res.redirect('thankyou')
+      res.redirect('citizen/version_2/thankyou')
     }
   else {
-    res.redirect('staff/join-appointment/version_2/start-staff-permissions')
+    res.redirect('citizen/version_2/end-complete-error')
   }
 
 })
