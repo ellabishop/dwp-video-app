@@ -1,10 +1,9 @@
 // global styles for <a> and <p> tags
 $govuk-global-styles: true;
 
-
 // We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
 $govuk-assets-path: '/govuk/assets/';
-$govuk-header-border-color: #00728F !important;
+
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
 @import "lib/extensions/extensions";
 
@@ -17,8 +16,8 @@ $govuk-header-border-color: #00728F !important;
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
-
-@import 'components/breakpointsMixin';
+@import "components/breakpointsMixin";
+@import "components/video";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 @import "jkeyboard";
@@ -822,7 +821,7 @@ border:none;
   border:none; }
 
 
-  @import "components/video";
+
 
 /* Modal styling */
 
