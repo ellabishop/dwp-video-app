@@ -1355,8 +1355,8 @@ $adjusted-desktop-width: calc(#{$adjusted-desktop-height} * 1.333);
 }
 
 .translation-nav {
-
-  margin: 0 810px 0 ;
+  float: right;
+  margin: 0;
   font-size: 16px;
   font-weight: 400;
   font-family: "GDS Transport", Arial, sans-serif;
@@ -1364,7 +1364,6 @@ $adjusted-desktop-width: calc(#{$adjusted-desktop-height} * 1.333);
 }
 
 .translation-nav_list {
-
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1374,15 +1373,16 @@ $adjusted-desktop-width: calc(#{$adjusted-desktop-height} * 1.333);
   float: left;
   border-right: 1px solid #b1b4b6;
   height: 16px;
-  padding-left: -100px;
+  padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
 
 }
 
 .translation-nav_list-item-2 {
+  float: left;
   height: 16px;
-  padding-left: 10px;
+  padding-left: 0px;
   padding-right: 10px;
   margin-bottom: 0px;
 }
