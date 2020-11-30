@@ -5,14 +5,18 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <div id="header-area" class="dwp-video-header-conduct">
-    <div class="govuk-width-container custom-header-width--conduct" style="margin: 0, text-align: center;">
-      {% include "includes/top-btn-conduct-staff.html" %}
-    </div>
-  </div>
+
 {% endblock %}
 
-{% block content %}
+{% block main %}
+
+<div id="header-area" class="dwp-video-header-conduct">
+  <div class="govuk-width-container custom-header-width--conduct" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-staff.html" %}
+  </div>
+</div>
+
+<main class="govuk-main-wrapper">
 
   <div id="base-container" class="base-container--conduct">
     <div id="tile-container" class="tile-container--conduct">
@@ -40,6 +44,8 @@
             </h1>
             There is nobody waiting.
       </dl>
+
+      <!--
       <div class="govuk-form-group">
         <h1 class="govuk-heading-s">
             Settings
@@ -51,7 +57,8 @@
           <option value="front">Camera 1</option>
           <option value="rear" selected>Camera 2</option>
         </select>
-      </div></div>
+      </div> -->
+    </div>
 
 
 
@@ -84,18 +91,7 @@
             </dd>
           </div>
         </dl>
-        <div class="govuk-form-group">
-          <h1 class="govuk-heading-s">
-              Settings
-              </h1>
-          <label class="govuk-label" for="Camera">
-            Camera
-          </label>
-          <select class="govuk-select" id="camera" name="camera">
-            <option value="front">Camera 1</option>
-            <option value="rear" selected>Camera 2</option>
-          </select>
-        </div></div>
+      </div>
   </div>
   <div style="float: right; margin-bottom: 0; padding: 0">
 <!--  <a href="conduct-wait-2">Next</a></div>
