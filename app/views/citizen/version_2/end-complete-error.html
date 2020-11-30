@@ -1,4 +1,4 @@
-{% extends "layout-citizen-3.html" %}
+{% extends "layout-citizen.html" %}
 
 {% block pageTitle %}
   Your video appointment is finished - Attend a video appointment
@@ -40,7 +40,7 @@
                <span id="quality-error" class="govuk-error-message">
       <span class="govuk-visually-hidden">Error:</span> Select if the quality of your video appointment was good or bad
     </span>
-               <div class="govuk-radios govuk-radios--conditional" id="quality" data-module="govuk-radios">
+               <div class="govuk-radios govuk-radios--conditional" id="quality-ques" data-module="govuk-radios">
                  <div class="govuk-radios__item">
                    <input class="govuk-radios__input" id="quality" name="quality" type="radio" value="good" data-aria-controls="conditional-quality">
                    <label class="govuk-label govuk-radios__label" for="quality">
@@ -55,7 +55,7 @@
                  </div>
                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-quality-2">
                    <div class="govuk-form-group">
-                     <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                     <fieldset class="govuk-fieldset" aria-describedby="wrong-hint">
      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
        <h1 class="govuk-fieldset__heading">
          What went wrong?
@@ -84,20 +84,20 @@
          </label>
        </div>
        <div class="govuk-checkboxes__item">
-         <input class="govuk-checkboxes__input" id="wrong-3" name="wrong" type="checkbox" value="other person">
-         <label class="govuk-label govuk-checkboxes__label" for="wrong-3">
+         <input class="govuk-checkboxes__input" id="wrong-4" name="wrong" type="checkbox" value="other person">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-4">
            I could not hear the other person
          </label>
        </div>
        <div class="govuk-checkboxes__item">
-         <input class="govuk-checkboxes__input" id="wrong-4" name="wrong" type="checkbox" value="me">
-         <label class="govuk-label govuk-checkboxes__label" for="wrong-4">
+         <input class="govuk-checkboxes__input" id="wrong-5" name="wrong" type="checkbox" value="me">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-5">
           The other person could not see me
          </label>
        </div>
        <div class="govuk-checkboxes__item">
-         <input class="govuk-checkboxes__input" id="wrong-4" name="wrong" type="checkbox" value="me">
-         <label class="govuk-label govuk-checkboxes__label" for="wrong-4">
+         <input class="govuk-checkboxes__input" id="wrong-6" name="wrong" type="checkbox" value="me">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-6">
           The other person could not hear me
          </label>
        </div>
@@ -121,7 +121,7 @@
              <span id="satisfaction-error" class="govuk-error-message">
     <span class="govuk-visually-hidden">Error:</span> Select yes if you are satisfied with using this video service to attend an appointment
   </span>
-             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+             <div class="govuk-radios govuk-radios--conditional" id="satisfaction-question" data-module="govuk-radios">
                <div class="govuk-radios__item">
                  <input class="govuk-radios__input" id="satisfaction" name="satisfaction" type="radio" value="yes" data-aria-controls="conditional-satisfaction">
                  <label class="govuk-label govuk-radios__label" for="satisfaction">
