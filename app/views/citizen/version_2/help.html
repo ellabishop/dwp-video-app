@@ -1,26 +1,33 @@
 {% extends "layout-citizen.html" %}
-{% extends "layout-citizen-3.html" %}
+
 
 {% block pageTitle %}
   How to prepare for a video appointment - Attend a video appointment
 {% endblock %}
 
+{% block beforeContent %}
+
+
+<nav class="hmrc-language-select" aria-label="Language switcher">
+<ul class="hmrc-language-select__list">
+<li class="hmrc-language-select__list-item">
+<span aria-current="true">English</span>
+</li>
+<li class="hmrc-language-select__list-item">
+<a href="welsh/help" hreflang="cy" lang="cy" rel="alternate" class="govuk-link" data-journey-click="link - click:lang-select:Cymraeg">
+<span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+<span aria-hidden="true">Cymraeg</span>
+</a>
+</li>
+</ul>
+</nav>
+
+  {% endblock %}
+
+
 {% block content %}
-
-<div class="govuk-width-container">
-
   <div class="govuk-grid-row">
-    <nav role="navigation" class="translation-nav" aria-label="Translations">
-      <ul class="translation-nav_list">
-              <li class="translation-nav_list-item">
-                <span lang="en">English</span> </li>
-               <li class="translation-nav_list-item-2">
-                 <a lang="cy" rel="alternate" href="welsh/help" style="padding-left:10px">Cymraeg</a> </li>
-           </nav>
-    <div class="govuk-grid-column-two-thirds">
-
-
-  <!--    <a href="#" class="govuk-back-link" onclick="goBack()">Back</a> -->
+  <div class="govuk-grid-column-two-thirds">
 
         <span class="govuk-caption-xl" style="margin-top:40px">Guidance</span>
           <h1 class="govuk-heading-xl">How to prepare for a video appointment</h1> </div>
@@ -77,8 +84,8 @@
 
           </div>
     </div>
-<button class="govuk-button" style="margin-top:30px" id="close3" onclick="closeWin()">Close</button>
-  </div>
+<button class="govuk-button" style="margin-top:30px" id="close3" onclick="closeWin()">Close</button> </main>
+
 
   <script>
     function closeWin() {

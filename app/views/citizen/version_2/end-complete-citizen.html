@@ -115,29 +115,40 @@
                  </label>
                </div>
                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-satisfaction-2">
-                 <div class="govuk-form-group">
-                   <label class="govuk-label" for="more-detail">
-                     Please tell us why
-                   </label>
-                   <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"></textarea> </div>
-               </div>
-             </div>
+
+                 <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1200" data-threshold="75">
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="word-count">
+      Please tell us why
+    </label>
+    <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="3" aria-describedby="word-count-info"></textarea>
+  </div>
+
+  <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+    You can enter up to 1200 characters
+  </div>
+
+</div>
            </fieldset>
          </div>
 
+         <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1200" data-threshold="75">
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-label--m" for="with-hint">
+      How can we improve this service?
+    </label>
+    <div id="with-hint-hint" class="govuk-hint">
+      Do not include any personal or financial information.
+    </div>
+    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+  </div>
+
+  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+    You can enter up to 1200 characters
+  </div>
+</div>
 
 
-           <div class="govuk-form-group">
-           <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="improve">
-               How can we improve this service?
-             </label>
-           </h1>
-           <span id="feedback-hint" class="govuk-hint">
-             Do not include any personal or financial information.
-           </span>
-
-           <textarea class="govuk-textarea" id="improve" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-           </div>
            <button class="govuk-button" id="send-feedback" data-module="govuk-button" onclick="javascript:SwapDivsWithClick('feedback','thankyou')">
                        Send feedback
                      </button>
@@ -146,6 +157,8 @@
 
 </div>
 </div>
+
+
 
 
 {% endblock %}
