@@ -16,7 +16,7 @@
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#quality">Select if the quality of your video appointment was good or bad</a>
+              <a href="#satisfaction">Select if you would be happy to use this video service again</a>
             </li>
           </ul>
         </div>
@@ -27,16 +27,14 @@
             </h1>
 
             <form action="/quality-answer" method="post" novalidate>
-              <div class="govuk-form-group govuk-form-group--error">
+              <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="quality quality-error">
                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                  <h1 class="govuk-fieldset__heading">
                   How was the quality of your video appointment?
                  </h1>
                </legend>
-               <span id="quality-error" class="govuk-error-message">
-      <span class="govuk-visually-hidden">Error:</span> Select if the quality of your video appointment was good or bad
-    </span>
+
                <div class="govuk-radios govuk-radios--conditional" id="quality-ques" data-module="govuk-radios">
                  <div class="govuk-radios__item">
                    <input class="govuk-radios__input" id="quality" name="quality" type="radio" value="good" data-aria-controls="conditional-quality">
@@ -108,13 +106,16 @@
 
 
 
-            <div class="govuk-form-group">
-           <fieldset class="govuk-fieldset" aria-describedby="satisfaction">
+            <div class="govuk-form-group govuk-form-group--error">
+           <fieldset class="govuk-fieldset" aria-describedby="satisfaction satisfaction-error">
              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                <h1 class="govuk-fieldset__heading">
-                Overall, are you satisfied with using this video service to attend an appointment?
+                Overall, would you be happy to use this video service again?
                </h1>
              </legend>
+             <span id="satisfaction-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select if you would be happy to use this video service again
+  </span>
              <div class="govuk-radios govuk-radios--conditional" id="satisfaction-question" data-module="govuk-radios">
                <div class="govuk-radios__item">
                  <input class="govuk-radios__input" id="satisfaction" name="satisfaction" type="radio" value="yes" data-aria-controls="conditional-satisfaction">
