@@ -1,14 +1,34 @@
-{% extends "layout-citizen.html" %}
+{% extends "layout-invalid-welsh.html" %}
 
 {% block pageTitle %}
-  Sorry, the appointment is unavailable - Attend a video appointment
+  Mae’n ddrwg gennym, nid yw’r apwyntiad ar gael - Mynychu apwyntiad fideo
 {% endblock %}
+
+{% block beforeContent %}
+
+<!--
+<nav class="hmrc-language-select" aria-label="Switcher iaith">
+  <ul class="hmrc-language-select__list">
+    <li class="hmrc-language-select__list-item">
+      <a href="../help" hreflang="en" lang="en" rel="alternate" class="govuk-link" data-journey-click="link - click:lang-select:English">
+        <span class="govuk-visually-hidden">Change the language to English</span>
+        <span aria-hidden="true">English</span>
+      </a>
+    </li>
+    <li class="hmrc-language-select__list-item">
+      <span aria-current="true">Cymraeg</span>
+    </li>
+  </ul>
+</nav>
+  -->
+
+  {% endblock %}
 
 {% block content %}
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl" style="margin-top: 40px">
+        <h1 class="govuk-heading-xl" style="margin-top:40px">
           Mae’n ddrwg gennym, nid yw’r apwyntiad ar gael
             </h1>
 
