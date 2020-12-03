@@ -199,6 +199,26 @@ router.post('/appointment-code-answer-2', function (req, res) {
 
 })
 
+//welsh Translations
+
+router.get('/translate', function (req, res) {
+
+// Make a variable and give it the value from 'how-many-balls'
+  var currentURL = req.path
+
+  if (currentURL=='help'){
+    // Send user to next page
+    res.redirect('welsh/help')
+  }
+
+})
+
+router.get('/english-help', function (req, res) {
+
+res.render('citizen/version_2/help')
+})
+
+
 module.exports = router
 
 module.exports = router
