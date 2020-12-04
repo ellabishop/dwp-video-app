@@ -13,21 +13,21 @@
         </li>
 
         <li>
-          <a href="#subnav-your-account" id="account-menu__main-2" class="hmrc-account-menu__link hmrc-account-icon hmrc-account-menu__link--more" aria-haspopup="true" aria-owns="subnav-your-account">
+          <a href="#subnav-your-account" id="account-menu__main-2" class="hmrc-account-menu__link hmrc-account-icon hmrc-account-menu__link--more" aria-haspopup="true" aria-owns="subnav-your-account" style="float:left;">
             Settings </a>
 
           <div class="hmrc-subnav" id="subnav-your-account" role="navigation" aria-labelledby="account-menu__main-2" aria-label="Your account">
-            <div class="govuk-grid-column-one-third hmrc-subnav__section">
-              <p class="hmrc-subnav__section__heading">
-                Paperless settings </p>
-
-              <div>
-                <a href="#paperless-settings">
-                  Manage your paperless settings </a>
-              </div>
+            <div class="govuk-grid-column-two-thirds hmrc-subnav__section">
+              <label class="govuk-label" for="camera" style="display:inline; margin-right:5px;">
+              Camera
+              </label>
+              <select class="govuk-select" id="camera" name="camera" style="margin: 0px 20px 0px 0px;">
+                <option value="front">FacetimeHD Camera</option>
+                <option value="rear" selected>Camera 2</option>
+              </select>
             </div>
 
-            <div class="govuk-grid-column-one-third hmrc-subnav__section">
+            <!--<div class="govuk-grid-column-one-third hmrc-subnav__section">
               <p class="hmrc-subnav__section__heading">
                 Personal details </p>
 
@@ -35,7 +35,7 @@
                 <a href="#personal-details">
                   Manage your personal details </a>
               </div>
-            </div>
+            </div> -->
           </div>
         </li>
 

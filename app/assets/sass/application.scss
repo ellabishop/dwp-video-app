@@ -282,7 +282,7 @@ padding: 2em 2em 0.5em 2em;
   display: inline-block;
   padding-top: 7.5px;
   color: #000000;
-  width: 70%;
+  width: 10%;
   text-align: left !important;
   float: left !important;
 }
@@ -292,7 +292,7 @@ padding: 2em 2em 0.5em 2em;
   font-size: 24px;
   font-weight: 700;
   color: #000000;
-  width: 32%;
+  width: 8%;
   text-align: left !important;
   float: left !important;
 }
@@ -1394,9 +1394,26 @@ margin-left: 150px;
   font-family: "GDS Transport",Arial,sans-serif;
 }
 
+// Camera and settings //
+
 .camera-select {
   width: 70%;
   text-align: left !important;
   float: left !important;
   margin-bottom: 20px;
+}
+
+.camera-select-header {
+  width: 100%;
+  text-align: right !important;
+  float: right !important;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #fff;
+}
+
+.govuk-header-settings {
+  display: block;
+  float: right;
+  clear: both;
+  width: 50%;
 }
