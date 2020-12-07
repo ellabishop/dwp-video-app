@@ -4,16 +4,23 @@
 
         <a href="/" class="govuk-header__link govuk-header__link--service-name">
       <div class="govuk-header__contents"> Conduct a video appointment</div></a>
-  <div class="govuk-width-container govuk-header__contents" style="float:right;">
+
+      <div class="govuk-width-container govuk-header__contents" style="float:right;">
+<button class="govuk-button govuk-button_settings" id="menu" onclick="myFunction();changeClass()"> Settings </button>
+<button class="govuk-button govuk-button_menu" onclick="myFunction()" style="display:none;"> Settings </button>
+ </div>
+
+
+  <!--<div class="govuk-width-container govuk-header__contents" style="float:right;">
         <a class="govuk-header__link" id="element1" href="#" onclick="myFunction();javascript:changeText(1)">
           Show settings
         </a>
-       </div>
+       </div> -->
 
 <!--<div class="govuk-width-container govuk-header__contents" style="float:right;">
        <details class="govuk-details govuk-header__link" data-module="govuk-details">
-  <summary class="govuk-details__summary" style="float:right; color:#ffffff;">
-    <span class="govuk-details__summary-text" style="color:#ffffff">
+  <summary class="govuk-details__summary govuk-details__summary-header" style="float:right; color:#ffffff; margin-right:16px;">
+    <span class="govuk-details__summary-text govuk-header__link" style="color:#ffffff;">
       Settings
     </span>
   </summary>
@@ -28,7 +35,7 @@
 </details> -->
 
 
-<div class="govuk-header-settings" id="settings" style="display:none;">
+<div id="settings" style="display:none;">
 <div class="camera-select-header">
       <label class="govuk-label" for="camera" style="display:inline; color:#fff">
       Camera
@@ -65,23 +72,17 @@
     }
   }
 
-  function changeText(idElement) {
-    var element = document.getElementById('element' + idElement);
-{
-        if (element.innerHTML === 'Show settings') element.innerHTML = 'Hide settings';
-        else {
-            element.innerHTML = 'Hide settings';
-        }
-    }
-}
+    function changeClass() {
 
-function changeText(idElement) {
-  var element = document.getElementById('element' + idElement);
-{
-      if (element.innerHTML === 'Hide settings') element.innerHTML = 'Show settings';
-      else {
-          element.innerHTML = 'Hide settings';
-      }
+      var x = document.getElementById("menu");
+      if (x.className === "govuk-button govuk-button_settings") {
+        x.className = "govuk-button govuk-button_menu";
+      } else {
+        x.className = "govuk-button govuk-button_settings";
+
+               }
+
   }
-}
+
+
   </script>
