@@ -4,11 +4,29 @@
 
         <a href="/" class="govuk-header__link govuk-header__link--service-name">
       <div class="govuk-header__contents"> Conduct a video appointment</div></a>
-      <div class="govuk-width-container govuk-header__contents" style="float:right;">
-        <a class="govuk-header__link" href="#" onclick="myFunction()">
-          Settings &#x25BC;
+  <div class="govuk-width-container govuk-header__contents" style="float:right;">
+        <a class="govuk-header__link" id="element1" href="#" onclick="myFunction();javascript:changeText(1)">
+          Show settings
         </a>
        </div>
+
+<!--<div class="govuk-width-container govuk-header__contents" style="float:right;">
+       <details class="govuk-details govuk-header__link" data-module="govuk-details">
+  <summary class="govuk-details__summary" style="float:right; color:#ffffff;">
+    <span class="govuk-details__summary-text" style="color:#ffffff">
+      Settings
+    </span>
+  </summary>
+  <div class="camera-select-header">
+        <label class="govuk-label" for="camera" style="display:inline; color:#fff">
+        Camera
+      </label>
+      <select class="govuk-select" id="camera" name="camera">
+        <option value="front">Facetime HD Camera</option>
+        <option value="rear" selected> FacetimeHD</option>
+      </select> </div>
+</details> -->
+
 
 <div class="govuk-header-settings" id="settings" style="display:none;">
 <div class="camera-select-header">
@@ -20,14 +38,15 @@
       <option value="rear" selected> FacetimeHD</option>
     </select> </div>
 
-    <div class="camera-select-header">
+
+<!--    <div class="camera-select-header">
           <label class="govuk-label" for="camera" style="display:inline; color:#fff">
           Speakers
         </label>
         <select class="govuk-select" id="camera" name="camera">
           <option value="front">Facetime HD Camera</option>
           <option value="rear" selected> FacetimeHD</option>
-        </select> </div>
+        </select> </div> -->
 
     </div>
 
@@ -37,6 +56,7 @@
 
 <script>
   function myFunction() {
+
     var x = document.getElementById("settings");
     if (x.style.display === "none") {
       x.style.display = "block";
@@ -45,4 +65,23 @@
     }
   }
 
+  function changeText(idElement) {
+    var element = document.getElementById('element' + idElement);
+{
+        if (element.innerHTML === 'Show settings') element.innerHTML = 'Hide settings';
+        else {
+            element.innerHTML = 'Hide settings';
+        }
+    }
+}
+
+function changeText(idElement) {
+  var element = document.getElementById('element' + idElement);
+{
+      if (element.innerHTML === 'Hide settings') element.innerHTML = 'Show settings';
+      else {
+          element.innerHTML = 'Hide settings';
+      }
+  }
+}
   </script>
