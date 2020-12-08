@@ -5,14 +5,15 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <div id="header-area" class="dwp-video-header-conduct">
-    <div class="govuk-width-container custom-header-width--conduct" style="margin: 0, text-align: center;">
-      {% include "includes/top-btn-conduct-staff.html" %}
-    </div>
-  </div>
+
 {% endblock %}
 
-{% block content %}
+{% block main %}
+<div id="header-area" class="dwp-video-header-conduct">
+  <div class="govuk-width-container custom-header-width--conduct" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-staff.html" %}
+  </div>
+</div>
 
   <div id="base-container" class="base-container--conduct">
     <div id="tile-container" class="tile-container--conduct">
@@ -41,7 +42,7 @@
             Attendee
           </dd>
           <dd class="govuk-summary-list__actions">
-         
+
           </dd>
         </div>
         <h1 class="govuk-heading-s" style="margin-top: 30px">
