@@ -115,38 +115,41 @@
                  </label>
                </div>
                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-satisfaction-2">
-
                  <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1200" data-threshold="75">
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="word-count">
-      Dywedwch wrthym pam
-    </label>
-    <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="3" aria-describedby="word-count-info"></textarea>
-  </div>
-
-  <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-    Gallwch roi hyd at 1200 nod
-  </div>
-
-</div>
+                   <div class="govuk-form-group govuk-form-group--error">
+                     <label class="govuk-label" for="word-count">
+                       Dywedwch wrthym pam
+                     </label>
+                     <span id="exceeding-characters-error" class="govuk-error-message">
+                       <span class="govuk-visually-hidden">Error:</span> Mae’n rhaid i’ch sylw fod yn 1200 nod neu lai
+                     </span>
+                  <textarea class="govuk-textarea govuk-textarea--error govuk-js-character-count govuk-textarea--error" id="exceeding-characters" name="exceeding" rows="3" aria-describedby="exceeding-characters-info exceeding-characters-error"></textarea>
+                </div>
+                <div id="exceeding-characters-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                  Gallwch roi hyd at 1200 nod
+                </div>
+              </div>
            </fieldset>
          </div>
 
          <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1200" data-threshold="75">
-  <div class="govuk-form-group">
-    <label class="govuk-label govuk-label--m" for="with-hint">
-      Sut allwn ni wella’r gwasanaeth hwn?
-    </label>
-    <div id="with-hint-hint" class="govuk-hint">
-      Peidiwch â chynnwys unrhyw fanylion personol neu ariannol.
-    </div>
-    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
-  </div>
+           <div class="govuk-form-group govuk-form-group--error">
+             <label class="govuk-label govuk-label--m" for="with-hint">
+               Sut allwn ni wella’r gwasanaeth hwn?
+             </label>
+             <span id="exceeding-characters-error" class="govuk-error-message">
+               <span class="govuk-visually-hidden">Error:</span> Mae’n rhaid i’ch sylw fod yn 1200 nod neu lai
+             </span>
+             <div id="with-hint-hint" class="govuk-hint">
+               Peidiwch â chynnwys unrhyw fanylion personol neu ariannol.
+             </div>
+             <textarea class="govuk-textarea govuk-textarea--error govuk-js-character-count govuk-textarea--error" id="exceeding-characters" name="exceeding" rows="5" aria-describedby="exceeding-characters-info exceeding-characters-error"></textarea>
+           </div>
 
-  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-    Gallwch roi hyd at 1200 nod
-  </div>
-</div>
+           <div id="exceeding-characters-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+             Gallwch roi hyd at 1200 nod
+           </div>
+         </div>
            <button class="govuk-button" id="send-feedback" data-module="govuk-button" onclick="javascript:SwapDivsWithClick('feedback','thankyou')">
                        Anfon adborth
         </button>
