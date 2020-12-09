@@ -183,6 +183,30 @@ router.post('/quality-answer', function (req, res) {
 
 })
 
+//**Blank quality radio **//
+
+// Add your routes here - above the module.exports line
+router.post('/quality-answer-welsh', function (req, res) {
+
+// Make a variable and give it the value from 'how-many-balls'
+  var quality = req.session.data['quality']
+
+// Check whether the variable matches a condition
+  if (quality == "good"){
+    // Send user to next page
+    res.redirect('citizen/version_2/welsh/thankyou')
+  }
+  // Check whether the variable matches a condition
+    if (quality == "bad"){
+      // Send user to next page
+      res.redirect('citizen/version_2/welsh/thankyou')
+    }
+  else {
+    res.redirect('citizen/version_2/welsh/end-complete-error')
+  }
+
+})
+
 router.post('/appointment-code-answer-2', function (req, res) {
 
 // Make a variable and give it the value from 'how-many-balls'
