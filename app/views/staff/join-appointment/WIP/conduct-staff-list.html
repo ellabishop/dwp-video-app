@@ -10,188 +10,132 @@
 {% endblock %}
 
 {% block main %}
-
-<div class="dwp-video-header">
-    <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 1280px">
-        {% include "includes/top-btn-conduct-staff-trial.html" %}
-    </div>
+<div id="header-area" class="dwp-video-header-conduct">
+  <div class="govuk-width-container custom-header-width--conduct" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-staff.html" %}
+  </div>
 </div>
 
-<main class="govuk-main-wrapper govuk-main-wrapper--l">
-
-<div class="govuk-width-container" style="max-width: 1280px">
-  <div class="govuk-video-image" style="text-align:left">
-    <img src="/public/images/Staff-list.png"></div>
-<div class="participants">
-<h1 class="govuk-heading-s">
-    Participants
-    </h1>
-<dl class="govuk-summary-list" style="font-size:16px">
-  <div class="govuk-summary-list__row">
-    <dd class="govuk-summary-list__value">
-      Host (me)
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">
-           <span class="govuk-visually-hidden"> No action available</span>
-         </a>
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dd class="govuk-summary-list__value">
-      Attendee
-    </dd>
-    <dd class="govuk-summary-list__actions">
-   <a class="govuk-link" href="#">
-        <span class="govuk-visually-hidden"> No action available</span>
-      </a>
-    </dd>
-  </div>
-</dl>
-
-<!--
-<details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Camera
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <div class="govuk-radios govuk-radios--small">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month" checked>
-        <label class="govuk-label govuk-radios__label" for="changed-name">
-          Camera 1
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
-        <label class="govuk-label govuk-radios__label" for="changed-name-2">
-          Camera 2
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
-  </div>
-</details>
-
-<!--
-<h2 class="govuk-heading-s"> Settings</h2>
-  <label class="govuk-label" for="Camera" style="display:inline;">
-    Select camera
-  </label>
-  <select class="govuk-select" id="camera" name="camera">
-    <option value="front">Camera 1</option>
-    <option value="rear" selected>Camera 2</option>
-  </select>
-</div></div>
-  </div>
-
-<!-- hidden pause content -->
-<div class="app-width-container--wide" id="two" style="display:none">
-<div class="govuk-video-frame">
-  <div class="govuk-video-inside-frame">
-    <div class="govuk-grid-column-two-thirds" style="display: inline-block; text-align: left;">
-      <h1 class="govuk-heading-xl">
-        You've paused the video appointment
-      </h1>
-
-      <p>
-        Resume the appointment when you're ready.
-        </p>
-
-<a href="#one" id="resume" class="govuk-button" style="margin: 25px 15px 0px 0px" onclick="javascript:SwapDivsWithClick('one','two'); myPauseEnabled(pause)">Resume</a>
+  <div id="base-container" class="base-container--conduct">
+    <div id="tile-container" class="tile-container--conduct">
+      <video id="primary-video" class="tile-primary--conduct" autoplay="" style="display:none;"></video>
+        <img id="primary-video" class="tile-primary--conduct" src="/public/images/workcoach9.png">
+      <video id="secondary-video" class="tile-secondary--conduct" autoplay=""></video>
 
     </div>
+
+    <div id="participants-list" class="participants-list--conduct">
+      <h1 class="govuk-heading-s">
+          Participants
+          </h1>
+      <dl class="govuk-summary-list" style="font-size:16px">
+        <div class="govuk-summary-list__row">
+          <dd class="govuk-summary-list__value">
+            Host (me)
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+                 <span class="govuk-visually-hidden"> No action available</span>
+               </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dd class="govuk-summary-list__value">
+            Attendee
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+        <h1 class="govuk-heading-s" style="margin-top: 30px">
+            Waiting room
+            </h1>
+            There is nobody waiting.
+      </dl></div>
   </div>
-</div>
-</div>
 
+  <script>
+    var primaryVideoAspectRatio = 0;
+    var primaryVideo = document.getElementById('primary-video');
+    var secondaryVideo = document.getElementById('secondary-video');
 
+    window.addEventListener('load', async () => {
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        // Not adding `{ audio: true }` since we only want video now
+        navigator
+          .mediaDevices
+          .getUserMedia({video: true})
+          .then(function (stream) {
+            //video.src = window.URL.createObjectURL(stream);
+            primaryVideo.srcObject = stream;
+            primaryVideo.play();
 
-<script src="/public/javascripts/jquery-1.11.3.js"></script>
-<script src="public/javascripts/staff-timer.js"></script>
-<script type="text/javascript">
+            secondaryVideo.srcObject = stream;
+            secondaryVideo.play();
+          });
+      }
 
-function SwapDivsWithClick(div1,div2)
-{
-   d1 = document.getElementById(div1);
-   d2 = document.getElementById(div2);
-  document.getElementById("pause").disabled = false;
+      primaryVideo.addEventListener('loadeddata', function() {
+        setDimensions();
+      });
 
-   if( d2.style.display == "none" )
-   {
-      d1.style.display = "none";
-      d2.style.display = "block";
-   }
-   else
-   {
-      d1.style.display = "block";
-      d2.style.display = "none";
-   }
-}
-
-function SwapDivsFinish(div1,div3)
-{
-   d1 = document.getElementById(div1);
-   d3 = document.getElementById(div3);
-
-   if( d3.style.display == "none" )
-   {
-
-      d3.style.display = "block";
-       document.getElementById("three").focus();
-   }
-   else
-   {
-      d1.style.display = "block";
-      d3.style.display = "none";
-   }
-}
-
-function CheckPauseOn(div1,div2)
-{
-  if(d2.style.display == "block")
-  {
-    d2.style.display == "block";
-    d1.style.display = "none";
-    document.getElementById("pause").disabled = true;
-  }
-}
-
-</script>
-
-<script>
-  function myPauseEnabled(el)
-  {
-    el.disabled = false;
-  }
-
-  function myFinishEnabled(el)
-  {
-    el.disabled = false;
-  }
-</script>
-
-<script>
-  function startTimer() {
-    stopTimer(); //make sure timer is not already running
-    a = setInterval(setTime, 1000); //start new timer
-  }
-document.getElementById("resume").addEventListener("click", startTimer);
-</script>
-
-<script>
-    $(document).ready(function() {
-
-      $("#resume").click(function() {
-
-      $("div").remove(txt,txt2);
+      window.addEventListener('resize', debounce(setDimensions, 200));
     });
-  });
-</script>
+
+    function setDimensions() {
+      if (primaryVideo.readyState >= 2) {
+        var primaryVideoAspectRatio = primaryVideo.videoWidth / primaryVideo.videoHeight;
+        var headerArea = document.getElementById('header-area');
+        var headerHeight = headerArea.offsetHeight;
+        var baseContainerHeight = window.innerHeight - (headerHeight + 40 + 100);
+        var baseContainerWidth = window.innerWidth - 40;
+        var tileContainerHeight = baseContainerHeight;
+        var tileContainerWidth = baseContainerWidth > 960 ? 960 : baseContainerWidth;
+        var participantsListHeight = baseContainerHeight;
+        var tileContainerAspectRatio =  tileContainerWidth / tileContainerHeight;
+
+        if (primaryVideoAspectRatio > tileContainerAspectRatio) {
+          tileContainerHeight = tileContainerWidth / primaryVideoAspectRatio;
+        }
+
+        else if (primaryVideoAspectRatio < tileContainerAspectRatio) {
+          tileContainerWidth = tileContainerHeight * primaryVideoAspectRatio;
+        }
+
+        var participantsListWidth = (tileContainerWidth - 20) / 4;
+        var conductCustomHeaderWidth = tileContainerWidth + participantsListWidth + 20;
+        var selfieHeight = tileContainerHeight * 0.25;
+        var selfieWidth = tileContainerWidth * 0.25;
+
+        document.documentElement.style.setProperty('--conduct-custom-max-width', `${conductCustomHeaderWidth}px`);
+
+        document.documentElement.style.setProperty('--conduct-base-container-height', `${baseContainerHeight}px`);
+        document.documentElement.style.setProperty('--conduct-base-container-width', `${baseContainerWidth}px`);
+
+        document.documentElement.style.setProperty('--conduct-tile-container-height', `${tileContainerHeight}px`);
+        document.documentElement.style.setProperty('--conduct-tile-container-width', `${tileContainerWidth}px`);
+
+        document.documentElement.style.setProperty('--participants-list-height', `${participantsListHeight}px`);
+        document.documentElement.style.setProperty('--participants-list-width', `${participantsListWidth}px`);
+
+        document.documentElement.style.setProperty('--selfie-height', `${selfieHeight}px`);
+        document.documentElement.style.setProperty('--selfie-width', `${selfieWidth}px`);
+      }
+    }
+
+
+    function debounce(func, time) {
+      var time= time || 100;
+      var timer;
+
+      return function(event) {
+          if (timer) {
+            clearTimeout(timer);
+          }
+
+          timer = setTimeout(func, time, event);
+      };
+    }
+  </script>
 
 {% endblock %}
