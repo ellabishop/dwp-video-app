@@ -1,0 +1,38 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Attend a video appointment
+{% endblock %}
+
+{% block header %}
+
+<div class="small-and-medium-screen--no-display">
+{% include "includes/header-attend-video.html" %}
+<div class="dwp-video-header small-to-medium-screen--top-border">
+  <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 960px">
+    {% include "includes/top-btn-conduct-citizen-trial.html" %}
+      </div>
+</div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<main style="margin:0;">
+<div class="flex-container">
+  <div class="flex-item flex-responsive-container">
+ <img class="fill" src="/public/images/workcoach8.png">
+</div>
+
+<div class="small-button-bottom">
+    <button class="govuk-button govuk-button--secondary govuk-button--panel" style="margin-top: 10px;">Refresh</button>
+</div>
+
+</div>
+
+<div class="small-and-medium-screen--no-display" style="float: right; margin:50px">
+<a href="end-complete-citizen">Appointment finished</a>
+</div>
+
+
+{% endblock %}

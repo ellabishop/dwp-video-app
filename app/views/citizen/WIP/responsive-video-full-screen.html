@@ -5,12 +5,13 @@
 {% endblock %}
 
 {% block header %}
-
+<div class="small-and-medium-screen--no-display">
 {% include "includes/header-attend-video.html" %}
 <div class="dwp-video-header">
   <div class="govuk-width-container" style="margin: 0, text-align: center; max-width: 960px">
-    {% include "includes/top-btn--conduct-citizen.html" %}
+    {% include "includes/top-btn-conduct-citizen-trial.html" %}
       </div>
+</div>
 </div>
 
 {% endblock %}
@@ -19,19 +20,21 @@
 
     <div class="flex-container">
 
-        <div class="flex-item flex-responsive-container">
+  <div class="flex-item flex-responsive-container">
 
-            <video id="video" autoplay=""></video>
-
+      <video id="video" autoplay=""></video>
             <div class="flex-selfie-container-waiting">
                 <video id="selfie-video" autoplay="" style="object-fit: cover;"></video>
             </div>
-
         </div>
-        <div style="float: right; margin:50px">
-      <a href="end-complete-citizen">Appointment finished</a>   <a href="removed-citizen">Removed by host</a>
 
+        <div class="flex-item">
+            <button class="govuk-button govuk-button--secondary govuk-button--panel">Refresh</button>
         </div>
+
+
+        <div class="small-and-medium-screen--no-display" style="float: right; margin:50px">
+      <a href="end-complete-citizen">Appointment finished</a>   <a href="removed-citizen">Removed by host</a> </div>
 
     </div>
 
