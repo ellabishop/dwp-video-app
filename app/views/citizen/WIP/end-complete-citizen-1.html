@@ -18,7 +18,7 @@
               <fieldset class="govuk-fieldset" aria-describedby="quality">
                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                  <h1 class="govuk-fieldset__heading">
-                  How was the quality of the video?
+                  How was the quality of your video appointment?
                  </h1>
                </legend>
                <div class="govuk-radios govuk-radios--conditional" id="quality" data-module="govuk-radios">
@@ -91,51 +91,88 @@
                </div>
               </fieldset>
               </div>
-<!--
+
+
+
               <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                    <h1 class="govuk-fieldset__heading">
-                      Overall, how did you feel about the video service today?
-                    </h1>
-                  </legend>
-                  <div class="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-                      <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-                        Very satisfied
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                        Satisfied
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-                        Neither satisfied or dissatisfied
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-                        Dissatisfied
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-                      Very dissatisfied
-                      </label>
-                    </div>
-                  </div>
+              <fieldset class="govuk-fieldset" aria-describedby="happy">
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                 <h1 class="govuk-fieldset__heading">
+                  Overall, would you be happy to use this video service again?
+                 </h1>
+               </legend>
+               <div class="govuk-radios govuk-radios--conditional" id="happy" data-module="govuk-radios">
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="good" name="happy" type="radio" value="yes" data-aria-controls="conditional-happy">
+                   <label class="govuk-label govuk-radios__label" for="yes">
+                     Yes
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="no" name="happy" type="radio" value="no" data-aria-controls="conditional-happy-2">
+                   <label class="govuk-label govuk-radios__label" for="no">
+                     No
+                   </label>
+                 </div>
+                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-happy-2">
+                   <div class="govuk-form-group">
+                     <fieldset class="govuk-fieldset" aria-describedby="why-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+          Please tell us why.
+          </h1>
+          </legend>
+          <div id="wrong-hint" class="govuk-hint">
+          Select all that apply.
+          </div>
+          <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="why" name="why" type="checkbox" value="poor-vide">
+          <label class="govuk-label govuk-checkboxes__label" for="why">
+           It is inconvenient
+          </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="why-2" name="why" type="checkbox" value="poor-audi">
+          <label class="govuk-label govuk-checkboxes__label" for="why-2">
+           I don't feel comfortable on screen
+          </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="why-3" name="why" type="checkbox" value="see-othe">
+          <label class="govuk-label govuk-checkboxes__label" for="why-3">
+           It is intrusive
+          </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="why-4" name="why" type="checkbox" value="hear-othe">
+          <label class="govuk-label govuk-checkboxes__label" for="why-4">
+           I'm worried about the cost
+          </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="why-5" name="why" type="checkbox" value="see-m">
+          <label class="govuk-label govuk-checkboxes__label" for="why-5">
+          There was not enough functionality
+          </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="why-6" name="why" type="checkbox" value="hear-m">
+          <label class="govuk-label govuk-checkboxes__label" for="why-6">
+          I struggled to join and use the service
+          </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="why-7" name="why" type="checkbox" value="hear-m">
+          <label class="govuk-label govuk-checkboxes__label" for="why-7">
+          None of the above
+          </label>
+          </div>
+          </div>
 
-                </fieldset>
-              </div>
+          </fieldset>
 
-
+          </div>
                  </div>
                </div>
               </fieldset>
