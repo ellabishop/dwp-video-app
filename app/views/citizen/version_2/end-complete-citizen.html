@@ -15,10 +15,10 @@
 
             <form action="/quality-answer" method="post" novalidate>
               <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="satisfied">
+              <fieldset class="govuk-fieldset" aria-describedby="quality">
                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                  <h1 class="govuk-fieldset__heading">
-                  How was the quality of your video appointment?
+                  How was the quality of the video?
                  </h1>
                </legend>
                <div class="govuk-radios govuk-radios--conditional" id="quality" data-module="govuk-radios">
@@ -49,40 +49,52 @@
        <div class="govuk-checkboxes__item">
          <input class="govuk-checkboxes__input" id="wrong" name="wrong" type="checkbox" value="poor-video">
          <label class="govuk-label govuk-checkboxes__label" for="wrong">
-           Poor video quality
+           Poor picture quality
          </label>
        </div>
-       <div class="govuk-checkboxes__item">
-         <input class="govuk-checkboxes__input" id="wrong-2" name="wrong" type="checkbox" value="poor-audio">
-         <label class="govuk-label govuk-checkboxes__label" for="wrong-2">
-           Poor audio quality
-         </label>
-       </div>
+
        <div class="govuk-checkboxes__item">
          <input class="govuk-checkboxes__input" id="wrong-3" name="wrong" type="checkbox" value="see-other">
          <label class="govuk-label govuk-checkboxes__label" for="wrong-3">
            I could not see the other person
          </label>
        </div>
+
        <div class="govuk-checkboxes__item">
          <input class="govuk-checkboxes__input" id="wrong-4" name="wrong" type="checkbox" value="hear-other">
          <label class="govuk-label govuk-checkboxes__label" for="wrong-4">
-           I could not hear the other person
+           The other person could not see me
          </label>
        </div>
+
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong-2" name="wrong" type="checkbox" value="poor-audio">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-2">
+           Poor sound quality
+         </label>
+       </div>
+
        <div class="govuk-checkboxes__item">
          <input class="govuk-checkboxes__input" id="wrong-5" name="wrong" type="checkbox" value="see-me">
          <label class="govuk-label govuk-checkboxes__label" for="wrong-5">
-          The other person could not see me
+          I could not hear any sound
          </label>
        </div>
+
        <div class="govuk-checkboxes__item">
          <input class="govuk-checkboxes__input" id="wrong-6" name="wrong" type="checkbox" value="hear-me">
          <label class="govuk-label govuk-checkboxes__label" for="wrong-6">
-          The other person could not hear me
+          The other person could not hear any sound
          </label>
        </div>
+
+     <div class="govuk-checkboxes__item">
+       <input class="govuk-checkboxes__input" id="wrong-7" name="wrong" type="checkbox" value="hear-me">
+       <label class="govuk-label govuk-checkboxes__label" for="wrong-7">
+        Other
+       </label>
      </div>
+   </div>
 
    </fieldset>
 
@@ -91,62 +103,6 @@
                </div>
               </fieldset>
               </div>
-
-
-
-            <div class="govuk-form-group">
-           <fieldset class="govuk-fieldset" aria-describedby="satisfied">
-             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-               <h1 class="govuk-fieldset__heading">
-                Overall, would you be happy to use this video service again?
-               </h1>
-             </legend>
-             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-               <div class="govuk-radios__item">
-                 <input class="govuk-radios__input" id="satisfaction" name="satisfaction" type="radio" value="yes" data-aria-controls="conditional-satisfaction">
-                 <label class="govuk-label govuk-radios__label" for="satisfaction">
-                   Yes
-                 </label>
-               </div>
-               <div class="govuk-radios__item">
-                 <input class="govuk-radios__input" id="satisfaction-2" name="satisfaction" type="radio" value="no" data-aria-controls="conditional-satisfaction-2">
-                 <label class="govuk-label govuk-radios__label" for="satisfaction-2">
-                   No
-                 </label>
-               </div>
-               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-satisfaction-2">
-
-                 <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1200" data-threshold="75">
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="word-count">
-      Please tell us why
-    </label>
-    <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="3" aria-describedby="word-count-info"></textarea>
-  </div>
-
-  <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-    You can enter up to 1200 characters
-  </div>
-
-</div>
-           </fieldset>
-         </div>
-
-         <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1200" data-threshold="75">
-  <div class="govuk-form-group">
-    <label class="govuk-label govuk-label--m" for="with-hint">
-      How can we improve this service?
-    </label>
-    <div id="with-hint-hint" class="govuk-hint">
-      Do not include any personal or financial information.
-    </div>
-    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
-  </div>
-
-  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-    You can enter up to 1200 characters
-  </div>
-</div>
 
 
            <button class="govuk-button" id="send-feedback" data-module="govuk-button" onclick="javascript:SwapDivsWithClick('feedback','thankyou')">
