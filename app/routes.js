@@ -178,7 +178,7 @@ router.post('/quality-answer', function (req, res) {
       res.redirect('citizen/version_2/thankyou')
     }
   else {
-    res.redirect('citizen/version_2/end-complete-error')
+    res.redirect('citizen/version_2/end-complete-error-quality')
   }
 
 })
