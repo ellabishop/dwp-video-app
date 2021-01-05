@@ -16,10 +16,7 @@
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#quality">Dewiswch os oedd ansawdd eich apwyntiad fideo yn dda neu ddrwg</a>
-            </li>
-            <li>
-              <a href="#satisfaction">Dewiswch os byddech yn hapus i ddefnyddio’r gwasanaeth fideo hwn eto</a>
+              <a href="#quality">Dewiswch a oedd ansawdd y fideo yn dda neu'n ddrwg</a>
             </li>
           </ul>
         </div>
@@ -34,11 +31,11 @@
               <fieldset class="govuk-fieldset" aria-describedby="quality quality-error">
                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                  <h1 class="govuk-fieldset__heading">
-                  Sut oedd ansawdd eich apwyntiad fideo?
+                  Sut oedd safon y fideo?
                  </h1>
                </legend>
                <span id="quality-error" class="govuk-error-message">
-      <span class="govuk-visually-hidden">Error:</span> Dewiswch os oedd ansawdd eich apwyntiad fideo yn dda neu ddrwg
+      <span class="govuk-visually-hidden">Error:</span> Dewiswch a oedd ansawdd y fideo yn dda neu'n ddrwg
     </span>
                <div class="govuk-radios govuk-radios--conditional" id="quality-ques" data-module="govuk-radios">
                  <div class="govuk-radios__item">
@@ -66,39 +63,45 @@
      </div>
      <div class="govuk-checkboxes">
        <div class="govuk-checkboxes__item">
-         <input class="govuk-checkboxes__input" id="wrong" name="wrong" type="checkbox" value="poor video">
+         <input class="govuk-checkboxes__input" id="wrong" name="wrong" type="checkbox" value="poor-video">
          <label class="govuk-label govuk-checkboxes__label" for="wrong">
-           Ansawdd fideo gwael
+           Ansawdd llun gwael
          </label>
        </div>
        <div class="govuk-checkboxes__item">
-         <input class="govuk-checkboxes__input" id="wrong-2" name="wrong" type="checkbox" value="poor audio">
+         <input class="govuk-checkboxes__input" id="wrong-2" name="wrong" type="checkbox" value="poor-audio">
          <label class="govuk-label govuk-checkboxes__label" for="wrong-2">
-           Ansawdd sain gwael
-         </label>
-       </div>
-       <div class="govuk-checkboxes__item">
-         <input class="govuk-checkboxes__input" id="wrong-3" name="wrong" type="checkbox" value="other person">
-         <label class="govuk-label govuk-checkboxes__label" for="wrong-3">
            Nid oeddwn yn gallu gweld y person arall
          </label>
        </div>
        <div class="govuk-checkboxes__item">
-         <input class="govuk-checkboxes__input" id="wrong-4" name="wrong" type="checkbox" value="other person">
-         <label class="govuk-label govuk-checkboxes__label" for="wrong-4">
-           Nid oeddwn yn gallu clywed y person arall
-         </label>
-       </div>
-       <div class="govuk-checkboxes__item">
-         <input class="govuk-checkboxes__input" id="wrong-5" name="wrong" type="checkbox" value="me">
-         <label class="govuk-label govuk-checkboxes__label" for="wrong-5">
+         <input class="govuk-checkboxes__input" id="wrong-3" name="wrong" type="checkbox" value="see-other">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-3">
           Nid oedd y person arall yn gallu fy ngweld
          </label>
        </div>
        <div class="govuk-checkboxes__item">
-         <input class="govuk-checkboxes__input" id="wrong-6" name="wrong" type="checkbox" value="me">
+         <input class="govuk-checkboxes__input" id="wrong-4" name="wrong" type="checkbox" value="hear-other">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-4">
+           Ansawdd swn gwael
+         </label>
+       </div>
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong-5" name="wrong" type="checkbox" value="see-me">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-5">
+          Nid oeddwn yn clywed unrhyw swn
+         </label>
+       </div>
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong-6" name="wrong" type="checkbox" value="hear-me">
          <label class="govuk-label govuk-checkboxes__label" for="wrong-6">
-          Nid oedd y person arall yn gallu fy nghlywed
+          Nid oedd y person arall yn clywed unrhyw swn
+         </label>
+       </div>
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong-6" name="wrong" type="checkbox" value="hear-me">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-6">
+          Arall
          </label>
        </div>
      </div>
@@ -111,73 +114,7 @@
 
 
 
-            <div class="govuk-form-group govuk-form-group--error">
-           <fieldset class="govuk-fieldset" aria-describedby="satisfaction satisfaction-error">
-             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-               <h1 class="govuk-fieldset__heading">
-                Ar y cyfan, a fyddech chi’n hapus i ddefnyddio’r gwasanaeth fideo hwn eto?
-               </h1>
-             </legend>
-             <span id="satisfaction-error" class="govuk-error-message">
-    <span class="govuk-visually-hidden">Error:</span> Dewiswch os byddech yn hapus i ddefnyddio’r gwasanaeth fideo hwn eto
-  </span>
 
-
-
-
-
-
-
-             <div class="govuk-radios govuk-radios--conditional" id="satisfaction-question" data-module="govuk-radios">
-               <div class="govuk-radios__item">
-                 <input class="govuk-radios__input" id="satisfaction" name="satisfaction" type="radio" value="yes" data-aria-controls="conditional-satisfaction">
-                 <label class="govuk-label govuk-radios__label" for="satisfaction">
-                   Byddwn
-                 </label>
-               </div>
-               <div class="govuk-radios__item">
-                 <input class="govuk-radios__input" id="satisfaction-2" name="satisfaction" type="radio" value="no" data-aria-controls="conditional-satisfaction-2">
-                 <label class="govuk-label govuk-radios__label" for="satisfaction-2">
-                   Na
-                 </label>
-               </div>
-
-
-
-
-               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-satisfaction-2">
-                 <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1200" data-threshold="75">
-                   <div class="govuk-form-group">
-                     <label class="govuk-label" for="word-count">
-                       Dywedwch wrthym pam
-                     </label>
-                     <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="3" aria-describedby="word-count-info"></textarea>
-                   </div>
-
-                   <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-                     Gallwch roi hyd at 1200 nod
-                   </div>
-                 </div>
-           </fieldset>
-         </div>
-
-
-
-         <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1200" data-threshold="75">
-  <div class="govuk-form-group">
-    <label class="govuk-label govuk-label--m" for="with-hint">
-      Sut allwn ni wella’r gwasanaeth hwn?
-    </label>
-    <div id="with-hint-hint" class="govuk-hint">
-      Peidiwch â chynnwys unrhyw fanylion personol neu ariannol.
-    </div>
-    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
-  </div>
-
-  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-    Gallwch roi hyd at 1200 nod
-  </div>
-</div>
            <button class="govuk-button" id="send-feedback" data-module="govuk-button" onclick="javascript:SwapDivsWithClick('feedback','thankyou')">
                        Anfon adborth
                      </button>
