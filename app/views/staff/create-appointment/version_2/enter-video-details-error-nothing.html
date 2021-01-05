@@ -33,29 +33,31 @@
       </div>
 
 <form action="/appt-time" method="post" class="govuk-form-group--error"style="margin-top: 10px">
-  <div class="govuk-form-group"><fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-        <h1 class="govuk-heading-xl" style="margin-bottom: 30px">
+
+
+        <h1 class="govuk-heading-xl">
         Enter the video appointment details
       </h1>
-    </legend>
-    </fieldset></div>
-      <fieldset class="govuk-fieldset">
+
+
+
       <div class="govuk-form-group">
   <label class="govuk-label" for="full-name">
     <strong>Claimant's full name</strong>
   </label><span class="govuk-error-message">
   <span class="govuk-visually-hidden">Error:</span> Enter the claimant's full name</span>
   <input id="full-name" name="full-name" type="text" autocomplete="name" spellcheck="false" class="govuk-input govuk-input--error">
-</div></fieldset>
-<label class="govuk-label" for="full-name">
+</div>
+
+<label class="govuk-label" for="appointment-date">
   <strong>Appointment date</strong>
-</label><span class="govuk-error-message">
+</label>
+<span class="govuk-error-message">
 <span class="govuk-visually-hidden">Error:</span> Enter the appointment date</span>
-<div class="govuk-date-input" id="passport-issued">
+<div class="govuk-date-input" id="appointment-date">
 <div class="govuk-date-input__item">
 <div class="govuk-form-group">
-  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+  <label class="govuk-label govuk-date-input__label" for="appointment-day">
     Day
   </label>
   <input class="govuk-input govuk-input--error govuk-date-input__input govuk-input--width-2" id="appointment-day" name="appointment-day" type="text" pattern="[0-9]*" inputmode="numeric">
@@ -63,7 +65,7 @@
 </div>
 <div class="govuk-date-input__item">
 <div class="govuk-form-group">
-  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+  <label class="govuk-label govuk-date-input__label" for="appointment-month">
     Month
   </label>
   <input class="govuk-input govuk-input--error govuk-date-input__input govuk-input--width-2" id="appointment-month" name="appointment-month" type="text" pattern="[0-9]*" inputmode="numeric">
@@ -71,7 +73,7 @@
 </div>
 <div class="govuk-date-input__item">
 <div class="govuk-form-group">
-  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+  <label class="govuk-label govuk-date-input__label" for="appointment-year">
     Year
   </label>
   <input class="govuk-input govuk-input--error govuk-date-input__input govuk-input--width-4" id="appointment-year" name="appointment-year" type="text" pattern="[0-9]*" inputmode="numeric">
@@ -79,21 +81,24 @@
 </div>
 </div>
           <div class="govuk-form-group">
-            <label class="govuk-label" for="width-10">
+            <label class="govuk-label" for="start-time">
 
               <strong>Start time</strong>
               <span id="account-number-hint" class="govuk-hint">
     For example, 2:00pm
   </span><span class="govuk-error-message"><span class="govuk-visually-hidden">Error:</span> Enter the start time</span>
               </label>
-              <input class="govuk-input govuk-input--error govuk-input--width-5"  name="startTime" type="text" id="startTime" placeholder="">
+              <input class="govuk-input govuk-input--error govuk-input--width-5"  name="startTime" type="text" id="start-time" placeholder="">
             </div>
             <div class="govuk-form-group">
-              <label class="govuk-label" for="width-10">
+              <label class="govuk-label" for="duration">
 
-                <strong>Duration</strong></label>
+                <strong>Duration</strong>
+                <span id="duration-hint" class="govuk-hint">
+      For example, 10 minutes or 1 hour 30 minutes
+    </span></label>
                 <span class="govuk-error-message"><span class="govuk-visually-hidden">Error:</span> Enter the duration</span>
-                <input class="govuk-input govuk-input--error" name="myDuration" type="text" id="myDuration" placeholder="" style="width: 120px">
+                <input class="govuk-input govuk-input--error" name="duration" type="text" id="duration" placeholder="" style="width: 120px">
                 </div>
 
 </form>
