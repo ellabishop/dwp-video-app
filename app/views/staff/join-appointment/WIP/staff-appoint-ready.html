@@ -1,0 +1,78 @@
+{% extends "layout_admin-appoint.html" %}
+
+{% block pageTitle %}
+  Remote Consultation
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-l">
+            Your scheduled appointments
+          </h1>
+
+          <h2 class="govuk-body-l">11 February, 2020</h2>
+<table class="govuk-table">
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Appointment Time</th>
+    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Name</th>
+    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Status</th>
+    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
+  </tr>
+</thead>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td scope="row" class="govuk-table__cell">09:00am</td>
+    <td class="govuk-table__cell">David Smith</td>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--progress" style="background: #00703c">
+  READY
+</strong></td>
+<td class="govuk-table__cell"><a href=conduct-video-staff> Join appointment</a></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td scope="row" class="govuk-table__cell">10:00am</td>
+    <td class="govuk-table__cell">Lucy Dunn</td>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--progress">
+  NOT READY
+</strong></td>
+<td class="govuk-table__cell"><a href=staff-notready> Join appointment</a></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td scope="row" class="govuk-table__cell">10:30am</td>
+    <td class="govuk-table__cell">Joseph Haynes</td>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--paused" style="background: #626a6e">
+  NOT READY
+  </strong></td>
+  <td class="govuk-table__cell"><a href=staff-notready> Join appointment</a></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td scope="row" class="govuk-table__cell">12:30pm</td>
+    <td class="govuk-table__cell">Laura Scott</td>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--paused" style="background: #626a6e">
+  NOT READY
+  </strong></td>
+  <td class="govuk-table__cell"><a href=staff-notready> Join appointment</a></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td scope="row" class="govuk-table__cell">02:00pm</td>
+    <td class="govuk-table__cell">James Harriss</td>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--paused" style="background: #626a6e">
+  NOT READY
+  </strong></td>
+  <td class="govuk-table__cell"><a href=staff-notready> Join appointment</a></td>
+  </tr>
+
+
+</tbody>
+</table>
+
+    </div>
+
+    </div>
+
+{% endblock %}
