@@ -911,11 +911,11 @@ border:none;
     display: none;
   }
 
-  /* space around video removed for small & medium devices */
+  /* space around video removed for small & medium devices
   .govuk-main-wrapper {
     padding-bottom: 0;
     padding-top: 0;
-  }
+  } */
 }
 
 /* width > 1024px */
@@ -1209,10 +1209,10 @@ $adjusted-desktop-width: calc(#{$adjusted-desktop-height} * 1.333);
     padding-bottom: $main-wrapper-padding;
   }
 
-  @include for-breakpoint (small-to-medium-screen) {
-    margin: 0;
+/* @include for-breakpoint (small-to-medium-screen) {
+    margin: 20;
     padding: 0;
-  }
+  } */
 }
 
 .custom-header-width {
