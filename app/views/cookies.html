@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="govuk-width-container">
+
     <!--<a href="static-trial/join-start-citizen" class="govuk-back-link">Back</a> -->
 
   <div class="govuk-grid-row">
@@ -105,11 +105,15 @@
                       </thead>
                       <tbody class="govuk-table__body">
                           <tr class="govuk-table__row">
-
-                          </tr><tr class="govuk-table__row">
                           <td class="govuk-table__cell">ajsvc_token</td>
-                          <td class="govuk-table__cell">To remember where you are in the service, so you can move back and forward through the website.</td>
+                          <td class="govuk-table__cell">To remember where you are in the service, so you can move back and forward through the website</td>
                           <td class="govuk-table__cell">When you close your browser</td>
+                          </tr>
+
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">lang</td>
+                            <td class="govuk-table__cell">	Stores your language choices</td>
+                            <td class="govuk-table__cell">When you close your browser</td>
                           </tr>
                       </tbody>
                   </table>
@@ -138,7 +142,7 @@
                 </div>
               </div>
               <button class="govuk-button" style="margin-top:30px" onclick="closeWin()">Close</button>
-                </div>
+
 
           <script>
             function closeWin() {
