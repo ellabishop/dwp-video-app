@@ -62,6 +62,39 @@
 </div>
 </div>
 
+<label class="govuk-label" for="full-name">
+  <strong>Start time</strong>
+</label>
+<div class="govuk-date-input" id="passport-issued">
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+    Hour
+  </label>
+  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
+</div>
+</div> <p class="govuk-body" style="display:inline;">:</p>
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+    Minute
+  </label>
+  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+</div>
+</div>
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+    <label class="govuk-label" for="time">
+    </label>
+    <select class="govuk-select" id="time" name="time">
+      <option value="10:00am">am</option>
+      <option value="11:00am" selected>pm</option>
+    </select>
+  </div>
+</div>
+</div>
+</div>
+
 
 <label for="appt">Choose a time for your meeting:</label>
 

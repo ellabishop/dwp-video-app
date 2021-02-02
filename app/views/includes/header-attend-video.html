@@ -6,7 +6,7 @@
                 <div class="govuk-width-container govuk-header__contents">Attend a video appointment</div>
             </a>
             <div class="govuk-width-container govuk-header__contents" style="display:inline-block; float:right;">
-              <nav aria-label="Choose a language">
+            <!---  <nav aria-label="Choose a language">
               <ul class="govuk-list" style="list-style-type:none; margin:0">
               <li class="govuk-header__navigation-item" style="padding-top:0px">
                 <a class="govuk-header__link" href="#">
@@ -14,13 +14,41 @@
                     </a>
                   </li>
               </ul>
-              </nav>
+              </nav> -->
+
+              <div class="dropdown">
+  <button onclick="myFunction()" class=" govuk-button govuk-button_drop dropbtn">Settings</button>
+  <div id="myDropdown" class="dropdown-content">
+
+<a class="govuk-link govuk-link--no-visited-state" href="#" style="color:#0b0c0c">Turn on background blur</a>
+  <!--  <a class="govuk-link govuk-link--no-visited-state" href="#" style="color:#0b0c0c">Cymraeg</a> -->
+
+
+
+  </div>
+</div>
         </div>
         </div>
         </header>
+<script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
 
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
 
-        </div>
-    </div>
-
-</header>
+        </script>
