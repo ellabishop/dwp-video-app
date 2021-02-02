@@ -8,60 +8,16 @@
 
 
 
-      <!-- Settings 'menu'
-
       <div class="govuk-width-container custom-header-width--conduct" style="float:right; margin-right:0px;">
 <button class="govuk-button govuk-button_settings" id="menu" onclick="myFunction();changeClass()">Settings</button>
- </div> -->
+ </div>
 
 
-<!--  Dropdown select
-<div class="govuk-width-container custom-header-width--conduct" style="float:right; margin-bottom: 7px;">
-         <label class="govuk-label" for="camera" style="display:inline; color:#fff; margin-right:5px;">
-         Blur background
-       </label>
-       <select class="govuk-select" id="camera" name="camera">
-         <option value="front"> On</option>
-         <option value="rear" selected>Off</option>
-       </select>
-  </div> -->
-
-<!--  Radio buttons
-<div class="govuk-width-container custom-header-width--conduct" style="float:right; margin-right:0px;">
-<label class="govuk-label" for="blur" style="color:#fff; margin-right:20px;">
-  Blur background
-</label>
-  <div class="govuk-radios govuk-radios--inline govuk-radios--small" style="margin-bottom: 5px;" id="blur" name="blur">
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-      <label class="govuk-label govuk-radios__label" for="changed-name" style="color:#fff">
-        On
-      </label>
-    </div>
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-      <label class="govuk-label govuk-radios__label" for="changed-name-2" style="color:#fff">
-        Off
-      </label>
-    </div>
-  </div>
-
-</div> </div> -->
-
-<!-- Switch
-<div class="govuk-width-container custom-header-width--conduct" style="float:right; margin-right:0px;">
-  <label class="govuk-label" for="onoffswitch" style="color:#fff; margin-right:20px; display:inline;">
-    Blur background
-  </label>
-  <div class="onoffswitch" style="float:right">
-      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked  style="display:inline;">
-      <label class="onoffswitch-label" for="myonoffswitch">
-          <span class="onoffswitch-inner"></span>
-          <span class="onoffswitch-switch"></span>
-      </label>
-  </div>
-</div> -->
-
+  <!--<div class="govuk-width-container govuk-header__contents" style="float:right;">
+        <a class="govuk-header__link" id="element1" href="#" onclick="myFunction();javascript:changeText(1)">
+          Show settings
+        </a>
+       </div> -->
 
 <!--<div class="govuk-width-container govuk-header__contents" style="float:right;">
        <details class="govuk-details govuk-header__link" data-module="govuk-details">
@@ -80,66 +36,26 @@
       </select> </div>
 </details> -->
 
-<!--Background blur link -->
-
-<div class="govuk-width-container custom-header-width--conduct govuk-header__contents" style="float:right; margin-right:0px;">
-<nav>
-  <ul class="govuk-list" style="list-style-type:none; margin:0">
-  <li class="govuk-header__navigation-item" style="padding-top:0px">
-    <a class="govuk-header__link" href="#" id="element1" onClick="javascript:changeText(1)">
-          Turn background blur on
-        </a>
-      </li>
-  </ul>
-  </nav>
-</div>
-
-<!-- Background blur button
-<div class="govuk-width-container custom-header-width--conduct" style="float:right; margin-right:0px;">
-<button class="govuk-button govuk-button--secondary" id="element1" onclick="javascript:changeText(1)" style="margin-bottom: 10px;">Background blur on</button>
-
--->
 
 <div id="settings" style="display:none;">
- <!--<div class="camera-select-header">
+<div class="camera-select-header">
       <label class="govuk-label" for="camera" style="display:inline; color:#fff">
       Camera
     </label>
     <select class="govuk-select" id="camera" name="camera">
       <option value="front"> Facetime HD Camera</option>
       <option value="rear" selected>External Camera</option>
-    </select> </div> -->
+    </select> </div>
 
-    <div class="camera-select-header">
+
+<!--    <div class="camera-select-header">
           <label class="govuk-label" for="camera" style="display:inline; color:#fff">
-          Blur background
+          Speakers
         </label>
         <select class="govuk-select" id="camera" name="camera">
-          <option value="front"> On</option>
-          <option value="rear" selected>Off</option>
-        </select> </div>
-
-<div class="camera-select-header">
-        <label class="govuk-label" for="changed-name" style="color:#fff">
-        Blur background
-      </label>
-        <div class="govuk-radios govuk-radios--inline"  style="float:right;">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="changed-name" style="color:#fff">
-            On
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="changed-name-2" style="color:#fff">
-              Off
-            </label>
-          </div>
-        </div>
-
-    </div>
-
+          <option value="front">Facetime HD Camera</option>
+          <option value="rear" selected> FacetimeHD</option>
+        </select> </div> -->
 
     </div>
 
@@ -172,15 +88,3 @@
 
 
   </script>
-<script>
-  function changeText(idElement) {
-    var element = document.getElementById('element' + idElement);
-    if (idElement === 1 || idElement === 2) {
-        if (element.innerHTML === 'Turn background blur on') element.innerHTML = 'Turn background blur off';
-        else {
-            element.innerHTML = 'Turn background blur on';
-        }
-    }
-}
-
-</script>
