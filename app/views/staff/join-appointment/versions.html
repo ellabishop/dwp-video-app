@@ -1,7 +1,11 @@
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "includes/header-conduct-versions.html" %}
 {% endblock %}
 
 {% block content %}
@@ -83,141 +87,5 @@ Version details: 2.2, 2.1, 2.0
 <h2><a href="v1-static-trial/start.html">Version 1 </a></h2>
 
 <p> Proof of concept - start of trial </p>
-<hr>
-
-
-
-  <h2><a href="WIP/start.html">Design WIP</a></h2>
-
-  <p> Proposed design iterations </p>
-
-  <h2><a href="../join-appointment/welsh-conduct-appointment/start.html">Welsh version</a></h2>
-    <p>Conduct service with welsh translation</p>
-
-    <hr>
-    <h2><a href="WIP/research/start.html">Testing version 2a - waiting room (code)</a></h2>
-    <h2><a href="WIP/DOI/conduct-wait-link.html" onclick="window.open(this.href, 'Snopzer',
-          'left=1000,top=20,width=1000,height=1000,resizable=0'); return false;" target="_blank">
-          Testing version 2b - waiting room (link- opens in new window)</a></h2>
-
-          <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-          Version details
-          </span>
-          </summary>
-          <div class="govuk-details__text">
-          <ul class="govuk-list govuk-list--bullet">
-          <li>On both journeys, 'Waiting room' heading added to participant list. </li>
-          <li>On both journeys, the host can 'admit' an attendee to the appointment once they have joined the 'Waiting room'. The attendee then moves to under the 'Participants' heading.</li>
-          <li>On both journeys, permissions page removed. </li>
-          <li>For the link journey, there is no call to action on the final page.</li>
-          <li>For the link journey, the start page is skipped to reduce the number of steps in to the appointment.</li>
-          </ul>
-            </details>
-  <details class="govuk-details" data-module="govuk-details">
-            <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-            User needs
-            </span>
-            </summary>
-            <div class="govuk-details__text">
-            <ul class="govuk-list govuk-list--bullet">
-            <li>As a DWP employee, I need to know when the attendee is ready to start the appointment, so that I can start the appointment when I am ready.</li>
-            <li>As a DWP employee, I need to formally start the appointment at a time of my choosing with a citizen who is ready, so that I can manage my time effectively.</li>
-
-
-            </ul>
-            </details>
-    <details class="govuk-details" data-module="govuk-details">
-    <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-    Assumptions
-    </span>
-    </summary>
-    <div class="govuk-details__text">
-      <h3 class="govuk-heading-s">Link</h3>
-    <ul class="govuk-list govuk-list--bullet">
-    <li>A link will be easier to access the appointment than a code. </li>
-    <li> Users will have greater control over the start of the appointment and over who can join and when.</li>
-    <li>Users will close the window after the appointment has ended. </li>
-    </ul>
-    <h3 class="govuk-heading-s">Code</h3>
-  <ul class="govuk-list govuk-list--bullet">
-    <li>Using a code to access the appointment will mean users have more control over the different windows on their desktop.</li>
-    <li>Users who have multiple appointments in a day, will keep the 'Conduct a video appointment' service open.</li>
-    <li>Users will have greater control over the start of the appointment and over who can join and when.</li></ul>
-      </details>
-
-      <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-      Research findings
-      </span>
-      </summary>
-      <div class="govuk-details__text">
-        <ul class="govuk-list govuk-list--bullet">
-        <li>Work coaches spoke of the benefits of checking their environment and ensuring they were ready to start the appointment before admitting the attendee.</li>
-        <li>Majority noticed the change from nobody in the waiting room to an attendee and intuitively admitted. There were some comments about the 'admit' link being too small.</li>
-        <li>The link was viewed as quicker and simpler than going back and forth to copy the code.</li>
-        <li>Everyone clicked straight in to the appointment, even with the Microsoft Edge pop up.</li>
-        <li>At the end of the appointment, most work coaches understood they could just close the screen on the link journey but some thought they may also be closing UCFS.</li>
-        <li>On the code journey, work coaches understood they could leave that Edge window open all day and join appointments. A couple confused 'Start a new appointment' for creating a new one. </li>
-        </ul>
-        </details>
-
-    <h2><a href="WIP/DOI/start.html">Testing version 1 - link on DOI journey</a></h2>
-
-    <details class="govuk-details" data-module="govuk-details">
-    <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-    User need
-    </span>
-    </summary>
-    <div class="govuk-details__text">
-    <ul class="govuk-list govuk-list--bullet">
-    <li>As a DWP employee, I need to access other applications without losing the view of the video, so that I can do other tasks during the appointment.</li>
-    </ul>
-      </details>
-
-      <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-      Assumptions
-      </span>
-      </summary>
-      <div class="govuk-details__text">
-      <ul class="govuk-list govuk-list--bullet">
-      <li>One device will improve the experience of both host and attendee.</li>
-      <li>A link to the specific appointment (rather than code entry) will be a simpler journey for the host.</li>
-      <li>A responsive video screen will make it simple to split the screen and perform the tasks required whilst on the video call.</li>
-      <li>At the end of the appointment, they will want to close the video service to return to other tasks.</li>
-      <li>Picture-in-picture functionality will give the host flexibility to perform the tasks required whilst on the video call. </li>
-      </ul>
-        </details>
-
-      <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-      Research findings
-      </span>
-      </summary>
-      <div class="govuk-details__text">
-      <ul class="govuk-list govuk-list--bullet">
-      <li>All workcoaches found it easier to use one device compared to two.</li>
-      <li>No problems with the code were identified, and it could now be pasted across.</li>
-      <li>The majority of work coaches thought that a link would be quicker to use than the code.</li>
-      <li>Splitting the screen wasn't instinctive but once prompted, most split the screen vertically.</li>
-      <li>All tasks to be done within an appointment could be when using the video service.</li>
-      <li>A number of work coaches also used Word or OneNote whilst completing the appointment.</li>
-      <li>Majority of work coaches found the picture-in-picture version the most user friendly.</li>
-      <li>All workcoaches were able to navigate back to the video service from picture-in-picture but in different ways. </li>
-      <li>Not all work coaches were comfortable in identifying the Edge browser.</li>
-      </ul>
-        </details>
-
-
-</div>
-</div>
 
 {% endblock %}

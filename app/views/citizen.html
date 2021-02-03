@@ -1,7 +1,13 @@
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include "includes/header-citizen-versions.html" %}
+
 {% endblock %}
 
 {% block content %}
@@ -12,7 +18,12 @@
       <h1 class="govuk-heading-xl" style="margin-top: 40px">
         Remote consultation - visitor facing prototype
       </h1>
-      <p>This is for testing only, do not rely on it if you want something real to happen.</p>
+
+      <h2 class="govuk-heading-m">
+        Developed/ In development
+      </h2>
+      <p>This is for testing only, do not rely on it if you want something real to happen.<br>
+      Citizen journey that is as close as possible to developed/currently in development.</p>
 
       <p><a class="govuk-button" href="citizen/version_2/join-start-citizen">Latest version</a></p>
 
@@ -124,12 +135,6 @@
       </ul>
       </div>
       </details>
-<hr>
-      <h2><a href="citizen/WIP/browser_script">Design WIP</a> </h2>
-      <p>Proposed design iterations</p>
-      <br>
-      <h2><a href="citizen/welsh-attend/v1-static-trial/join-start-citizen">Welsh version</a> </h2>
-      <p>Attend service with welsh translation</p>
 
 
 

@@ -1,0 +1,140 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Conduct a video appointment
+{% endblock %}
+
+{% block header %}
+{% include "includes/headers/header-staff-blur2.html" %}
+{% endblock %}
+
+{% block main %}
+<div id="header-area" class="dwp-video-header-conduct">
+  <div class="govuk-width-container custom-header-width--conduct" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-staff.html" %}
+  </div>
+</div>
+
+  <div id="base-container" class="base-container--conduct">
+    <div id="tile-container" class="tile-container--conduct">
+      <video id="primary-video" class="tile-primary--conduct" autoplay="" style="display:none;"></video>
+        <img id="primary-video" class="tile-primary--conduct" src="/public/images/workcoach9.png">
+      <video id="secondary-video" class="tile-secondary--conduct" autoplay=""></video>
+
+    </div>
+
+    <div id="participants-list" class="participants-list--conduct">
+      <h1 class="govuk-heading-s">
+          Participants
+          </h1>
+      <dl class="govuk-summary-list" style="font-size:16px">
+        <div class="govuk-summary-list__row">
+          <dd class="govuk-summary-list__value">
+            Host (me)
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+                 <span class="govuk-visually-hidden"> No action available</span>
+               </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dd class="govuk-summary-list__value">
+            Attendee
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+        <h1 class="govuk-heading-s" style="margin-top: 30px">
+            Waiting room
+            </h1>
+            There is nobody waiting.
+      </dl></div>
+  </div>
+
+  <script>
+    var primaryVideoAspectRatio = 0;
+    var primaryVideo = document.getElementById('primary-video');
+    var secondaryVideo = document.getElementById('secondary-video');
+
+    window.addEventListener('load', async () => {
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        // Not adding `{ audio: true }` since we only want video now
+        navigator
+          .mediaDevices
+          .getUserMedia({video: true})
+          .then(function (stream) {
+            //video.src = window.URL.createObjectURL(stream);
+            primaryVideo.srcObject = stream;
+            primaryVideo.play();
+
+            secondaryVideo.srcObject = stream;
+            secondaryVideo.play();
+          });
+      }
+
+      primaryVideo.addEventListener('loadeddata', function() {
+        setDimensions();
+      });
+
+      window.addEventListener('resize', debounce(setDimensions, 200));
+    });
+
+    function setDimensions() {
+      if (primaryVideo.readyState >= 2) {
+        var primaryVideoAspectRatio = primaryVideo.videoWidth / primaryVideo.videoHeight;
+        var headerArea = document.getElementById('header-area');
+        var headerHeight = headerArea.offsetHeight;
+        var baseContainerHeight = window.innerHeight - (headerHeight + 40 + 100);
+        var baseContainerWidth = window.innerWidth - 40;
+        var tileContainerHeight = baseContainerHeight;
+        var tileContainerWidth = baseContainerWidth > 960 ? 960 : baseContainerWidth;
+        var participantsListHeight = baseContainerHeight;
+        var tileContainerAspectRatio =  tileContainerWidth / tileContainerHeight;
+
+        if (primaryVideoAspectRatio > tileContainerAspectRatio) {
+          tileContainerHeight = tileContainerWidth / primaryVideoAspectRatio;
+        }
+
+        else if (primaryVideoAspectRatio < tileContainerAspectRatio) {
+          tileContainerWidth = tileContainerHeight * primaryVideoAspectRatio;
+        }
+
+        var participantsListWidth = (tileContainerWidth - 20) / 4;
+        var conductCustomHeaderWidth = tileContainerWidth + participantsListWidth + 20;
+        var selfieHeight = tileContainerHeight * 0.25;
+        var selfieWidth = tileContainerWidth * 0.25;
+
+        document.documentElement.style.setProperty('--conduct-custom-max-width', `${conductCustomHeaderWidth}px`);
+
+        document.documentElement.style.setProperty('--conduct-base-container-height', `${baseContainerHeight}px`);
+        document.documentElement.style.setProperty('--conduct-base-container-width', `${baseContainerWidth}px`);
+
+        document.documentElement.style.setProperty('--conduct-tile-container-height', `${tileContainerHeight}px`);
+        document.documentElement.style.setProperty('--conduct-tile-container-width', `${tileContainerWidth}px`);
+
+        document.documentElement.style.setProperty('--participants-list-height', `${participantsListHeight}px`);
+        document.documentElement.style.setProperty('--participants-list-width', `${participantsListWidth}px`);
+
+        document.documentElement.style.setProperty('--selfie-height', `${selfieHeight}px`);
+        document.documentElement.style.setProperty('--selfie-width', `${selfieWidth}px`);
+      }
+    }
+
+
+    function debounce(func, time) {
+      var time= time || 100;
+      var timer;
+
+      return function(event) {
+          if (timer) {
+            clearTimeout(timer);
+          }
+
+          timer = setTimeout(func, time, event);
+      };
+    }
+  </script>
+
+{% endblock %}

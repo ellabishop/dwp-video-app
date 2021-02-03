@@ -1,7 +1,11 @@
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {% include "includes/header-create-versions.html" %}
 {% endblock %}
 
 {% block content %}
@@ -12,7 +16,13 @@
       <h1 class="govuk-heading-xl" style="margin-top: 40px">
       Remote consultation - staff facing prototype
       </h1>
-      <p>This is for testing only, do not rely on it if you want something real to happen.</p>
+
+      <h2 class="govuk-heading-m">
+        Developed/ In development
+      </h2>
+      <p>This is for testing only, do not rely on it if you want something real to happen.<br>
+      Citizen journey that is as close as possible to developed/currently in development.</p>
+
 
       <p><a class="govuk-button" role="button" href="version_2/create-video-start">Latest version</a></p>
 
@@ -107,72 +117,5 @@ Issues this addresses 2.0
 </ul>
 </div>
 </details>
-<hr>
-
-      <h2><a href="WIP/create-video-start">Design WIP</a> </h2>
-
-
-      <p> Proposed design iterations </p>
-
-
-            <h2><a href="welsh-create-appointment/version_1/create-video-start">Welsh version</a> </h2>
-            <p>Create service with welsh translation</p>
-<hr>
-<br>
-<h2> <a href="research/link/create-video-start.html">Testing version 1a - DOI and UC journey (link) </a> </h2>
-<h2> <a href="research/code/create-video-start.html">Testing version 1b - DOI and UC journey (code)</a> </h2>
-<details class="govuk-details" data-module="govuk-details">
-<summary class="govuk-details__summary">
-<span class="govuk-details__summary-text">
-Version details
-</span>
-</summary>
-<div class="govuk-details__text">
-<ul class="govuk-list govuk-list--bullet">
-<li>Third section added to video confirmation page with the separate help link, with additional copy button.</li>
-<li>Order of information given on video confirmation page updated to: code/link for conduct, link for attend, help link. The help link may not be required for every use case.</li>
-<li>Content updated to be use case agnostic on video confirmation page.</li>
-
-</ul>
-</div>
-</details>
-
-<details class="govuk-details" data-module="govuk-details">
-<summary class="govuk-details__summary">
-<span class="govuk-details__summary-text">
-Assumptions
-</span>
-</summary>
-<div class="govuk-details__text">
-<ul class="govuk-list govuk-list--bullet">
-<li>The link straight in to the create service for UCFS will give a smoother and more efficient journey.</li>
-<li>Work coaches will understand where each piece of information from the 'Create a video appointment' confirmation page needs to go in the UC to-do.</li>
-<li>Work coaches will be able to work across two tabs in the two services.</li></ul>
-  </details>
-
-        <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-        Research findings
-        </span>
-        </summary>
-        <div class="govuk-details__text">
-        <ul class="govuk-list govuk-list--bullet">
-        <!--<li>Majority of work coaches spoke of 2 devices being a major pain point and it being much better on one device and being one journey, 'all in one place'.</li>
-        <li>Majority of work coaches spoke of benefits of video being better interaction with customers, and saving the claimants time but many struggled with the time given for and between appointments.</li> -->
-        <li>Majority of work coaches flicked between tabs to copy information between UC build and our services. One split the screen and two made a physical note of appointment details.</li>
-        <li>5/6 work coaches understood how and where to copy and paste the code/link and attendee link between the two services. One needed guidance as had not scrolled down on UC to-do to see inputs.</li>
-        <li>5/6 workcoaches used the 'copy' buttons.</li>
-        <li>Confusion over where to copy the help link. Some copied in to the attendee link box on the UC prototype. 2 others spoke of putting it into the claimants journal.</li>
-        <li>A few workcoaches pulled the tab out in to a new window and worked split screen whilst on the video appointment.</li>
-        <!--<li>Majority of work coaches agreed that the one to-do with clear instructions for the claimant would cause less confusion.</li> -->
-        <li>Often workcoaches had multiple tabs open and did not close our services once finished. One work coach got particularly lost in them.</li>
-        <li>'Finish' button caused confusion over whether the user had done something wrong when it took them back to the start.</li>
-        <li>'The quicker we can make the booking process the better'.</li>
-
-
-        </ul>
-          </details>
-
 
 {% endblock %}
