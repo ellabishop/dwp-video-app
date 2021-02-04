@@ -14,8 +14,8 @@
   float: right;
   right: 0;
   bottom: 0;
-  border-top: 1px solid #f1f2f3;
-  border-left: 1px solid #f1f2f3;
+  border-top: 1px solid #505a5f;
+  border-left: 1px solid #505a5f;
 
 }
 
@@ -26,7 +26,7 @@
   float: right;
   right: 0;
   top: 0;
-  border-left: 1px solid #f1f2f3;
+  border-left: 1px solid #505a5f;
 }
 
 .attendee-multiple-2 {
@@ -36,4 +36,46 @@
   float: right;
   left: 0;
   top: 0;
+}
+
+
+.attendee-multiple-3 {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  float: right;
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #505a5f;
+}
+
+.attendee-multiple-4 {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  float: right;
+  left: 0;
+  top: 0;
+}
+
+
+.video-participant {
+  object-fit: contain;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  width: 99%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+.video-participant-2 {
+  object-fit: contain;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  height: 99%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
