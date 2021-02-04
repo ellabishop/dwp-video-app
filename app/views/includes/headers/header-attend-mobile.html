@@ -1,0 +1,45 @@
+<header class="govuk-header" role="banner" data-module="dwp-header">
+
+    <div class="govuk-header__container govuk-header__container--full-width">
+        <div class="govuk-header__contents">
+            <a href="/" class="govuk-header__link govuk-header__link--service-name"style="margin-top:10px;">
+              Attend a video appointment
+            </a>
+            <div class="govuk-header__contents" style="float:right;">
+  <div class="dropdown">
+  <button onclick="myFunction()" class="govuk-button govuk-button_drop dropbtn" style="font-size:16px; display:inline;">Settings</button> </div>
+
+  <div id="myDropdown" class="dropdown-content" style="min-width:100%; margin-top:40px;">
+
+<a class="govuk-link govuk-link--no-visited-state" href="#" style="color:#0b0c0c">Turn on background blur</a>
+  <!--  <a class="govuk-link govuk-link--no-visited-state" href="#" style="color:#0b0c0c">Cymraeg</a> -->
+
+
+
+  </div>
+</div>
+        </div>
+        </div>
+        </header>
+<script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+
+        </script>

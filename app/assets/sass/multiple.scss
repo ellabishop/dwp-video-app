@@ -1,0 +1,39 @@
+
+.video-frame {
+  position: relative;
+  height: 0;
+  padding-top: 90%;
+  margin-bottom: 20px;
+  background: #0b0b0c;
+}
+
+.selfie-multiple {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  float: right;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid #f1f2f3;
+  border-left: 1px solid #f1f2f3;
+
+}
+
+.attendee-multiple-1 {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  float: right;
+  right: 0;
+  top: 0;
+  border-left: 1px solid #f1f2f3;
+}
+
+.attendee-multiple-2 {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  float: right;
+  left: 0;
+  top: 0;
+}

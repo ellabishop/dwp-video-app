@@ -21,6 +21,7 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 @import "jkeyboard";
+@import "multiple";
 //.govuk-template__body {
   //background-color: #444 !important;
 //}
@@ -1065,7 +1066,7 @@ border:none;
 /* Video element */
 .flex-item:nth-child(1) {
   @media screen and (max-width: 479px) {
-    border-top: 5px solid #00728F !important;
+  /*  border-top: 5px solid #00728F !important; */
     height: calc(90% - 5px);
   }
 
@@ -1608,6 +1609,21 @@ margin-left: 150px;
   outline: 1px solid transparent;
   box-shadow: none;
   margin-bottom: 5px;
+
+}
+
+.govuk-button_drop:after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  clip-path: polygon (0% 0%, 50%, 100%, 100%, 0%);
+  border-width: 8.66px 5px 0 5px;
+  content: "";
+  margin-left: 5px;
+  border-top-color: currentColor;
+
 }
 
 .govuk-button_drop:hover {
@@ -1645,7 +1661,10 @@ border: 1px solid #333;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
+.dropdown-content a:hover {
+  background-color: #ddd;
+  text-decoration: underline;
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
