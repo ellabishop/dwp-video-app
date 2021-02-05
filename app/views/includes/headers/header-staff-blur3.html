@@ -1,0 +1,57 @@
+<header class="govuk-header" role="banner" data-module="dwp-header">
+  <div class="govuk-header__container">
+    <div class="govuk-width-container custom-header-width--conduct" >
+
+        <a href="/" class="govuk-header__link govuk-header__link--service-name">
+
+      <div class="govuk-header__contents">Conduct a video appointment</div></a>
+
+            <div class="govuk-header__contents" style="display:inline-block; float:right;">
+
+
+              <div class="dropdown">
+  <button onclick="myFunction()" class=" govuk-button govuk-button_drop dropbtn">Settings</button>
+  <div id="myDropdown" class="dropdown-content">
+
+<a class="govuk-link govuk-link--no-visited-state" href="#" style="color:#0b0c0c">Turn on background blur</a>
+
+<div class="camera-select-header" style="padding: 12px 16px;">
+<label class="govuk-label" for="camera" style="display:inline; font-size:16px; float: left;">
+Camera
+</label>
+<select class="govuk-select" id="camera" name="camera" style="display:inline;">
+<option value="front"> Facetime HD Camera</option>
+<option value="rear" selected>External Camera</option>
+</select> </div>
+
+
+
+
+
+  </div>
+</div>
+        </div>
+        </div>
+        </header>
+<script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+
+        </script>
