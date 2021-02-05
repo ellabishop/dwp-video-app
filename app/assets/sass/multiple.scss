@@ -79,3 +79,12 @@
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+
+
+.video-frame-attendee {
+  position: relative;
+  height: 0;
+  padding-top: 70%;
+  margin-bottom: 20px;
+  background: #0b0b0c;
+}
