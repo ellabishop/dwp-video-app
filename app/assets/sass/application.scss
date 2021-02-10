@@ -206,6 +206,7 @@ padding: 2em 2em 0.5em 2em;
 .fill {
     overflow: hidden;
     background-size: cover;
+    object-fit:cover;
     background-position: center;
 }
 
@@ -1437,4 +1438,19 @@ margin-left: 150px;
   padding: 20px 20px 0;
   border: 5px solid #1d70b8;
   font-family: "GDS Transport",Arial,sans-serif;
+}
+
+.js-enabled .govuk-header__menu-button {
+    display: none;
+}
+.js-enabled .govuk-header__navigation {
+    display: block;
+}
+
+.bottom-buttons {
+  background: #f3f2f1;
+  height: 90px;
+  display: flex;
+justify-content: center;
+align-items: center;
 }
