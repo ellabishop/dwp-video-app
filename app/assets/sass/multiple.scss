@@ -38,6 +38,42 @@
   top: 0;
 }
 
+.mobile-multiple-top {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  float: right;
+  left: 0;
+  top: 0;
+}
+
+.mobile-multiple-left {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  float: right;
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #505a5f;
+}
+
+.landscape-left-2 {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  float: right;
+  left: 0;
+  bottom: 0;
+  border-right: 1px solid #505a5f;
+}
+.landscape-right-2 {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  float: right;
+  right: 0;
+  bottom: 0;
+}
 
 .attendee-multiple-3 {
   position: absolute;
@@ -79,6 +115,7 @@
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+
 
 
 .video-frame-attendee {

@@ -1,0 +1,33 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Attend a video appointment
+{% endblock %}
+
+
+{% block header %}
+
+{% include "includes/header-attend-video.html" %}
+<div class="dwp-video-header-conduct">
+  <div class="govuk-width-container" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-citizen-trial.html" %}
+      </div>
+</div>
+
+<main style="margin:0; padding:0;">
+<div class="flex-container">
+  <div class="flex-item flex-responsive-container" style="height:65%; background-color: #0b0c0c;">
+    <div class="landscape-left-2">
+    <img class="video-participant-2" src="/public/images/workcoach9.png">
+  </div>
+    <div class="landscape-right-2">
+      <img class="video-participant" src="/public/images/attendee_2.png">
+ </div>
+</div>
+
+</div>
+<a class="govuk-link" href="attend-mobile-3-contain" style="float:right;"> Alternative </a> <br>
+<a class="govuk-link" href="attend-mobile-4" style="float:right;"> Another joins </a>
+</main>
+
+{% endblock %}
