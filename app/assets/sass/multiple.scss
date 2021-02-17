@@ -19,6 +19,17 @@
 
 }
 
+
+.selfie-land-3 {
+  position: absolute;
+  width: 25%;
+  height: 50%;
+  float: right;
+  right: 0;
+  bottom: 0;
+
+}
+
 .attendee-multiple-1 {
   position: absolute;
   width: 50%;
@@ -115,6 +126,14 @@
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+
+.video-participant-3 {
+  object-fit: contain;
+  margin: 0;
+  position: absolute;
+  height: 99%;
+}
+
 
 
 
