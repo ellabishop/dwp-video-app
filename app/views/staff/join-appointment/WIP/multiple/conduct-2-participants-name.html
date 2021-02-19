@@ -1,0 +1,54 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Conduct a video appointment
+{% endblock %}
+
+{% block header %}
+{% include "includes/headers/header-staff-blur1.html" %}
+<div id="header-area" class="dwp-video-header-conduct">
+  <div class="govuk-width-container custom-header-width--conduct" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-staff.html" %}
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        <div class="video-frame">
+          <div class="attendee-main">
+            <img class="video-participant" src="/public/images/attendee_2.png">
+          <div class="name-tag"> <p class="govuk-body" style="color:#fff; margin-bottom: 0px;">Adele Johnson</p> </div>
+        </div>
+        <div class="selfie-multiple-small">
+            <img class="video-participant" src="/public/images/workcoach9.png">
+            <!--<div class="name-tag"> <p class="govuk-body" style="color:#fff;margin-bottom: 5px; font-size:14px;">Host (me)</p> </div> -->
+        </div>
+      </div>
+    </div>
+      <div class="govuk-grid-column-one-quarter">
+        <h2 class="govuk-heading-s">Participants</h2>
+        <dl class="govuk-summary-list" style="font-size:16px">
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              Host (me)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                   <span class="govuk-visually-hidden"> No action available</span>
+                 </a>
+            </dd>
+          </div>
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          Adele Johnson
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        </dd>
+  </div>  </dl>
+    </div> </div>
+
+{% endblock %}

@@ -20,6 +20,18 @@
 }
 
 
+.selfie-multiple-small {
+  position: absolute;
+  width: 30%;
+  height: 25%;
+  float: right;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid #505a5f;
+  border-left: 1px solid #505a5f;
+
+}
+
 .selfie-land-3 {
   position: absolute;
   width: 25%;
@@ -49,6 +61,14 @@
   top: 0;
 }
 
+.attendee-main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  float: right;
+  left: 0;
+  top: 0;
+}
 .mobile-multiple-top {
   position: absolute;
   width: 100%;
@@ -70,20 +90,32 @@
 
 .landscape-left-2 {
   position: absolute;
-  width: 50%;
+  width: 100%;
   height: 100%;
   float: right;
   left: 0;
   bottom: 0;
   border-right: 1px solid #505a5f;
 }
+
 .landscape-right-2 {
   position: absolute;
-  width: 50%;
-  height: 100%;
+  width: 25%;
+  height: 50%;
   float: right;
   right: 0;
   bottom: 0;
+}
+
+.landscape-selfie {
+  position: absolute;
+  width: 25%;
+  height: 50%;
+  float: right;
+  right: 0;
+  bottom: 0;
+  background-color: #0b0c0c;
+  border: 1px solid #505a5f;
 }
 
 .attendee-multiple-3 {
@@ -127,6 +159,7 @@
   transform: translateX(-50%);
 }
 
+
 .video-participant-3 {
   object-fit: contain;
   margin: 0;
@@ -134,7 +167,31 @@
   height: 99%;
 }
 
+.video-participant-4 {
+  object-fit: cover;
+  margin: 0;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
+
+.video-participant-5 {
+  object-fit: cover;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  height: 99%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.video-participant-5 {
+  object-fit: contain;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+
+}
 
 
 .video-frame-attendee {
@@ -143,4 +200,15 @@
   padding-top: 70%;
   margin-bottom: 20px;
   background: #0b0b0c;
+}
+
+.name-tag {
+  position: absolute;
+  background-color: #0b0c0c;
+  border: 1px solid #626a6e;
+  padding: 5px 10px 5px 10px;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0px;
+  margin-left: 0px;
 }
