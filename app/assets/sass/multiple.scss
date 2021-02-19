@@ -32,6 +32,18 @@
 
 }
 
+.selfie-small {
+  position: absolute;
+  width: 40%;
+  height: 30%;
+  float: right;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid #505a5f;
+  border-left: 1px solid #505a5f;
+
+}
+
 .selfie-land-3 {
   position: absolute;
   width: 25%;
@@ -193,6 +205,14 @@
 
 }
 
+.wait-frame {
+    position: relative;
+    padding: 15% 30% 35% 10%;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 3px solid #0b0c0c;
+}
+
 
 .video-frame-attendee {
   position: relative;
@@ -211,4 +231,5 @@
   left: 0;
   margin-bottom: 0px;
   margin-left: 0px;
+  z-index: 100;
 }

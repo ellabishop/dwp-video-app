@@ -1,0 +1,85 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Conduct a video appointment
+{% endblock %}
+
+{% block header %}
+{% include "includes/headers/header-staff-blur3.html" %}
+<div id="header-area" class="dwp-video-header-conduct">
+  <div class="govuk-width-container custom-header-width--conduct" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-staff.html" %}
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        <div class="wait-frame">
+            <h1 class="govuk-heading-xl">
+              You've joined the video appointment
+            </h1>
+
+            <p>
+              You can adjust your settings in the settings menu. <br> <br>
+              When you are ready, please admit your attendees from the waiting room.
+              </p>
+
+
+              <div class="selfie-small">
+	<video autoplay="true" id="videoElement" style="object-fit:cover;"></video>
+</div>
+      </div>
+    </div>
+      <div class="govuk-grid-column-one-quarter">
+
+        <h1 class="govuk-heading-s">
+            Waiting room
+            </h1>
+        <div class="govuk-summary-list__row">
+          <dd class="govuk-summary-list__value govuk-body" style="font-size:16px; width: 50%;">
+            Catherine Glover
+          </dd>
+          <dd class="govuk-summary-list__actions">
+         <a class="govuk-link" href="conduct-staff" style="float:right; display: inline;">
+              Admit
+            </a>
+          </dd>
+        </div>
+          <h1 class="govuk-heading-s" style="margin-top:30px;">
+              Participants
+              </h1>
+          <dl class="govuk-summary-list" style="font-size:16px">
+            <div class="govuk-summary-list__row">
+              <dd class="govuk-summary-list__value">
+                Host (me)
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                     <span class="govuk-visually-hidden"> No action available</span>
+                   </a>
+              </dd>
+            </div>
+
+            </div>
+    </div>
+
+    <script>
+      var video = document.querySelector("#videoElement");
+
+      if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+          .then(function (stream) {
+            video.srcObject = stream;
+          })
+          .catch(function (err0r) {
+            console.log("Something went wrong!");
+          });
+      }
+    </script>
+
+
+{% endblock %}
