@@ -1,0 +1,94 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Attend a video appointment
+{% endblock %}
+
+{% block header %}
+
+{% include "includes/headers/header-attend.html" %}
+
+
+<div class="portrait-no-display">
+<div class="dwp-video-header-conduct">
+  <div class="govuk-width-container" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-citizen-trial.html" %}
+      </div>
+</div>
+</div>
+
+<!-- Portrait -->
+<div class="portrait-screen-only">
+  <main style="margin:0; padding:0;">
+  <div class="flex-container">
+    <div class="flex-item flex-responsive-container" style="height: calc(100% - 150px); background-color: #0b0c0c;">
+      <div class="selfie-single">
+          <video autoplay="true" id="videoElement" style="object-fit:cover;"></video>
+      </div>
+  </div>
+  <div class="bottom-buttons">
+      <button class="govuk-button govuk-button--secondary govuk-button--panel" style="margin:0px 5px 10px 5px; width: 95%;">Refresh</button>
+  </div>
+
+  </div>
+  </main>
+  </div>
+
+  <!-- Medium -->
+  <div class="medium-screen-only">
+    <main style="margin:0; padding:0;">
+    <div class="flex-container">
+      <div class="flex-item flex-responsive-container" style="height: calc(100% - 130px); background-color: #0b0c0c;">
+        <div class="selfie-single">
+            <video autoplay="true" id="videoMedium" style="object-fit:contain;"></video>
+        </div>
+    </div>
+    </div>
+    </main>
+    </div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Desktop -->
+
+<div class="desktop-screen-only">
+  <div class="govuk-grid-row">
+      <div class="video-frame-attendee">
+        <div class="selfie-single">
+            <video autoplay="true" id="videoDesktop" style="object-fit:cover;"></video>
+        </div>
+  </div>
+  </div>
+  </div>
+
+
+ <script>
+      // Grab elements, create settings, etc.
+      var video = document.getElementById('videoElement');
+      var desktopVideo = document.getElementById('videoDesktop');
+        var selfieVideo = document.getElementById('videoMedium');
+
+      // Get access to the camera!
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          // Not adding `{ audio: true }` since we only want video now
+          navigator
+              .mediaDevices
+              .getUserMedia({video: true})
+              .then(function (stream) {
+                  //video.src = window.URL.createObjectURL(stream);
+                  video.srcObject = stream;
+                  video.play();
+
+                  selfieVideo.srcObject = stream;
+                  selfieVideo.play();
+
+                  desktopVideo.srcObject = stream;
+                  desktopVideo.play();
+              });
+      }
+  </script>
+
+{% endblock %}
