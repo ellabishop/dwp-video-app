@@ -52,7 +52,7 @@
 
 }
 
-.conduct-selfie-small-2{
+.conduct-selfie-small-2 {
   position: absolute;
   width: 18%;
   height: 15%;
@@ -61,7 +61,29 @@
   bottom: 0;
 }
 
+.attend-selfie-small {
+  position: absolute;
+  width: 30%;
+  height: 15%;
+  float: right;
+  right: 0;
+  bottom: 0;
+  -ms-transform: translateX(30%);
+  transform: translateX(30%);
 
+}
+
+.attend-selfie-small-desktop {
+  position: absolute;
+  width: 30%;
+  height: 15%;
+  float: right;
+  right: 0;
+  bottom: 0;
+  -ms-transform: translateX(25%);
+  transform: translateX(25%);
+
+}
 
 .selfie-small {
   position: absolute;
@@ -200,6 +222,14 @@
   top: 0;
 }
 
+.attendee-multiple-5 {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  float: right;
+  right: 0;
+  bottom: 0;
+}
 
 .video-participant {
   object-fit: contain;
@@ -224,7 +254,7 @@
 
 .video-participant-cov {
   left: 100%;
-  height: 99%;
+  height: 100%;
   display: flex;
   object-fit: cover;
 }
@@ -266,7 +296,7 @@
 .video-frame-attendee {
   position: relative;
   height: 0;
-  width: 100%
+  width: 100%;
   padding-top: 70%;
   margin-bottom: 20px;
   background: #0b0b0c;
@@ -289,7 +319,7 @@
 
 .refresh-bar {
   background: #f3f2f1;
-  height: 90px;
+  height: 70px;
   display: flex;
 justify-content: center;
 align-items: center;

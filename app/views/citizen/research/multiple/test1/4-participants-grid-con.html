@@ -23,38 +23,40 @@
   <div class="flex-container">
     <div class="flex-item flex-responsive-container" style="height: calc(100% - 150px); background-color: #0b0c0c;">
       <div class="selfie-multiple">
-          <video autoplay="true" id="videoElement" style="object-fit:cover;"></video>
+        <video autoplay="true" id="videoElement" style="object-fit:contain;"></video>
       </div>
-      <div class="mobile-multiple-top">
-      <img class="video-participant-2" style="object-fit:cover;" src="/public/images/workcoach9.png">
+      <div class="attendee-multiple-1">
+      <img class="video-participant-2" src="/public/images/attendee_2.png">
     </div>
-      <div class="mobile-multiple-left">
-        <img class="video-participant" style="object-fit:cover;" src="/public/images/attendee_2.png">
-   </div>
+      <div class="attendee-multiple-3">
+        <img class="video-participant-2" src="/public/images/workcoach9.png"> </div>
+      <div class="attendee-multiple-4">
+          <img class="video-participant-2" src="/public/images/attendee_1.png"></div>
   </div>
 
   <div class="bottom-buttons">
       <button class="govuk-button govuk-button--secondary govuk-button--panel" style="margin:0px 5px 10px 5px; width: 95%;">Refresh</button>
   </div>
+
   </div>
   </main>
-
   </div>
 
   <!-- Medium -->
   <div class="medium-screen-only">
     <main style="margin:0; padding:0;">
     <div class="flex-container">
-      <div class="flex-item flex-responsive-container" style="height: calc(100% - 130px); background-color: #0b0c0c;">
-        <div class="landscape-left-2" >
-          <img class="video-participant-3" style="object-fit:contain;" src="/public/images/workcoach9.png">
+      <div class="flex-item flex-responsive-container" style="height: calc(100% - 150px); background-color: #0b0c0c;">
+        <div class="selfie-multiple">
+          <video autoplay="true" id="videoMedium" style="object-fit:contain;"></video>
         </div>
-        <div class="landscape-right-2" style="background-color: #0b0c0c;">
-            <img class="video-participant-4" style="object-fit:contain;" src="/public/images/attendee_2.png">
-        </div>
-        <div class="landscape-selfie" style="background-color:transparent">
-            <video autoplay="true" id="videoMedium" style="object-fit:cover;"></video>
-        </div>
+        <div class="attendee-multiple-1">
+        <img class="video-participant-2" src="/public/images/attendee_2.png">
+      </div>
+        <div class="attendee-multiple-3">
+          <img class="video-participant-2" src="/public/images/workcoach9.png"> </div>
+        <div class="attendee-multiple-4">
+            <img class="video-participant-2" src="/public/images/attendee_1.png"></div>
     </div>
     </div>
     </main>
@@ -69,20 +71,22 @@
 
 <div class="desktop-screen-only">
 
-      <div class="govuk-grid-row">
-          <div class="video-frame-attendee">
-            <div class="selfie-multiple">
-                <video autoplay="true" id="videoDesktop" style="object-fit:cover;"></video>
-            </div>
-            <div class="attendee-multiple-1">
-            <img class="video-participant-2" src="/public/images/attendee_2.png">
-          </div>
-            <div class="attendee-multiple-2">
-              <img class="video-participant" src="/public/images/workcoach9.png"></div>
-        </div>
+    <div class="video-frame-attendee">
+      <div class="selfie-multiple">
+            <video autoplay="true" id="videoDesktop" style="object-fit:contain;"></video>
       </div>
+      <div class="attendee-multiple-1">
+      <img class="video-participant-2" src="/public/images/attendee_2.png">
+    </div>
+      <div class="attendee-multiple-3">
+        <img class="video-participant-2" src="/public/images/workcoach9.png"></div>
+      <div class="attendee-multiple-4">
+          <img class="video-participant-2" src="/public/images/attendee_1.png"></div>
   </div>
-  <a class="govuk-link" href="4-participants">Another attendee</a>
+      </div>
+  <div class="govuk-width-container"> <a class="govuk-link" href="4-selfie-con">New layout</a> </div>
+
+
 
  <script>
       // Grab elements, create settings, etc.
