@@ -243,3 +243,26 @@
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+
+.top-buttons {
+  background: #f3f2f1;
+  height: 50px;
+  display: flex;
+}
+
+.blur-background {
+  display: inline-block;
+  padding-top: 7.5px;
+  color: #000000;
+  width: 50%;
+  text-align: left !important;
+  float: left !important;
+}
+
+
+@media screen and (max-width: 480px) {
+  .govuk-radios-header {
+    display: inline;
+  }
+}
