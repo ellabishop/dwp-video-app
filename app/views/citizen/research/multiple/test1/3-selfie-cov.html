@@ -1,0 +1,112 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Attend a video appointment
+{% endblock %}
+
+{% block header %}
+
+{% include "includes/headers/header-attend.html" %}
+
+
+<div class="portrait-no-display">
+<div class="dwp-video-header-conduct">
+  <div class="govuk-width-container" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-citizen-trial.html" %}
+      </div>
+</div>
+</div>
+
+<!-- Portrait -->
+<div class="portrait-screen-only">
+  <main style="margin:0; padding:0;">
+  <div class="flex-container">
+    <div class="flex-item flex-responsive-container" style="height: calc(100% - 150px); background-color: #0b0c0c;">
+      <div class="mobile-multiple-top">
+      <img class="video-participant-2" style="object-fit: cover;" width="100%"  src="/public/images/workcoach9.png">
+    </div>
+      <div class="mobile-multiple-bottom">
+        <img class="video-participant" style="object-fit: cover;" width="100%"  src="/public/images/attendee_1.png">
+   </div>
+   <div class="conduct-selfie-small-2">
+     <video autoplay="true" id="videoElement"></video>
+</div>
+  </div>
+
+  <div class="bottom-buttons">
+      <button class="govuk-button govuk-button--secondary govuk-button--panel" style="margin:0px 5px 10px 5px; width: 95%;">Refresh</button>
+  </div>
+  </div>
+  </main>
+
+  </div>
+
+
+  <!-- Medium -->
+  <div class="medium-screen-only">
+    <main style="margin:0; padding:0;">
+    <div class="flex-container">
+      <div class="flex-item flex-responsive-container" style="height: calc(100% - 150px); background-color: #0b0c0c;">
+        <div class="landscape-left-2">
+          <img class="video-participant-5" style="object-fit:cover;" src="/public/images/workcoach9.png">
+        </div>
+        <div class="landscape-right-2" style="background-color: #0b0c0c;">
+            <img class="video-participant-4" style="object-fit:cover;" src="/public/images/attendee_1.png">
+        </div>
+        <div class="attend-selfie-small">
+            <video autoplay="true" id="videoMedium"></video>
+        </div>
+    </div>
+    </div>
+    </main>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Desktop -->
+
+<div class="desktop-screen-only">
+    <div class="video-frame-attendee">
+
+      <div class="landscape-left-2">
+        <img class="video-participant-2" style="object-fit:cover;" width="100%" src="/public/images/workcoach9.png"></div>
+      <div class="landscape-right-2">
+          <img class="video-participant-2" style="object-fit:cover;" width="100%" src="/public/images/attendee_1.png"></div>
+      <div class="attend-selfie-small-desktop">
+                <video autoplay="true" id="videoDesktop" style="object-fit:contain;"></video>
+          </div>
+  </div>
+      </div>
+  <div class="govuk-width-container"> <a class="govuk-link" href="3-selfie-con">Alternative</a> </div>
+
+
+
+ <script>
+      // Grab elements, create settings, etc.
+      var video = document.getElementById('videoElement');
+      var desktopVideo = document.getElementById('videoDesktop');
+        var selfieVideo = document.getElementById('videoMedium');
+
+      // Get access to the camera!
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          // Not adding `{ audio: true }` since we only want video now
+          navigator
+              .mediaDevices
+              .getUserMedia({video: true})
+              .then(function (stream) {
+                  //video.src = window.URL.createObjectURL(stream);
+                  video.srcObject = stream;
+                  video.play();
+
+                  selfieVideo.srcObject = stream;
+                  selfieVideo.play();
+
+                  desktopVideo.srcObject = stream;
+                  desktopVideo.play();
+              });
+      }
+  </script>
+
+{% endblock %}

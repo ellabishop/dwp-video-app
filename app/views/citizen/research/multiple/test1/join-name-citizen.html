@@ -1,0 +1,32 @@
+{% extends "layout-citizen-3.html" %}
+
+
+{% block pageTitle %}
+  What is your name? - Attend a video appointment
+{% endblock %}
+
+{% block content %}
+
+      <form action="responsive-video-waiting" method="post" class="form" name="theForm" id="check-in_form" style="margin-top: 40px" onsubmit="fixit()">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-heading-xl" style="margin-bottom: 15px">What is your name?</h1>
+          </legend>
+          <p> This will only be visible to the host and will be deleted when the appointment ends.</p>
+
+
+        </fieldset>
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-form-group">
+  <label class="govuk-label" for="full-name">
+    Full name
+  </label>
+  <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+
+            </fieldset>
+      <button class="govuk-button" data-module="govuk-button" style="margin-top: 30px">Continue</button>
+</form>
+
+
+
+    {% endblock %}
