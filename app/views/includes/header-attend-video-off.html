@@ -4,21 +4,12 @@
       <a href="/" class="govuk-header__link govuk-header__link--service-name">
     <div class="govuk-header__contents"> Attend a video appointment</div></a>
             <div class="govuk-header__contents" style="display:inline-block; float:right;">
-            <!---  <nav aria-label="Choose a language">
-              <ul class="govuk-list" style="list-style-type:none; margin:0">
-              <li class="govuk-header__navigation-item" style="padding-top:0px">
-                <a class="govuk-header__link" href="#">
-                      Cymraeg
-                    </a>
-                  </li>
-              </ul>
-              </nav> -->
 
               <div class="dropdown">
-  <button onclick="myDrop()" class=" govuk-button govuk-button_drop dropbtn">Settings</button>
-  <div id="myDropLarge" class="dropdown-content">
+  <button onclick="myFunction()" class=" govuk-button govuk-button_drop dropbtn">Settings</button>
+  <div id="myDropdown" class="dropdown-content">
 
-<a class="govuk-link govuk-link--no-visited-state" href="attend-video-replace-example" style="color:#0b0c0c">Turn on replace background</a>
+<a class="govuk-link govuk-link--no-visited-state" href="#" style="color:#0b0c0c">Turn off replace background</a>
   <!--  <a class="govuk-link govuk-link--no-visited-state" href="#" style="color:#0b0c0c">Cymraeg</a> -->
 
 
@@ -31,8 +22,8 @@
 <script>
         /* When the user clicks on the button,
         toggle between hiding and showing the dropdown content */
-        function myDrop() {
-          document.getElementById("myDropLarge").classList.toggle("show");
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
         }
 
         // Close the dropdown menu if the user clicks outside of it

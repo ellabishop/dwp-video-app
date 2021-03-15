@@ -7,7 +7,7 @@
 {% block header %}
 
 <div class="portrait-no-display">
-{% include "includes/headers/header-attend.html" %}
+{% include "includes/header-attend-video.html" %}
 <div class="dwp-video-header-conduct">
   <div class="govuk-width-container" style="margin: 0, text-align: center;">
     {% include "includes/top-btn-conduct-citizen-trial.html" %}
@@ -29,7 +29,7 @@
     <div class="dropdown">
     <button onclick="myFunction()" class="govuk-button govuk-button_drop dropbtn" style="font-size:16px; display:inline;">Settings</button> </div>
 
-    <div id="myDropdown" class="dropdown-content" style="min-width:100%; margin-top:40px;">
+    <div id="myPortrait" class="dropdown-content" style="min-width:100%; margin-top:40px;">
 
   <a class="govuk-link govuk-link--no-visited-state" href="attend-video-replace-example" style="color:#0b0c0c">Turn on replace background</a>
 
@@ -125,7 +125,7 @@
           /* When the user clicks on the button,
           toggle between hiding and showing the dropdown content */
           function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
+            document.getElementById("myPortrait").classList.toggle("show");
           }
 
           // Close the dropdown menu if the user clicks outside of it
