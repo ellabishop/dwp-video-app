@@ -27,9 +27,9 @@
               </a>
               <div class="govuk-header__contents" style="float:right;">
     <div class="dropdown">
-    <button onclick="myFunction()" class="govuk-button govuk-button_drop dropbtn" style="font-size:16px; display:inline;">Settings</button> </div>
+    <button onclick="mySettings()" class="govuk-button govuk-button_drop dropbtn" style="font-size:16px; display:inline;">Settings</button> </div>
 
-    <div id="myDropdown" class="dropdown-content" style="min-width:100%; margin-top:40px;">
+    <div id="mySettings" class="dropdown-content" style="min-width:100%; margin-top:40px;">
 
   <a class="govuk-link govuk-link--no-visited-state" href="attend-video-citizen-mobile" style="color:#0b0c0c">Turn off replace background</a>
 
@@ -44,7 +44,7 @@
 
   <main style="margin:0; padding:0;">
   <div class="flex-container">
-    <div class="flex-item flex-responsive-container" style="height: calc(100vh - 139px);">
+    <div class="flex-item flex-responsive-container" style="height: calc(100vh - 200px);">
       <div class="selfie-single">
         <img class="video-participant" style="object-fit:cover;  width: 100%;" src="/public/images/workcoach9.png">
         </div>
@@ -64,7 +64,7 @@
   <div class="medium-screen-only">
     <main style="margin:0; padding:0;">
     <div class="flex-container">
-      <div class="flex-item flex-responsive-container" style="height: calc(100% - 130px); background-color: #0b0c0c;">
+      <div class="flex-item flex-responsive-container" style="height: calc(100% - 200px); background-color: #0b0c0c;">
         <div class="landscape-main">
           <img class="video-participant" style="object-fit:cover;  width: 100%;"  src="/public/images/workcoach9.png">
         </div>
@@ -124,8 +124,8 @@
   <script>
           /* When the user clicks on the button,
           toggle between hiding and showing the dropdown content */
-          function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
+          function mySettings() {
+            document.getElementById("mySettings").classList.toggle("show");
           }
 
           // Close the dropdown menu if the user clicks outside of it
