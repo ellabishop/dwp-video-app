@@ -1,0 +1,77 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Conduct a video appointment
+{% endblock %}
+
+{% block header %}
+{% include "includes/headers/header-staff-blur2.html" %}
+<div id="header-area" class="dwp-video-header-conduct">
+  <div class="govuk-width-container custom-header-width--conduct" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-staff.html" %}
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        <div class="video-frame">
+          <div class="attendee-main">
+          <img class="video-participant" style="height:100%" src="/public/images/attendee_1.png">
+        </div>
+          <div class="selfie-multiple-small">
+<video autoplay="true" id="videoElement"></video>
+</div>
+    </div>
+    </div>
+      <div class="govuk-grid-column-one-quarter">
+        <h2 class="govuk-heading-s">Participants</h2>
+        <dl class="govuk-summary-list" style="font-size:16px">
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              Host (me)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                   <span class="govuk-visually-hidden"> No action available</span>
+                 </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              Attendee
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                   <span class="govuk-visually-hidden"> No action available</span>
+                 </a>
+            </dd>
+          </div>
+          </div>
+
+
+    <script>
+      var video = document.querySelector("#videoElement");
+
+      if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+          .then(function (stream) {
+            video.srcObject = stream;
+          })
+          .catch(function (err0r) {
+            console.log("Something went wrong!");
+          });
+      }
+    </script>
+
+{% endblock %}
+
+{% block footer %}
+
+<div class="govuk-width-container">
+  <a class="govuk-link" style="float:left" href="blur-opt-1-example">Back</a> <a class="govuk-link" style="float:right" href="replace-background">Next</a></div>
+
+{% endblock %}
