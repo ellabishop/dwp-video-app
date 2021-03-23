@@ -5,37 +5,7 @@
 {% endblock %}
 
 {% block header %}
-
-<header class="govuk-header" role="banner" data-module="dwp-header">
-  <div class="govuk-header__container">
-    <div class="govuk-width-container custom-header-width--conduct" >
-
-        <a href="/" class="govuk-header__link govuk-header__link--service-name">
-
-      <div class="govuk-header__contents">Conduct a video appointment</div></a>
-
-<div class="govuk-width-container custom-header-width--conduct govuk-header__contents" style="float:right; margin-right:0px;">
-<nav>
-  <ul class="govuk-list" style="list-style-type:none; margin:0">
-  <li class="govuk-header__navigation-item" style="padding-top:0px">
-    <a class="govuk-header__link" href="replace-background">
-          Remove background
-        </a>
-      </li>
-  </ul>
-  </nav>
-</div>
-
-
-
-
-
-    </div>
-
-
-    </div>
-
-</header>
+{% include "includes/header-staff-vid-responsive.html" %}
 <div id="header-area" class="dwp-video-header-conduct">
   <div class="govuk-width-container custom-header-width--conduct" style="margin: 0, text-align: center;">
     {% include "includes/top-btn-conduct-staff.html" %}
@@ -49,13 +19,15 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-three-quarters">
         <div class="video-frame">
-          <div class="attendee-main">
-          <img class="video-participant" style="height:100%" src="/public/images/attendee_1.png">
-        </div>
-          <div class="selfie-multiple-small">
-  <img class="video-participant" style="object-fit:cover; height:100%" src="/public/images/replacebackground.png">
+          <div class="selfie-multiple">
+<video autoplay="true" id="videoElement" style="object-fit:cover;"></video>
 </div>
-    </div>
+          <div class="attendee-multiple-1">
+          <img class="video-participant-cov" width="100%" style="text-align:centre" src="/public/images/attendee_6.jpeg">
+        </div>
+          <div class="attendee-multiple-2">
+            <img class="video-participant-cov" width="100%" src="/public/images/attendee_3.png"></div>
+      </div>
     </div>
       <div class="govuk-grid-column-one-quarter">
         <h2 class="govuk-heading-s">Participants</h2>
@@ -72,15 +44,18 @@
           </div>
           <div class="govuk-summary-list__row">
             <dd class="govuk-summary-list__value">
-              Attendee
+            Attendee
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                   <span class="govuk-visually-hidden"> No action available</span>
-                 </a>
             </dd>
-          </div>
-          </div>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          Attendee
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        </dd>
+ </div>
 
 
     <script>
@@ -102,6 +77,6 @@
 {% block footer %}
 
 <div class="govuk-width-container">
-  <a class="govuk-link" style="float:left" href="replace-background">Back</a> <a class="govuk-link" style="float:right" href="3-participants-grid-con">Next</a></div>
+  <a class="govuk-link" style="float:left" href="3-participants-grid-con">Back</a> <a class="govuk-link" style="float:right" href="3-participants-selfie-cov">Next</a></div>
 
 {% endblock %}
