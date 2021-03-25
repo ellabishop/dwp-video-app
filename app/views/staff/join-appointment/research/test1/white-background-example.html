@@ -3,9 +3,41 @@
 {% block pageTitle %}
   Video appointment - Conduct a video appointment
 {% endblock %}
-
 {% block header %}
-{% include "includes/headers/header-staff-blur3.html" %}
+<header class="govuk-header" role="banner" data-module="dwp-header">
+  <div class="govuk-header__container">
+    <div class="govuk-width-container custom-header-width--conduct" >
+
+        <a href="/" class="govuk-header__link govuk-header__link--service-name">
+
+      <div class="govuk-header__contents">Conduct a video appointment</div></a>
+
+<!--  Radio buttons -->
+<div class="govuk-width-container custom-header-width--conduct" style="float:right; margin-right:0px;">
+<label class="govuk-label" for="blur" style="color:#fff; margin-right:20px; margin-top: 5px; display:inline; float:left;">
+  Hide background
+</label>
+  <div class="govuk-radios govuk-radios--inline govuk-radios--small" style="margin-bottom: 5px; display:inline;" id="blur" name="blur">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes" checked>
+      <label class="govuk-label govuk-radios__label" for="changed-name" style="color:#fff">
+        On
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no" onclick="location.href='blur-opt-2.html';">
+      <label class="govuk-label govuk-radios__label" for="changed-name-2" style="color:#fff">
+        Off
+      </label>
+    </div>
+  </div>
+
+</div> </div>
+
+        </div>
+
+</header>
+
 <div id="header-area" class="dwp-video-header-conduct">
   <div class="govuk-width-container custom-header-width--conduct" style="margin: 0, text-align: center;">
     {% include "includes/top-btn-conduct-staff.html" %}
@@ -23,7 +55,7 @@
           <img class="video-participant" style="height:100%" src="/public/images/attendee_1.png">
         </div>
           <div class="selfie-multiple-small">
-<video autoplay="true" id="videoElement"></video>
+  <img class="video-participant" style="object-fit:cover; height:100%" src="/public/images/whitebackground.png">
 </div>
     </div>
     </div>
@@ -72,6 +104,6 @@
 {% block footer %}
 
 <div class="govuk-width-container">
-  <a class="govuk-link" style="float:left" href="start-appt">Back</a> <a class="govuk-link" style="float:right" href="blur-opt-1-example">Next</a></div>
+  <a class="govuk-link" style="float:left" href="blur-opt-2">Back</a> <a class="govuk-link" style="float:right" href="replace-background">Next</a></div>
 
 {% endblock %}

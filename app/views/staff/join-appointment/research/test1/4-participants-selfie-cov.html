@@ -15,15 +15,24 @@
 {% endblock %}
 
 {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <div class="video-frame">
 
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-three-quarters">
-        <div class="video-frame">
-          <div class="selfie-single">
-<video autoplay="true" id="videoElement"></video>
+      <div class="landscape-right-2">
+      <img class="video-participant-cov" width="100%" src="/public/images/attendee_1.png">
+    </div>
+      <div class="attendee-multiple-3">
+        <img class="video-participant-cov" width="100%" src="/public/images/attendee_2.png"></div>
+        <div class="attendee-multiple-4">
+          <img class="video-participant-cov" width="100%"  src="/public/images/attendee_3.png"></div>
+
+          <div class="conduct-selfie-small-2">
+    <video autoplay="true" id="videoElement" style="object-fit:cover"></video>
+    </div>
+  </div>
+
 </div>
-    </div>
-    </div>
       <div class="govuk-grid-column-one-quarter">
         <h2 class="govuk-heading-s">Participants</h2>
         <dl class="govuk-summary-list" style="font-size:16px">
@@ -37,7 +46,27 @@
                  </a>
             </dd>
           </div>
-          </div>
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+            Attendee
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          Attendee
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        </dd>
+ </div>
+ <div class="govuk-summary-list__row">
+   <dd class="govuk-summary-list__value">
+     Attendee
+   </dd>
+   <dd class="govuk-summary-list__actions">
+   </dd>
+</div>
 
 
     <script>
@@ -59,6 +88,6 @@
 {% block footer %}
 
 <div class="govuk-width-container">
-  <a class="govuk-link" style="float:left" href="start">Back</a> <a class="govuk-link" style="float:right" href="blur-opt-1">Next</a></div>
+  <a class="govuk-link" style="float:left" href="3-participants-selfie-cov">Back</a> <a class="govuk-link" style="float:right" href="4-participants-grid-con">Next</a></div>
 
 {% endblock %}
