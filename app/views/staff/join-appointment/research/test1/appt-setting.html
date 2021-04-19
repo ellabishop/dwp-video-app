@@ -1,0 +1,55 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  Conduct a video appointment
+{% endblock %}
+
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl" style="margin-top:40px">
+        Choose your video settings
+      </h1>
+
+
+    <div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+  <legend class="govuk-fieldset__legend">
+    Hide your background?
+  </legend> <!--
+  <div id="changed-name-hint" class="govuk-hint">
+    This protects your privacy.
+  </div> -->
+  <div class="govuk-radios govuk-radios--inline">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+      <label class="govuk-label govuk-radios__label" for="changed-name">
+        Yes
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no" checked>
+      <label class="govuk-label govuk-radios__label" for="changed-name-2">
+        No
+      </label>
+    </div>
+  </div>
+
+</fieldset>
+</div>
+
+
+
+        <a href="start-appt" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+          Start appointment
+        </a>
+    </div>
+  </div>
+
+
+{% endblock %}
