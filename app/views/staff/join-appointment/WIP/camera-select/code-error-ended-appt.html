@@ -5,7 +5,7 @@ Enter the appointment code - Conduct a video appointment
 {% endblock %}
 
 {% block content %}
-
+<div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
@@ -26,7 +26,7 @@ Enter the appointment code - Conduct a video appointment
       </div>
 
 
-      <form action="/appointment-code-3" method="post" class="govuk-form-group--error" id="appointmentCode" style="margin-top: 10px">
+      <form action="/appointment-code-answer" method="post" class="govuk-form-group--error" id="appointmentCode" style="margin-top: 10px">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <h1 class="govuk-heading-xl">
@@ -58,6 +58,6 @@ Appointment code </label>
   <a href="enter-code" style="float: right">Back to start</a>
 </div>
 
-
+</div>
 
 {% endblock %}

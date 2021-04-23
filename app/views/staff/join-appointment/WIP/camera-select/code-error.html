@@ -5,7 +5,7 @@ Enter the appointment code - Conduct a video appointment
 {% endblock %}
 
 {% block content %}
-
+<div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
@@ -16,7 +16,7 @@ Enter the appointment code - Conduct a video appointment
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#appointmentCode">Appointment code must not be for an ended appointment</a>
+              <a href="#appointment-code">Enter the appointment code</a>
             </li>
             <li>
 
@@ -26,27 +26,25 @@ Enter the appointment code - Conduct a video appointment
       </div>
 
 
-      <form action="/appointment-code-3" method="post" class="govuk-form-group--error" id="appointmentCode" style="margin-top: 10px">
+        <form action="/appointment-code-answer" method="post" class="govuk-form-group--error" id="appointmentcode_form" style="margin-top:40px">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <h1 class="govuk-heading-xl">
                 Enter the appointment code </h1>
                 <p>This is the 6 letter code you generated when you created the appointment.</p>
             </legend>
-            </fieldset>
-            <fieldset class="govuk-fieldset">
 
-  <label class="govuk-label" for="address-line-1">
+  <label class="govuk-label" for="appointment-code">
 Appointment code </label>
 
-<span id="appointmentCode" class="govuk-error-message">
-<span class="govuk-visually-hidden">Error:</span> Appointment code must not be for an ended appointment
+<span id="appointment-code-error" class="govuk-error-message">
+<span class="govuk-visually-hidden">Error:</span> Enter the appointment code
 </span>
-      <input type="text" id="appointmentCode" name="appointmentCode" class="govuk-input govuk-input--error" style="width:50%">
+      <input type="text" id="appointment-code" name="appointmentCode" class="govuk-input govuk-input--error" style="width:50%">
       </fieldset>
-
+<button class="govuk-button" data-module="govuk-button" style="margin-top: 30px">Continue</button>
       </form>
-        <button class="govuk-button" data-module="govuk-button" style="margin-top: 30px">Continue</button>
+
       <br>
 
 
@@ -55,9 +53,10 @@ Appointment code </label>
       <p>If you've lost or forgotten your code, you'll need to create a new video appointment. </p>
 
   </div>
-  <a href="enter-code" style="float: right">Back to start</a>
+  <a href="code-error-too-short" style="float: right">Too short</a>
+
 </div>
 
-
+</div>
 
 {% endblock %}

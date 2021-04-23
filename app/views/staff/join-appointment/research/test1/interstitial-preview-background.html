@@ -16,8 +16,8 @@
       </h1>
 
 
-  <div class="video-preview">
-      <img src="/public/images/Room.png">
+  <div>
+      <img style="display:block; height:200px; width: 40%; border: 3px solid #505a5f;" src="/public/images/DWP.png">
   </div>
 
 
@@ -38,7 +38,7 @@
       </label>
     </div>
     <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+      <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no" onclick="location.href='interstitial-preview'">
       <label class="govuk-label govuk-radios__label" for="changed-name-2">
         No
       </label>
@@ -55,21 +55,6 @@
     </div>
   </div>
 
-
-
-      <script>
-        var video = document.querySelector("#videoElement");
-
-        if (navigator.mediaDevices.getUserMedia) {
-          navigator.mediaDevices.getUserMedia({ video: true })
-            .then(function (stream) {
-              video.srcObject = stream;
-            })
-            .catch(function (err0r) {
-              console.log("Something went wrong!");
-            });
-        }
-      </script>
 
 
 {% endblock %}

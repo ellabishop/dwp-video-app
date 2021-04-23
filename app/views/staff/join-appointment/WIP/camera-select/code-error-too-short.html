@@ -5,7 +5,7 @@ Enter the appointment code - Conduct a video appointment
 {% endblock %}
 
 {% block content %}
-
+<div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
@@ -16,7 +16,7 @@ Enter the appointment code - Conduct a video appointment
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#appointmentCode">Appointment code must not be for an ended appointment</a>
+              <a href="#appointmentCode">Appointment code must be 6 letters</a>
             </li>
             <li>
 
@@ -26,21 +26,20 @@ Enter the appointment code - Conduct a video appointment
       </div>
 
 
-      <form action="/appointment-code-3" method="post" class="govuk-form-group--error" id="appointmentCode" style="margin-top: 10px">
+      <form action="/appointment-code-answer" method="post" class="govuk-form-group--error" id="appointmentCode" style="margin-top: 10px">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <h1 class="govuk-heading-xl">
-                Enter the appointment code </h1>
+                Enter the appointment code </h1> </legend>
                 <p>This is the 6 letter code you generated when you created the appointment.</p>
-            </legend>
-            </fieldset>
-            <fieldset class="govuk-fieldset">
 
-  <label class="govuk-label" for="address-line-1">
+
+
+  <label class="govuk-label" for="appointmentCode">
 Appointment code </label>
 
 <span id="appointmentCode" class="govuk-error-message">
-<span class="govuk-visually-hidden">Error:</span> Appointment code must not be for an ended appointment
+<span class="govuk-visually-hidden">Error:</span> Appointment code must be 6 letters
 </span>
       <input type="text" id="appointmentCode" name="appointmentCode" class="govuk-input govuk-input--error" style="width:50%">
       </fieldset>
@@ -54,10 +53,10 @@ Appointment code </label>
 
       <p>If you've lost or forgotten your code, you'll need to create a new video appointment. </p>
 
+    </div>
+    <a href="code-error-not-alpha" style="float: right">Not alpha</a>
   </div>
-  <a href="enter-code" style="float: right">Back to start</a>
-</div>
 
-
+  </div>
 
 {% endblock %}
