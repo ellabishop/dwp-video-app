@@ -1,0 +1,84 @@
+{% extends "layout-help-welsh.html" %}
+
+{% block pageTitle %}
+  Sut i baratoi am apwyntiad fideo - Mynychu apwyntiad fideo
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <span class="govuk-caption-xl" style="margin-top:40px;">Arweiniad</span>
+          <h1 class="govuk-heading-xl">Sut i baratoi am apwyntiad fideo</h1> </div>
+
+
+          <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-m">Offer rydych ei angen</h2>
+          <p>Rydych angen y canlynol:<p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>cyfrifiadur, gliniadur, ffôn glyfar neu lechen gyda chamera neu ficroffon</li>
+              <li>mynediad at y rhyngrwyd – rydym yn awgrymu eich bod yn defnyddio wifi i osgoi costau data</li>
+              <li>porwr rhyngrwyd cynaladwy (y meddalwedd rydych yn ei ddefnyddio i gael mynediad at y rhyngrwyd)</li>
+            </ul>
+            <h2 class="govuk-heading-s">Porwyr cynaladwy</h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="https://www.google.com/chrome/">Google Chrome</a> (fersiwn 79 neu ddiweddarach) ar ddyfais Windows, Apple neu Android</li>
+              <li><a href="https://support.apple.com/en_GB/downloads/safari ">Safari</a> (fersiwn 12 neu ddiweddarach) ar ddyfais Apple</li>
+            </ul>
+            <p>Gallwch <a href="https://www.whatsmybrowser.org/" class="govuk-link">Edrych i weld pa mor gyfredol yw eich porwr.</a></p>
+
+              <h2 class="govuk-heading-m">Cyn eich apwyntiad</h2>
+                <p>	I baratoi:<p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>gwnewch yn siwr bod y ddyfais y byddwch yn ei ddefnyddio wedi ei bweru’n llawn neu yn cael ei bweru</li>
+                  <li>gwisgwch fel petai chi yn dod i’r ganolfan gwaith</li>
+                  <li>penderfynwch ble byddwch yn eistedd, dylai fod yn fan sy’n dawel, preifat ac wedi’i oleuo’n dda</li>
+
+                </ul>
+              <h2 class="govuk-heading-m">Yn ystod eich apwyntiad</h2>
+                <p>Pan fydd eich camera ymlaen, byddwch yn cael eich gweld trwy’r amser, p'un a ydych yn siarad ai peidio. Mae hyn yn cynnwys os ydych yn newid i dab arall, neu ar rai dyfeisiau, hyd yn oed os ydych yn cloi'ch sgrin.</p>
+
+                <p>Os cewch unrhyw broblemau gyda'r llun neu'r sain yn ystod yr apwyntiad, rhowch gynnig ar y botwm 'Refresh'. Yn y rhan fwyaf o achosion bydd hyn yn datrys y broblem.</p>
+
+                <p>Os byddwch yn cau'ch porwr neu'n colli cysylltiad cyn diwedd eich apwyntiad, gallwch ddefnyddio'r ddolen 'Mynychu eich apwyntiad fideo' eto i ailymuno.</p>
+
+                <div class="warning-panel"><div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>Ni chaniateir i chi recordio apwyntiad fideo heb ein caniatâd. Os ydym yn amau eich bod yn gwneud recordiad, byddwn yn dod â'r apwyntiad i ben ar unwaith.<br><br>Bydd adroddiad yn cael ei wneud am unrhyw ymddygiad troseddol.</strong></div></div>
+              <h2 class="govuk-heading-m">Sut i ymuno ag apwyntiad fideo</h2>
+              <ol class="govuk-list govuk-list--number">
+                <li>Dewiswch y ddolen 'Mynychu eich apwyntiad fideo' o fewn 10 munud i’r amser mae eich apwyntiad yn dechrau.</li>
+                <li>Gofynnir i chi am ddefnyddio eich camera a microffon. Mae’n rhaid i chi ddewis ‘Allow’ i gymryd rhan yn yr apwyntiad fideo.</li>
+                <li>Yna dylech weld y person arall a ffenestr fechan gyda chi ynddi. Os nad ydych yn gweld y person arall dylech ddisgwyl iddynt ymuno.</li>
+
+
+          </div>
+    </div>
+<button class="govuk-button" style="margin-top:30px" id="close3" onclick="closeWin()">Cau</button>
+  </div>
+
+  <script>
+    function closeWin() {
+      var myWindow = window.close("help")
+      myWindow.close();
+    }
+</script>
+
+<noscript>
+<style>
+    #close3 {display:none;}
+</style>
+</noscript>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+{% endblock %}

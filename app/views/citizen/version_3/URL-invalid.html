@@ -1,0 +1,55 @@
+{% extends "layout-invalid-eng.html" %}
+
+{% block pageTitle %}
+  Sorry, the appointment is unavailable - Attend a video appointment
+{% endblock %}
+
+{% block beforeContent %}
+
+<!--
+<nav class="hmrc-language-select" aria-label="Language switcher">
+<ul class="hmrc-language-select__list">
+<li class="hmrc-language-select__list-item">
+<span aria-current="true">English</span>
+</li>
+<li class="hmrc-language-select__list-item">
+<a href="welsh/URL-invalid" hreflang="cy" lang="cy" rel="alternate" class="govuk-link" data-journey-click="link - click:lang-select:Cymraeg">
+<span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+<span aria-hidden="true">Cymraeg</span>
+</a>
+</li>
+</ul>
+</nav> -->
+
+  {% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl" style="margin-top:40px">
+          Sorry, the appointment is unavailable
+            </h1>
+
+          <p>This could be because:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>you're too early</li>
+            <li>you're too late</li>
+            <li>the appointment has finished</li>
+          </ul>
+          <p>Check the date and time of your appointment and make sure you have used the correct link.</p>
+
+      <button class="govuk-button" style="margin-top:30px" onclick="closeWin()">Close</button>
+
+        </div>
+    </div>
+
+
+<script>
+  function closeWin() {
+    var myWindow = window.close("help")
+    myWindow.close();
+  }
+</script>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Attend a video appointment
+{% endblock %}
+
+{% block header %}
+
+{% include "includes/headers/header-attend.html" %}
+
+
+<div class="portrait-no-display">
+<div class="dwp-video-header-conduct">
+  <div class="govuk-width-container" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-citizen-trial.html" %}
+      </div>
+</div>
+</div>
+
+<!-- Portrait -->
+<div class="portrait-screen-only">
+  <main style="margin:0; padding:0;">
+  <div class="flex-container">
+    <div class="flex-item flex-responsive-container" style="height: calc(100% - 150px); background-color: #0b0c0c;">
+      <div class="selfie-multiple">
+          <img class="video-participant" style="object-fit:contain;" src="/public/images/Citizen-mobile.png">
+      </div>
+      <div class="mobile-multiple-top">
+      <img class="video-participant-2" src="/public/images/workcoach9.png">
+    </div>
+      <div class="mobile-multiple-left">
+        <img class="video-participant" src="/public/images/attendee_2.png">
+   </div>
+  </div>
+
+  <div class="bottom-buttons">
+      <button class="govuk-button govuk-button--secondary govuk-button--panel" style="margin:0px 5px 10px 5px; width: 95%;">Refresh</button>
+  </div>
+  </div>
+  </main>
+
+  </div>
+
+  <!-- Medium -->
+  <div class="medium-screen-only">
+    <main style="margin:0; padding:0;">
+    <div class="flex-container">
+      <div class="flex-item flex-responsive-container" style="height: calc(100% - 150px); background-color: #0b0c0c;">
+        <div class="landscape-left-2" >
+          <img class="video-participant-3" style="object-fit:contain;" src="/public/images/workcoach9.png">
+        </div>
+        <div class="attendee-multiple-1" style="background-color: #0b0c0c;">
+            <img class="video-participant-4" style="object-fit:contain;" src="/public/images/attendee_2.png">
+        </div>
+        <div class="selfie-multiple">
+            <img class="video-participant" style="object-fit:contain;" src="/public/images/Citizen-med.png">
+        </div>
+    </div>
+    </div>
+    </main>
+    </div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Desktop -->
+
+<div class="desktop-screen-only">
+          <div class="video-frame-attendee">
+            <div class="selfie-multiple">
+                <img class="video-participant" style="object-fit:contain;" src="/public/images/Citizen.png">
+            </div>
+            <div class="attendee-multiple-1">
+            <img class="video-participant-2" src="/public/images/attendee_2.png">
+          </div>
+            <div class="attendee-multiple-2">
+              <img class="video-participant" src="/public/images/workcoach9.png"></div>
+        </div>
+      </div>
+
+      <div class="govuk-width-container"> <a class="govuk-link" style="float:left" href="4-participants">Another attendee joins</a> <a class="govuk-link" style="float:right" href="end-complete-citizen">Appointment finished</a></div>
+
+
+{% endblock %}
