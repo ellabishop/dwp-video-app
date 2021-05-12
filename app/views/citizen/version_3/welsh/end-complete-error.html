@@ -1,0 +1,128 @@
+{% extends "layout-citizen-welsh.html" %}
+
+{% block pageTitle %}
+  Mae eich apwyntiad fideo wedi gorffen - Mynychu apwyntiad fideo
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          Mae problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#quality">Dewiswch a oedd ansawdd y fideo yn dda neu'n ddrwg</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+            <h1 class="govuk-heading-xl" style="margin-top: 40px">
+            Mae eich apwyntiad fideo wedi gorffen
+            </h1>
+
+            <form action="/quality-answer" method="post" novalidate>
+              <div class="govuk-form-group govuk-form-group--error">
+              <fieldset class="govuk-fieldset" aria-describedby="quality quality-error">
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                 <h1 class="govuk-fieldset__heading">
+                  Sut oedd safon y fideo?
+                 </h1>
+               </legend>
+               <span id="quality-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Dewiswch a oedd ansawdd y fideo yn dda neu'n ddrwg
+    </span>
+               <div class="govuk-radios govuk-radios--conditional" id="quality-ques" data-module="govuk-radios">
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="quality" name="quality" type="radio" value="good" data-aria-controls="conditional-quality">
+                   <label class="govuk-label govuk-radios__label" for="quality">
+                     Da
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="quality-2" name="quality" type="radio" value="bad" data-aria-controls="conditional-quality-2">
+                   <label class="govuk-label govuk-radios__label" for="quality-2">
+                     Drwg
+                   </label>
+                 </div>
+                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-quality-2">
+                   <div class="govuk-form-group">
+                     <fieldset class="govuk-fieldset" aria-describedby="wrong-hint">
+     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+       <h1 class="govuk-fieldset__heading">
+         Beth aeth o’i le?
+       </h1>
+     </legend>
+     <div id="wrong-hint" class="govuk-hint">
+       Dewiswch bob un sy’n bethnasol.
+     </div>
+     <div class="govuk-checkboxes">
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong" name="wrong" type="checkbox" value="poor-video">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong">
+           Ansawdd llun gwael
+         </label>
+       </div>
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong-2" name="wrong" type="checkbox" value="poor-audio">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-2">
+           Nid oeddwn yn gallu gweld y person arall
+         </label>
+       </div>
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong-3" name="wrong" type="checkbox" value="see-other">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-3">
+          Nid oedd y person arall yn gallu fy ngweld
+         </label>
+       </div>
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong-4" name="wrong" type="checkbox" value="hear-other">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-4">
+           Ansawdd swn gwael
+         </label>
+       </div>
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong-5" name="wrong" type="checkbox" value="see-me">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-5">
+          Nid oeddwn yn clywed unrhyw swn
+         </label>
+       </div>
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong-6" name="wrong" type="checkbox" value="hear-me">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-6">
+          Nid oedd y person arall yn clywed unrhyw swn
+         </label>
+       </div>
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="wrong-6" name="wrong" type="checkbox" value="hear-me">
+         <label class="govuk-label govuk-checkboxes__label" for="wrong-6">
+          Arall
+         </label>
+       </div>
+     </div>
+
+   </fieldset> </div>
+                 </div>
+               </div>
+              </fieldset>
+              </div>
+
+
+
+
+           <button class="govuk-button" id="send-feedback" data-module="govuk-button" onclick="javascript:SwapDivsWithClick('feedback','thankyou')">
+                       Anfon adborth
+                     </button>
+                   </form>
+         </div>
+
+</div>
+
+
+
+{% endblock %}
