@@ -1,3 +1,25 @@
+<div class="govuk-cookie-banner " id="banner" role="region" aria-label="Cookies on Attend a video appointment">
+  <div class="govuk-cookie-banner__message govuk-width-container">
+
+    <div class="govuk-grid-row" >
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on Attend a video appointment</h2>
+
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">We use some essential cookies to make this service work.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-button-group">
+      <a class="govuk-link" href="/cookies">View cookies</a>
+      <button onclick="myFunction()" type="button" id="hide" class="govuk-button" data-module="govuk-button">
+        Hide this message
+      </button>
+    </div>
+  </div>
+</div>
+
 <header class="govuk-header" role="banner" data-module="dwp-header">
   <div class="govuk-header__container">
     <div class="govuk-width-container">
@@ -20,3 +42,14 @@
   </p>
 </div>
 </div>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("banner");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
