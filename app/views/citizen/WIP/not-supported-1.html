@@ -1,0 +1,67 @@
+{% extends "layout-citizen-3.html" %}
+
+{% block pageTitle %}
+  Attend a video appointment
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl" style="margin-top: 40px">
+              Sorry, your browser is not supported
+            </h1>
+<p class="govuk-body"> This service does not work on your current web browser (the software you use to access the internet).</p>
+  <p>To continue, copy the URL and paste it in to one of the below:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a href="https://www.google.com/chrome">Google Chrome</a> (version 78 or later) on Windows, Apple or Android devices</li>
+  <li><a href="https://support.apple.com/en_GB/downloads/safari">Safari</a> (version 12 or later) on Apple devices</li>
+</ul>
+
+<div class="text-box-3">
+
+<div class="copy-email-btn"><button class="govuk-button" id="btext2" onclick="copyClipboard()" role="button" tabindex="0">Copy link</button>
+</div>
+
+<div class="email" id="divText">
+
+<p><a href="#" class="longURL">https://jobcentre.dwp.gov.uk/attend-video-appointment/start-yrumze?ajsvc_token=st=1593095400~exp=1595691000~acl=/attend-video-appointment/start-yrumze!/attend-video-appointment/
+  ended-yrumze!/attend-video-appointment/end!/attend-video-appointment/yrumze!/attend-video-appointment/join!/attend-video-appointment/leave~hmac=af81326e524c4b88585ee972cdd3a52885c0667cb22e058047f42dc87096fdda</a></p>
+</div>
+
+
+</div>
+</div>
+
+<script>
+function copyClipboard() {
+var elm = document.getElementById("divText");
+// for Internet Explorer
+
+if(document.body.createTextRange) {
+  var range = document.body.createTextRange();
+  range.moveToElementText(elm);
+  range.select();
+  document.execCommand("Copy");
+}
+else if(window.getSelection) {
+  // other browsers
+
+  var selection = window.getSelection();
+  var range = document.createRange();
+  range.selectNodeContents(elm);
+  selection.removeAllRanges();
+  selection.addRange(range);
+  document.execCommand("Copy");
+  document.getElementById("btext2").innerHTML = 'Link copied';
+  var originalContent2 = document.getElementById("btext2").innerHTML;
+        setTimeout(function() {
+                    document.getElementById('btext2').innerHTML = 'Copy link'
+                 }, 3000);
+
+}
+}
+</script>
+
+
+{% endblock %}
