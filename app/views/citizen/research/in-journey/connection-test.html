@@ -7,11 +7,18 @@
 {% block content %}
 
   <div class="govuk-grid-row">
+
         <h1 class="govuk-heading-xl" style="margin-top: 40px; text-align: center;">
-              Checking your internet connection, please wait
+              Checking your internet connection
             </h1>
 
         <div class="lds-spinner" style="text-align:center;"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 
-<div class="govuk-width-container"> <a class="govuk-link" href="connection-results">Next</a> </div>
+<!-- <div class="govuk-width-container"> <a class="govuk-link" href="connection-results" style="float:right">Next</a> </div> -->
+
+<script>
+  var timer = setTimeout(function() {
+              window.location='/citizen/research/in-journey/connection-results'
+          }, 5000);
+</script>
 {% endblock %}
