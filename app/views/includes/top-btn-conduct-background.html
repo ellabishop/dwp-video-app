@@ -1,0 +1,153 @@
+
+
+<div class="btn-video-top">
+
+
+<div class="background-banner">
+  <div class="govuk-form-group" style="margin-bottom:0px;">
+    <fieldset class="govuk-fieldset" aria-describedby="blur-my-background">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s"  style="display:inline;">
+        <h1 class="govuk-fieldset__heading">
+          Blur my background
+        </h1>
+      </legend>
+      <div class="govuk-radios govuk-radios--inline govuk-radios--small govuk-radios-respond">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="background-1" name="background" type="radio" value="on">
+          <label class="govuk-label govuk-radios__label" for="background-1">
+            On
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="background-2" name="background" type="radio" value="off">
+          <label class="govuk-label govuk-radios__label" for="changed-name-2">
+            Off
+          </label>
+        </div>
+      </div>
+
+    </fieldset>
+  </div>
+ </div>
+
+<div class="btn-video-top--right" style="margin-top:10px;">
+
+
+
+
+    <button id="refresh" class="govuk-button govuk-button--secondary govuk-button--panel govuk-button-respond" style="margin: 0px 20px 15px 0px;" onClick="window.location.reload();">Refresh</button>
+    <button class= "govuk-button govuk-button--warning govuk-button-respond" onclick="document.getElementById('id01').style.display='block'">End</button> </div>
+
+<dialog id="id01" class="modal" aria-labelledby="end-appointment" aria-describedby="end-confirmation" aria-modal="true" role="dialog" tabindex="-1" open>
+  <form class="modal-content">
+    <div class="govuk-modal-dialog-header">
+
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="govuk-button modal-close" title="Cancel">×</button></div>
+    <div class="modal-container">
+      <h1>End the video appointment?</h1>
+      <p> You will not be able to rejoin and the session will be closed.</p>
+
+      <div class="clearfix">
+          <a href="end-staff" role="button" class="govuk-button govuk-button--warning govuk-!-margin-right-2 govuk-button-respond" data-module="govuk-button" style="margin-bottom: 0">End appointment </a>
+          <button onClick="document.getElementById('id01').style.display='none'" class="govuk-button govuk-button--secondary govuk-button-respond" data-module="govuk-button" style="margin-bottom: 0px;">Cancel</button>
+
+      </div>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="id02" class="modal" aria-labelledby="end-appointment" aria-describedby="end-confirmation" aria-modal="true" role="dialog" tabindex="-1" open>
+  <form class="modal-content">
+    <div class="govuk-modal-dialog-header">
+
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="govuk-button modal-close" title="Cancel">×</button></div>
+    <div class="modal-container">
+      <h1>Settings</h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="Camera">
+          Camera
+        </label>
+        <select class="govuk-select" id="camera" name="camera">
+          <option value="front">Camera 1</option>
+          <option value="rear" selected>Camera 2</option>
+        </select>
+      </div>
+
+      <div class="clearfix">
+          <a href onClick="document.getElementById('id01').style.display='none'" style="display: inline-block; margin: 7px 0 0 " class="govuk-button">Close</a>
+
+      </div>
+    </div>
+  </form>
+</dialog>
+
+
+
+    </div>
+
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+
+
+
+
+<script>
+
+  function myPauseClicked(this)
+  {
+     this.disabled = true;
+
+</script>
+
+<script>
+
+  function myFinishDisabled(el)
+  {
+    el.disabled = true;
+  }
+</script>
+
+<script>
+  function stopTimer() {
+    if (a) clearInterval(a);
+    a = null;
+  }
+  document.getElementById("pause").addEventListener("click", stopTimer);
+
+  </script>
+
+  <script>
+  // add all the elements inside modal which you want to make focusable
+const  focusableElements =
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+const modal = document.querySelector('#id01'); // select the modal by it's id
+const firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal
+const focusableContent = modal.querySelectorAll(focusableElements);
+const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
+document.addEventListener('keydown', function(e) {
+  let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+  if (!isTabPressed) {
+    return;
+  }
+  if (e.shiftKey) { // if shift key pressed for shift + tab combination
+    if (document.activeElement === firstFocusableElement) {
+      lastFocusableElement.focus(); // add focus for the last focusable element
+      e.preventDefault();
+    }
+  } else { // if tab key is pressed
+    if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
+      firstFocusableElement.focus(); // add focus for the first focusable element
+      e.preventDefault();
+    }
+  }
+});
+firstFocusableElement.focus();
+</script>
+
+<script>
+  $(document).keydown(function(event) {
+    if (event.keyCode == 27) {
+      $('#id01').hide();
+    }
+  });
+</script>

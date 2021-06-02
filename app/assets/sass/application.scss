@@ -189,6 +189,22 @@ padding: 2em 2em 0.5em 2em;
   text-align: center;
 }
 
+.dwp-video-header-background {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  color: #000000;
+  background: #f3f2f1;
+  display: block;
+  padding-top: 15px;
+  position:relative;
+  width: 100%;
+  text-align: center;
+}
 
 .dwp-video-header__container {
   width: 1280px;
@@ -322,7 +338,12 @@ padding: 2em 2em 0.5em 2em;
   }
 }
 
-
+.background-banner {
+  display: inline-block;
+  color: #000000;
+  text-align: left !important;
+  float: left !important;
+}
 
 .participants-names_touch {
   display: inline-block;
@@ -333,6 +354,8 @@ padding: 2em 2em 0.5em 2em;
   text-align: left !important;
   float: left !important;
 }
+
+
 /* Quiet warning button */
 
 .govuk-button--quiet-warning {
@@ -475,6 +498,15 @@ padding: 2em 2em 0.5em 2em;
 .govuk-button-respond {
   @include govuk-media-query($from: mobile) {
     width: auto;
+  }
+}
+
+/*Remove media query on conduct page */
+.govuk-radios-respond {
+  @include govuk-media-query($from: mobile) {
+    display: inline-flex;
+    position: relative;
+
   }
 }
 
