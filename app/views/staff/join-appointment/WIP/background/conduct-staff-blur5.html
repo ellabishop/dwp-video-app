@@ -1,0 +1,80 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Conduct a video appointment
+{% endblock %}
+
+{% block header %}
+{% include "includes/header-staff-vid-responsive.html" %}
+<div id="header-area" class="dwp-video-header-background" style="height:auto;">
+
+  <div class="govuk-width-container custom-header-width--conduct" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-background-2.html" %}
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        <div class="video-frame">
+          <div class="attendee-main">
+          <img class="video-participant" style="height:100%" src="/public/images/attendee_1.png">
+        </div>
+        <div class="selfie-multiple-small">
+<img class="video-participant-cov" style="width:100%" src="/public/images/workcoach9.png">
+</div>
+
+<!--
+<div id="header-area" class="dwp-video-header-conduct">
+  <div class="govuk-width-container custom-header-width--conduct" style="float:right; margin-right:0px;">
+  <label class="govuk-label" for="blur" style="margin-right:20px; margin-top: 7px; display:inline; float:left;">
+    Hide my background
+  </label>
+    <div class="govuk-radios govuk-radios--inline govuk-radios--small govuk-radios-respond" style="margin-bottom: 5px; display:inline;" id="blur" name="blur">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          On
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no" checked>
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          Off
+        </label>
+      </div>
+    </div>
+</div>
+ </div> -->
+    </div>
+    </div>
+      <div class="govuk-grid-column-one-quarter">
+        <h2 class="govuk-heading-s">Participants</h2>
+        <dl class="govuk-summary-list" style="font-size:16px">
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              Host (me)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                   <span class="govuk-visually-hidden"> No action available</span>
+                 </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              Attendee
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                   <span class="govuk-visually-hidden"> No action available</span>
+                 </a>
+            </dd>
+          </div>
+          </div>
+
+
+
+{% endblock %}
