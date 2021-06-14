@@ -1,0 +1,60 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Universal Credit - Attend a video appointment
+{% endblock %}
+
+{% block header %}
+
+{% include "includes/header-claimant-uc.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">To do</span>
+    <h1 class="govuk-heading-l">Take part in your work search review by video</h1>
+
+    <div class="govuk-inset-text">
+You must attend on   <h2 class="govuk-heading-m" style="display:inline;">Tuesday 24 June 2021 at 10:00am </h2> <br><br>
+<h3 class="govuk-heading-s"> Your appointment is with: Danny Kang </h3>
+</div>
+
+<a href="start" role="button" draggable="false" class="govuk-button" data-module="govuk-button" target="_blank">
+  Join the meeting
+</a>
+<h3 class="govuk-heading-s">Prepare for your video appointment </h3>
+<a class="govuk-link" href="help" target="_blank"> Find out how to prepare for your video appointment (opens in a new tab)</a> <br><br>
+<p class="govuk-body"> <strong>You should:</strong></p>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>make sure your device has a camera, microphone and is fully charged</li>
+  <li>use Chrome or Safari web browser</li>
+  <li>use wifi where you can</li>
+</ul>
+<p class="govuk-body">If your appointment does not start, you should wait for your work coach to call you.</p>
+    </div>
+  </div>
+
+
+{% endblock %}
+{% block footer %}
+  {{ govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Prototype Kit " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+
+      ]
+    }
+  }) }}
+{% endblock %}
