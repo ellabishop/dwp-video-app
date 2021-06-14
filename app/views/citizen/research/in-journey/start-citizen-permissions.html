@@ -6,6 +6,7 @@
 
 {% block content %}
 
+<div class="popup2" style="display:none"><a href="wait"><img src="/public/images/popup2.png"></a></div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl" style="margin-top: 40px">
@@ -31,17 +32,11 @@
         </div>
 
         <div style="float: right; margin-bottom: 0; padding: 0">
-    <a href="wait">Next</a></div>
-<!-- <script>
-      setTimeout(function(){
-$('.popup').show();
-}, 3000);
-</script> -->
-<!-- <script>
 
-function showPopup() {
-$('.popup').show();
-}
-</script> -->
+          <script>
+            setTimeout(function(){
+        $('.popup2').show();
+        }, 1000);
+        </script>
 
 {% endblock %}
