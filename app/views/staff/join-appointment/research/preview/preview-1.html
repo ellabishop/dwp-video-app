@@ -11,27 +11,25 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl" style="margin-top:40px">
-        You're about to join your video appointment
+      <h1 class="govuk-heading-xl govuk-!-margin-top-7">
+        Check your video
       </h1>
 
+      <p class="govuk-body">You can check your camera is
+        working and change your background, before you join your video appointment.</p>
 
-<!--
-<video autoplay="true" id="videoElement" style="height:200px; width:40%;"></video> -->
+<div class="govuk-!-width-one-half" style="background:govuk-colour("black")">
+<video autoplay="true" id="videoElement"></video>
+</div>
 
-
-<h2 class="govuk-heading-s" style="margin-top:5px;">Choose your appointment settings</h2>
-    <div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-  <legend class="govuk-fieldset__legend">
-    Do you want to hide your background?
-  </legend> <!--
-  <div id="changed-name-hint" class="govuk-hint">
-    This protects your privacy.
-  </div> -->
+    <div class="govuk-form-group govuk-!-margin-top-4">
+<fieldset class="govuk-fieldset" aria-describedby="blur-background">
+  <legend class="govuk-fieldset__legend"> <h2 class="govuk-heading-s">
+    Blur my background </h2>
+  </legend>
   <div class="govuk-radios govuk-radios--inline">
     <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes" onclick="location.href='interstitial-preview-background.html';">
+      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes" onclick="location.href='#ß';">
       <label class="govuk-label govuk-radios__label" for="changed-name">
         Yes
       </label>
@@ -49,7 +47,7 @@
 
 
 <a href="start-appt" role="button" class="govuk-button">
-  Continue
+  Join appointment
 </a>
     </div>
   </div>
