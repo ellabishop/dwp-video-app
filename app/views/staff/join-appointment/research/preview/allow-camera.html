@@ -1,0 +1,71 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  Conduct a video appointment
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="popup2" style="display:none"><a href="preview-1"><img src="/public/images/popup2.png"></a></div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl" style="margin-top:40px">
+        You're about to join your video appointment
+      </h1>
+
+
+
+<div style="width:60%">
+<div style="border: 3px solid #505a5f; width:100%; padding-top:75%">
+</div>
+</div>
+
+
+<h2 class="govuk-heading-s" style="margin-top:5px;">Choose your appointment settings</h2>
+    <div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+  <legend class="govuk-fieldset__legend">
+    Do you want to hide your background?
+  </legend> <!--
+  <div id="changed-name-hint" class="govuk-hint">
+    This protects your privacy.
+  </div> -->
+  <div class="govuk-radios govuk-radios--inline">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+      <label class="govuk-label govuk-radios__label" for="changed-name">
+        Yes
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no" checked>
+      <label class="govuk-label govuk-radios__label" for="changed-name-2">
+        No
+      </label>
+    </div>
+  </div>
+
+</fieldset>
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+Join appointment
+</button>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(function(){
+$('.popup2').show();
+}, 1000);
+</script>
+
+
+
+
+{% endblock %}
