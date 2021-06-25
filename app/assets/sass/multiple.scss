@@ -7,6 +7,15 @@
   background: #0b0b0c;
 }
 
+.waiting-frame {
+  position: relative;
+  height: 0;
+  padding-top: 80%;
+  margin-bottom: 20px;
+  background: govuk-colour("white");
+  border: 3px solid govuk-colour("black");
+}
+
 .selfie-multiple {
   position: absolute;
   width: 50%;
@@ -337,6 +346,8 @@
 justify-content: center;
 align-items: center;
 }
+
+
 
 /* Breakpoints */
 
