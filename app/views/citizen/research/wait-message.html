@@ -1,0 +1,127 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  You've joined the video appointment - Attend a video appointment
+{% endblock %}
+
+{% block header %}
+
+{% include "includes/headers/header-attend.html" %}
+
+
+<div class="portrait-no-display">
+<div class="dwp-video-header-conduct">
+  <div class="govuk-width-container" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-citizen-trial.html" %}
+      </div>
+</div>
+</div>
+
+<!-- Portrait -->
+<div class="portrait-screen-only">
+  <main style="margin:0; padding:0;">
+  <div class="flex-container">
+    <div class="flex-item flex-responsive-container" style="height: calc(100% - 139px);">
+      <div class="selfie-single">
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-top-9 govuk-!-padding-left-9" style="display: inline-block; text-align: left;">
+
+        <h1 class="govuk-heading-xl">
+          You've joined the video appointment
+        </h1>
+
+        <p>
+          Please wait for the host.
+          </p>
+</div>
+        </div>
+      <div class="selfie-multiple-small">
+          <video autoplay="true" id="videoElement" style="object-fit:cover;"></video>
+      </div>
+  </div>
+  <div class="bottom-buttons">
+      <button class="govuk-button govuk-button--secondary govuk-button--panel" style="margin:0px 5px 10px 5px; width: 95%;">Refresh</button>
+  </div>
+
+  </div>
+  </main>
+  </div>
+
+  <!-- Medium -->
+  <div class="medium-screen-only">
+    <main style="margin:0; padding:0;">
+    <div class="flex-container">
+      <div class="flex-item flex-responsive-container" style="height: calc(100% - 130px);">
+        <div class="landscape-main">
+          <div class="govuk-grid-column-two-thirds govuk-!-padding-top-9 govuk-!-padding-left-9" style="display: inline-block; text-align: left;">
+
+          <h1 class="govuk-heading-xl">
+            You've joined the video appointment
+          </h1>
+
+          <p>
+            Please wait for the host.
+            </p>
+  </div>
+          </div>
+        </div>
+        <div class="landscape-medium" style="background-color: #0b0c0c;">
+            <video autoplay="true" id="videoMedium" style="object-fit:cover;"></video>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Desktop -->
+
+<div class="desktop-screen-only">
+      <div class="video-frame-attendee">
+        <div class="attendee-main" style="background-color:#fff; border: 3px solid #0b0c0c;">
+          <div class="govuk-grid-column-two-thirds govuk-!-padding-top-9 govuk-!-padding-left-9" style="display: inline-block; text-align: left;">
+
+          <h1 class="govuk-heading-xl">
+            You have joined the video appointment
+          </h1>
+
+          <p>
+            Please wait for the host to join.
+            </p>
+          </div>
+      </div>
+        <div class="selfie-multiple-small">
+            <video autoplay="true" id="videoDesktop" style="object-fit:cover;"></video>
+        </div>
+  </div>
+  </div>
+
+  <a class="govuk-link" href="2-participants">Alternative</a>
+ <script>
+      // Grab elements, create settings, etc.
+      var video = document.getElementById('videoElement');
+      var desktopVideo = document.getElementById('videoDesktop');
+        var selfieVideo = document.getElementById('videoMedium');
+
+      // Get access to the camera!
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          // Not adding `{ audio: true }` since we only want video now
+          navigator
+              .mediaDevices
+              .getUserMedia({video: true})
+              .then(function (stream) {
+                  //video.src = window.URL.createObjectURL(stream);
+                  video.srcObject = stream;
+                  video.play();
+
+                  selfieVideo.srcObject = stream;
+                  selfieVideo.play();
+
+                  desktopVideo.srcObject = stream;
+                  desktopVideo.play();
+              });
+      }
+  </script>
+
+{% endblock %}
