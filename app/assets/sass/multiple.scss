@@ -10,11 +10,21 @@
 .waiting-frame {
   position: relative;
   height: 0;
-  padding-top: 80%;
+  padding-top: 90%;
+  padding-right: 20px;
   margin-bottom: 20px;
   background: govuk-colour("white");
   border: 3px solid govuk-colour("black");
+  display: block;
 }
+
+
+@media (max-width: 1024px) and (min-width: 400px) {
+  .waiting-header {
+    font-size: 36px;
+  }
+}
+
 
 .selfie-multiple {
   position: absolute;
@@ -145,7 +155,9 @@
   float: right;
   left: 0;
   top: 0;
+  display: block;
 }
+
 
 .mobile-multiple-top {
   position: absolute;
