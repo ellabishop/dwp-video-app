@@ -22,25 +22,6 @@
   width: 100%;
 }
 
-// HEADER DETAILS
-
-.govuk-details__summary-header:before {
-  content: "";
-  position: absolute;
-
-  top: 2px;
-  bottom: 0;
-  left: 99px;
-
-  margin: auto;
-
-  @include govuk-shape-arrow($direction: down, $base: 11px);
-
-  .govuk-details[open] > & {
-    @include govuk-shape-arrow($direction: up, $base: 11px);
-  }
-}
-
 //HEADER SETTINGS BUTTON
 
 .govuk-button_settings {
