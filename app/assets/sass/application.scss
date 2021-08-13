@@ -282,6 +282,16 @@ padding: 2em 2em 0.5em 2em;
 .btn-video-top--right {
   float: right;
 }
+
+.btn-drop {
+  @include govuk-media-query($from: desktop) {
+    margin-top: 0;
+  }
+}
+
+
+
+
 .btn-top--right a {
   border-bottom: 0;
 }
@@ -499,6 +509,7 @@ padding: 2em 2em 0.5em 2em;
   @include govuk-media-query($from: mobile) {
     width: auto;
   }
+
 }
 
 /*Remove media query on conduct page */
@@ -506,6 +517,14 @@ padding: 2em 2em 0.5em 2em;
   @include govuk-media-query($from: mobile) {
     display: inline-flex;
     position: relative;
+
+  }
+}
+
+/*Drop radio buttons on split screen */
+.govuk-label-respond {
+  @include govuk-media-query($from: tablet) {
+    float: left;
 
   }
 }
