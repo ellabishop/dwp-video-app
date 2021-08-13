@@ -22,13 +22,13 @@
           </label>
           <div class="govuk-radios govuk-radios--inline govuk-radios--small govuk-radios-respond" name="hide">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="background-1" name="background" type="radio" value="on" checked>
+              <input class="govuk-radios__input" id="background-1" name="background" type="radio" value="on" onclick="location.href='conduct-background-on';">
               <label class="govuk-label govuk-radios__label" for="background-1">
                 On
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="background-2" name="background" type="radio" value="off" onclick="location.href='#';">
+              <input class="govuk-radios__input" id="background-2" name="background" type="radio" value="off" checked>
               <label class="govuk-label govuk-radios__label" for="background-2">
                 Off
               </label>
@@ -67,23 +67,20 @@
 </div>
 
 {% endblock %}
+
 {% block content %}
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-three-quarters">
         <div class="video-frame">
-
-          <div class="landscape-right-2">
-          <img class="video-participant-2" src="/public/images/attendee_1.png">
+          <div class="attendee-main">
+          <img class="video-participant" style="width:100%" src="/public/images/Citizen.png">
         </div>
-          <div class="attendee-multiple-2">
-            <img class="video-participant" src="/public/images/Citizen.png"></div>
-
-            <div class="conduct-selfie-small-2">
-  <img class="video-participant-cov" style="width:100%" src="/public/images/gradient.png">
-  </div>
-      </div>
-      </div>
+          <div class="selfie-multiple-small">
+<img class="video-participant-cov" style="width:100%;" src="/public/images/original.png">
+</div>
+    </div>
+    </div>
       <div class="govuk-grid-column-one-quarter">
         <h2 class="govuk-heading-s">Participants</h2>
         <dl class="govuk-summary-list" style="font-size:16px">
@@ -99,19 +96,17 @@
           </div>
           <div class="govuk-summary-list__row">
             <dd class="govuk-summary-list__value">
-            Attendee
+              Attendee
             </dd>
             <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                   <span class="govuk-visually-hidden"> No action available</span>
+                 </a>
             </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dd class="govuk-summary-list__value">
-          Attendee
-        </dd>
-        <dd class="govuk-summary-list__actions">
-        </dd>
- </div>
-</div> </div>
-  <div class="govuk-width-container"><a class="govuk-link" style="float:right" href="4-participants">Another attendee joins</a></div>
+          </div>
+          </div>
+          </div>
+
+    <div class="govuk-width-container"><a class="govuk-link" style="float:right" href="3-participants">Another attendee joins</a></div>
 
 {% endblock %}

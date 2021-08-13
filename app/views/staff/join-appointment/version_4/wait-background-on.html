@@ -28,7 +28,7 @@
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="background-2" name="background" type="radio" value="off" onclick="location.href='#';">
+              <input class="govuk-radios__input" id="background-2" name="background" type="radio" value="off" onclick="location.href='staff-wait';">
               <label class="govuk-label govuk-radios__label" for="background-2">
                 Off
               </label>
@@ -67,23 +67,24 @@
 </div>
 
 {% endblock %}
-{% block content %}
 
+{% block content %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-three-quarters">
-        <div class="video-frame">
+        <div class="waiting-frame">
+          <div class="attendee-main">
+            <div class="govuk-grid-row govuk-!-margin-top-7 govuk-!-margin-left-7 govuk-!-margin-bottom-7">
+              <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l waiting-header">You have joined the video appointment</h2>
+            <p class="govuk-body">Please wait for an attendee to join.</p>
+          <p class="govuk-body">  You do not need  to do anything. The appointment will start automatically.</p>
+        </div> </div> </div>
+        <div class="selfie-multiple-small">
+<img class="video-participant-cov" style="width:100%" src="/public/images/gradient.png">
+</div>
 
-          <div class="landscape-right-2">
-          <img class="video-participant-2" src="/public/images/attendee_1.png">
-        </div>
-          <div class="attendee-multiple-2">
-            <img class="video-participant" src="/public/images/Citizen.png"></div>
-
-            <div class="conduct-selfie-small-2">
-  <img class="video-participant-cov" style="width:100%" src="/public/images/gradient.png">
-  </div>
-      </div>
-      </div>
+    </div>
+    </div>
       <div class="govuk-grid-column-one-quarter">
         <h2 class="govuk-heading-s">Participants</h2>
         <dl class="govuk-summary-list" style="font-size:16px">
@@ -97,21 +98,15 @@
                  </a>
             </dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dd class="govuk-summary-list__value">
-            Attendee
-            </dd>
-            <dd class="govuk-summary-list__actions">
-            </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dd class="govuk-summary-list__value">
-          Attendee
-        </dd>
-        <dd class="govuk-summary-list__actions">
-        </dd>
- </div>
-</div> </div>
-  <div class="govuk-width-container"><a class="govuk-link" style="float:right" href="4-participants">Another attendee joins</a></div>
+          </div>
+
+
+
+{% endblock %}
+
+{% block footer %}
+
+<div class="govuk-width-container">
+  <a class="govuk-link" style="float:right" href="conduct-background-on">Attendee joins</a></div>
 
 {% endblock %}
