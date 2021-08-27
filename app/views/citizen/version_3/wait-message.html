@@ -36,7 +36,7 @@
 </div>
         </div>
       <div class="selfie-multiple-small">
-          <video autoplay="true" id="videoElement" style="object-fit:cover;"></video>
+          <img class="video-participant-cov" style="width:100%" src="/public/images/Citizen.png">
       </div>
   </div>
   <div class="bottom-buttons">
@@ -67,7 +67,7 @@
           </div>
         </div>
         <div class="landscape-medium" style="background-color: #0b0c0c;">
-            <video autoplay="true" id="videoMedium" style="object-fit:cover;"></video>
+          <img class="video-participant-cov" style="width:100%" src="/public/images/Citizen.png">
         </div>
     </div>
     </div>
@@ -95,36 +95,11 @@
           </div>
       </div>
         <div class="selfie-multiple-small">
-            <video autoplay="true" id="videoDesktop" style="object-fit:cover;"></video>
+            <img class="video-participant-cov" style="width:100%" src="/public/images/Citizen.png">
         </div>
   </div>
   </div>
 
   <a class="govuk-link" href="conduct-video-citizen">Host joins</a>
- <script>
-      // Grab elements, create settings, etc.
-      var video = document.getElementById('videoElement');
-      var desktopVideo = document.getElementById('videoDesktop');
-        var selfieVideo = document.getElementById('videoMedium');
-
-      // Get access to the camera!
-      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-          // Not adding `{ audio: true }` since we only want video now
-          navigator
-              .mediaDevices
-              .getUserMedia({video: true})
-              .then(function (stream) {
-                  //video.src = window.URL.createObjectURL(stream);
-                  video.srcObject = stream;
-                  video.play();
-
-                  selfieVideo.srcObject = stream;
-                  selfieVideo.play();
-
-                  desktopVideo.srcObject = stream;
-                  desktopVideo.play();
-              });
-      }
-  </script>
 
 {% endblock %}
