@@ -1,0 +1,65 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  Conduct a video appointment
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl govuk-!-margin-top-7">
+        Preview your video
+      </h1>
+
+      <p class="govuk-body">You can check your camera is
+        working and change your background before you join your video appointment.</p>
+
+<div class="govuk-!-width-one-half">
+  <img class="video-participant-cov" id="picture" style="aspect-ratio: 4/3; width:100%;" src="/public/images/original.png">
+</div>
+
+    <div class="govuk-form-group govuk-!-margin-top-4">
+<fieldset class="govuk-fieldset" aria-describedby="hide-background">
+  <legend class="govuk-fieldset__legend"> <h2 class="govuk-heading-s">
+    Hide my background </h2>
+  </legend>
+  <div class="govuk-radios govuk-radios--inline">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="background-on" name="background" type="radio" value="yes" onClick="window.location.href='preview-background-on'">
+      <label class="govuk-label govuk-radios__label" for="background-on">
+        On
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="background-off" name="background" type="radio" value="no" checked>
+      <label class="govuk-label govuk-radios__label" for="background-off">
+        Off
+      </label>
+    </div>
+  </div>
+
+</fieldset>
+</div>
+
+
+<a href="staff-wait" role="button" class="govuk-button">
+  Join appointment
+</a>
+    </div>
+  </div>
+
+<script>
+  function changeSrc() {
+      if (document.getElementById("background-on").checked) {
+      document.getElementById("picture").src = "/public/images/light-background.png";
+    } else if (document.getElementById("background-off").checked) {
+      document.getElementById("picture").src ="/public/images/original.png";
+      }
+  }
+  </script>
+
+{% endblock %}
