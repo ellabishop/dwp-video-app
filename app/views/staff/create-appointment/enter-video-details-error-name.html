@@ -17,7 +17,7 @@
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href='#full-name'>The appointment date must be in the future</a>
+              <a href='#full-name'>Claimant's full name must only contain letters, hyphens and apostrophes</a>
             </li>
           </ul>
         </div>
@@ -28,25 +28,25 @@
         Enter the video appointment details
       </h1>
 
-      <div class="govuk-form-group">
+      <div class="govuk-form-group govuk-form-group--error">
   <label class="govuk-label" for="full-name">
     <strong>Claimant's full name</strong>
-  </label>
-  <input class="govuk-input" id="fullName" name="fullName" type="text" autocomplete="name" spellcheck="false">
+  </label><span class="govuk-error-message">
+  <span class="govuk-visually-hidden">Error:</span>Claimant's full name must only contain letters, hyphens and apostrophes</span>
+  <input class="govuk-input  govuk-input--error" id="fullName" name="fullName" type="text" autocomplete="name" spellcheck="false">
 </div>
 
-  <div class="govuk-form-group govuk-form-group--error">
+  <div class="govuk-form-group">
 <label class="govuk-label" for="full-name">
   <strong>Appointment date</strong>
-</label><span class="govuk-error-message">
-<span class="govuk-visually-hidden">Error:</span>The appointment date must be in the future</span>
+</label>
 <div class="govuk-date-input" id="passport-issued">
 <div class="govuk-date-input__item">
 <div class="govuk-form-group">
   <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
     Day
   </label>
-  <input class="govuk-input govuk-input--error govuk-date-input__input govuk-input--width-2" id="appointment-day" name="appointment-day" type="text" pattern="[0-9]*" inputmode="numeric">
+  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="appointment-day" name="appointment-day" type="text" pattern="[0-9]*" inputmode="numeric">
 </div>
 </div>
 <div class="govuk-date-input__item">
@@ -54,7 +54,7 @@
   <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
     Month
   </label>
-  <input class="govuk-input govuk-input--error govuk-date-input__input govuk-input--width-2" id="appointment-month" name="appointment-month" type="text" pattern="[0-9]*" inputmode="numeric">
+  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="appointment-month" name="appointment-month" type="text" pattern="[0-9]*" inputmode="numeric">
 </div>
 </div>
 <div class="govuk-date-input__item">
@@ -62,7 +62,7 @@
   <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
     Year
   </label>
-  <input class="govuk-input govuk-input--error govuk-date-input__input govuk-input--width-4" id="appointment-year" name="appointment-year" type="text" pattern="[0-9]*" inputmode="numeric">
+  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="appointment-year" name="appointment-year" type="text" pattern="[0-9]*" inputmode="numeric">
 </div>
 </div>
 </div>
