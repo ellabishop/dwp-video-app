@@ -256,3 +256,266 @@
   aspect-ratio: 4 / 3;
   background-color: #0b0c0c;
 }
+
+/*Switch - secondary button style */
+
+
+button.switch {
+  margin: 0;
+  width: auto;
+  padding: 5px;
+  display: inline-block;
+  margin-right: 1em;
+  line-height: 20px;
+  vertical-align: middle;
+  text-align: center;
+  box-shadow: none;
+  border-radius: 2px;
+  border: 1px solid #b1b4b6;
+}
+
+button.switch span {
+  padding: 5px 5px;
+  pointer-events: none;
+}
+
+[role="switch"][aria-checked="false"] :first-child, {
+  background: 	#6b7377;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+[role="switch"][aria-checked="true"] :last-child {
+  background: #1d70b8;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: bold;
+}
+
+[role="switch"][aria-checked="false"] :last-child,
+[role="switch"][aria-checked="true"] :first-child {
+  color: #505A5F;
+}
+
+label.switch {
+  line-height: 20px;
+  user-select: none;
+  vertical-align: middle;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f3f2f1;
+  box-shadow: 2px #929191;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #0b0c0c;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #28a197;
+  box-shadow: 0 2px 0 #929191;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 2px #929191;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+
+
+
+
+
+
+
+
+/* CSS rules are kept repetitive so that you can get CSS rules for each button easily :) */
+
+*
+{
+    user-select: none;
+    -webkit-tap-highlight-color:transparent;
+}
+
+*:focus
+{
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f1f9f9;
+}
+
+
+
+.button-cover:before
+{
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.button-cover, .knobs, .layer
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button
+{
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+
+.button.b2
+{
+    border-radius: 2px;
+}
+
+.checkbox
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs
+{
+    z-index: 2;
+}
+
+.layer
+{
+    width: 100%;
+    background-color: #f3f2f1;
+    border: 2px #0b0c0c;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+
+/* Button 10 */
+#button-10 .knobs:before, #button-10 .knobs:after, #button-10 .knobs span
+{
+    position: absolute;
+    top: 4px;
+    width: 20px;
+    height: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    border-radius: 2px;
+    transition: 0.3s ease all;
+}
+
+#button-10 .knobs:before
+{
+    content: '';
+    left: 4px;
+    background-color: #00703c;
+}
+
+#button-10 .knobs:after
+{
+    content: 'Off';
+    right: 4px;
+    color: #4e4e4e;
+}
+
+#button-10 .knobs span
+{
+    display: inline-block;
+    left: 4px;
+    color: #fff;
+    z-index: 1;
+}
+
+#button-10 .checkbox:checked + .knobs span
+{
+    color: #4e4e4e;
+}
+
+#button-10 .checkbox:checked + .knobs:before
+{
+    left: 42px;
+    background-color: #0b0c0c;
+}
+
+#button-10 .checkbox:checked + .knobs:after
+{
+    color: #fff;
+}
+
+#button-10 .checkbox:checked ~ .layer
+{
+    background-color: #f3f2f1;
+}

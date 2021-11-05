@@ -1,0 +1,156 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Attend a video appointment
+{% endblock %}
+
+{% block header %}
+
+{% include "includes/headers/header-attend.html" %}
+
+<div class="portrait-no-display">
+
+  <div class="dwp-video-header-conduct">
+    <div class="govuk-width-container" style="margin: 0, text-align: center;">
+      <div class="btn-video-top">
+
+      <div class="btn-video-top--right">
+
+          <button id="refresh" class="govuk-button govuk-button--secondary govuk-button--panel" style="margin: 0px 0px 15px 0px;" onClick="window.location.reload();">Refresh</button>
+
+          </div>
+      </div>
+        </div>
+  </div>
+</div>
+
+<!-- Portrait -->
+<div class="portrait-screen-only">
+
+  <main style="margin:0; padding:0;">
+  <div class="flex-container">
+    <div class="flex-item flex-responsive-container" style="height: calc(100vh - 150px); background-color: #0b0c0c;">
+      <div class="selfie-single">
+        <img class="video-participant-con" style="width: 100%;" src="/public/images/workcoach9.png">
+        </div>
+      <div class="selfie-multiple-small">
+          <img class="video-participant-cov" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
+      </div>
+  </div>
+  <div class="bottom-buttons">
+      <button class="govuk-button govuk-button--secondary govuk-button--panel" style="margin:0px 5px 0px 5px;" onClick="window.location.reload();">Refresh</button>
+  </div>
+
+  </div>
+  </main>
+  </div>
+  <!-- Medium -->
+  <div class="medium-screen-only">
+    <main style="margin:0; padding:0;">
+    <div class="flex-container">
+      <div class="flex-item flex-responsive-container" style="height: calc(100% - 150px); background-color: #0b0c0c;">
+        <div class="landscape-main">
+          <img class="video-participant-con" style="width: 100%;"  src="/public/images/workcoach9.png">
+        </div>
+        <div class="landscape-medium" style="background-color: #0b0c0c;">
+              <img class="video-participant" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
+        </div>
+    </div>
+    </div>
+    </main>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Desktop -->
+
+<div class="desktop-screen-only">
+      <div class="video-frame-attendee">
+        <div class="attendee-main">
+        <img class="video-participant-con" width="100%" style="aspect-ratio: 4/3;" src="/public/images/workcoach9.png">
+      </div>
+        <div class="selfie-multiple-small">
+            <img class="video-participant-cov" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
+        </div>
+
+
+      </div>
+      </div>
+
+
+  <label for="speakerPower" class="govuk-body">Microphone</label>
+        <button role="switch" aria-checked="true"
+              id="speakerPower" class="switch govuk-button govuk-button--secondary">
+          <span class="govuk-body">On</span>
+          <span class="govuk-body">Off</span>
+        </button>
+
+
+<button id="refresh" class="govuk-button govuk-button--secondary govuk-button--panel" style="margin: 0px 0px 15px 0px;" onClick="window.location.reload();">
+
+
+  <svg width="31px" height="19px" viewBox="0 0 31 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>Camera</title>
+      <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Artboard" transform="translate(-181.000000, -60.000000)" fill="#505A5F">
+              <g id="Camera" transform="translate(181.000000, 60.000000)">
+                  <rect id="Rectangle" x="0" y="0" width="19.8636364" height="19" rx="2"></rect>
+                  <path d="M30.2272727,1.53719632 L30.2272727,17.4989476 C30.2272727,18.0512324 29.7795575,18.4989476 29.2272727,18.4989476 C29.0950288,18.4989476 28.9640983,18.4727174 28.8420599,18.4217754 L22.2056963,15.6515809 C21.8333673,15.4961609 21.5909091,15.1322185 21.5909091,14.7287532 L21.5909091,4.47929982 C21.5909091,4.08377369 21.8240354,3.72541279 22.1856211,3.56511078 L28.8219847,0.623007279 C29.3268774,0.399172877 29.9176274,0.627015619 30.1414618,1.13190829 C30.1980419,1.25953345 30.2272727,1.39759154 30.2272727,1.53719632 Z" id="Path-5"></path>
+              </g>
+          </g>
+      </g>
+  </svg>
+  Stop video</button>
+
+
+  <button id="refresh" class="govuk-button govuk-button--secondary govuk-button--panel" style="margin: 0px 0px 15px 0px;" onClick="window.location.reload();">
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48"><title>microphone off</title><g stroke-linecap="square" stroke-width="4" fill="none" stroke="#f3f2f1" stroke-linejoin="miter" class="nc-icon-wrapper"><line x1="14" y1="46" x2="34" y2="46"></line><line x1="24" y1="38" x2="24" y2="46"></line><path d="M34,14V12a10,10,0,0,0-20,0V22a9.971,9.971,0,0,0,4.008,7.992" data-cap="butt" stroke-linecap="butt"></path><path d="M23.115,31.885c.292.025.586.044.885.044a10,10,0,0,0,10-10V21" data-cap="butt" stroke-linecap="butt"></path><path d="M8,22a15.961,15.961,0,0,0,5.734,12.266" data-cap="butt" stroke-linecap="butt"></path><path d="M18.179,36.892A15.975,15.975,0,0,0,40,22" data-cap="butt" stroke-linecap="butt"></path><line x1="6" y1="42" x2="42" y2="6"></line><line x1="6" y1="42" x2="42" y2="6" stroke="#bababa"></line></g></svg>
+    Mute</button>
+
+
+    <button id="refresh" class="govuk-button govuk-button--secondary govuk-button--panel">
+
+      <svg width="16px" height="25px" viewBox="0 0 16 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:block; margin:auto; padding-bottom: 5px;">
+          <title>Microphone on</title>
+          <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Artboard" transform="translate(-88.000000, -58.000000)">
+                  <g id="Mic" transform="translate(89.129298, 58.000000)">
+                      <rect id="Rectangle" fill="#505A5F" x="2" y="0" width="9" height="16.5863703" rx="4.5"></rect>
+                      <path d="M0,9 L0,12.1645732 C1.33249484e-15,15.7926921 2.94117147,18.7338636 6.56929034,18.7338636 C10.1974092,18.7338636 13.1385807,15.7926921 13.1385807,12.1645732 L13.1385807,9 L13.1385807,9" id="Path" stroke="#505A5F" stroke-width="2" stroke-linecap="round"></path>
+                      <line x1="6.21264577" y1="19" x2="6.21264577" y2="22.7603055" id="Path-2" stroke="#505A5F" stroke-width="2"></line>
+                      <line x1="1" y1="23.2126458" x2="11.4184191" y2="23.2126458" id="Path-3" stroke="#505A5F" stroke-width="2" stroke-linecap="round"></line>
+                  </g>
+              </g>
+          </g>
+      </svg>
+
+
+      Mute</button>
+
+
+
+
+
+
+
+
+
+
+  <script>      document.querySelectorAll(".switch").forEach(function(theSwitch) {
+  theSwitch.addEventListener("click", handleClickEvent, false);
+});
+
+function handleClickEvent(evt) {
+  let el = evt.target;
+
+  if (el.getAttribute("aria-checked") == "true") {
+      el.setAttribute("aria-checked", "false");
+  } else {
+      el.setAttribute("aria-checked", "true");
+  }
+} </script>
+{% endblock %}

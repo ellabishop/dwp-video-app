@@ -504,6 +504,10 @@ padding: 2em 2em 0.5em 2em;
   background-color: darken(#dee0e2, 10%) !important;
 }
 
+.govuk-button--icon {
+  text-align: center;
+}
+
 /*Remove media query on conduct page */
 .govuk-button-respond {
   @include govuk-media-query($from: mobile) {
