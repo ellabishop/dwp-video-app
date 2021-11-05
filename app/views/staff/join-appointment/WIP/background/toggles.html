@@ -1,0 +1,92 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  Conduct a video appointment
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="switch-container1">
+<div class="govuk-!-margin-top-4">
+<label for="hideBackground1" class="govuk-body govuk-!-margin-right-3">Option 1 </label>
+      <button role="switch" aria-checked="true" id="hideBackground1" class="switch1 govuk-button govuk-button--secondary">
+        <span class="govuk-body govuk-!-font-size-14">Off</span>
+        <span class="govuk-body govuk-!-font-size-14">On</span>
+      </button>
+
+      </div> </div>
+
+<div class="switch-container2">
+      <div class="govuk-!-margin-top-4">
+      <label for="hideBackground2" class="govuk-body govuk-!-margin-right-3">Option 2 </label>
+            <button role="switch" aria-checked="true" id="hideBackground2" class="switch2 govuk-button govuk-button--secondary">
+              <span class="govuk-body govuk-!-font-size-14">Off</span>
+              <span class="govuk-body govuk-!-font-size-14">On</span>
+            </button>
+
+            </div> </div>
+
+
+  <div class="switch-container3">
+                  <div class="govuk-!-margin-top-4">
+                  <label for="hideBackground3" class="govuk-body govuk-!-margin-right-3">Option 3 </label>
+                        <button role="switch" aria-checked="true" id="hideBackground2" class="switch3 govuk-button govuk-button--secondary">
+                          <span class="govuk-body govuk-!-font-size-14">Off</span>
+                          <span class="govuk-body govuk-!-font-size-14">On</span>
+                        </button>
+
+                        </div> </div>
+
+
+
+    <script>      document.querySelectorAll(".switch1").forEach(function(theSwitch) {
+    theSwitch.addEventListener("click", handleClickEvent, false);
+  });
+
+  function handleClickEvent(evt) {
+    let el = evt.target;
+
+    if (el.getAttribute("aria-checked") == "true") {
+        el.setAttribute("aria-checked", "false");
+    } else {
+        el.setAttribute("aria-checked", "true");
+    }
+  } </script>
+
+
+  <script>      document.querySelectorAll(".switch2").forEach(function(theSwitch) {
+  theSwitch.addEventListener("click", handleClickEvent, false);
+});
+
+function handleClickEvent(evt) {
+  let el = evt.target;
+
+  if (el.getAttribute("aria-checked") == "true") {
+      el.setAttribute("aria-checked", "false");
+  } else {
+      el.setAttribute("aria-checked", "true");
+  }
+} </script>
+
+
+<script>      document.querySelectorAll(".switch3").forEach(function(theSwitch) {
+theSwitch.addEventListener("click", handleClickEvent, false);
+});
+
+function handleClickEvent(evt) {
+let el = evt.target;
+
+if (el.getAttribute("aria-checked") == "true") {
+    el.setAttribute("aria-checked", "false");
+} else {
+    el.setAttribute("aria-checked", "true");
+}
+} </script>
+
+
+
+
+{% endblock %}

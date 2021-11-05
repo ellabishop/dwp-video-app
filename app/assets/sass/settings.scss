@@ -257,59 +257,6 @@
   background-color: #0b0c0c;
 }
 
-/*Switch - secondary button style */
-
-
-button.switch {
-  margin: 0;
-  width: auto;
-  padding: 5px;
-  display: inline-block;
-  margin-right: 1em;
-  line-height: 20px;
-  vertical-align: middle;
-  text-align: center;
-  box-shadow: none;
-  border-radius: 2px;
-  border: 1px solid #b1b4b6;
-}
-
-button.switch span {
-  padding: 5px 5px;
-  pointer-events: none;
-}
-
-[role="switch"][aria-checked="false"] :first-child, {
-  background: 	#6b7377;
-  border-radius: 2px;
-  color: #fff;
-  font-weight: bold;
-}
-
-
-[role="switch"][aria-checked="true"] :last-child {
-  background: #1d70b8;
-  border-radius: 2px;
-  color: #fff;
-  font-weight: bold;
-}
-
-[role="switch"][aria-checked="false"] :last-child,
-[role="switch"][aria-checked="true"] :first-child {
-  color: #505A5F;
-}
-
-label.switch {
-  line-height: 20px;
-  user-select: none;
-  vertical-align: middle;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
-
-}
-
 
 /* The switch - the box around the slider */
 .switch {
