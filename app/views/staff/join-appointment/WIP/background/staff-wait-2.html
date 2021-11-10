@@ -45,8 +45,6 @@
 {% endblock %}
 
 {% block content %}
-
-<div class="desktop-screen-only">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-three-quarters">
         <div class="waiting-frame">
@@ -58,7 +56,7 @@
           <p class="govuk-body">  You do not need  to do anything. The appointment will start automatically.</p>
         </div> </div> </div>
         <div class="selfie-multiple-small">
-<img class="video-participant-cov" id="myImage" style="width:100%" src="/public/images/original.png">
+<img class="video-participant-cov" style="width:100%" src="/public/images/original.png">
 </div>
 
     </div>
@@ -73,8 +71,8 @@
                     Microphone
                   </dd>
                   <dd class="govuk-summary-list__actions" style="width:45%">
-                    <div class="switch-container1">
-                    <button role="switch" aria-checked="true" id="hideBackground" class="switch1 govuk-button govuk-button--secondary" style="margin-right:0;">
+                    <div class="switch-container5">
+                    <button role="switch" aria-checked="true" id="hideBackground5" class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
                       <span class="govuk-body govuk-!-font-size-14">Off</span>
                       <span class="govuk-body govuk-!-font-size-14">On</span>
                     </button></div>
@@ -85,8 +83,8 @@
                       Camera
                     </dd>
                     <dd class="govuk-summary-list__actions" style="width:45%">
-                      <div class="switch-container1">
-                      <button role="switch" aria-checked="true" id="hideBackground" class="switch1 govuk-button govuk-button--secondary" style="margin-right:0;">
+                      <div class="switch-container5">
+                      <button role="switch" aria-checked="true" id="hideBackground5" class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
                         <span class="govuk-body govuk-!-font-size-14">Off</span>
                         <span class="govuk-body govuk-!-font-size-14">On</span>
                       </button> </div>
@@ -97,11 +95,11 @@
                       Background
                     </dd>
                     <dd class="govuk-summary-list__actions" style="width:45%">
-                      <div class="switch-container1">
-                      <button role="switch" aria-checked="false" id="hideBackground" onclick="changeImage()" class="switch1 govuk-button govuk-button--secondary" style="margin-right:0;">
+                      <div class="switch-container5">
+                      <button role="switch" aria-checked="true" id="hideBackground5" class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
                         <span class="govuk-body govuk-!-font-size-14">Off</span>
                         <span class="govuk-body govuk-!-font-size-14">On</span>
-                      </button> </div
+                      </button> </div>
                     </dd>
                   </div> </div>
 
@@ -117,71 +115,9 @@
                  </a>
             </dd>
           </div>
-          </div> </div> </div>
+          </div>
 
-        <!- Smaller screen -->
-
-<div class="medium-screen-small">
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
-            <div class="waiting-frame">
-              <div class="attendee-main">
-                <div class="govuk-grid-row govuk-!-margin-top-7 govuk-!-margin-left-7 govuk-!-margin-bottom-7">
-                  <div class="govuk-grid-column-two-thirds">
-                <h2 class="govuk-heading-l waiting-header">You have joined the video appointment</h2>
-                <p class="govuk-body">Please wait for an attendee to join.</p>
-              <p class="govuk-body">  You do not need  to do anything. The appointment will start automatically.</p>
-            </div> </div> </div>
-            <div class="selfie-multiple-small">
-    <img class="video-participant-cov" id="myImage2" style="width:100%" src="/public/images/original.png">
-    </div>
-
-        </div>
-        </div>
-          <div class="govuk-grid-column-full">
-                  <h2 class="govuk-heading-s" style="color:#1d70b8;">Video settings</h2>
-                  <div class="switch-container1">
-                  <div class="govuk-!-margin-top-4">
-                  <label for="microphone" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-6">Microphone </label>
-                        <button role="switch" aria-checked="true" id="microphone" class="switch1 govuk-button govuk-button--secondary">
-                          <span class="govuk-body govuk-!-font-size-14">Off</span>
-                          <span class="govuk-body govuk-!-font-size-14">On</span>
-                        </button> <br><hr>
-                        <label for="camera" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-9">Camera </label>
-                              <button role="switch" aria-checked="true" id="camera" class="switch1 govuk-button govuk-button--secondary">
-                                <span class="govuk-body govuk-!-font-size-14">Off</span>
-                                <span class="govuk-body govuk-!-font-size-14">On</span>
-                              </button>
-
-                              <br><hr>
-                              <label for="background" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-6">Background</label>
-                                    <button role="switch" aria-checked="true" id="background" onclick="changeImageSmall()" class="switch1 govuk-button govuk-button--secondary">
-                                      <span class="govuk-body govuk-!-font-size-14">Off</span>
-                                      <span class="govuk-body govuk-!-font-size-14">On</span>
-                                    </button>
-                        </div> </div> <hr>
-
-
-
-
-
-            <h2 class="govuk-heading-s govuk-!-margin-top-4" style="color:#1d70b8;">Participants (1)</h2>
-            <dl class="govuk-summary-list" style="font-size:16px">
-              <div class="govuk-summary-list__row">
-                <dd class="govuk-summary-list__value">
-                  Host (me)
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">
-                       <span class="govuk-visually-hidden"> No action available</span>
-                     </a>
-                </dd>
-              </div>
-              </div> </div> </div>
-
-
-
-          <script>      document.querySelectorAll(".switch1").forEach(function(theSwitch) {
+          <script>      document.querySelectorAll(".switch5").forEach(function(theSwitch) {
           theSwitch.addEventListener("click", handleClickEvent, false);
         });
 
@@ -195,38 +131,11 @@
           }
         } </script>
 
-        <script>
-
-          function changeImage() {
-                      var image = document.getElementById('myImage');
-                      if (image.src.match("/public/images/original.png")) {
-                          image.src = "/public/images/gradient.png";
-                      }
-                      else {
-                          image.src = "/public/images/original.png";
-                      }
-                  }
-          </script>
-
-          <script>
-
-            function changeImageSmall() {
-                        var image = document.getElementById('myImage2');
-                        if (image.src.match("/public/images/original.png")) {
-                            image.src = "/public/images/gradient.png";
-                        }
-                        else {
-                            image.src = "/public/images/original.png";
-                        }
-                    }
-            </script>
-
-
 {% endblock %}
 
 {% block footer %}
 
 <div class="govuk-width-container">
-  <a class="govuk-link" style="float:right" href="staff-wait-2">Next</a></div>
+  <a class="govuk-link" style="float:right" href="conduct-background-off">Attendee joins</a></div>
 
 {% endblock %}

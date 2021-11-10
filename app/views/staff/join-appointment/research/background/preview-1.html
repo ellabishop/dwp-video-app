@@ -1,0 +1,67 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  Conduct a video appointment
+{% endblock %}
+
+
+
+{% block content %}
+<div class="popup2" style="display:none"><a href="preview-2"><img src="/public/images/edge-allow.png" style="width:300px;"></a></div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl govuk-!-margin-top-7">
+        Preview your video
+      </h1>
+
+      <p class="govuk-body">You can check your camera is
+        working and change your background before you join your video appointment.</p>
+
+<div class="govuk-!-width-one-half">
+  <div class="preview-frame"></div>
+</div>
+
+<div class="switch-container1">
+<div class="govuk-!-margin-top-4">
+<label for="hideBackground" class="govuk-body govuk-!-margin-right-3">Hide my background </label>
+      <button role="switch" aria-checked="false" id="hideBackground" onclick="changeImage()" class="switch1 govuk-button govuk-button--secondary">
+        <span class="govuk-body govuk-!-font-size-14">Off</span>
+        <span class="govuk-body govuk-!-font-size-14">On</span>
+      </button>
+
+      </div></div>
+
+
+
+<a href="start-staff-permissions" role="button" class="govuk-button govuk-!-margin-top-7">
+  Join appointment
+</a>
+    </div>
+  </div>
+
+
+  <script>
+    setTimeout(function(){
+$('.popup2').show();
+}, 500);
+</script>
+
+<script>      document.querySelectorAll(".switch1").forEach(function(theSwitch) {
+theSwitch.addEventListener("click", handleClickEvent, false);
+});
+
+function handleClickEvent(evt) {
+let el = evt.target;
+
+if (el.getAttribute("aria-checked") == "true") {
+    el.setAttribute("aria-checked", "false");
+} else {
+    el.setAttribute("aria-checked", "true");
+}
+} </script>
+
+
+
+{% endblock %}
