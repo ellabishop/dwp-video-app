@@ -401,14 +401,14 @@ align-items: center;
     }
   }
 
-  @media screen and (min-width: 705px) {
-    .medium-705 {
+  @media screen and (min-width: 769px) {
+    .medium-769 {
       display: none;
     }
   }
 
-  @media screen and (max-width: 705px) {
-    .desktop-705 {
+  @media screen and (max-width: 769px) {
+    .desktop-769 {
       display: none;
     }
   }
