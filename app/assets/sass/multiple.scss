@@ -400,3 +400,15 @@ align-items: center;
       display: none;
     }
   }
+
+  @media screen and (min-width: 705px) {
+    .medium-705 {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 705px) {
+    .desktop-705 {
+      display: none;
+    }
+  }
