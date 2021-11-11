@@ -394,3 +394,21 @@ align-items: center;
       display: none;
     }
   }
+
+  @media screen and (min-width: 1025px) {
+    .medium-screen-small {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    .medium-769 {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    .desktop-769 {
+      display: none;
+    }
+  }

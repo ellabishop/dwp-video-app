@@ -1,0 +1,232 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Conduct a video appointment
+{% endblock %}
+
+{% block header %}
+{% include "includes/header-staff-vid-responsive.html" %}
+<div id="header-area" class="dwp-video-header-background govuk-!-padding-top-2">
+
+  <div class="govuk-width-container custom-header-width--conduct" style="margin: 0, text-align: center;">
+
+
+    <div class="btn-video-top">
+
+
+
+     <div class="btn-video-top--right">
+
+         <button id="refresh" class="govuk-button govuk-button--secondary govuk-button--panel govuk-button-respond govuk-!-margin-bottom-3" style="margin-right:20px;" onClick="window.location.reload();">Refresh</button>
+         <button class= "govuk-button govuk-button--warning govuk-button-respond govuk-!-margin-bottom-0" onclick="document.getElementById('id01').style.display='block'">End</button> </div>
+
+    <dialog id="id01" class="modal" aria-labelledby="end-appointment" aria-describedby="end-confirmation" aria-modal="true" role="dialog" tabindex="-1" open>
+      <form class="modal-content">
+        <div class="govuk-modal-dialog-header">
+
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="govuk-button modal-close" title="Cancel">×</button></div>
+        <div class="modal-container">
+          <h1>End the video appointment?</h1>
+          <p> You will not be able to rejoin and the session will be closed.</p>
+
+          <div class="clearfix">
+              <a href="end-staff" role="button" class="govuk-button govuk-button--warning govuk-!-margin-right-2 govuk-button-respond" data-module="govuk-button" style="margin-bottom: 0">End appointment </a>
+              <button onClick="document.getElementById('id01').style.display='none'" class="govuk-button govuk-button--secondary govuk-button-respond" data-module="govuk-button" style="margin-bottom: 0px;">Cancel</button>
+
+          </div>
+        </div>
+      </form>
+    </dialog> </div>
+
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="desktop-screen-only">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        <div class="waiting-frame">
+          <div class="attendee-main">
+            <div class="govuk-grid-row govuk-!-margin-top-7 govuk-!-margin-left-7 govuk-!-margin-bottom-7">
+              <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l waiting-header">You have joined the video appointment</h2>
+            <p class="govuk-body">Please wait for an attendee to join.</p>
+          <p class="govuk-body">  You do not need  to do anything. The appointment will start automatically.</p>
+        </div> </div> </div>
+        <div class="selfie-multiple-small">
+<img class="video-participant-cov" id="myImage" style="width:100%" src="/public/images/original.png">
+</div>
+
+    </div>
+    </div>
+      <div class="govuk-grid-column-one-quarter">
+        <div class="govuk-!-margin-bottom-4">
+
+              <h2 class="govuk-heading-s" style="color:#1d70b8;">Video settings</h2>
+              <dl class="govuk-summary-list" style="font-size:16px">
+                <div class="govuk-summary-list__row">
+                  <dd class="govuk-summary-list__value">
+                    Microphone
+                  </dd>
+                  <dd class="govuk-summary-list__actions" style="width:45%">
+                    <div class="switch-container1">
+                    <button role="switch" aria-checked="true" id="hideBackground" class="switch1 govuk-button govuk-button--secondary" style="margin-right:0;">
+                      <span class="govuk-body govuk-!-font-size-14">Off</span>
+                      <span class="govuk-body govuk-!-font-size-14">On</span>
+                    </button></div>
+                  </dd>
+                </div>
+                  <div class="govuk-summary-list__row">
+                    <dd class="govuk-summary-list__value">
+                      Camera
+                    </dd>
+                    <dd class="govuk-summary-list__actions" style="width:45%">
+                      <div class="switch-container1">
+                      <button role="switch" aria-checked="true" id="hideBackground" class="switch1 govuk-button govuk-button--secondary" style="margin-right:0;">
+                        <span class="govuk-body govuk-!-font-size-14">Off</span>
+                        <span class="govuk-body govuk-!-font-size-14">On</span>
+                      </button> </div>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dd class="govuk-summary-list__value">
+                      Background
+                    </dd>
+                    <dd class="govuk-summary-list__actions" style="width:45%">
+                      <div class="switch-container1">
+                      <button role="switch" aria-checked="false" id="hideBackground" onclick="changeImage()" class="switch1 govuk-button govuk-button--secondary" style="margin-right:0;">
+                        <span class="govuk-body govuk-!-font-size-14">Off</span>
+                        <span class="govuk-body govuk-!-font-size-14">On</span>
+                      </button> </div
+                    </dd>
+                  </div> </div>
+
+        <h2 class="govuk-heading-s" style="color:#1d70b8;">Participants (1)</h2>
+        <dl class="govuk-summary-list" style="font-size:16px">
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              Host (me)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                   <span class="govuk-visually-hidden"> No action available</span>
+                 </a>
+            </dd>
+          </div>
+          </div> </div> </div>
+
+        <!- Smaller screen -->
+
+<div class="medium-screen-small">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <div class="waiting-frame">
+              <div class="attendee-main">
+                <div class="govuk-grid-row govuk-!-margin-top-7 govuk-!-margin-left-7 govuk-!-margin-bottom-7">
+                  <div class="govuk-grid-column-two-thirds">
+                <h2 class="govuk-heading-l waiting-header">You have joined the video appointment</h2>
+                <p class="govuk-body">Please wait for an attendee to join.</p>
+              <p class="govuk-body">  You do not need  to do anything. The appointment will start automatically.</p>
+            </div> </div> </div>
+            <div class="selfie-multiple-small">
+    <img class="video-participant-cov" id="myImage2" style="width:100%" src="/public/images/original.png">
+    </div>
+
+        </div>
+        </div>
+          <div class="govuk-grid-column-full">
+                  <h2 class="govuk-heading-s" style="color:#1d70b8;">Video settings</h2>
+                  <div class="switch-container1">
+                  <div class="govuk-!-margin-top-4">
+                <label for="microphone" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-6">Microphone </label>
+                       <button role="switch" aria-checked="true" id="microphone" class="switch1 govuk-button govuk-button--secondary">
+                          <span class="govuk-body govuk-!-font-size-14">Off</span>
+                          <span class="govuk-body govuk-!-font-size-14">On</span>
+                        </button> <br><hr>
+                        <label for="camera" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-9">Camera </label>
+                              <button role="switch" aria-checked="true" id="camera" class="switch1 govuk-button govuk-button--secondary">
+                                <span class="govuk-body govuk-!-font-size-14">Off</span>
+                                <span class="govuk-body govuk-!-font-size-14">On</span>
+                              </button>
+
+                              <br><hr>
+                              <label for="background" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-6">Background</label>
+                                    <button role="switch" aria-checked="true" id="background" onclick="changeImageSmall()" class="switch1 govuk-button govuk-button--secondary">
+                                      <span class="govuk-body govuk-!-font-size-14">Off</span>
+                                      <span class="govuk-body govuk-!-font-size-14">On</span>
+                                    </button>
+                        </div> </div> <hr>
+
+
+
+
+
+            <h2 class="govuk-heading-s govuk-!-margin-top-4" style="color:#1d70b8;">Participants (1)</h2>
+            <dl class="govuk-summary-list" style="font-size:16px">
+              <div class="govuk-summary-list__row">
+                <dd class="govuk-summary-list__value">
+                  Host (me)
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                       <span class="govuk-visually-hidden"> No action available</span>
+                     </a>
+                </dd>
+              </div>
+              </div> </div> </div>
+
+
+
+          <script>      document.querySelectorAll(".switch1").forEach(function(theSwitch) {
+          theSwitch.addEventListener("click", handleClickEvent, false);
+        });
+
+        function handleClickEvent(evt) {
+          let el = evt.target;
+
+          if (el.getAttribute("aria-checked") == "true") {
+              el.setAttribute("aria-checked", "false");
+          } else {
+              el.setAttribute("aria-checked", "true");
+          }
+        } </script>
+
+        <script>
+
+          function changeImage() {
+                      var image = document.getElementById('myImage');
+                      if (image.src.match("/public/images/original.png")) {
+                          image.src = "/public/images/gradient.png";
+                      }
+                      else {
+                          image.src = "/public/images/original.png";
+                      }
+                  }
+          </script>
+
+          <script>
+
+            function changeImageSmall() {
+                        var image = document.getElementById('myImage2');
+                        if (image.src.match("/public/images/original.png")) {
+                            image.src = "/public/images/gradient.png";
+                        }
+                        else {
+                            image.src = "/public/images/original.png";
+                        }
+                    }
+            </script>
+
+
+{% endblock %}
+
+{% block footer %}
+
+<div class="govuk-width-container">
+  <a class="govuk-link" style="float:right" href="staff-wait-2">Next</a></div>
+
+{% endblock %}

@@ -26,6 +26,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "multiple";
 @import "settings";
 @import "checks";
+@import "toggle";
 //.govuk-template__body {
   //background-color: #444 !important;
 //}
@@ -502,6 +503,10 @@ padding: 2em 2em 0.5em 2em;
 
 .govuk-button--panel:hover {
   background-color: darken(#dee0e2, 10%) !important;
+}
+
+.govuk-button--icon {
+  text-align: center;
 }
 
 /*Remove media query on conduct page */
