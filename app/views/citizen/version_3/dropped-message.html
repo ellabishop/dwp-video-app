@@ -1,0 +1,104 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  You have joined the video appointment - Attend a video appointment
+{% endblock %}
+
+{% block header %}
+
+{% include "includes/headers/header-attend.html" %}
+
+
+<div class="portrait-no-display">
+<div class="dwp-video-header-conduct">
+  <div class="govuk-width-container" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-citizen-trial.html" %}
+      </div>
+</div>
+</div>
+
+<!-- Portrait -->
+<div class="portrait-screen-only">
+  <main style="margin:0; padding:0;">
+  <div class="flex-container">
+    <div class="flex-item flex-responsive-container" style="height: calc(100% - 139px);">
+      <div class="selfie-single">
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-top-9 govuk-!-padding-left-9" style="display: inline-block; text-align: left;">
+
+        <h1 class="govuk-heading-l">
+          Your host has lost connection
+        </h1>
+
+        <p>
+          This could be because they have a problem with their internet or their web browser has closed.
+          </p>
+          <p>You can wait for them to rejoin or close the page.</p>
+</div>
+        </div>
+      <div class="selfie-multiple-small">
+          <img class="video-participant-cov" style="width:100%" src="/public/images/Citizen.png">
+      </div>
+  </div>
+  <div class="bottom-buttons">
+      <button class="govuk-button govuk-button--secondary govuk-button--panel" style="margin:0px 5px 10px 5px; width: 95%;">Refresh</button>
+  </div>
+
+  </div>
+  </main>
+  </div>
+
+  <!-- Medium -->
+  <div class="medium-screen-only">
+    <main style="margin:0; padding:0;">
+    <div class="flex-container">
+      <div class="flex-item flex-responsive-container" style="height: calc(100% - 130px);">
+        <div class="landscape-main">
+          <div class="govuk-grid-column-two-thirds govuk-!-padding-top-9 govuk-!-padding-left-9" style="display: inline-block; text-align: left;">
+
+            <h1 class="govuk-heading-l">
+              Your host has lost connection
+            </h1>
+
+            <p>
+              This could be because they have a problem with their internet or their web browser has closed.
+              </p>
+              <p>You can wait for them to rejoin or close the page.</p>
+  </div>
+          </div>
+        </div>
+        <div class="landscape-medium" style="background-color: #0b0c0c;">
+          <img class="video-participant-cov" style="width:100%" src="/public/images/Citizen.png">
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Desktop -->
+
+<div class="desktop-screen-only">
+      <div class="video-frame-attendee">
+        <div class="attendee-main" style="background-color:#fff; border: 3px solid #0b0c0c;">
+          <div class="govuk-grid-column-two-thirds govuk-!-padding-top-9 govuk-!-padding-left-9" style="display: inline-block; text-align: left;">
+
+            <h1 class="govuk-heading-l">
+              Your host has lost connection
+            </h1>
+
+            <p>
+              This could be because they have a problem with their internet or their web browser has closed.
+              </p>
+              <p>You can wait for them to rejoin or close the page.</p>
+          </div>
+      </div>
+        <div class="selfie-multiple-small">
+            <img class="video-participant-cov" style="width:100%" src="/public/images/Citizen.png">
+        </div>
+  </div>
+  </div>
+
+
+{% endblock %}
