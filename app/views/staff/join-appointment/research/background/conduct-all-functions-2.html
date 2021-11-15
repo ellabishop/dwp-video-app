@@ -1,0 +1,299 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Conduct a video appointment
+{% endblock %}
+
+{% block header %}
+{% include "includes/header-staff-vid-responsive.html" %}
+<div id="header-area" class="dwp-video-header-background govuk-!-padding-top-2">
+
+  <div class="govuk-width-container custom-header-width--conduct" style="margin: 0, text-align: center;">
+
+
+    <div class="btn-video-top">
+
+     <div class="btn-video-top--right">
+
+         <button id="refresh" class="govuk-button govuk-button--secondary govuk-button--panel govuk-button-respond govuk-!-margin-bottom-3" style="margin-right:20px;" onClick="window.location.reload();">Refresh</button>
+         <button class= "govuk-button govuk-button--warning govuk-button-respond govuk-!-margin-bottom-0" onclick="document.getElementById('id01').style.display='block'">End</button> </div>
+
+    <dialog id="id01" class="modal" aria-labelledby="end-appointment" aria-describedby="end-confirmation" aria-modal="true" role="dialog" tabindex="-1" open>
+      <form class="modal-content">
+        <div class="govuk-modal-dialog-header">
+
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="govuk-button modal-close" title="Cancel">×</button></div>
+        <div class="modal-container">
+          <h1>End the video appointment?</h1>
+          <p> You will not be able to rejoin and the session will be closed.</p>
+
+          <div class="clearfix">
+              <a href="end-staff" role="button" class="govuk-button govuk-button--warning govuk-!-margin-right-2 govuk-button-respond" data-module="govuk-button" style="margin-bottom: 0">End appointment </a>
+              <button onClick="document.getElementById('id01').style.display='none'" class="govuk-button govuk-button--secondary govuk-button-respond" data-module="govuk-button" style="margin-bottom: 0px;">Cancel</button>
+
+          </div>
+        </div>
+      </form>
+    </dialog> </div>
+
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="desktop-769">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        <div class="video-frame">
+          <div class="attendee-main">
+          <img class="video-participant-cov" style="aspect-ratio: 4/3; width:100%" src="/public/images/Citizen.png">
+        </div>
+          <div class="selfie-multiple-small">
+<img class="video-participant-cov" style="width:100%;" id="myImage" src="/public/images/original.png">
+</div>
+    </div>
+    </div>
+    <div class="govuk-grid-column-one-quarter">
+      <div class="govuk-!-margin-bottom-4">
+
+            <h2 class="govuk-heading-s" style="color:#1d70b8;">Video settings</h2>
+            <dl class="govuk-summary-list" style="font-size:16px">
+              <div class="govuk-summary-list__row">
+                <dd class="govuk-summary-list__value">
+                  Microphone
+                </dd>
+                <dd class="govuk-summary-list__actions" style="width:45%">
+                  <div class="switch-container5">
+                  <button role="switch" aria-checked="true" id="hideBackground5" class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
+                    <span class="govuk-body govuk-!-font-size-14">Off</span>
+                    <span class="govuk-body govuk-!-font-size-14">On</span>
+                  </button></div>
+                </dd>
+              </div>
+                <div class="govuk-summary-list__row">
+                  <dd class="govuk-summary-list__value">
+                    Camera
+                  </dd>
+                  <dd class="govuk-summary-list__actions" style="width:45%">
+                    <div class="switch-container5">
+                    <button role="switch" aria-checked="true" id="hideBackground5" onclick="hideImage()" class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
+                      <span class="govuk-body govuk-!-font-size-14">Off</span>
+                      <span class="govuk-body govuk-!-font-size-14">On</span>
+                    </button> </div>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dd class="govuk-summary-list__value">
+                    Background
+                  </dd>
+                  <dd class="govuk-summary-list__actions" style="width:45%">
+                    <div class="switch-container5">
+                    <button role="switch" aria-checked="false" id="hideBackground" onclick="changeImage()" class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
+                      <span class="govuk-body govuk-!-font-size-14">Off</span>
+                      <span class="govuk-body govuk-!-font-size-14">On</span>
+                    </button> </div
+                  </dd>
+                </div> </div>
+
+
+                <h2 class="govuk-heading-s" style="color:#1d70b8;">Participants (2)</h2>
+                <dl class="govuk-summary-list" style="font-size:16px">
+                  <div class="govuk-summary-list__row">
+                    <dd class="govuk-summary-list__value">
+                      Host (me)
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                           <span class="govuk-visually-hidden"> No action available</span>
+                         </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dd class="govuk-summary-list__value">
+                      Attendee
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                           <span class="govuk-visually-hidden"> No action available</span>
+                         </a>
+                    </dd>
+                  </div>
+                  </div> </div> </div>
+
+
+
+        <!- Smaller screen -->
+
+<div class="medium-769">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <div class="video-frame">
+              <div class="attendee-main">
+              <img class="video-participant-cov" style="aspect-ratio: 4/3; width:100%" src="/public/images/Citizen.png">
+            </div>
+              <div class="selfie-multiple-small">
+    <img class="video-participant-cov" style="width:100%;" id="myImage2" src="/public/images/original.png">
+    </div>
+
+        </div>
+        </div>
+        <div class="govuk-grid-column-one-half">
+                <h2 class="govuk-heading-s" style="color:#1d70b8;">Video settings</h2>
+                <div class="switch-container5">
+                <div class="govuk-!-margin-top-4">
+              <label for="microphone" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-6">Microphone </label>
+                     <button role="switch" aria-checked="true" id="microphone" class="switch5 govuk-button govuk-button--secondary">
+                        <span class="govuk-body govuk-!-font-size-14">Off</span>
+                        <span class="govuk-body govuk-!-font-size-14">On</span>
+                      </button> <br><hr>
+                      <label for="camera" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-9">Camera </label>
+                            <button role="switch" aria-checked="true" id="camera" onclick="hideImageSmall()" class="switch5 govuk-button govuk-button--secondary">
+                              <span class="govuk-body govuk-!-font-size-14">Off</span>
+                              <span class="govuk-body govuk-!-font-size-14">On</span>
+                            </button>
+
+                            <br><hr>
+                            <label for="background" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-6">Background</label>
+                                  <button role="switch" aria-checked="false" id="background" onclick="changeImageSmall()" class="switch5 govuk-button govuk-button--secondary">
+                                    <span class="govuk-body govuk-!-font-size-14">Off</span>
+                                    <span class="govuk-body govuk-!-font-size-14">On</span>
+                                  </button>
+                      </div> </div> <hr>
+
+
+
+
+<div class="govuk-!-margin-top-4">
+                        <h2 class="govuk-heading-s" style="color:#1d70b8;">Participants (2)</h2>
+                        <dl class="govuk-summary-list" style="font-size:16px">
+                          <div class="govuk-summary-list__row">
+                            <dd class="govuk-summary-list__value">
+                              Host (me)
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                              <a class="govuk-link" href="#">
+                                   <span class="govuk-visually-hidden"> No action available</span>
+                                 </a>
+                            </dd>
+                          </div>
+                          <div class="govuk-summary-list__row">
+                            <dd class="govuk-summary-list__value">
+                              Attendee
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+
+                            </dd> </dl>
+                          </div>
+                          </div> </div>
+
+
+<a class="govuk-link" href="conduct-all-functions">Back</a></div>
+
+
+    <script>      document.querySelectorAll(".switch5").forEach(function(theSwitch) {
+    theSwitch.addEventListener("click", handleClickEvent, false);
+  });
+
+  function handleClickEvent(evt) {
+    let el = evt.target;
+
+    if (el.getAttribute("aria-checked") == "true") {
+        el.setAttribute("aria-checked", "false");
+    } else {
+        el.setAttribute("aria-checked", "true");
+    }
+  } </script>
+
+  <script>
+    var img_background_tracker = 0; // no background is 0
+    var camera_on = true; // to check state of camera
+
+    function changeImage() {
+
+                if (camera_on == true){
+                  var image = document.getElementById('myImage');
+                  if (image.src.match("/public/images/original.png")) {
+                      img_background_tracker = 1; // background is 1
+                      image.src = "/public/images/light-background.png";
+                  }
+                  else {
+                    img_background_tracker = 0; // no background is 0
+                    image.src = "/public/images/original.png";
+                  }
+                }
+                else if (camera_on == false){
+
+                  if (img_background_tracker == 0){
+                    img_background_tracker = 1;
+                  } else if (img_background_tracker == 1) {
+                    img_background_tracker = 0;
+                  }
+
+                  image.src = "/public/images/camera-off.png";
+
+
+                }
+
+
+
+
+
+
+            }
+    </script>
+
+    <script>
+
+      function changeImageSmall() {
+                  var image = document.getElementById('myImage2');
+                  if (image.src.match("/public/images/original.png")) {
+                      image.src = "/public/images/light-background.png";
+                  }
+                  else {
+                      image.src = "/public/images/original.png";
+                  }
+              }
+      </script>
+
+      <script>
+        function hideImage() {
+                    if (camera_on == true){
+                      camera_on = false;
+                    } else if (camera_on == false){
+                      camera_on = true;
+                    }
+                    // global var of image that gets updated
+                    var image = document.getElementById('myImage');
+                    if (image.src.match("/public/images/original.png")) {
+                        image.src = "/public/images/camera-off.png";
+                    }
+                    else if (image.src.match("/public/images/light-background.png")) {
+                        image.src = "/public/images/camera-off.png";
+                    }
+                    else {
+                      if (img_background_tracker == 0){
+                        image.src = "/public/images/original.png";
+                      }
+                      else if (img_background_tracker == 1){
+                        image.src = "/public/images/light-background.png";
+                      }
+                    }
+                }
+        </script>
+
+      <script>
+
+        function hideImageSmall() {
+                    var image = document.getElementById('myImage2');
+                    if (image.src.match("/public/images/original.png")) {
+                        image.src = "/public/images/camera-off.png";
+                    }
+                    else {
+                        image.src = "/public/images/original.png";
+                    }
+                }
+        </script>
+
+{% endblock %}

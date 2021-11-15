@@ -10,13 +10,13 @@ button.switch1 {
   vertical-align: middle;
   text-align: center;
   box-shadow: none;
-  border-radius: 2px;
+  border-radius: 0px;
   border: 1px solid #b1b4b6;
 }
 
 button.switch1:focus:not(:active):not(:hover) {
   box-shadow: none;
-  border: 2px solid #b1b4b6;
+  border: 1px solid #b1b4b6;
 }
 
 button.switch1 span {
@@ -29,7 +29,7 @@ button.switch1 span {
 
 [role="switch"][aria-checked="false"] :first-child, {
   background: 	#6b7377;
-  border-radius: 2px;
+  border-radius: 0px;
   color: #fff;
   font-weight: bold;
 }
@@ -37,7 +37,7 @@ button.switch1 span {
 
 [role="switch"][aria-checked="true"] :last-child {
   background: #1d70b8;
-  border-radius: 2px;
+  border-radius: 0px;
   color: #fff;
   font-weight: bold;
 }
@@ -239,7 +239,7 @@ button.switch5 {
 
 button.switch5:focus:not(:active):not(:hover) {
   box-shadow: none;
-  border: 2px solid #b1b4b6;
+  border: 1px solid #b1b4b6;
 }
 
 button.switch5 span {
