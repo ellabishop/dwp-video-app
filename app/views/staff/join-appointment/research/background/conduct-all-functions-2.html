@@ -58,46 +58,7 @@
     <div class="govuk-grid-column-one-quarter">
       <div class="govuk-!-margin-bottom-4">
 
-            <h2 class="govuk-heading-s" style="color:#1d70b8;">Video settings</h2>
-            <dl class="govuk-summary-list" style="font-size:16px">
-              <div class="govuk-summary-list__row">
                 <dd class="govuk-summary-list__value">
-                  Microphone
-                </dd>
-                <dd class="govuk-summary-list__actions" style="width:45%">
-                  <div class="switch-container5">
-                  <button role="switch" aria-checked="true" id="hideBackground5" class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
-                    <span class="govuk-body govuk-!-font-size-14">Off</span>
-                    <span class="govuk-body govuk-!-font-size-14">On</span>
-                  </button></div>
-                </dd>
-              </div>
-                <div class="govuk-summary-list__row">
-                  <dd class="govuk-summary-list__value">
-                    Camera
-                  </dd>
-                  <dd class="govuk-summary-list__actions" style="width:45%">
-                    <div class="switch-container5">
-                    <button role="switch" aria-checked="true" id="hideBackground5" onclick="hideImage()" class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
-                      <span class="govuk-body govuk-!-font-size-14">Off</span>
-                      <span class="govuk-body govuk-!-font-size-14">On</span>
-                    </button> </div>
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dd class="govuk-summary-list__value">
-                    Background
-                  </dd>
-                  <dd class="govuk-summary-list__actions" style="width:45%">
-                    <div class="switch-container5">
-                    <button role="switch" aria-checked="false" id="hideBackground" onclick="changeImage()" class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
-                      <span class="govuk-body govuk-!-font-size-14">Off</span>
-                      <span class="govuk-body govuk-!-font-size-14">On</span>
-                    </button> </div
-                  </dd>
-                </div> </div>
-
-
                 <h2 class="govuk-heading-s" style="color:#1d70b8;">Participants (2)</h2>
                 <dl class="govuk-summary-list" style="font-size:16px">
                   <div class="govuk-summary-list__row">
@@ -120,7 +81,45 @@
                          </a>
                     </dd>
                   </div>
-                  </div> </div> </div>
+                  </div>
+                  <h2 class="govuk-heading-s" style="color:#1d70b8;">Video settings</h2>
+                  <dl class="govuk-summary-list" style="font-size:16px">
+                    <div class="govuk-summary-list__row">
+                      <dd class="govuk-summary-list__value">
+                        Microphone
+                      </dd>
+                      <dd class="govuk-summary-list__actions" style="width:45%">
+                        <div class="switch-container5">
+                        <button role="switch" aria-checked="true" id="hideBackground5" class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
+                          <span class="govuk-body govuk-!-font-size-14">Off</span>
+                          <span class="govuk-body govuk-!-font-size-14">On</span>
+                        </button></div>
+                      </dd>
+                    </div>
+                      <div class="govuk-summary-list__row">
+                        <dd class="govuk-summary-list__value">
+                          Camera
+                        </dd>
+                        <dd class="govuk-summary-list__actions" style="width:45%">
+                          <div class="switch-container5">
+                          <button role="switch" aria-checked="true" id="hideBackground5" onclick="hideImage()" class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
+                            <span class="govuk-body govuk-!-font-size-14">Off</span>
+                            <span class="govuk-body govuk-!-font-size-14">On</span>
+                          </button> </div>
+                        </dd>
+                      </div>
+                      <div class="govuk-summary-list__row">
+                        <dd class="govuk-summary-list__value">
+                          Background
+                        </dd>
+                        <dd class="govuk-summary-list__actions" style="width:45%">
+                          <div class="switch-container5">
+                          <button role="switch" aria-checked="false" id="hideBackground" onclick="changeImage()" class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
+                            <span class="govuk-body govuk-!-font-size-14">Off</span>
+                            <span class="govuk-body govuk-!-font-size-14">On</span>
+                          </button> </div
+                        </dd>
+                      </div> </div> </div> </div>
 
 
 
@@ -139,35 +138,14 @@
 
         </div>
         </div>
-        <div class="govuk-grid-column-one-half">
-                <h2 class="govuk-heading-s" style="color:#1d70b8;">Video settings</h2>
-                <div class="switch-container5">
-                <div class="govuk-!-margin-top-4">
-              <label for="microphone" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-6">Microphone </label>
-                     <button role="switch" aria-checked="true" id="microphone" class="switch5 govuk-button govuk-button--secondary">
-                        <span class="govuk-body govuk-!-font-size-14">Off</span>
-                        <span class="govuk-body govuk-!-font-size-14">On</span>
-                      </button> <br><hr>
-                      <label for="camera" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-9">Camera </label>
-                            <button role="switch" aria-checked="true" id="camera" onclick="hideImageSmall()" class="switch5 govuk-button govuk-button--secondary">
-                              <span class="govuk-body govuk-!-font-size-14">Off</span>
-                              <span class="govuk-body govuk-!-font-size-14">On</span>
-                            </button>
-
-                            <br><hr>
-                            <label for="background" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-6">Background</label>
-                                  <button role="switch" aria-checked="false" id="background" onclick="changeImageSmall()" class="switch5 govuk-button govuk-button--secondary">
-                                    <span class="govuk-body govuk-!-font-size-14">Off</span>
-                                    <span class="govuk-body govuk-!-font-size-14">On</span>
-                                  </button>
-                      </div> </div> <hr>
 
 
 
 
-<div class="govuk-!-margin-top-4">
+<div class="govuk-grid-column-one-half">
+
                         <h2 class="govuk-heading-s" style="color:#1d70b8;">Participants (2)</h2>
-                        <dl class="govuk-summary-list" style="font-size:16px">
+                        <dl class="govuk-summary-list" style="font-size:16px;">
                           <div class="govuk-summary-list__row">
                             <dd class="govuk-summary-list__value">
                               Host (me)
@@ -186,9 +164,32 @@
 
                             </dd> </dl>
                           </div>
-                          </div> </div>
 
 
+      <div class="govuk-grid-column-one-half">
+                                  <h2 class="govuk-heading-s" style="color:#1d70b8; display: inline;">Video settings</h2>
+                                  <div class="switch-container5">
+                                  <div class="govuk-!-margin-top-4">
+                                <label for="microphone" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-6">Microphone </label>
+                                       <button role="switch" aria-checked="true" id="microphone" class="switch5 govuk-button govuk-button--secondary">
+                                          <span class="govuk-body govuk-!-font-size-14">Off</span>
+                                          <span class="govuk-body govuk-!-font-size-14">On</span>
+                                        </button> <br><hr>
+                                        <label for="camera" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-9">Camera </label>
+                                              <button role="switch" aria-checked="true" id="camera" onclick="hideImageSmall()" class="switch5 govuk-button govuk-button--secondary">
+                                                <span class="govuk-body govuk-!-font-size-14">Off</span>
+                                                <span class="govuk-body govuk-!-font-size-14">On</span>
+                                              </button>
+
+                                              <br><hr>
+                                              <label for="background" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-6">Background</label>
+                                                    <button role="switch" aria-checked="false" id="background" onclick="changeImageSmall()" class="switch5 govuk-button govuk-button--secondary">
+                                                      <span class="govuk-body govuk-!-font-size-14">Off</span>
+                                                      <span class="govuk-body govuk-!-font-size-14">On</span>
+                                                    </button>
+                                        </div> </div> </div> </div>
+
+<br>
 <a class="govuk-link" href="conduct-all-functions">Back</a></div>
 
 
