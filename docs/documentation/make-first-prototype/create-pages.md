@@ -44,9 +44,9 @@ In the `juggling-balls.html` file, change the text inside the `h1` tag from `Hea
 
 In the `juggling-trick.html` file, change the text inside the `h1` tag to `What is your most impressive juggling trick?`.
 
-### 'Check answers' page
+### 'Check your answers' page
 
-Copy the `check-answers.html` file from `docs/views/templates` to `app/views`.
+Copy the `check-your-answers.html` file from `docs/views/templates` to `app/views`.
 
 ### Confirmation page
 
