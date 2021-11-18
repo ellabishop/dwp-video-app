@@ -8,8 +8,6 @@
 
 {% include "includes/headers/header-attend.html" %}
 
-<div class="portrait-no-display">
-
   <div class="dwp-video-header-conduct">
     <div class="govuk-width-container" style="margin: 0, text-align: center;">
       <div class="btn-video-top">
@@ -22,7 +20,6 @@
       </div>
         </div>
   </div>
-</div>
 
 <!-- Portrait -->
 <div class="portrait-screen-only">
@@ -44,21 +41,56 @@
   </div>
   </main>
   </div>
+
+
   <!-- Medium -->
-  <div class="medium-screen-only">
-    <main style="margin:0; padding:0;">
-    <div class="flex-container">
-      <div class="flex-item flex-responsive-container" style="height: calc(100% - 150px); background-color: #0b0c0c;">
-        <div class="landscape-main">
-          <img class="video-participant-con" style="width: 100%;"  src="/public/images/workcoach9.png">
-        </div>
-        <div class="landscape-medium" style="background-color: #0b0c0c;">
-              <img class="video-participant" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
-        </div>
+
+
+<div class="medium-screen-only">
+  <main style="margin:0; padding:0;">
+    <div class="govuk-grid-column-three-quarters" style="padding: 0px;">
+  <div class="flex-container">
+    <div class="flex-item flex-responsive-container" style="height: calc(100% - 130px);background-color: #0b0c0c;">
+      <div class="landscape-main">
+      <img class="video-participant-2" src="/public/images/workcoach9.png">
     </div>
+    <div class="landscape-medium" style="background-color: #0b0c0c;">
+          <img class="video-participant" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
     </div>
-    </main>
-    </div>
+  </div> </div>
+  </div>
+
+<div class="govuk-grid-column-one-quarter">
+<h2> Video settings </h2>
+  <dl class="govuk-summary-list" style="font-size:16px">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          Microphone
+        </dd>
+        <dd class="govuk-summary-list__actions" style="width:45%">
+          <div class="switch-container1">
+          <button role="switch" aria-checked="false" id="microphone"  class="switch1 govuk-button govuk-button--secondary" style="margin-right:0;">
+            <span class="govuk-body govuk-!-font-size-14">Off</span>
+            <span class="govuk-body govuk-!-font-size-14">On</span>
+          </button> </div></div>
+
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              Camera
+            </dd>
+            <dd class="govuk-summary-list__actions" style="width:45%">
+              <div class="switch-container1">
+              <button role="switch" aria-checked="false" id="microphone"  class="switch1 govuk-button govuk-button--secondary" style="margin-right:0;">
+                <span class="govuk-body govuk-!-font-size-14">Off</span>
+                <span class="govuk-body govuk-!-font-size-14">On</span>
+              </button> </div>
+        </dd>
+      </div>
+
+
+  </div>
+
+  </main> </div>
 
 {% endblock %}
 
@@ -66,25 +98,46 @@
 
 <!-- Desktop -->
 
-<div class="desktop-screen-only">
-  <div class="govuk-grid-column-three-quarters">
-      <div class="video-frame-attendee">
-        <div class="attendee-main">
-        <img class="video-participant-con" width="100%" style="aspect-ratio: 4/3;" src="/public/images/workcoach9.png">
-      </div>
-        <div class="selfie-multiple-small">
-            <img class="video-participant-cov" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
-        </div> </div> </div>
-        <div class="govuk-grid-column-one-quarter">
-<p> Camera </p>
-<p> Microphone </p>
-</div>
-      </div>
+<div class="desktop-769">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        <div class="video-frame">
+          <div class="attendee-main">
+          <img class="video-participant-con" width="100%" style="aspect-ratio: 4/3;" src="/public/images/workcoach9.png">
+        </div>
+          <div class="selfie-multiple-small">
+              <img class="video-participant-cov" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
+          </div>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-quarter">
+      <div class="govuk-!-margin-bottom-4">
+            <dl class="govuk-summary-list" style="font-size:16px">
+                <div class="govuk-summary-list__row">
+                  <dd class="govuk-summary-list__value">
+                    Microphone
+                  </dd>
+                  <dd class="govuk-summary-list__actions" style="width:45%">
+                    <div class="switch-container1">
+                    <button role="switch" aria-checked="false" id="microphone"  class="switch1 govuk-button govuk-button--secondary" style="margin-right:0;">
+                      <span class="govuk-body govuk-!-font-size-14">Off</span>
+                      <span class="govuk-body govuk-!-font-size-14">On</span>
+                    </button> </div></div>
+
+                    <div class="govuk-summary-list__row">
+                      <dd class="govuk-summary-list__value">
+                        Camera
+                      </dd>
+                      <dd class="govuk-summary-list__actions" style="width:45%">
+                        <div class="switch-container1">
+                        <button role="switch" aria-checked="false" id="microphone"  class="switch1 govuk-button govuk-button--secondary" style="margin-right:0;">
+                          <span class="govuk-body govuk-!-font-size-14">Off</span>
+                          <span class="govuk-body govuk-!-font-size-14">On</span>
+                        </button> </div>
+                  </dd>
+                </div> </div>
+        </div>
+        </div> </div>
 
 
-{% endblock %}
-
-{% block footer %}
-
-<div class="govuk-width-container"> <a class="govuk-link" style="float:left" href="3-participants">Another attendee joins</a> <a class="govuk-link" style="float:right" href="end-complete-citizen">Appointment finished</a></div>
 {% endblock %}
