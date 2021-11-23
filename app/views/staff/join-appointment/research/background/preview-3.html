@@ -16,7 +16,7 @@
       </h1>
 
       <p class="govuk-body">You can check your camera is
-        working before you join your video appointment.</p>
+        working and change your background before you join your video appointment.</p>
 
 <div class="govuk-!-width-one-half">
   <img class="video-participant-cov" id="myImage" style="aspect-ratio: 4/3; width:100%;" src="/public/images/original.png">
@@ -33,12 +33,14 @@
 
 
 
-<a href="conduct-background" role="button" class="govuk-button govuk-!-margin-top-7">
+<a href="staff-wait" role="button" class="govuk-button govuk-!-margin-top-7">
   Join appointment
 </a>
     </div>
   </div>
 
+  <div class="govuk-width-container">
+    <a class="govuk-link"  href="preview-2">Back</a></div>
 
 
 
@@ -60,7 +62,7 @@
     function changeImage() {
                 var image = document.getElementById('myImage');
                 if (image.src.match("/public/images/original.png")) {
-                    image.src = "/public/images/gradient.png";
+                    image.src = "/public/images/light-background.png";
                 }
                 else {
                     image.src = "/public/images/original.png";

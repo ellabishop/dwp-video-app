@@ -412,3 +412,9 @@ align-items: center;
       display: none;
     }
   }
+
+  @media (max-width:40.0625em) {
+    .one-half-small {
+      width: 50%;
+  }
+  }
