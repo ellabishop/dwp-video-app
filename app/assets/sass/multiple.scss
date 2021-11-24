@@ -349,6 +349,7 @@
 .name-tag {
   position: absolute;
   background-color: #0b0c0c;
+  color: #fff;
   border: 1px solid #626a6e;
   padding: 5px 10px 5px 10px;
   bottom: 0;
@@ -358,6 +359,15 @@
   z-index: 100;
 }
 
+.mute-tag {
+  position: absolute;
+  padding: 5px 10px 5px 10px;
+  top: 0;
+  left: 0;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  z-index: 100;
+}
 
 .refresh-bar {
   background: #f3f2f1;
