@@ -1,0 +1,347 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Video appointment - Attend a video appointment
+{% endblock %}
+
+{% block header %}
+
+{% include "includes/headers/header-attend.html" %}
+
+  <div class="dwp-video-header-conduct">
+    <div class="govuk-width-container" style="margin: 0, text-align: center;">
+      <div class="btn-video-top">
+
+      <div class="btn-video-top--right">
+
+          <button id="refresh" class="govuk-button govuk-button--secondary govuk-button--panel" style="margin: 0px 0px 15px 0px;">Refresh</button>
+
+          </div>
+      </div>
+        </div>
+  </div>
+
+  <!-- Portrait -->
+  <div class="portrait-screen-only">
+
+    <main style="margin:0; padding:0;">
+    <div class="flex-container">
+      <div class="flex-item flex-responsive-container" style="height: calc(100vh - 230px); background-color: #0b0c0c;">
+        <div class="selfie-single">
+
+            <div class="name-tag" style="border:none"> </div>
+            <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-top-9" style="background-color: #0b0c0c;">
+    <h1 class="govuk-panel__title">
+      The host's camera is off
+    </h1>
+    <div class="govuk-panel__body">
+
+      <svg width="58px" height="45px" viewBox="0 0 58 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <title>Camera</title>
+          <defs>
+              <path d="M48,0 C46.7452507,0.675029904 30.7452507,13.0083632 0,37" id="path-1"></path>
+          </defs>
+          <g id="Attend---host-is-muted/-camera-off" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Artboard" transform="translate(-758.000000, -752.000000)">
+                  <g id="Camera" transform="translate(762.000000, 756.000000)">
+                      <rect id="Rectangle" fill="#FFFFFF" x="5" y="1" width="32" height="31" rx="2"></rect>
+                      <path d="M54,2.54124499 L54,30.49519 C54,31.0474748 53.5522847,31.49519 53,31.49519 C52.8669798,31.49519 52.7352963,31.468651 52.6126601,31.417127 L40.6126601,26.3754815 C40.2414639,26.2195282 40,25.8561709 40,25.4535445 L40,7.89575821 C40,7.50110353 40.2321125,7.1433613 40.592516,6.98254585 L52.592516,1.62803263 C53.0968693,1.40298544 53.6881652,1.62940776 53.9132124,2.13376102 C53.9704291,2.26198949 54,2.40083025 54,2.54124499 Z" id="Path-5" fill="#FFFFFF"></path>
+                      <g id="Path-4" stroke-linecap="round" transform="translate(24.000000, 18.500000) scale(-1, 1) translate(-24.000000, -18.500000) ">
+                          <use stroke="#0B0C0C" stroke-width="8" xlink:href="#path-1"></use>
+                          <use stroke="#FFFFFF" stroke-width="4" xlink:href="#path-1"></use>
+                      </g>
+                  </g>
+              </g>
+          </g>
+      </svg>
+    </div>
+  </div>
+          </div>
+        <div class="selfie-multiple-small" style="border: 1px solid #b1b4b6; padding: 5px;">
+<h3 class="govuk-body govuk-!-font-weight-bold" style="color:#fff; text-align: center;"> Your camera is off <br> <br>
+<svg width="26px" height="22px" viewBox="0 0 58 45" style="text-align: center;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Camera</title>
+    <defs>
+        <path d="M48,0 C46.7452507,0.675029904 30.7452507,13.0083632 0,37" id="path-1"></path>
+    </defs>
+    <g id="Attend---host-is-muted/-camera-off" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-758.000000, -752.000000)">
+            <g id="Camera" transform="translate(762.000000, 756.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" x="5" y="1" width="32" height="31" rx="2"></rect>
+                <path d="M54,2.54124499 L54,30.49519 C54,31.0474748 53.5522847,31.49519 53,31.49519 C52.8669798,31.49519 52.7352963,31.468651 52.6126601,31.417127 L40.6126601,26.3754815 C40.2414639,26.2195282 40,25.8561709 40,25.4535445 L40,7.89575821 C40,7.50110353 40.2321125,7.1433613 40.592516,6.98254585 L52.592516,1.62803263 C53.0968693,1.40298544 53.6881652,1.62940776 53.9132124,2.13376102 C53.9704291,2.26198949 54,2.40083025 54,2.54124499 Z" id="Path-5" fill="#FFFFFF"></path>
+                <g id="Path-4" stroke-linecap="round" transform="translate(24.000000, 18.500000) scale(-1, 1) translate(-24.000000, -18.500000) ">
+                    <use stroke="#0B0C0C" stroke-width="8" xlink:href="#path-1"></use>
+                    <use stroke="#FFFFFF" stroke-width="4" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg> </h3>
+          <div class="name-tag" style="border:none"> <strong class="govuk-tag govuk-tag--green">Your microphone is off</strong> </div>
+
+        </div>
+    </div>
+    <div style="padding: 20px;">
+      <h1 class="govuk-heading-s" style="color:#1d70b8;">Video settings</h1>
+      <div class="switch-container5">
+
+    <label for="microphone" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-2">Microphone </label>
+           <button role="switch" aria-checked="false" id="microphone"  class="switch5 govuk-button govuk-button--secondary govuk-!-margin-right-5">
+              <span class="govuk-body govuk-!-font-size-14">Off</span>
+              <span class="govuk-body govuk-!-font-size-14">On</span>
+            </button>
+
+            <label for="camera" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-2">Camera </label>
+                  <button role="switch" aria-checked="false" id="camera" onclick="hideImage3()" class="switch5 govuk-button govuk-button--secondary">
+                    <span class="govuk-body govuk-!-font-size-14">Off</span>
+                    <span class="govuk-body govuk-!-font-size-14">On</span>
+                  </button>
+    </div> </div>
+
+
+    </div>
+    </main>
+    </div>
+
+
+    <!-- Medium -->
+
+
+  <div class="medium-screen-only">
+    <main style="margin:0; padding:0;">
+      <div class="govuk-grid-column-full" style="padding: 0px;">
+    <div class="flex-container">
+      <div class="flex-item flex-responsive-container" style="height: calc(100vh - 250px);background-color: #0b0c0c;">
+        <div class="landscape-main">
+        <img class="video-participant-2" src="/public/images/workcoach9.png">
+
+      <div class="mute-tag"> <strong class="govuk-tag govuk-tag--green">Host is muted</strong> </div>
+      </div>
+      <div class="landscape-medium" style="background-color: #0b0c0c; border: 1px solid #b1b4b6; padding: 5px;">
+        <h3 class="govuk-body govuk-!-font-weight-bold" style="color:#fff; text-align: center;"> Your camera is off <br> <br>
+        <svg width="26px" height="22px" viewBox="0 0 58 45" style="text-align: center;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Camera</title>
+            <defs>
+                <path d="M48,0 C46.7452507,0.675029904 30.7452507,13.0083632 0,37" id="path-1"></path>
+            </defs>
+            <g id="Attend---host-is-muted/-camera-off" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Artboard" transform="translate(-758.000000, -752.000000)">
+                    <g id="Camera" transform="translate(762.000000, 756.000000)">
+                        <rect id="Rectangle" fill="#FFFFFF" x="5" y="1" width="32" height="31" rx="2"></rect>
+                        <path d="M54,2.54124499 L54,30.49519 C54,31.0474748 53.5522847,31.49519 53,31.49519 C52.8669798,31.49519 52.7352963,31.468651 52.6126601,31.417127 L40.6126601,26.3754815 C40.2414639,26.2195282 40,25.8561709 40,25.4535445 L40,7.89575821 C40,7.50110353 40.2321125,7.1433613 40.592516,6.98254585 L52.592516,1.62803263 C53.0968693,1.40298544 53.6881652,1.62940776 53.9132124,2.13376102 C53.9704291,2.26198949 54,2.40083025 54,2.54124499 Z" id="Path-5" fill="#FFFFFF"></path>
+                        <g id="Path-4" stroke-linecap="round" transform="translate(24.000000, 18.500000) scale(-1, 1) translate(-24.000000, -18.500000) ">
+                            <use stroke="#0B0C0C" stroke-width="8" xlink:href="#path-1"></use>
+                            <use stroke="#FFFFFF" stroke-width="4" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg> </h3>
+            <div class="name-tag"> <p class="govuk-body" style="color:#fff; margin-bottom: 0px;">
+              <?xml version="1.0" encoding="UTF-8"?>
+              <svg width="21px" height="25px" viewBox="0 0 21 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <title>Mic</title>
+                  <defs>
+                      <path d="M0.00554626114,1.5 L17.0269944,19.783723" id="path-1"></path>
+                  </defs>
+                  <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Artboard" transform="translate(-109.000000, -58.000000)">
+                          <g id="Mic" transform="translate(110.494454, 58.000000)">
+                              <rect id="Rectangle" fill="#FFFFFF" x="3.63484453" y="0" width="9" height="16.5863703" rx="4.5"></rect>
+                              <path d="M1.63484453,9 L1.63484453,12.1645732 C1.63484453,15.7926921 4.576016,18.7338636 8.20413487,18.7338636 C11.8322537,18.7338636 14.7734252,15.7926921 14.7734252,12.1645732 L14.7734252,9 L14.7734252,9" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+                              <line x1="7.8474903" y1="19" x2="7.8474903" y2="22.7603055" id="Path-2" stroke="#FFFFFF" stroke-width="2"></line>
+                              <line x1="2.63484453" y1="23.2126458" x2="13.0532636" y2="23.2126458" id="Path-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></line>
+                              <g id="Path-6" stroke-linecap="round">
+                                  <use stroke="#0B0C0C" stroke-width="3" xlink:href="#path-1"></use>
+                                  <use stroke="#FFFFFF" stroke-width="2" xlink:href="#path-1"></use>
+                              </g>
+                          </g>
+                      </g>
+                  </g>
+              </svg>
+
+            </p> </div>
+      </div>
+    </div>
+  <div style="padding: 20px;">
+    <h1 class="govuk-heading-s" style="color:#1d70b8;">Video settings</h1>
+    <div class="switch-container5">
+
+  <label for="microphone" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-3">Microphone </label>
+         <button role="switch" aria-checked="false" id="microphone"  class="switch5 govuk-button govuk-button--secondary govuk-!-margin-right-7">
+            <span class="govuk-body govuk-!-font-size-14">Off</span>
+            <span class="govuk-body govuk-!-font-size-14">On</span>
+          </button>
+
+          <label for="camera" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-3">Camera </label>
+                <button role="switch" aria-checked="false" id="camera" onclick="hideImage2()" class="switch5 govuk-button govuk-button--secondary">
+                  <span class="govuk-body govuk-!-font-size-14">Off</span>
+                  <span class="govuk-body govuk-!-font-size-14">On</span>
+                </button>
+  </div> </div>
+
+
+    </div>
+
+    </main> </div>
+
+  {% endblock %}
+
+
+{% block content %}
+
+<!-- Desktop -->
+
+<div class="desktop-screen-only">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        <div class="video-frame">
+          <div class="attendee-main">
+          <img class="video-participant-con" style="height: 300px; width: 100%; margin-top: 100px;" src="/public/images/camera-off-person.png">
+          <div class="name-tag" style="background-color: #0b0c0c;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Host</h2>
+      <img src="/public/images/mic-icon.png" style="display: inline-block; height: 20px; margin-left: 5px;">
+          </div>
+
+
+          <div class="selfie-multiple-small">
+              <img class="video-participant-cov" id="cameraOn" style="object-fit:cover;  width: 100%; border: 1px solid #b1b4b6;" src="/public/images/Citizen.png">
+              <div class="name-tag" style="background-color: #0b0c0c; margin: 2px;">
+                <p class="govuk-heading-s" style="color: #fff; display:inline;">You</p>
+              <img src="/public/images/mic-icon.png" style="display: none; height: 20px; margin-left: 5px;"   id="muteTag">
+              </div> </div>
+
+              <div class="selfie-multiple-small" id="cameraOff" style="display:none; background: #0b0c0c; border: 2px solid #f3f2f1;">
+                <img class="video-participant-cov" id="cameraOn" style="object-fit:contain;  width: 100%; height: 100px; margin-top: 10px;" src="/public/images/camera-off-person.png">
+
+
+          </div>
+        </div>
+    </div> </div>
+    <div class="govuk-grid-column-one-quarter">
+      <h1 class="govuk-heading-s" style="color: #1d70b8;"> Video settings </h1>
+      <div class="govuk-!-margin-bottom-4">
+            <dl class="govuk-summary-list" style="font-size:16px">
+                <div class="govuk-summary-list__row">
+                  <dd class="govuk-summary-list__value">
+                    Microphone
+                  </dd>
+                  <dd class="govuk-summary-list__actions" style="width:45%">
+                    <div class="switch-container5">
+                    <button role="switch" aria-checked="true" id="microphone" onclick="myFunction()" class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
+                      <span class="govuk-body govuk-!-font-size-14">Off</span>
+                      <span class="govuk-body govuk-!-font-size-14">On</span>
+                    </button> </div></div>
+
+                    <div class="govuk-summary-list__row">
+                      <dd class="govuk-summary-list__value">
+                        Camera
+
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions" style="width:45%">
+                        <div class="switch-container5">
+                        <button role="switch" aria-checked="true" onclick="cameraOff()" id="camera"  class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
+                          <span class="govuk-body govuk-!-font-size-14">Off</span>
+                          <span class="govuk-body govuk-!-font-size-14">On</span>
+                        </button> </div>
+                  </dd>
+                </div> </div>
+        </div>
+        </div> </div>
+
+
+        <script>      document.querySelectorAll(".switch5").forEach(function(theSwitch) {
+        theSwitch.addEventListener("click", handleClickEvent, false);
+      });
+
+      function handleClickEvent(evt) {
+        let el = evt.target;
+
+        if (el.getAttribute("aria-checked") == "true") {
+            el.setAttribute("aria-checked", "false");
+        } else {
+            el.setAttribute("aria-checked", "true");
+        }
+      } </script>
+
+
+
+
+        <script>
+
+          function hideImage3() {
+                      var image = document.getElementById('myImage3');
+                      if (image.src.match("/public/images/Citizen.png")) {
+                          image.src = "/public/images/camera-off.png";
+                      }
+                      else {
+                          image.src = "/public/images/Citizen.png";
+                      }
+                  }
+          </script>
+
+
+                  <script>
+
+                    function hideImage2() {
+                                var image = document.getElementById('myImage2');
+                                if (image.src.match("/public/images/Citizen.png")) {
+                                    image.src = "/public/images/camera-off.png";
+                                }
+                                else {
+                                    image.src = "/public/images/Citizen.png";
+                                }
+                            }
+                    </script>
+
+
+
+                    <script>
+
+                      function cameraOff() {
+                                  var x = document.getElementById('cameraOn');
+                                  var y = document.getElementById('cameraOff');
+                                  var z = document.getElementById('cameraSetting');
+
+                                  if (x.style.display === "none") {
+                                    x.style.display = "block";
+                                  } else {
+                                    x.style.display = "none";
+                                  }
+                                  if (y.style.display === "none") {
+                                    y.style.display = "block";
+                                  } else {
+                                    y.style.display = "none";
+                                  }
+                                  if (z.style.display === "none") {
+                                    z.style.display = "inline-block";
+                                  } else {
+                                    z.style.display = "none";
+                                  }
+                                                }
+
+
+                      </script>
+
+
+
+            <script>
+              function myFunction() {
+                var x = document.getElementById("muteTag");
+                var y = document.getElementById("muteSetting");
+if (x.style.display === "none") {
+  x.style.display = "inline-block";
+} else {
+  x.style.display = "none";
+}
+
+if (y.style.display === "none") {
+  y.style.display = "inline-block";
+} else {
+  y.style.display = "none";
+}
+              }
+              </script>
+
+
+{% endblock %}
