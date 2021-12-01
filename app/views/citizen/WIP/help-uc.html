@@ -15,15 +15,7 @@
         <span class="govuk-caption-xl" style="margin-top:40px">Guidance</span>
           <h1 class="govuk-heading-xl">How to prepare for a video appointment</h1> </div>
 
-          <div class="govuk-grid-column-one-third">
-<nav role="navigation" class="translation-nav" aria-label="Translations">
-  <ul class="translation-nav_list">
-          <li class="translation-nav_list-item">
-            <span lang="en">English</span> </li>
-           <li class="translation-nav_list-item-2">
-             <a lang="cy" rel="alternate" href="../welsh-attend/v1-static-trial/help" style="padding-left:10px">Cymraeg</a> </li>
-       </nav>
-           </div>
+
           <div class="govuk-grid-column-two-thirds">
           <h2 class="govuk-heading-m">Equipment you need</h2>
           <p>You'll need the following:<p>
@@ -35,13 +27,20 @@
             </ul>
             <h2 class="govuk-heading-s">Supported browsers</h2>
             <ul class="govuk-list govuk-list--bullet">
-              <li><a href="https://www.google.com/chrome/">Google Chrome</a> (version 78 or later) on Windows, Apple or Android devices</li>
-              <li><a href="https://support.apple.com/en_GB/downloads/safari ">Safari</a> (version 12 or later) on Apple devices</li>
+              <li>Google Chrome (version 79 or later) on Windows, Apple or Android devices</li>
+              <li>Safari (version 12 or later) on Apple devices</li>
             </ul>
 
+            <p>You can <a href="https://www.whatsmybrowser.org/" class="govuk-link">check your browser</a> and how up to date it is.</p>
 
 
-              <h2 class="govuk-heading-m">During your appointment</h2>
+              <h2 class="govuk-heading-m">Joining your appointment</h2>
+
+                <p>Be ready to join the appointment at least 5 minutes before your scheduled start time.</p>
+                <p>You will be asked for use of your camera and microphone. You must choose 'Allow' to take part in the video appointment.</p>
+
+
+                <h2 class="govuk-heading-m">During your appointment</h2>
 
                 <p>If you experience any issues with the picture or sound during the appointment, try the 'Refresh' button.
                   In most cases this will fix the problem.</p>
@@ -50,31 +49,33 @@
                 <div class="warning-panel"><div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
   <strong class="govuk-warning-text__text">
-    <span class="govuk-warning-text__assistive">Warning</span>You are not allowed to record or take pictures of a video appointment without our consent. If we suspect you are making a recording, we will end the appointment immediately.<br><br>Any criminal behaviour will be reported.</span></strong></div></div>
+    <span class="govuk-warning-text__assistive">Warning</span>You are not allowed to record or take pictures of a video appointment without our consent. If we suspect you are making a recording, we will end the appointment immediately.<br><br>Any criminal behaviour will be reported.</strong></div></div>
 
 
           </div>
     </div>
-<button class="govuk-button" style="margin-top:30px" id="close3" onclick="closeWin()">Close</button>
+
+    <button class="govuk-button" style="margin-top:30px" id="close3" onclick="closeWin()">Close</button>
 
 
-  <script>
-    function closeWin() {
-      var myWindow = window.close("help")
-      myWindow.close();
+      <script>
+        function closeWin() {
+          var myWindow = window.close("help")
+          myWindow.close();
+        }
+    </script>
+
+    <noscript>
+    <style>
+        #close3 {display:none;}
+    </style>
+    </noscript>
+
+    <script>
+    function goBack() {
+      window.history.back();
     }
-</script>
+    </script>
 
-<noscript>
-<style>
-    #close3 {display:none;}
-</style>
-</noscript>
-
-<script>
-function goBack() {
-  window.history.back();
-}
-</script>
 
 {% endblock %}
