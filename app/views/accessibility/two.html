@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl" style="margin-top: 40px">
+            🦄 Two at a time, try these 🦄
+        </h1>
+
+        <a id="start">Click me Enis 🚀 (and wait)</a>
+        <a id="hide">reset</a>
+        <a href="./index.html">Back</a>
+
+        <hr />
+
+        <div id="content-message" class="govuk-grid-column-three-quarters content-container govuk-!-display-none"
+            aria-live="polite">
+            <div class="content-message">
+
+                <div class="content-text govuk-!-padding-top-9 govuk-!-padding-left-9 govuk-!-padding-right-9">
+                    <h1 class="govuk-heading-l">Your attendee has lost connection</h1>
+                    <p>This could be because they have a problem with their internet or their web browser has closed.
+                    </p>
+                    <p>You can wait for them to rejoin or end the appointment.</p>
+                </div>
+                <div id="tile-5" class="content-tile">
+                    <video id="video-5"></video>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script>
+    //Remove display none
+    //Add role alert
+
+    $('#start').click(function () {
+        setTimeout(function () {
+            $('#content-message').removeClass('govuk-!-display-none').attr('role', 'alert');
+        }, 2000);
+    });
+
+    $('#hide').click(function () {
+        setTimeout(function () {
+            $('#content-message').delay('20000').attr('role', '').addClass('govuk-!-display-none');
+        }, 2000);
+    });
+</script>
+
+{% endblock %}
