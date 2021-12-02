@@ -1,0 +1,65 @@
+{% extends "layout-citizen.html" %}
+
+{% block pageTitle %}
+Preview your video
+{% endblock %}
+
+
+
+{% block content %}
+<div class="popup2" style="display:none"><a href="preview-2"><img src="/public/images/edge-allow.png" style="width:300px;"></a></div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl govuk-!-margin-top-7">
+        Preview your video
+      </h1>
+
+      <p class="govuk-body">You can check your camera is
+        working before you join your video appointment.</p>
+
+<div class="govuk-!-width-one-half">
+  <div class="preview-frame"></div>
+</div>
+
+  <!--  <div class="govuk-form-group govuk-!-margin-top-4">
+<fieldset class="govuk-fieldset" aria-describedby="hide-background">
+  <legend class="govuk-fieldset__legend"> <h2 class="govuk-heading-s">
+    Hide my background </h2>
+  </legend>
+  <div class="govuk-radios govuk-radios--inline">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="background-on" name="background" type="radio" value="yes">
+      <label class="govuk-label govuk-radios__label" for="background-on">
+        On
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="background-off" name="background" type="radio" value="no" checked>
+      <label class="govuk-label govuk-radios__label" for="background-off">
+        Off
+      </label>
+    </div>
+  </div>
+
+</fieldset>
+</div> -->
+
+
+<a href="start-staff-permissions" role="button" class="govuk-button govuk-!-margin-top-7">
+  Join appointment
+</a>
+    </div>
+  </div>
+
+
+  <script>
+    setTimeout(function(){
+$('.popup2').show();
+}, 500);
+</script>
+
+
+
+{% endblock %}
