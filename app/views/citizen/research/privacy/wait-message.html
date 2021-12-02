@@ -97,7 +97,7 @@
           </div>
       </div>
         <div class="selfie-multiple-small">
-            <img class="video-participant-cov" style="width:100%" src="/public/images/Citizen.png">
+            <img class="video-participant-cov" id="myImage" style="width:100%" src="/public/images/Citizen.png">
         </div>
   </div>
   </div>
@@ -132,5 +132,73 @@
       </div> </div>
 
   <a class="govuk-link" href="option-1">Host joins</a>
+
+  <script>      document.querySelectorAll(".switch5").forEach(function(theSwitch) {
+  theSwitch.addEventListener("click", handleClickEvent, false);
+});
+
+function handleClickEvent(evt) {
+  let el = evt.target;
+
+  if (el.getAttribute("aria-checked") == "true") {
+      el.setAttribute("aria-checked", "false");
+  } else {
+      el.setAttribute("aria-checked", "true");
+  }
+} </script>
+
+
+
+
+  <script>
+
+    function hideImage3() {
+                var image = document.getElementById('myImage3');
+                if (image.src.match("/public/images/Citizen.png")) {
+                    image.src = "/public/images/camera-off.png";
+                }
+                else {
+                    image.src = "/public/images/Citizen.png";
+                }
+            }
+    </script>
+
+
+            <script>
+
+              function hideImage2() {
+                          var image = document.getElementById('myImage2');
+                          if (image.src.match("/public/images/Citizen.png")) {
+                              image.src = "/public/images/camera-off-person.png";
+                          }
+                          else {
+                              image.src = "/public/images/Citizen.png";
+                          }
+                      }
+              </script>
+
+    <script>
+
+      function hideImage() {
+                  var image = document.getElementById('myImage');
+                  if (image.src.match("/public/images/Citizen.png")) {
+                      image.src = "/public/images/camera-off.png";
+                  }
+                  else {
+                      image.src = "/public/images/Citizen.png";
+                  }
+              }
+      </script>
+
+      <script>
+        function myFunction() {
+          var x = document.getElementById("muteTag");
+if (x.style.display === "none") {
+x.style.display = "block";
+} else {
+x.style.display = "none";
+}
+        }
+        </script>
 
 {% endblock %}
