@@ -21,10 +21,8 @@ GOV.UK Prototype Kit
 
         <div id="content-message" class="govuk-grid-column-three-quarters content-container govuk-!-display-none">
             <div class="content-message">
-                <div id="content-inner-message" class="content-text govuk-!-padding-top-9 govuk-!-padding-left-9 govuk-!-padding-right-9" aria-atomic="true">
-                    <p id="lost-connection" class="govuk-heading-l">Your attendee has lost connection</p>
-                    <p>This could be because they have a problem with their internet or their web browser has closed.</p>
-                    <p>You can wait for them to rejoin or end the appointment.</p>
+                <div id="content-inner-message" class="content-text govuk-!-padding-top-9 govuk-!-padding-left-9 govuk-!-padding-right-9" role="alert" aria-atomic="true">
+                    
                 </div>
                 <div id="tile-5" class="content-tile">
                     <video id="video-5"></video>
@@ -42,14 +40,14 @@ GOV.UK Prototype Kit
     $('#start').click(function () {
         setTimeout(function () {
             $('#content-message').removeClass('govuk-!-display-none');
-            $('#content-inner-message').attr("role", "alert");
+            $('#content-inner-message').append("<p id='lost-connection' class='govuk-heading-l'>Your attendee has lost connection</p><p>This could be because they have a problem with their internet or their web browser has closed.</p><p>You can wait for them to rejoin or end the appointment.</p>")
         }, 1000);
     });
 
     $('#hide').click(function () {
         setTimeout(function () {
             $('#content-message').addClass('govuk-!-display-none');
-            $('#content-inner-message').attr("role", "");
+            $("#conent-inner-message").remove();
         }, 1000);
     });
 </script>
