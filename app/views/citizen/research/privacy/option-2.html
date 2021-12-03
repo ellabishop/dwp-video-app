@@ -68,25 +68,35 @@
       <div class="flex-item flex-responsive-container" style="height: calc(100vh - 250px);background-color: #0b0c0c;">
         <div class="landscape-main">
         <img class="video-participant-2" src="/public/images/workcoach9.png">
-
-  <!--    <div class="mute-tag"> <strong class="govuk-tag govuk-tag--green">Host is muted</strong> </div> -->
+        <div class="name-tag" style="background-color: #0b0c0c;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Host</h2>
+        </div>
       </div>
       <div class="landscape-medium" style="background-color: #0b0c0c; border: 1px solid #b1b4b6;">
-            <img class="video-participant" id="myImage2" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
-      </div>
+            <img class="video-participant" id="cameraOnMed" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
+            <div class="name-tag" style="background-color: #0b0c0c; margin: 2px;">
+              <p class="govuk-heading-s" style="color: #fff; display:inline;">You</p>
+            <img src="/public/images/mic-icon.png" style="display: none; height: 20px; width: auto; margin-left: 5px;" id="muteTagMed">
+            </div> </div>
+
+            <div class="selfie-multiple-small" id="cameraOffMed" style="display:none; background: #0b0c0c; border: 2px solid #f3f2f1;">
+              <img class="video-participant-cov" id="cameraOn" style="object-fit:contain;  width: 100%; height: 100px; margin-top: 10px;" src="/public/images/camera-off-person.png">
+
+
+        </div>
+
     </div>
   <div style="padding: 20px;">
-    <h1 class="govuk-heading-s" style="color:#1d70b8;">Video settings</h1>
+    <h1 class="govuk-heading-s" style="color:#1d70b8;">Your settings</h1>
     <div class="switch-container5">
 
   <label for="microphone" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-3">Microphone </label>
-         <button role="switch" aria-checked="true" id="microphone"  class="switch5 govuk-button govuk-button--secondary govuk-!-margin-right-7">
+         <button role="switch" aria-checked="true" id="microphone" onclick="myFunctionMed()" class="switch5 govuk-button govuk-button--secondary govuk-!-margin-right-7">
             <span class="govuk-body govuk-!-font-size-14">Off</span>
             <span class="govuk-body govuk-!-font-size-14">On</span>
           </button>
 
           <label for="camera" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-3">Camera </label>
-                <button role="switch" aria-checked="true" id="camera" onclick="hideImage2()" class="switch5 govuk-button govuk-button--secondary">
+                <button role="switch" aria-checked="true" id="camera" onclick="cameraOffMed()" class="switch5 govuk-button govuk-button--secondary">
                   <span class="govuk-body govuk-!-font-size-14">Off</span>
                   <span class="govuk-body govuk-!-font-size-14">On</span>
                 </button>
@@ -157,7 +167,7 @@
         </div>
         </div> </div>
 
-        <a href="#" class="govuk-link">Mobile view</a> |  <a href="#" class="govuk-link">Tablet view</a>   <div style="float:right;"> <a href="option-1" class="govuk-link">Back</a>    |<a href="host-mic-off" class="govuk-link">Next</a> </div>
+        <a href="#" class="govuk-link">Mobile views</a> |  <a href="#" class="govuk-link">Tablet views</a>   <div style="float:right;"> <a href="option-1" class="govuk-link">Back</a>    |<a href="host-mic-off" class="govuk-link">Next</a> </div>
 
         <script>      document.querySelectorAll(".switch5").forEach(function(theSwitch) {
         theSwitch.addEventListener("click", handleClickEvent, false);
@@ -245,6 +255,28 @@
 
                                   </script>
 
+                                  <script>
+
+                                    function cameraOffMed() {
+                                                var x = document.getElementById('cameraOnMed');
+                                                var y = document.getElementById('cameraOffMed');
+
+
+                                                if (x.style.display === "none") {
+                                                  x.style.display = "block";
+                                                } else {
+                                                  x.style.display = "none";
+                                                }
+                                                if (y.style.display === "none") {
+                                                  y.style.display = "block";
+                                                } else {
+                                                  y.style.display = "none";
+                                                }
+
+                                                              }
+
+
+                                    </script>
 
 
                         <script>
@@ -264,4 +296,18 @@
             }
                           }
                           </script>
+
+
+
+  <script>
+function myFunctionMed() {
+var x = document.getElementById("muteTagMed");
+  if (x.style.display === "none") {
+    x.style.display = "inline-block";
+    } else {
+      x.style.display = "none";
+    }
+
+          }
+                                </script>
 {% endblock %}
