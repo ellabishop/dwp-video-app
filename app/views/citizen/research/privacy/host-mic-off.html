@@ -197,23 +197,15 @@
       <div class="govuk-grid-column-three-quarters">
         <div class="video-frame">
           <div class="attendee-main">
-          <img class="video-participant-con" style="width: 100%;" src="/public/images/workcoach9.png">
-          <div class="name-tag" style="background-color: #0b0c0c;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Host</h2>
-      <img src="/public/images/mic-icon.png" style="display: inline-block; height: 20px; margin-left: 5px;">
+          <img class="video-participant-con" width="100%" style="aspect-ratio: 4/3;" src="/public/images/workcoach9.png">
+          <div class="mute-tag" style="background-color: #0b0c0c;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px;">Host</h2>
+        <p class="govuk-body-s" style="color:#fff; margin-bottom: 0px;">Microphone off</p>
           </div>
-
-
           <div class="selfie-multiple-small">
-              <img class="video-participant-cov" id="cameraOn" style="object-fit:cover;  width: 100%; border: 1px solid #b1b4b6;" src="/public/images/Citizen.png">
-              <div class="name-tag" style="background-color: #0b0c0c; margin: 2px;">
-                <p class="govuk-heading-s" style="color: #fff; display:inline;">You</p>
-              <img src="/public/images/mic-icon.png" style="display: none; height: 20px; margin-left: 5px;" id="muteTag">
-              </div> </div>
-
-              <div class="selfie-multiple-small" id="cameraOff" style="display:none; background: #0b0c0c; border: 2px solid #f3f2f1;">
-                <img class="video-participant-cov" id="cameraOn" style="object-fit:contain;  width: 100%; height: 100px; margin-top: 10px;" src="/public/images/camera-off-person.png">
-
-
+              <img class="video-participant-cov" id="myImage" style="object-fit:cover;  width: 100%; border: 1px solid #b1b4b6;" src="/public/images/Citizen.png">
+              <div class="mute-tag" style="background-color: #0b0c0c; display:none; margin: 2px;"  id="muteTag">
+              <p class="govuk-body-s" style="color:#fff; margin-bottom: 0px;">Microphone off</p>
+              </div>
           </div>
         </div>
     </div> </div>
@@ -221,7 +213,7 @@
       <h1 class="govuk-heading-s" style="color: #1d70b8;"> Video settings </h1>
       <div class="govuk-!-margin-bottom-4">
             <dl class="govuk-summary-list" style="font-size:16px">
-                <div class="govuk-summary-list__row">
+                <div class="govuk-summary-list__row" style="height:60px;">
                   <dd class="govuk-summary-list__value">
                     Microphone
                   </dd>
@@ -232,15 +224,13 @@
                       <span class="govuk-body govuk-!-font-size-14">On</span>
                     </button> </div></div>
 
-                    <div class="govuk-summary-list__row">
+                    <div class="govuk-summary-list__row" style="height:60px;">
                       <dd class="govuk-summary-list__value">
                         Camera
-
-
                       </dd>
                       <dd class="govuk-summary-list__actions" style="width:45%">
                         <div class="switch-container5">
-                        <button role="switch" aria-checked="true" onclick="cameraOff()" id="camera"  class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
+                        <button role="switch" aria-checked="true" onclick="hideImage()" id="camera"  class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
                           <span class="govuk-body govuk-!-font-size-14">Off</span>
                           <span class="govuk-body govuk-!-font-size-14">On</span>
                         </button> </div>
@@ -248,8 +238,8 @@
                 </div> </div>
         </div>
         </div> </div>
-          <a class="govuk-link" href="host-mic-camera-off-3"> Host turns camera off </a>
 
+        <a class="govuk-link" href="host-mic-camera-off" style="float:right;"> Next </a>
 
         <script>      document.querySelectorAll(".switch5").forEach(function(theSwitch) {
         theSwitch.addEventListener("click", handleClickEvent, false);
@@ -295,54 +285,27 @@
                             }
                     </script>
 
+          <script>
 
-
-                    <script>
-
-                      function cameraOff() {
-                                  var x = document.getElementById('cameraOn');
-                                  var y = document.getElementById('cameraOff');
-                                  var z = document.getElementById('cameraSetting');
-
-                                  if (x.style.display === "none") {
-                                    x.style.display = "block";
-                                  } else {
-                                    x.style.display = "none";
-                                  }
-                                  if (y.style.display === "none") {
-                                    y.style.display = "block";
-                                  } else {
-                                    y.style.display = "none";
-                                  }
-                                  if (z.style.display === "none") {
-                                    z.style.display = "inline-block";
-                                  } else {
-                                    z.style.display = "none";
-                                  }
-                                                }
-
-
-                      </script>
-
-
+            function hideImage() {
+                        var image = document.getElementById('myImage');
+                        if (image.src.match("/public/images/Citizen.png")) {
+                            image.src = "/public/images/camera-off-person.png";
+                        }
+                        else {
+                            image.src = "/public/images/Citizen.png";
+                        }
+                    }
+            </script>
 
             <script>
               function myFunction() {
                 var x = document.getElementById("muteTag");
-                var y = document.getElementById("muteSetting");
 if (x.style.display === "none") {
-  x.style.display = "inline-block";
+  x.style.display = "block";
 } else {
   x.style.display = "none";
 }
-
-if (y.style.display === "none") {
-  y.style.display = "inline-block";
-} else {
-  y.style.display = "none";
-}
               }
               </script>
-
-
 {% endblock %}

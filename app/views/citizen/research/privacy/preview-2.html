@@ -1,0 +1,43 @@
+{% extends "layout-citizen.html" %}
+
+{% block pageTitle %}
+  Conduct a video appointment
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl govuk-!-margin-top-7">
+        Preview your video
+      </h1>
+
+      <p class="govuk-body">You can check your camera is
+        working before you join your video appointment.</p>
+
+<div class="govuk-!-width-one-half">
+  <img class="video-participant-cov" id="picture" style="aspect-ratio: 4/3; width:100%;" src="/public/images/Citizen.png">
+</div>
+
+
+
+<a href="wait-message" role="button" class="govuk-button govuk-!-margin-top-7">
+  Join appointment
+</a>
+    </div>
+  </div>
+
+<script>
+  function changeSrc() {
+      if (document.getElementById("background-on").checked) {
+      document.getElementById("picture").src = "/public/images/gradient.png";
+    } else if (document.getElementById("background-off").checked) {
+      document.getElementById("picture").src ="/public/images/original.png";
+      }
+  }
+  </script>
+
+{% endblock %}

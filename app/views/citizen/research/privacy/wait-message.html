@@ -1,0 +1,204 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  You have joined the video appointment - Attend a video appointment
+{% endblock %}
+
+{% block header %}
+
+{% include "includes/headers/header-attend.html" %}
+
+
+<div class="portrait-no-display">
+<div class="dwp-video-header-conduct">
+  <div class="govuk-width-container" style="margin: 0, text-align: center;">
+    {% include "includes/top-btn-conduct-citizen-trial.html" %}
+      </div>
+</div>
+</div>
+
+<!-- Portrait -->
+<div class="portrait-screen-only">
+  <main style="margin:0; padding:0;">
+  <div class="flex-container">
+    <div class="flex-item flex-responsive-container" style="height: calc(100% - 139px);">
+      <div class="selfie-single">
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-top-9 govuk-!-padding-left-9" style="display: inline-block; text-align: left;">
+
+        <h1 class="govuk-heading-xl">
+          You have joined the video appointment
+        </h1>
+
+        <p>
+          Please wait for the host to join.
+          </p>
+          <p> You do not need to do anything. The appointment will start automatically.</p>
+</div>
+        </div>
+      <div class="selfie-multiple-small">
+          <img class="video-participant-cov" style="width:100%" src="/public/images/Citizen.png">
+      </div>
+  </div>
+  <div class="bottom-buttons">
+      <button class="govuk-button govuk-button--secondary govuk-button--panel" style="margin:0px 5px 10px 5px; width: 95%;">Refresh</button>
+  </div>
+
+  </div>
+  </main>
+  </div>
+
+  <!-- Medium -->
+  <div class="medium-screen-only">
+    <main style="margin:0; padding:0;">
+    <div class="flex-container">
+      <div class="flex-item flex-responsive-container" style="height: calc(100% - 130px);">
+        <div class="landscape-main">
+          <div class="govuk-grid-column-two-thirds govuk-!-padding-top-9 govuk-!-padding-left-9" style="display: inline-block; text-align: left;">
+
+            <h1 class="govuk-heading-xl">
+              You have joined the video appointment
+            </h1>
+
+            <p>
+              Please wait for the host to join.
+              </p>
+              <p> You do not need to do anything. The appointment will start automatically.</p>
+  </div>
+          </div>
+        </div>
+        <div class="landscape-medium" style="background-color: #0b0c0c;">
+          <img class="video-participant-cov" style="width:100%" src="/public/images/Citizen.png">
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Desktop -->
+
+<div class="desktop-screen-only">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      <div class="video-frame-attendee">
+        <div class="attendee-main" style="background-color:#fff; border: 3px solid #0b0c0c;">
+          <div class="govuk-grid-column-two-thirds govuk-!-padding-top-9 govuk-!-padding-left-9" style="display: inline-block; text-align: left;">
+
+            <h1 class="govuk-heading-l">
+              You have joined the video appointment
+            </h1>
+
+            <p>
+              Please wait for the host to join.
+              </p>
+              <p> You do not need to do anything. The appointment will start automatically.</p>
+          </div>
+      </div>
+        <div class="selfie-multiple-small">
+            <img class="video-participant-cov" id="myImage" style="width:100%" src="/public/images/Citizen.png">
+        </div>
+  </div>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <h1 class="govuk-heading-s" style="color: #1d70b8;"> Video settings </h1>
+    <div class="govuk-!-margin-bottom-4">
+          <dl class="govuk-summary-list" style="font-size:16px">
+              <div class="govuk-summary-list__row" style="height:60px;">
+                <dd class="govuk-summary-list__value">
+                  Microphone
+                </dd>
+                <dd class="govuk-summary-list__actions" style="width:45%; padding-top:10px;">
+                  <div class="switch-container5">
+                  <button role="switch" aria-checked="true" id="microphone"  onclick="myFunction()" class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
+                    <span class="govuk-body govuk-!-font-size-14">Off</span>
+                    <span class="govuk-body govuk-!-font-size-14">On</span>
+                  </button> </div></div>
+
+                  <div class="govuk-summary-list__row"  style="height:60px;">
+                    <dd class="govuk-summary-list__value">
+                      Camera
+                    </dd>
+                    <dd class="govuk-summary-list__actions" style="width:45%; padding-top: 15px;">
+                      <div class="switch-container5">
+                      <button role="switch" aria-checked="true" onclick="hideImage()" id="camera"  class="switch5 govuk-button govuk-button--secondary" style="margin-right:0;">
+                        <span class="govuk-body govuk-!-font-size-14">Off</span>
+                        <span class="govuk-body govuk-!-font-size-14">On</span>
+                      </button> </div>
+                </dd>
+              </div> </div>
+      </div>
+      </div> </div>
+
+  <a class="govuk-link" href="option-1">Host joins</a>
+
+  <script>      document.querySelectorAll(".switch5").forEach(function(theSwitch) {
+  theSwitch.addEventListener("click", handleClickEvent, false);
+});
+
+function handleClickEvent(evt) {
+  let el = evt.target;
+
+  if (el.getAttribute("aria-checked") == "true") {
+      el.setAttribute("aria-checked", "false");
+  } else {
+      el.setAttribute("aria-checked", "true");
+  }
+} </script>
+
+
+
+
+  <script>
+
+    function hideImage3() {
+                var image = document.getElementById('myImage3');
+                if (image.src.match("/public/images/Citizen.png")) {
+                    image.src = "/public/images/camera-off.png";
+                }
+                else {
+                    image.src = "/public/images/Citizen.png";
+                }
+            }
+    </script>
+
+
+            <script>
+
+              function hideImage2() {
+                          var image = document.getElementById('myImage2');
+                          if (image.src.match("/public/images/Citizen.png")) {
+                              image.src = "/public/images/camera-off-person.png";
+                          }
+                          else {
+                              image.src = "/public/images/Citizen.png";
+                          }
+                      }
+              </script>
+
+    <script>
+
+      function hideImage() {
+                  var image = document.getElementById('myImage');
+                  if (image.src.match("/public/images/Citizen.png")) {
+                      image.src = "/public/images/camera-off.png";
+                  }
+                  else {
+                      image.src = "/public/images/Citizen.png";
+                  }
+              }
+      </script>
+
+      <script>
+        function myFunction() {
+          var x = document.getElementById("muteTag");
+if (x.style.display === "none") {
+x.style.display = "block";
+} else {
+x.style.display = "none";
+}
+        }
+        </script>
+
+{% endblock %}
