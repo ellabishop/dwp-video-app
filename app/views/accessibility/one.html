@@ -19,15 +19,13 @@ GOV.UK Prototype Kit
 
         <hr />
 
-        <div id="content-message" class="govuk-grid-column-three-quarters content-container"
-            aria-labelledby="lost-connection">
+        <div id="content-message" class="govuk-grid-column-three-quarters content-container">
             <div class="content-message">
-
-                <div class="content-text govuk-!-padding-top-9 govuk-!-padding-left-9 govuk-!-padding-right-9">
-                    <h1 id="lost-connection" class="govuk-heading-l">Your attendee has lost connection</h1>
-                    <p>This could be because they have a problem with their internet or their web browser has closed.
+                <div class="content-text govuk-!-padding-top-9 govuk-!-padding-left-9 govuk-!-padding-right-9" role="status">
+                    <h1 id="lost-connection" class="govuk-heading-l"></h1>
+                    <p id="text1">
                     </p>
-                    <p>You can wait for them to rejoin or end the appointment.</p>
+                    <p id="text2"></p>
                 </div>
                 <div id="tile-5" class="content-tile">
                     <video id="video-5"></video>
@@ -44,14 +42,20 @@ GOV.UK Prototype Kit
 
     $('#start').click(function () {
         setTimeout(function () {
-            $('#content-message').removeClass('govuk-!-display-none').attr('role', 'alert');
-        }, 2000);
+            $('#content-message').removeClass('govuk-!-display-none');
+            $('#lost-connection').append('Your attendee has lost connection');
+            $('#text1').append('This could be because they have a problem with their internet or their web browser has closed.');
+            $('#text2').append('You can wait for them to rejoin or end the appointment.');
+        }, 1000);
     });
 
     $('#hide').click(function () {
         setTimeout(function () {
-            $('#content-message').delay('20000').attr('role', '').addClass('govuk-!-display-none');
-        }, 2000);
+            $('#content-message').delay('20000')
+            $('#lost-connection').empty();
+            $('#text1').empty();
+            $('#text2').empty();
+        }, 1000);
     });
 </script>
 

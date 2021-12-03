@@ -19,11 +19,12 @@ GOV.UK Prototype Kit
 
         <hr />
 
-        <div id="content-message" class="govuk-grid-column-three-quarters content-container govuk-!-display-none">
+        <div id="content-message" class="govuk-grid-column-three-quarters content-container govuk-!-display-none"
+            aria-labelledby="head" aria-describedby="info info2">
             <div class="content-message">
 
                 <div id="content-content" aria-atomic="true" class="content-text govuk-!-padding-top-9 govuk-!-padding-left-9 govuk-!-padding-right-9"
-                aria-labelledby="head" aria-describedby="info info2">
+                >
                     <h1 id="head" class="govuk-heading-l">Your attendee has lost connection</h1>
                     <p id="info">This could be because they have a problem with their internet or their web browser has closed.
                     </p>
@@ -45,13 +46,13 @@ GOV.UK Prototype Kit
     $('#start').click(function () {
         setTimeout(function () {
             $('#content-message').removeClass('govuk-!-display-none');
-            $('#content-content').attr('role', 'alert');
+            $('#content-message').attr('role', 'alert');
         }, 2000);
     });
 
     $('#hide').click(function () {
         setTimeout(function () {
-            $('#content-content').delay('20000').attr('role', '');
+            $('#content-content').attr('role', '');
             $('#content-message').addClass('govuk-!-display-none');
         }, 2000);
     });
