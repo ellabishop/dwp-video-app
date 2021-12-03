@@ -10,7 +10,7 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-xl" style="margin-top: 40px">
-            🦄 Two at a time, try these 🦄
+            Lets two
         </h1>
 
         <a id="start">Click me Enis 🚀 (and wait)</a>
@@ -19,16 +19,12 @@ GOV.UK Prototype Kit
 
         <hr />
 
-        <div id="content-message" class="govuk-grid-column-three-quarters content-container govuk-!-display-none"
-            aria-labelledby="head" aria-describedby="info info2">
+        <div id="content-message" class="govuk-grid-column-three-quarters content-container govuk-!-display-none">
             <div class="content-message">
-
-                <div id="content-content" aria-atomic="true" class="content-text govuk-!-padding-top-9 govuk-!-padding-left-9 govuk-!-padding-right-9"
-                >
-                    <h1 id="head" class="govuk-heading-l">Your attendee has lost connection</h1>
-                    <p id="info">This could be because they have a problem with their internet or their web browser has closed.
-                    </p>
-                    <p id="info2">You can wait for them to rejoin or end the appointment.</p>
+                <div id="content-inner-message" class="content-text govuk-!-padding-top-9 govuk-!-padding-left-9 govuk-!-padding-right-9" aria-atomic="true">
+                    <h1 id="lost-connection" class="govuk-heading-l">Your attendee has lost connection</h1>
+                    <p>This could be because they have a problem with their internet or their web browser has closed.</p>
+                    <p>You can wait for them to rejoin or end the appointment.</p>
                 </div>
                 <div id="tile-5" class="content-tile">
                     <video id="video-5"></video>
@@ -46,15 +42,15 @@ GOV.UK Prototype Kit
     $('#start').click(function () {
         setTimeout(function () {
             $('#content-message').removeClass('govuk-!-display-none');
-            $('#content-message').attr('role', 'alert');
-        }, 2000);
+            $('#content-inner-message').attr("role", "alert");
+        }, 1000);
     });
 
     $('#hide').click(function () {
         setTimeout(function () {
-            $('#content-content').attr('role', '');
             $('#content-message').addClass('govuk-!-display-none');
-        }, 2000);
+            $('#content-inner-message').attr("role", "");
+        }, 1000);
     });
 </script>
 

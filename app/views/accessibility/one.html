@@ -10,7 +10,7 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-xl" style="margin-top: 40px">
-            Visible from the start..
+            Lets two
         </h1>
 
         <a id="start">Click me Enis 🚀 (and wait)</a>
@@ -19,13 +19,12 @@ GOV.UK Prototype Kit
 
         <hr />
 
-        <div id="content-message" class="govuk-grid-column-three-quarters content-container">
+        <div id="content-message" class="govuk-grid-column-three-quarters content-container govuk-!-display-none">
             <div class="content-message">
-                <div class="content-text govuk-!-padding-top-9 govuk-!-padding-left-9 govuk-!-padding-right-9" role="status">
-                    <h1 id="lost-connection" class="govuk-heading-l"></h1>
-                    <p id="text1">
-                    </p>
-                    <p id="text2"></p>
+                <div id="content-inner-message" class="content-text govuk-!-padding-top-9 govuk-!-padding-left-9 govuk-!-padding-right-9" aria-atomic="true">
+                    <p id="lost-connection" class="govuk-heading-l">Your attendee has lost connection</p>
+                    <p>This could be because they have a problem with their internet or their web browser has closed.</p>
+                    <p>You can wait for them to rejoin or end the appointment.</p>
                 </div>
                 <div id="tile-5" class="content-tile">
                     <video id="video-5"></video>
@@ -43,18 +42,14 @@ GOV.UK Prototype Kit
     $('#start').click(function () {
         setTimeout(function () {
             $('#content-message').removeClass('govuk-!-display-none');
-            $('#lost-connection').append('Your attendee has lost connection');
-            $('#text1').append('This could be because they have a problem with their internet or their web browser has closed.');
-            $('#text2').append('You can wait for them to rejoin or end the appointment.');
+            $('#content-inner-message').attr("role", "alert");
         }, 1000);
     });
 
     $('#hide').click(function () {
         setTimeout(function () {
-            $('#content-message').delay('20000')
-            $('#lost-connection').empty();
-            $('#text1').empty();
-            $('#text2').empty();
+            $('#content-message').addClass('govuk-!-display-none');
+            $('#content-inner-message').attr("role", "");
         }, 1000);
     });
 </script>
