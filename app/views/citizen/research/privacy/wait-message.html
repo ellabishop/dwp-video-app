@@ -31,14 +31,14 @@
         <div class="selfie-single">
           <div class="govuk-grid-column-two-thirds govuk-!-padding-top-9 govuk-!-padding-left-9" style="display: inline-block; text-align: left;">
 
-          <h1 class="govuk-heading-xl">
+          <h1 class="govuk-heading-l">
             You have joined the video appointment
           </h1>
 
-          <p>
+          <p class="govuk-body">
             Please wait for the host to join.
             </p>
-            <p> You do not need to do anything. The appointment will start automatically.</p>
+            <p class="govuk-body"> You do not need to do anything. The appointment will start automatically.</p>
   </div>
 
           </div>
@@ -76,23 +76,23 @@
   <main style="margin:0; padding:0;">
     <div class="govuk-grid-column-two-thirds" style="padding: 0px;">
   <div class="flex-container">
-    <div class="flex-item flex-responsive-container" style="height: calc(100vh - 160px); background-color:#fff;">
+    <div class="flex-item flex-responsive-container" style="background-color:#fff;">
       <div class="landscape-main" style="border-right: 3px solid #0b0c0c;">
         <div class="govuk-grid-column-two-thirds govuk-!-padding-top-9 govuk-!-padding-left-9" style="display: inline-block; text-align: left;">
 
-          <h1 class="govuk-heading-xl">
+          <h1 class="govuk-heading-l">
             You have joined the video appointment
           </h1>
 
-          <p>
+          <p class="govuk-body">
             Please wait for the host to join.
             </p>
-            <p> You do not need to do anything. The appointment will start automatically.</p>
+            <p class="govuk-body"> You do not need to do anything. The appointment will start automatically.</p>
 </div>
         </div>
 
       <div class="landscape-medium" style="background-color: #0b0c0c;">
-        <img class="video-participant-cov" style="width:100%" src="/public/images/Citizen.png">
+        <img class="video-participant-cov" style="width:100%" id="myImage2" src="/public/images/Citizen.png">
     </div>
   </div> </div>
   </div>
@@ -147,10 +147,10 @@
               You have joined the video appointment
             </h1>
 
-            <p>
+            <p class="govuk-body">
               Please wait for the host to join.
               </p>
-              <p> You do not need to do anything. The appointment will start automatically.</p>
+              <p class="govuk-body"> You do not need to do anything. The appointment will start automatically.</p>
           </div>
       </div>
         <div class="selfie-multiple-small">
@@ -188,7 +188,7 @@
       </div>
       </div> </div>
 
-  <a class="govuk-link" href="option-1">Host joins</a>
+  <a class="govuk-link" href="option-1">Next</a>
 
   <script>      document.querySelectorAll(".switch5").forEach(function(theSwitch) {
   theSwitch.addEventListener("click", handleClickEvent, false);
@@ -226,7 +226,7 @@ function handleClickEvent(evt) {
               function hideImage2() {
                           var image = document.getElementById('myImage2');
                           if (image.src.match("/public/images/Citizen.png")) {
-                              image.src = "/public/images/camera-off-person.png";
+                              image.src = "/public/images/camera-off.png";
                           }
                           else {
                               image.src = "/public/images/Citizen.png";
