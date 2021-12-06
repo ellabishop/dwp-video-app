@@ -29,24 +29,33 @@
       <div class="flex-item flex-responsive-container" style="height: calc(100vh - 230px); background-color: #0b0c0c;">
         <div class="selfie-single">
           <img class="video-participant-con" style="width: 100%;" src="/public/images/workcoach9.png">
-          <!--  <div class="mute-tag"> <strong class="govuk-tag govuk-tag--green">Host is muted</strong> </div> -->
+          <div class="name-tag" style="background-color: #0b0c0c;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Host</h2>
           </div>
-        <div class="selfie-multiple-small" style="border: 1px solid #b1b4b6;">
-            <img class="video-participant-cov" id="myImage3" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
+          </div>
+        <div class="selfie-multiple-small"  style="border: 1px solid #b1b4b6;">
+            <img class="video-participant"  id="cameraOnSml" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
+            <div class="name-tag" style="background-color: #0b0c0c; margin: 2px;">
+              <p class="govuk-heading-s" style="color: #fff; display:inline;">You</p>
+            <img src="/public/images/mic-icon.png" style="display: none; height: 15px; width: auto; margin-left: 5px;" id="muteTagSml">
+            </div>
         </div>
+        <div class="selfie-multiple-small" id="cameraOffSml" style="display:none; background: #0b0c0c; border: 2px solid #f3f2f1;  min-height: 100px;">
+          <img class="video-participant-cov" style="object-fit:contain;  width: 100%; height: 100px;" src="/public/images/camera-off-person.png">
+      </div>
+
     </div>
     <div style="padding: 20px;">
-      <h1 class="govuk-heading-s" style="color:#1d70b8;">Video settings</h1>
+      <h1 class="govuk-heading-s" style="color:#1d70b8;">Your settings</h1>
       <div class="switch-container5">
 
     <label for="microphone" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-2">Microphone </label>
-           <button role="switch" aria-checked="true" id="microphone"  class="switch5 govuk-button govuk-button--secondary govuk-!-margin-right-5">
+           <button role="switch" aria-checked="true" id="microphone" onclick="myFunctionSml()" class="switch5 govuk-button govuk-button--secondary govuk-!-margin-right-5">
               <span class="govuk-body govuk-!-font-size-14">Off</span>
               <span class="govuk-body govuk-!-font-size-14">On</span>
             </button>
 
             <label for="camera" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-2">Camera </label>
-                  <button role="switch" aria-checked="true" id="camera" onclick="hideImage3()" class="switch5 govuk-button govuk-button--secondary">
+                  <button role="switch" aria-checked="true" id="camera" onclick="cameraOffSml()" class="switch5 govuk-button govuk-button--secondary">
                     <span class="govuk-body govuk-!-font-size-14">Off</span>
                     <span class="govuk-body govuk-!-font-size-14">On</span>
                   </button>
@@ -71,21 +80,21 @@
         <div class="name-tag" style="background-color: #0b0c0c;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Host</h2>
         </div>
       </div>
-      <div class="landscape-medium" style="background-color: #0b0c0c; border: 1px solid #b1b4b6;">
+      <div class="landscape-medium" style="background-color: #0b0c0c; border: 1px solid #b1b4b6; min-height: 100px;">
             <img class="video-participant" id="cameraOnMed" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
             <div class="name-tag" style="background-color: #0b0c0c; margin: 2px;">
               <p class="govuk-heading-s" style="color: #fff; display:inline;">You</p>
             <img src="/public/images/mic-icon.png" style="display: none; height: 20px; width: auto; margin-left: 5px;" id="muteTagMed">
             </div> </div>
 
-            <div class="landscape-medium" id="cameraOffMed" style="display:none; background: #0b0c0c; border: 2px solid #f3f2f1;">
-              <img class="video-participant-cov" id="cameraOn" style="object-fit:contain;  width: 100%; height: 100px; margin-top: 10px;" src="/public/images/camera-off-person.png">
+            <div class="landscape-medium" id="cameraOffMed" style="display:none; background: #0b0c0c; border: 2px solid #f3f2f1;  min-height: 100px;">
+              <img class="video-participant-cov" id="cameraOn" style="object-fit:contain;  width: 100%; height: 100px;" src="/public/images/camera-off-person.png">
 
 
         </div>
 
     </div>
-  <div style="padding: 20px;">
+  <div style="padding: 20px; background-color: #fff;">
     <h1 class="govuk-heading-s" style="color:#1d70b8;">Your settings</h1>
     <div class="switch-container5">
 
@@ -123,17 +132,15 @@
           <div class="name-tag" style="background-color: #0b0c0c;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Host</h2>
           </div>
         </div>
-        <div class="selfie-multiple-small">
-            <img class="video-participant-cov" id="cameraOn" style="object-fit:cover;  width: 100%; border: 1px solid #b1b4b6;" src="/public/images/Citizen.png">
+        <div class="selfie-multiple-small" id="cameraOn">
+            <img class="video-participant-cov"  style="object-fit:cover;  width: 100%; border: 1px solid #b1b4b6;" src="/public/images/Citizen.png">
             <div class="name-tag" style="background-color: #0b0c0c; margin: 2px;">
               <p class="govuk-heading-s" style="color: #fff; display:inline;">You</p>
             <img src="/public/images/mic-icon.png" style="display: none; height: 20px; margin-left: 5px;" id="muteTag">
             </div> </div>
 
-            <div class="selfie-multiple-small" id="cameraOff" style="display:none; background: #0b0c0c; border: 2px solid #f3f2f1;">
-              <img class="video-participant-cov" id="cameraOn" style="object-fit:contain;  width: 100%; height: 100px; margin-top: 10px;" src="/public/images/camera-off-person.png">
-
-
+            <div class="selfie-multiple-small"  id="cameraOff" style="display:none; background: #0b0c0c; border: 1px solid #b1b4b6;">
+              <img class="video-participant-cov" style="object-fit:contain;  width: 100%; height: 100px; margin-top: 10px;" src="/public/images/camera-off-person.png">
         </div>
         </div>
     </div>
@@ -185,55 +192,12 @@
 
 
 
-
-        <script>
-
-          function hideImage3() {
-                      var image = document.getElementById('myImage3');
-                      if (image.src.match("/public/images/Citizen.png")) {
-                          image.src = "/public/images/camera-off.png";
-                      }
-                      else {
-                          image.src = "/public/images/Citizen.png";
-                      }
-                  }
-          </script>
-
-
-                  <script>
-
-                    function hideImage2() {
-                                var image = document.getElementById('myImage2');
-                                if (image.src.match("/public/images/Citizen.png")) {
-                                    image.src = "/public/images/camera-off.png";
-                                }
-                                else {
-                                    image.src = "/public/images/Citizen.png";
-                                }
-                            }
-                    </script>
-
-          <script>
-
-            function hideImage() {
-                        var image = document.getElementById('myImage');
-                        if (image.src.match("/public/images/Citizen.png")) {
-                            image.src = "/public/images/camera-off.png";
-                        }
-                        else {
-                            image.src = "/public/images/Citizen.png";
-                        }
-                    }
-            </script>
-
-
-
                                 <script>
 
                                   function cameraOff() {
                                               var x = document.getElementById('cameraOn');
                                               var y = document.getElementById('cameraOff');
-                                              var z = document.getElementById('cameraSetting');
+
 
                                               if (x.style.display === "none") {
                                                 x.style.display = "block";
@@ -245,12 +209,8 @@
                                               } else {
                                                 y.style.display = "none";
                                               }
-                                              if (z.style.display === "none") {
-                                                z.style.display = "inline-block";
-                                              } else {
-                                                z.style.display = "none";
-                                              }
-                                                            }
+
+                                                      }
 
 
                                   </script>
@@ -277,6 +237,30 @@
 
 
                                     </script>
+
+
+                                    <script>
+
+                                      function cameraOffSml() {
+                                                  var x = document.getElementById('cameraOnSml');
+                                                  var y = document.getElementById('cameraOffSml');
+
+
+                                                  if (x.style.display === "none") {
+                                                    x.style.display = "block";
+                                                  } else {
+                                                    x.style.display = "none";
+                                                  }
+                                                  if (y.style.display === "none") {
+                                                    y.style.display = "block";
+                                                  } else {
+                                                    y.style.display = "none";
+                                                  }
+
+                                                                }
+
+
+                                      </script>
 
 
                         <script>
@@ -309,5 +293,19 @@ var x = document.getElementById("muteTagMed");
     }
 
           }
-                                </script>
+                  </script>
+
+
+
+                  <script>
+                function myFunctionSml() {
+                var x = document.getElementById("muteTagSml");
+                  if (x.style.display === "none") {
+                    x.style.display = "inline-block";
+                    } else {
+                      x.style.display = "none";
+                    }
+
+                          }
+                                  </script>
 {% endblock %}

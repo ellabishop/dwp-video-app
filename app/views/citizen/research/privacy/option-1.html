@@ -32,7 +32,7 @@
         <div class="mute-tag" style="background-color: #0b0c0c;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px;">Host</h2>
          </div>
         </div>
-      <div class="selfie-multiple-small" style="border: 1px solid #b1b4b6;">
+      <div class="selfie-multiple-small" style="border: 1px solid #b1b4b6; min-height: 150px;">
           <img class="video-participant-cov" id="myImage3" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
           <div class="mute-tag" style="background-color: #0b0c0c; display:none; margin: 2px;"  id="muteTagSml">
           <p class="govuk-body-s" style="color:#fff; margin-bottom: 0px;">Microphone off</p>
@@ -75,7 +75,7 @@
       <div class="mute-tag" style="background-color: #0b0c0c;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px;">Host</h2>
        </div>
     </div>
-    <div class="landscape-medium" style="background-color: #0b0c0c; border: 1px solid #b1b4b6;">
+    <div class="landscape-medium" style="background-color: #0b0c0c; border: 1px solid #b1b4b6; min-height: 150px;">
           <img class="video-participant" id="myImage2" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
           <div class="mute-tag" style="background-color: #0b0c0c; display:none; margin: 2px;"  id="muteTagMed">
           <p class="govuk-body-s" style="color:#fff; margin-bottom: 0px;">Microphone off</p>
@@ -228,6 +228,7 @@
                     }
             </script>
 
+
             <script>
               function myFunction() {
                 var x = document.getElementById("muteTag");
@@ -251,9 +252,11 @@ if (x.style.display === "none") {
                             }
                             </script>
 
-                            <script>
-                              function myFunctionSml() {
-                                var x = document.getElementById("muteTagSml");
+
+
+  <script>
+  function myFunctionSml() {
+var x = document.getElementById("muteTagSml");
                   if (x.style.display === "none") {
                   x.style.display = "block";
                   } else {
