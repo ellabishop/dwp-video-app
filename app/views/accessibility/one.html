@@ -14,7 +14,7 @@ GOV.UK Prototype Kit
         </h1>
 
         <a id="start">Click me Enis 🚀 (and wait)</a>
-        <a id="hide">reset</a>
+        <a href="./one.html">reset</a>
         <a href="./index.html">Back</a>
 
         <hr />
@@ -40,7 +40,7 @@ GOV.UK Prototype Kit
     $('#start').click(function () {
         setTimeout(function () {
             $('#content-message').removeClass('govuk-!-display-none');
-            $('#content-inner-message').append("<p id='lost-connection' class='govuk-heading-l'>Your attendee has lost connection</p><p>This could be because they have a problem with their internet or their web browser has closed.</p><p>You can wait for them to rejoin or end the appointment.</p>")
+            $('#content-inner-message').append("<h2 class='govuk-heading-l'>Your attendee has lost connection</h2><p>This could be because they have a problem with their internet or their web browser has closed.</p><p>You can wait for them to rejoin or end the appointment.</p>")
         }, 1000);
     });
 
