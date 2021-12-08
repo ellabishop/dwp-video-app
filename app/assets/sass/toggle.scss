@@ -245,6 +245,7 @@ button.switch5:focus:not(:active):not(:hover) {
 button.switch5 span {
   padding: 10px 10px;
   pointer-events: none;
+  z-index: 50;
 }
 
 
