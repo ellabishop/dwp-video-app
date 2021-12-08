@@ -7,7 +7,17 @@ Preview your video
 
 
 {% block content %}
-<div class="popup2" style="display:none"><a href="preview-2"><img src="/public/images/edge-allow.png" style="width:300px;"></a></div>
+
+<div class="desktop-screen-only">
+<div class="popup2" style="display:none"><a href="preview-2"><img src="/public/images/edge-allow.png" style="width:300px;"></a></div></div>
+
+<div class="govuk-grid-column-full">
+<div class="portrait-screen-only">
+<div class="popup-mobile"><a href="preview-2"><img src="/public/images/mobile-allow.png"></a> </div> </div>
+
+<div class="medium-screen-only">
+<div class="popup-tablet"><a href="preview-2"><img src="/public/images/mobile-allow.png"></a> </div> </div>
+
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -32,11 +42,6 @@ Preview your video
   </div>
 
 
-  <script>
-    setTimeout(function(){
-$('.popup2').show();
-}, 500);
-</script>
 
 
 
