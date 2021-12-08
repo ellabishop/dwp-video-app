@@ -245,10 +245,7 @@ button.switch5:focus:not(:active):not(:hover) {
 button.switch5 span {
   padding: 10px 10px;
   pointer-events: none;
-  z-index: 50;
 }
-
-
 
 
 .switch-container5 {
@@ -282,6 +279,7 @@ label.switch5 {
   -ms-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
+  -webkit-appearance: none;
 
 }
 
