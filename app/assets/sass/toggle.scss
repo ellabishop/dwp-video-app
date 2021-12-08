@@ -236,7 +236,7 @@ button.switch5 {
   border-radius: 15px;
   border: 1px solid #b1b4b6;
   -webkit-appearance: none;
-  overflow: visible;
+
 }
 
 button.switch5:focus:not(:active):not(:hover) {
@@ -247,6 +247,7 @@ button.switch5:focus:not(:active):not(:hover) {
 button.switch5 span {
   padding: 10px 10px;
   pointer-events: none;
+  position: relative;
 }
 
 
