@@ -466,3 +466,17 @@ body
 {
     background-color: #f3f2f1;
 }
+
+
+
+@media screen and (max-width: 641px) {
+  .your-settings-large {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .your-settings-med {
+    display: none;
+  }
+}
