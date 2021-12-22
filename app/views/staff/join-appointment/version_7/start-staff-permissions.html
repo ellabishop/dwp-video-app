@@ -1,0 +1,41 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  Allow access to camera and microphone - Conduct a video appointment
+{% endblock %}
+
+{% block content %}
+
+<div class="popup2" style="display:none"><a href="staff-wait"><img src="/public/images/edge-allow.png" style="width:300px;"></a></div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl" style="margin-top: 40px">
+              Allow access to camera and microphone
+            </h1>
+
+
+        <p class="govuk-body">If you're asked to allow use of your camera and microphone, you must choose ‘Allow’ to take part in the video appointment.</p>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+            Did not see a message?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            If you did not see a message and cannot see or hear the other person, you may have blocked access to your camera or microphone. You can change permissions through your browser or device settings.
+
+          </div>
+        </details>
+
+
+        </div>
+
+      </div>
+    <script>
+      setTimeout(function(){
+$('.popup2').show();
+}, 500);
+</script>
+
+{% endblock %}

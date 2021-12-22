@@ -78,6 +78,14 @@
                     </button>
                     </div> </div> <hr>
 
+                    <div class="switch-container5">
+                    <div class="govuk-!-margin-bottom-1 govuk-!-margin-top-4">
+                    <label for="camera" class="govuk-body-s govuk-!-margin-right-9 govuk-!-margin-bottom-2" style="display:inline-block">Camera </label>
+                         <button role="switch" aria-checked="true" id="camera" onclick="cameraOff()" class="switch5 govuk-button govuk-button--secondary govuk-!-margin-left-2">
+                            <span class="govuk-body govuk-!-font-size-14">Off</span>
+                            <span class="govuk-body govuk-!-font-size-14">On</span>
+                          </button>
+                          </div> </div> <hr>
 
 
               <div class="switch-container5">
@@ -105,6 +113,11 @@
                                     <span class="govuk-body govuk-!-font-size-14">On</span>
                                   </button>
 
+                                  <label for="camera" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-1">Camera</label>
+                                         <button role="switch" aria-checked="true" id="camera" onclick="cameraOff()" class="switch5 govuk-button govuk-button--secondary govuk-!-margin-right-7">
+                                            <span class="govuk-body govuk-!-font-size-14">Off</span>
+                                            <span class="govuk-body govuk-!-font-size-14">On</span>
+                                          </button>
 
                             <label for="background" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-1">Hide background</label>
                                               <button role="switch" aria-checked="false" id="background" onclick="changeImage()" class="switch5 govuk-button govuk-button--secondary">
@@ -195,6 +208,19 @@ x.style.display = "block";
 x.style.display = "none";
 }
     }
+    </script>
+
+    <script>
+
+              function cameraOff() {
+                          var image = document.getElementById('myImage');
+                          if (image.src.match("/public/images/original.png")) {
+                              image.src = "/public/images/camera-off-person.png";
+                          }
+                          else {
+                              image.src = "/public/images/original.png";
+                          }
+                      }
     </script>
 
 {% endblock %}
