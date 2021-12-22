@@ -1,0 +1,47 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  Enter the appointment code - Conduct a video appointment
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="preview" method="post" class="form" id="appointmentcode_form" style="margin-top:40px">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-heading-xl">
+              Enter the appointment code
+            </h1>
+            <p> This is the 6 letter code you generated when you created the appointment.</p>
+          </legend>
+
+          <label class="govuk-label" for="appointment-code">
+            Appointment code </label>
+            <input type="text" id="appointment-code" name="appointmentCode" class="govuk-input" style="width:50%">
+      </fieldset>
+        <button class="govuk-button" data-module="govuk-button" style="margin-top: 30px">Continue</button>
+      </form>
+
+      <h2 class="govuk-heading-m">If you do not have your code</h2>
+
+      <p>If you've lost or forgotten your code, you'll need to create a new video appointment.</p>
+
+    </div>
+    <div style="float: right; margin-bottom: 0; padding: 0">
+  </div>
+
+  <div style="float: right">
+  <a href="appt-ended">Appointment already ended</a> <!-- | <a href="page-not-found">Appointment expired</a> -->
+
+
+  <script type="text/javascript">
+  function addLink(){
+    var anchor = document.getElementById('link');
+    var meeting = document.getElementById('appointmentCode');
+    anchor.href += meeting.value;
+  }
+</script>
+
+{% endblock %}
