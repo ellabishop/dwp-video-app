@@ -48,12 +48,12 @@
       <div class="govuk-grid-column-three-quarters">
         <div class="video-frame">
           <div class="attendee-main">
-          <img class="video-participant" style="width:100%" src="/public/images/Citizen.png">
+            <img class="video-participant-con" style="height: 300px; width: 100%; margin-top: 100px;" src="/public/images/camera-off-person.png">
           <div class="mute-tag" style="background-color: #0b0c0c; border-radius: 5px;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px;">Attendee</h2>
-          </div>
+          <p class="govuk-body" style="color: #fff; margin-bottom: 0px;">Microphone off <br> Camera off</p></div>
         </div>
           <div class="selfie-multiple-small">
-<img class="video-participant-cov" id="myImage" style="width:100%;" src="/public/images/original.png">
+<img class="video-participant-cov" id="myImage" style="width:100%; border: 1px solid #f3f2f1;" src="/public/images/original.png">
 <div class="name-tag" style="background-color: #0b0c0c; display:none; margin: 2px; border-radius:3px;"  id="muteTag">
 <p class="govuk-body-s" style="color:#fff; margin-bottom: 0px;">Microphone off</p>
 </div>
@@ -77,6 +77,14 @@
                   </button>
                   </div> </div> <hr>
 
+                  <div class="switch-container5">
+                  <div class="govuk-!-margin-bottom-1 govuk-!-margin-top-4">
+                  <label for="camera" class="govuk-body-s govuk-!-margin-right-9 govuk-!-margin-bottom-2" style="display:inline-block">Camera </label>
+                       <button role="switch" aria-checked="true" id="camera" onclick="cameraOff()" class="switch5 govuk-button govuk-button--secondary govuk-!-margin-left-2">
+                          <span class="govuk-body govuk-!-font-size-14">Off</span>
+                          <span class="govuk-body govuk-!-font-size-14">On</span>
+                        </button>
+                        </div> </div> <hr>
 
 
             <div class="switch-container5">
@@ -103,6 +111,12 @@
                                   <span class="govuk-body govuk-!-font-size-14">Off</span>
                                   <span class="govuk-body govuk-!-font-size-14">On</span>
                                 </button>
+
+                                <label for="camera" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-1">Camera</label>
+                                       <button role="switch" aria-checked="true" id="camera" onclick="cameraOff()" class="switch5 govuk-button govuk-button--secondary govuk-!-margin-right-7">
+                                          <span class="govuk-body govuk-!-font-size-14">Off</span>
+                                          <span class="govuk-body govuk-!-font-size-14">On</span>
+                                        </button>
 
 
                           <label for="background" class="govuk-body govuk-!-font-size-16 govuk-!-margin-right-1">Hide background</label>
@@ -142,7 +156,7 @@
 
            </div>
 
-    <div class="govuk-width-container"><a class="govuk-link" href="staff-dropped">Attendee drops</a> <div class="govuk-width-container"><br><a class="govuk-link" href="attend-mic-off">Attendee mutes</a>   <a class="govuk-link" style="float:right" href="3-participants">Another attendee joins</a></div>
+    <div class="govuk-width-container"><a class="govuk-link" href="staff-dropped">Attendee drops</a> <br> <a class="govuk-link" style="float:right" href="conduct-video-appt">Attendee turns on camera and mic</a></div>
 
     <script>      document.querySelectorAll(".switch5").forEach(function(theSwitch) {
     theSwitch.addEventListener("click", handleClickEvent, false);
@@ -180,6 +194,19 @@ x.style.display = "block";
 x.style.display = "none";
 }
       }
+      </script>
+
+      <script>
+
+                function cameraOff() {
+                            var image = document.getElementById('myImage');
+                            if (image.src.match("/public/images/original.png")) {
+                                image.src = "/public/images/camera-off-person.png";
+                            }
+                            else {
+                                image.src = "/public/images/original.png";
+                            }
+                        }
       </script>
 
 
