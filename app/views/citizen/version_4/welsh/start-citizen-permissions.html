@@ -1,0 +1,39 @@
+{% extends "layout-citizen-welsh.html" %}
+
+{% block pageTitle %}
+  Caniatáu mynediad at eich camera a microffon - Mynychu apwyntiad fideo
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl" style="margin-top: 40px">
+
+Caniatáu mynediad at eich camera a microffon
+            </h1>
+
+
+        <p class="govuk-body">Os gofynnir i chi ganiatáu defnyddio eich camera a microffon, mae’n rhaid i chi ddweis '<strong>Allow’ </strong>' i gymryd rhan yn yr apwyntiad fideo.</p>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+            Heb weld neges?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Os na wnaethoch weld neges ac yn methu â gweld neu glywed y person arall, efallai eich bod wedi blocio mynediad at eich camera neu ficroffon. Gallwch newid y caniatad drwy eich porwr neu osodiadau’r ddyfais.
+          </div>
+        </details>
+
+        </div>
+        <div style="float: right; margin-bottom: 0; padding: 0">
+        <a href="wait-message">Next</a></div>
+  <!--  <script>
+      setTimeout(function(){
+$('.popup').show();
+}, 3000);
+</script> -->
+
+{% endblock %}
