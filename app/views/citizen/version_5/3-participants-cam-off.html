@@ -116,12 +116,19 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-three-quarters">
         <div class="video-frame">
-          <div class="attendee-main">
-          <img class="video-participant-con" width="100%" style="aspect-ratio: 4/3;" src="/public/images/workcoach9.png">
-          <div class="mute-tag" style="background-color: #0b0c0c; border-radius: 5px;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Host</h2>
+          <div class="attendee-multiple-1">
+          <img class="video-participant-con" width="100%" style="aspect-ratio: 4/3;" src="/public/images/attendee_2.png">
+          <div class="mute-tag" style="background-color: #0b0c0c; border-radius: 5px;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Attendee</h2>
+            <p class="govuk-body-s" style="color:#fff; margin-bottom: 0px;">Microphone off</p>
           </div>
         </div>
-        <div class="selfie-multiple-small">
+        <div class="attendee-multiple-2">
+        <img class="video-participant-con" style="height: 300px; width: 100%; margin-top: 100px;" src="/public/images/camera-off-person.png">
+        <div class="mute-tag" style="background-color: #0b0c0c; border-radius: 5px;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Host</h2>
+          <p class="govuk-body-s" style="color:#fff; margin-bottom: 0px;">Camera off</p>
+        </div>
+      </div>
+        <div class="selfie-multiple">
             <img class="video-participant-cov"  style="object-fit:cover;  width: 100%; border: 1px solid #b1b4b6;" id="myImage" src="/public/images/Citizen.png">
             <div class="name-tag" style="background-color: #0b0c0c; display:none; margin: 2px; border-radius:3px;"  id="muteTag">
             <p class="govuk-body-s" style="color:#fff; margin-bottom: 0px;">Microphone off</p>
@@ -160,7 +167,7 @@
 
         </div>
 
-<a href="host-drops" class="govuk-link">Host drops</a> <br> <a href="host-cam-off" class="govuk-link">Host turns off camera</a> <a href="3-participants" class="govuk-link" style="float:right;">Another attendee joins</a><br><a href="end-complete-citizen" class="govuk-link" style="float:right;">Host ends</a> </div>
+<a href="host-drops" class="govuk-link">Host drops</a> <br> <a href="3-participants" class="govuk-link">Host turns camera on</a> <a href="end-complete-citizen" class="govuk-link" style="float:right;">Host ends</a> </div>
 
         <script>      document.querySelectorAll(".switch5").forEach(function(theSwitch) {
         theSwitch.addEventListener("click", handleClickEvent, false);

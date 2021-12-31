@@ -27,12 +27,20 @@
     <main style="margin:0; padding:0;">
     <div class="flex-container">
       <div class="flex-item flex-responsive-container" style="height: calc(100vh - 280px); background-color: #0b0c0c;">
-        <div class="selfie-single">
+        <div class="mobile-multiple-top">
           <img class="video-participant-con" style="width: 100%;" src="/public/images/workcoach9.png">
           <div class="mute-tag"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Host</h2>
           </div>
           </div>
-        <div class="selfie-multiple-small"  style="border: 1px solid #b1b4b6;">
+
+          <div class="mobile-multiple-left">
+            <img class="video-participant" src="/public/images/attendee_2.png">
+            <div class="mute-tag"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Attendee</h2>
+              <p class="govuk-body-s" style="color:#fff; margin-bottom: 0px;">Microphone off</p>
+            </div>
+       </div>
+
+        <div class="selfie-multiple"  style="border: 1px solid #b1b4b6;">
             <img class="video-participant"  id="myImage3" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
             <div class="name-tag" style="background-color: #0b0c0c; display:none; margin: 2px; border-radius:3px;"  id="muteTagSml">
             <p class="govuk-body-s" style="color:#fff; margin-bottom: 0px;">Microphone off</p>
@@ -71,13 +79,19 @@
       <div class="govuk-grid-column-full" style="padding: 0px;">
     <div class="flex-container">
       <div class="flex-item flex-responsive-container" style="height: calc(100vh - 280px);background-color: #0b0c0c;">
-        <div class="landscape-main">
+        <div class="attendee-multiple-2">
         <img class="video-participant-2" src="/public/images/workcoach9.png">
         <div class="mute-tag"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Host</h2>
         </div>
       </div>
-      <div class="landscape-medium" style="background-color: #0b0c0c; border: 1px solid #b1b4b6; min-height: 100px;">
-            <img class="video-participant" id="myImage2" style="object-fit:cover;  width: 100%;" src="/public/images/Citizen.png">
+      <div class="attendee-multiple-1">
+      <img class="video-participant-2" src="/public/images/attendee_2.png">
+      <div class="mute-tag"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Attendee</h2>
+        <p class="govuk-body-s" style="color:#fff; margin-bottom: 0px;">Microphone off</p>
+      </div>
+    </div>
+      <div class="selfie-multiple" style="background-color: #0b0c0c; border: 1px solid #b1b4b6; min-height: 100px;">
+            <img class="video-participant" id="myImage2" style="object-fit:contain;  width: 100%;" src="/public/images/Citizen.png">
             <div class="name-tag" style="background-color: #0b0c0c; display:none; margin: 2px; border-radius:3px;"  id="muteTagMed">
             <p class="govuk-body-s" style="color:#fff; margin-bottom: 0px;">Microphone off</p>
             </div>  </div>
@@ -116,12 +130,18 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-three-quarters">
         <div class="video-frame">
-          <div class="attendee-main">
-          <img class="video-participant-con" width="100%" style="aspect-ratio: 4/3;" src="/public/images/workcoach9.png">
-          <div class="mute-tag" style="background-color: #0b0c0c; border-radius: 5px;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Host</h2>
+          <div class="attendee-multiple-1">
+          <img class="video-participant-con" width="100%" style="aspect-ratio: 4/3;" src="/public/images/attendee_2.png">
+          <div class="mute-tag" style="background-color: #0b0c0c; border-radius: 5px;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Attendee</h2>
+            <p class="govuk-body-s" style="color:#fff; margin-bottom: 0px;">Microphone off</p>
           </div>
         </div>
-        <div class="selfie-multiple-small">
+        <div class="attendee-multiple-2">
+        <img class="video-participant-con" width="100%" style="aspect-ratio: 4/3;" src="/public/images/workcoach9.png">
+        <div class="mute-tag" style="background-color: #0b0c0c; border-radius: 5px;"> <h2 class="govuk-heading-s" style="color: #fff; margin-bottom: 0px; display: inline;">Host</h2>
+        </div>
+      </div>
+        <div class="selfie-multiple">
             <img class="video-participant-cov"  style="object-fit:cover;  width: 100%; border: 1px solid #b1b4b6;" id="myImage" src="/public/images/Citizen.png">
             <div class="name-tag" style="background-color: #0b0c0c; display:none; margin: 2px; border-radius:3px;"  id="muteTag">
             <p class="govuk-body-s" style="color:#fff; margin-bottom: 0px;">Microphone off</p>
@@ -160,7 +180,7 @@
 
         </div>
 
-<a href="host-drops" class="govuk-link">Host drops</a> <br> <a href="host-cam-off" class="govuk-link">Host turns off camera</a> <a href="3-participants" class="govuk-link" style="float:right;">Another attendee joins</a><br><a href="end-complete-citizen" class="govuk-link" style="float:right;">Host ends</a> </div>
+<a href="host-drops" class="govuk-link">Host drops</a> <br> <a href="3-participants-cam-off" class="govuk-link">Host turns off camera</a> <a href="4-participants" class="govuk-link" style="float:right;">Another attendee joins</a><br><a href="end-complete-citizen" class="govuk-link" style="float:right;">Host ends</a> </div>
 
         <script>      document.querySelectorAll(".switch5").forEach(function(theSwitch) {
         theSwitch.addEventListener("click", handleClickEvent, false);
